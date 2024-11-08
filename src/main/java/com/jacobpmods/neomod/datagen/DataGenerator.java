@@ -1,7 +1,6 @@
 package com.jacobpmods.neomod.datagen;
 
 import com.jacobpmods.neomod.FirstNeoMod;
-import com.jacobpmods.neomod.block.custom.portal.setup.ModPoiTypes;
 import com.mojang.logging.LogUtils;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;

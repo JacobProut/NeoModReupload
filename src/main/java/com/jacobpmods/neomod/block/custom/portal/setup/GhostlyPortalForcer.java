@@ -1,6 +1,7 @@
 package com.jacobpmods.neomod.block.custom.portal.setup;
 
 import com.jacobpmods.neomod.block.ModBlocks;
+import com.jacobpmods.neomod.worldgen.dimension.ModPoiTypes;
 import net.minecraft.BlockUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
