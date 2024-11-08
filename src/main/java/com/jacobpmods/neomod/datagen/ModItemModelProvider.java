@@ -77,8 +77,17 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent(ModItems.SKELETAL_ZOMBIE_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         withExistingParent(ModItems.SKELETAL_ENDERMAN_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 
+        //Flowers
+        flowerItem(ModBlocks.OOZING_FLOWER);
 
 
+
+    }
+
+    public void flowerItem(DeferredBlock<Block> block) {
+        this.withExistingParent(block.getId().getPath(), mcLoc("item/generated"))
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID,
+                        "block/" + block.getId().getPath()));
     }
 
     // Shoutout to El_Redstoniano for making this

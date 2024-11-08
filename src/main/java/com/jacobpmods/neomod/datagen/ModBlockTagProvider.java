@@ -73,5 +73,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         this.tag(PORTALS)
                 .add(ModBlocks.GHOSTLY_PORTAL_BLOCK.get());
 
+        tag(FLOWERS)
+                .add(ModBlocks.OOZING_FLOWER.get());
+
     }
 }

@@ -2,6 +2,7 @@ package com.jacobpmods.neomod.block;
 
 import com.jacobpmods.neomod.FirstNeoMod;
 import com.jacobpmods.neomod.block.custom.ModFlammableRotatedPillarBlock;
+import com.jacobpmods.neomod.block.custom.ModFlowerBlock;
 import com.jacobpmods.neomod.block.custom.ModSaplingBlock;
 import com.jacobpmods.neomod.block.custom.PedestalBlock;
 import com.jacobpmods.neomod.block.custom.portal.BoneBrick;
@@ -12,6 +13,7 @@ import com.jacobpmods.neomod.item.ModItems;
 import com.jacobpmods.neomod.worldgen.tree.ModTreeGrowers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
@@ -113,6 +115,10 @@ public class ModBlocks {
 
     public static final DeferredBlock<BoneBrick> BONE_BRICK = registerBlock("bone_brick", () ->new BoneBrick(BlockBehaviour.Properties.of()
             .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+
+    public static final DeferredBlock<Block> OOZING_FLOWER = registerBlock("oozing_flower",
+            () -> new ModFlowerBlock(MobEffects.HARM, 2, BlockBehaviour.Properties.ofFullCopy(Blocks.ALLIUM)));
+
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

@@ -111,7 +111,7 @@
         "weight": 100
       },
       {
-        "type": "minecraft:zombie",
+        "type": "neomod:skeletalzombie",
         "maxCount": 4,
         "minCount": 4,
         "weight": 95
@@ -141,10 +141,10 @@
         "weight": 100
       },
       {
-        "type": "minecraft:enderman",
+        "type": "neomod:skeletalenderman",
         "maxCount": 4,
-        "minCount": 1,
-        "weight": 10
+        "minCount": 4,
+        "weight": 95
       },
       {
         "type": "minecraft:witch",
