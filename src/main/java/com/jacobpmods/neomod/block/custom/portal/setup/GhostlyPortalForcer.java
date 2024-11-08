@@ -122,9 +122,9 @@ public class GhostlyPortalForcer  {
 
 
 
-    public static Optional<BlockPos> findClosestPortalPosition(ServerLevel level, BlockPos exitPos, boolean isUndergarden, WorldBorder worldBorder) {
+    public static Optional<BlockPos> findClosestPortalPosition(ServerLevel level, BlockPos exitPos, boolean isGhostly, WorldBorder worldBorder) {
         PoiManager poimanager = level.getPoiManager();
-        int i = isUndergarden ? 16 : 128;
+        int i = isGhostly ? 16 : 128;
         poimanager.ensureLoadedAndValid(level, exitPos, i);
         return poimanager.getInSquare(holder -> holder.is(ModPoiTypes.GHOSTLY_PORTAL), exitPos, i, PoiManager.Occupancy.ANY)
                 .map(PoiRecord::getPos)

@@ -34,14 +34,9 @@ import java.util.Optional;
 
 public class GhostlyPortalBlock extends Block implements Portal {
 
-    //public static final MapCodec<GhostlyPortalBlock> CODEC = simpleCodec(GhostlyPortalBlock::new);
     public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.HORIZONTAL_AXIS;
     protected static final VoxelShape X_AXIS_AABB = Block.box(0.0, 0.0, 6.0, 16.0, 16.0, 10.0);
     protected static final VoxelShape Z_AXIS_AABB = Block.box(6.0, 0.0, 0.0, 10.0, 16.0, 16.0);
-
-   /* public MapCodec<GhostlyPortalBlock> codec() {
-        return CODEC;
-    }*/
 
     public GhostlyPortalBlock(Properties properties) {
         super(Properties.of()

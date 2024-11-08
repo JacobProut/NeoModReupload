@@ -1,6 +1,7 @@
 package com.jacobpmods.neomod;
 
 import com.jacobpmods.neomod.block.ModBlocks;
+import com.jacobpmods.neomod.block.custom.portal.setup.ModPoiTypes;
 import com.jacobpmods.neomod.block.entity.custom.ModBlockEntities;
 import com.jacobpmods.neomod.block.entity.renderer.PedestalBlockEntityRenderer;
 import com.jacobpmods.neomod.entity.ModEntities;
@@ -64,6 +65,7 @@ public class FirstNeoMod {
         ModFluids.register(modEventBus);
 
         ModMenuTypes.register(modEventBus);
+        ModPoiTypes.register(modEventBus);
 
 
         // Register the item to a creative tab
