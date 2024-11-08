@@ -1,0 +1,58 @@
+{
+  "blockentity.neomod.pedestal": "Pedestal",
+
+
+  "item.neomod.speedapple": "Speed Apple",
+  "item.neomod.throwablefireball": "Fire Ball",
+  "item.neomod.godsword": "Sword of the Gods",
+
+
+  "item.neomod.nexon": "Nexon",
+  "item.neomod.nexonheated": "Heated Nexon",
+  "item.neomod.nexoningot": "Nexon Ingot",
+  "item.neomod.nexonreinforcedingot": "Reinforced Nexon Ingot",
+  "item.neomod.nexonpickaxe": "Nexon Pickaxe",
+  "item.neomod.nexonaxe": "Nexon Axe",
+  "item.neomod.nexonshovel": "Nexon Shovel",
+  "item.neomod.nexonsword": "Nexon Sword",
+  "item.neomod.nexonhoe": "Nexon Hoe",
+
+  "item.neomod.nexonhelmet": "Nexon Helmet",
+  "item.neomod.nexonchestplate": "Nexon Chestplate",
+  "item.neomod.nexonleggings": "Nexon Leggings",
+  "item.neomod.nexonboots": "Nexon Boots",
+
+  "item.neomod.skeletal_zombie_egg": "Skeletal Zombie Spawn Egg",
+  "item.neomod.skeletal_enderman_egg": "Skeletal Enderman Spawn Egg",
+
+  "item.neomod.poisoned_water_bucket": "Poisoned Water Bucket",
+
+
+
+
+  "block.neomod.nexon_block": "Nexon Block",
+  "block.neomod.nexon_ore_block": "Nexon Ore Block",
+  "block.neomod.ghostly_grass_block": "Ghostly Grass",
+  "block.neomod.ghostly_grass_top": "Ghostly Grass top",
+  "block.neomod.ghostly_dirt": "Ghostly Dirt",
+
+  "block.neomod.log_ghostly": "Ghostly Log",
+  "block.neomod.log_ghostly_top": "Ghostly Log Top",
+  "block.neomod.planks_ghostly": "Ghostly Planks",
+  "block.neomod.stripped_ghostly_log": "Stripped Ghostly Log",
+  "block.neomod.stripped_ghostly_log_top": "Stripped Ghostly Log Top",
+  "block.neomod.ghostly_leaves": "Ghostly Leaves",
+  "block.neomod.ghostly_sapling": "Ghostly Sapling",
+  "block.neomod.ghostly_stone": "Ghostly Stone",
+  "block.neomod.bone_brick": "Bone Brick Block",
+
+  "block.neomod.ghostly_web": "Ghostly Web TEMPORARY Teleporter",
+
+  "block.neomod.pedestal": "Pedestal",
+
+  "block.neomod.ghostly_portal_block": "Ghostly Portal Block",
+
+
+  "enchantment.neomod.magma_mine": "Magma Mine",
+  "enchantment.neomod.ice_barrage_melee": "Ice Barrage"
+}
