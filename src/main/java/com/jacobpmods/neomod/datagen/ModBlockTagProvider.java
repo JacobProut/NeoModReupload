@@ -71,6 +71,10 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.STRIPPED_GHOSTLY_WOOD.get())
                 .add(ModBlocks.LOG_BLOODY.get());
 
+        this.tag(PLANKS)
+                .add(ModBlocks.PLANKS_GHOSTLY.get())
+                .add(ModBlocks.PLANKS_BLOODY.get());
+
         this.tag(PORTALS)
                 .add(ModBlocks.GHOSTLY_PORTAL_BLOCK.get());
 

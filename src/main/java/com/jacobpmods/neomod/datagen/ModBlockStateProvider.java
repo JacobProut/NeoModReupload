@@ -51,6 +51,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         logBlock(((RotatedPillarBlock) ModBlocks.LOG_BLOODY.get()));
         blockItem(ModBlocks.LOG_BLOODY);
         saplingBlock(ModBlocks.BLOODY_SAPLING);
+        blockWithItem(ModBlocks.PLANKS_BLOODY);
 
 
         simpleBlock(ModBlocks.OOZING_FLOWER.get(),

@@ -50,7 +50,6 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.GHOSTLY_GRASS_BLOCK.get());
                         output.accept(ModBlocks.GHOSTLY_DIRT.get());
                         output.accept(ModBlocks.LOG_GHOSTLY.get());
-                        output.accept(ModBlocks.PLANKS_GHOSTLY.get());
                         output.accept(ModBlocks.GHOSTLY_WEB.get());
 
                         //BONE ITEMS
@@ -78,6 +77,10 @@ public class ModCreativeModeTabs {
 
                         //Logs/Wood
                         output.accept(ModBlocks.LOG_BLOODY.get());
+
+                        //Planks
+                        output.accept(ModBlocks.PLANKS_GHOSTLY.get());
+                        output.accept(ModBlocks.PLANKS_BLOODY.get());
 
                     }).build());
 

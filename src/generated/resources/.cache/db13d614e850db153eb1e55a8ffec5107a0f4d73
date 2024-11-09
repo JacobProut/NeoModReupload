@@ -1,4 +1,4 @@
-// 1.21.1	2024-11-08T22:24:32.8833618	Tags for minecraft:block mod id neomod
+// 1.21.1	2024-11-09T15:01:56.3180169	Tags for minecraft:block mod id neomod
 f5fbb319f25c4056dadc32c54493627182dc4ab6 data/minecraft/tags/block/dirt.json
 acec1d17d5229dc15c4c3dc5f8095e5624c35dce data/minecraft/tags/block/flowers.json
 cdc899dde00cb15e2170f0a866271497533205a6 data/minecraft/tags/block/incorrect_for_diamond_tool.json
@@ -10,6 +10,7 @@ cdc899dde00cb15e2170f0a866271497533205a6 data/minecraft/tags/block/incorrect_for
 2cb95d639d66db75ec0a90f6c6afdb1319eeacae data/minecraft/tags/block/logs_that_burn.json
 5e76e30ffbbb576b7b46fdc1493ade7c6ade4270 data/minecraft/tags/block/mineable/axe.json
 1ba3ab1c8722ba6cf49452845bde3a2a856968fd data/minecraft/tags/block/mineable/pickaxe.json
+0cf0c01099e2e8f641c4cb12d5e51c3e9c66090c data/minecraft/tags/block/planks.json
 ac3c884022f5a161f793d2a7f9d814466ec169b4 data/minecraft/tags/block/portals.json
 40c7f88c4ac255e6ed8eb06c7c90495e03b821de data/minecraft/tags/block/saplings.json
 0c1f9c1ea432787bc7f25694d692ecfaffa1cdac data/neoforge/tags/block/needs_netherite_tool.json
