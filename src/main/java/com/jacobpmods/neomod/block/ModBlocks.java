@@ -5,7 +5,6 @@ import com.jacobpmods.neomod.block.custom.ModFlammableRotatedPillarBlock;
 import com.jacobpmods.neomod.block.custom.ModFlowerBlock;
 import com.jacobpmods.neomod.block.custom.ModSaplingBlock;
 import com.jacobpmods.neomod.block.custom.PedestalBlock;
-import com.jacobpmods.neomod.block.custom.portal.BoneBrick;
 import com.jacobpmods.neomod.block.custom.portal.GhostlyPortalBlock;
 import com.jacobpmods.neomod.block.terrainblocks.GhostlyBlock;
 import com.jacobpmods.neomod.block.terrainblocks.GhostlyDirtBlock;
@@ -59,8 +58,6 @@ public class ModBlocks {
             .strength(1f).sound(SoundType.WOOD)));
     public static final DeferredBlock<Block> PLANKS_GHOSTLY = registerBlock("planks_ghostly", () ->new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
             .strength(1f).sound(SoundType.WOOD)) {
-
-
         @Override
         public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
             return true;
@@ -113,11 +110,40 @@ public class ModBlocks {
     public static final DeferredBlock<GhostlyPortalBlock> GHOSTLY_PORTAL_BLOCK = registerBlock("ghostly_portal_block", () ->new GhostlyPortalBlock(BlockBehaviour.Properties.of()
             .strength(7f).destroyTime(100000).sound(SoundType.GLASS)));
 
-    public static final DeferredBlock<BoneBrick> BONE_BRICK = registerBlock("bone_brick", () ->new BoneBrick(BlockBehaviour.Properties.of()
+    public static final DeferredBlock<Block> BONE_BRICK = registerBlock("bone_brick", () ->new Block(BlockBehaviour.Properties.of()
             .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
     public static final DeferredBlock<Block> OOZING_FLOWER = registerBlock("oozing_flower",
             () -> new ModFlowerBlock(MobEffects.HARM, 2, BlockBehaviour.Properties.ofFullCopy(Blocks.ALLIUM)));
+
+    public static final DeferredBlock<Block> BLOODY_LEAVES = registerBlock("bloody_leaves", () ->new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)
+            .strength(0.2f).sound(SoundType.CHERRY_LEAVES)) {
+        @Override
+        public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+            return true;
+        }
+
+        @Override
+        public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+            return 60;
+        }
+
+        @Override
+        public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+            return 30;
+        }
+    });
+
+
+    public static final DeferredBlock<Block> LOG_BLOODY = registerBlock("log_bloody", () ->new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)
+            .strength(2f).sound(SoundType.WOOD)));
+
+
+    public static final DeferredBlock<Block> BLOODY_SAPLING = registerBlock("bloody_sapling",
+            () -> new ModSaplingBlock(ModTreeGrowers.BLOODY, BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_SAPLING)
+                    .strength(0.2f).sound(SoundType.CHERRY_SAPLING),  ModBlocks.GHOSTLY_GRASS_BLOCK.get(), ModBlocks.GHOSTLY_DIRT.get(), Blocks.GRASS_BLOCK, Blocks.DIRT));
+
+
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

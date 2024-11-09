@@ -30,7 +30,9 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModBlocks.LOG_GHOSTLY.get().asItem())
                 .add(ModBlocks.WOOD_GHOSTLY.get().asItem())
                 .add(ModBlocks.STRIPPED_GHOSTLY_LOG.get().asItem())
-                .add(ModBlocks.STRIPPED_GHOSTLY_WOOD.get().asItem());
+                .add(ModBlocks.STRIPPED_GHOSTLY_WOOD.get().asItem())
+                .add(ModBlocks.LOG_BLOODY.get().asItem());
+
 
         tag(PLANKS)
                 .add(ModBlocks.PLANKS_GHOSTLY.get().asItem());

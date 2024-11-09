@@ -16,7 +16,6 @@ public class ModSurfaceRules {
     private static final SurfaceRules.RuleSource MOD_GRASS_BLOCK = makeStateRule(ModBlocks.GHOSTLY_GRASS_BLOCK.get());
     private static final SurfaceRules.RuleSource MOD_STONE_BLOCK = makeStateRule(ModBlocks.GHOSTLY_STONE.get());
     private static final SurfaceRules.RuleSource BEDROCK = makeStateRule(Blocks.BEDROCK);
-
     private static final SurfaceRules.RuleSource OOZING_FLOWER = makeStateRule(ModBlocks.OOZING_FLOWER.get()); // Define the rule for the flower
 
     public static SurfaceRules.RuleSource makeRules() {
@@ -29,14 +28,11 @@ public class ModSurfaceRules {
                 SurfaceRules.isBiome(ModBiomes.GHOSTLY_BIOME),
                 SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, OOZING_FLOWER)
         );
-
-
         SurfaceRules.RuleSource grassSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(isAtOrAboveWaterlevel, SurfaceRules.sequence(
                 myRules,
                 MOD_GRASS_BLOCK,
                 flowerRule
         )),MOD_DIRT);
-
 
         // Combined rules for the GHOSTLY_BIOME
         SurfaceRules.RuleSource modBiomeRules = SurfaceRules.sequence(
@@ -49,14 +45,6 @@ public class ModSurfaceRules {
                 )
         );
 
-      /*  SurfaceRules.RuleSource modBiomeRules = SurfaceRules.sequence(
-                SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.isBiome(ModBiomes.GHOSTLY_BIOME),
-                                SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SurfaceRules.sequence(grassSurface, myRules, flowerRule))),
-                        SurfaceRules.ifTrue(SurfaceRules.UNDER_FLOOR, MOD_DIRT),
-                        SurfaceRules.ifTrue(SurfaceRules.isBiome(ModBiomes.GHOSTLY_BIOME), MOD_STONE_BLOCK)
-                ),
-                grassSurface
-        );*/
 
         ImmutableList.Builder<SurfaceRules.RuleSource> builder = ImmutableList.builder();
 
@@ -71,22 +59,3 @@ public class ModSurfaceRules {
     }
 
 }
-
-
-
-
-//ORIGINAL
-    /*public static SurfaceRules.RuleSource makeRules() {
-        SurfaceRules.ConditionSource isAtOrAboveWaterLevel = SurfaceRules.waterBlockCheck(-1, 0);
-
-        SurfaceRules.RuleSource grassSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(isAtOrAboveWaterLevel, GRASS_BLOCK), DIRT);
-
-        return SurfaceRules.sequence(
-                SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.isBiome(ModBiomes.GHOSTLY_BIOME),
-                                //SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, RAW_SAPPHIRE)),
-                        //SurfaceRules.ifTrue(SurfaceRules.ON_CEILING, SAPPHIRE)),
-
-                // Default to a grass and dirt surface
-                SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, grassSurface)
-        )));
-    }*/

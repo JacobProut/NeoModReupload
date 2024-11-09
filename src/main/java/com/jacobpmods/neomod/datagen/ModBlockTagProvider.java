@@ -68,13 +68,22 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.LOG_GHOSTLY.get())
                 .add(ModBlocks.WOOD_GHOSTLY.get())
                 .add(ModBlocks.STRIPPED_GHOSTLY_LOG.get())
-                .add(ModBlocks.STRIPPED_GHOSTLY_WOOD.get());
+                .add(ModBlocks.STRIPPED_GHOSTLY_WOOD.get())
+                .add(ModBlocks.LOG_BLOODY.get());
 
         this.tag(PORTALS)
                 .add(ModBlocks.GHOSTLY_PORTAL_BLOCK.get());
 
         tag(FLOWERS)
                 .add(ModBlocks.OOZING_FLOWER.get());
+
+        this.tag(LEAVES)
+                .add(ModBlocks.GHOSTLY_LEAVES.get())
+                .add(ModBlocks.BLOODY_LEAVES.get());
+
+        this.tag(SAPLINGS)
+                .add(ModBlocks.GHOSTLY_SAPLING.get())
+                .add(ModBlocks.BLOODY_SAPLING.get());
 
     }
 }

@@ -9,4 +9,7 @@ import java.util.Optional;
 public class ModTreeGrowers {
     public static final TreeGrower GHOSTLY = new TreeGrower(FirstNeoMod.MOD_ID + ":ghostly",
             Optional.empty(), Optional.of(ModConfiguredFeatures.GHOSTLY_KEY), Optional.empty());
+
+    public static final TreeGrower BLOODY = new TreeGrower(FirstNeoMod.MOD_ID + ":bloody",
+            Optional.empty(), Optional.of(ModConfiguredFeatures.BLOODY_KEY), Optional.empty());
 }

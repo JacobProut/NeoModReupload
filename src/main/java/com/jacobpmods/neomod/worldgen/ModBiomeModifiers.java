@@ -15,16 +15,11 @@ import net.neoforged.neoforge.registries.NeoForgeRegistries;
 
 public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_TREE_GHOSTLY = registerKey("add_tree_ghostly");
-
-
     public static final ResourceKey<BiomeModifier> ADD_OOZING_FLOWER = registerKey("add_oozing_flower");
 
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
         var biomes = context.lookup(Registries.BIOME);
-
-        //HolderSet created to send a direct link to the Modded Biome
-        HolderSet<Biome> ghostlyBiomes = HolderSet.direct(biomes.getOrThrow(ModBiomes.GHOSTLY_BIOME));
 
         //This is for combined biomes
        /* HolderSet<Biome> combinedBiomes = HolderSet.direct(
@@ -32,16 +27,20 @@ public class ModBiomeModifiers {
                 biomes.getOrThrow(Biomes.BIRCH_FOREST)
         );*/
 
+        //HolderSet created to send a direct link to the Modded Biome
+        HolderSet<Biome> ghostlyBiomes = HolderSet.direct(biomes.getOrThrow(ModBiomes.GHOSTLY_BIOME));
         context.register(ADD_TREE_GHOSTLY, new BiomeModifiers.AddFeaturesBiomeModifier(
                 ghostlyBiomes, // I assume change this to a different biome for it to spawn else where.
                 // For multiple biomes use: HolderSet.direct(biomes.getOrThrow(Biomes.PLAINS), biomes.getOrThrow(Biomes.BIRCH_FOREST))
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.GHOSTLY_TREE_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
-
         context.register(ADD_OOZING_FLOWER, new BiomeModifiers.AddFeaturesBiomeModifier(
                 ghostlyBiomes,
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.OOZING_FLOWER_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
+
+
+
     }
     private static ResourceKey<BiomeModifier> registerKey(String name) {
         return ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID, name));

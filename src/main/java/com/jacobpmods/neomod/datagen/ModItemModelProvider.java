@@ -72,6 +72,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         //Saplings
         saplingItem(ModBlocks.GHOSTLY_SAPLING);
+        saplingItem(ModBlocks.BLOODY_SAPLING);
 
         //Spawn Eggs
         withExistingParent(ModItems.SKELETAL_ZOMBIE_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));

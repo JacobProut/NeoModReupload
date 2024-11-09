@@ -54,6 +54,12 @@ public class ModBlockLootTableProvider  extends BlockLootSubProvider {
         this.add(ModBlocks.GHOSTLY_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.GHOSTLY_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
+        this.dropSelf(ModBlocks.BLOODY_SAPLING.get());
+        this.add(ModBlocks.BLOODY_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.BLOODY_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        dropSelf(ModBlocks.BLOODY_LEAVES.get());
+        this.dropSelf(ModBlocks.LOG_BLOODY.get());
+
     }
 
 

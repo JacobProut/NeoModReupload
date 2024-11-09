@@ -3,6 +3,7 @@
     "neomod:log_ghostly",
     "neomod:wood_ghostly",
     "neomod:stripped_ghostly_log",
-    "neomod:stripped_ghostly_wood"
+    "neomod:stripped_ghostly_wood",
+    "neomod:log_bloody"
   ]
 }

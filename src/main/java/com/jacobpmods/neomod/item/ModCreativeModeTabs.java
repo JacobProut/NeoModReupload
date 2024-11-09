@@ -51,8 +51,6 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.GHOSTLY_DIRT.get());
                         output.accept(ModBlocks.LOG_GHOSTLY.get());
                         output.accept(ModBlocks.PLANKS_GHOSTLY.get());
-                        output.accept(ModBlocks.GHOSTLY_SAPLING.get());
-                        output.accept(ModBlocks.GHOSTLY_LEAVES.get());
                         output.accept(ModBlocks.GHOSTLY_WEB.get());
 
                         //BONE ITEMS
@@ -69,6 +67,17 @@ public class ModCreativeModeTabs {
 
                         //Flowers
                         output.accept(ModBlocks.OOZING_FLOWER.get());
+
+                        //Leaves
+                        output.accept(ModBlocks.GHOSTLY_LEAVES.get());
+                        output.accept(ModBlocks.BLOODY_LEAVES.get());
+
+                        //Saplings
+                        output.accept(ModBlocks.GHOSTLY_SAPLING.get());
+                        output.accept(ModBlocks.BLOODY_SAPLING.get());
+
+                        //Logs/Wood
+                        output.accept(ModBlocks.LOG_BLOODY.get());
 
                     }).build());
 

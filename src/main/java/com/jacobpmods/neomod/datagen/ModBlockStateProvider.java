@@ -47,6 +47,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
         leavesBlock(ModBlocks.GHOSTLY_LEAVES);
         saplingBlock(ModBlocks.GHOSTLY_SAPLING);
 
+        leavesBlock(ModBlocks.BLOODY_LEAVES);
+        logBlock(((RotatedPillarBlock) ModBlocks.LOG_BLOODY.get()));
+        blockItem(ModBlocks.LOG_BLOODY);
+        saplingBlock(ModBlocks.BLOODY_SAPLING);
+
+
         simpleBlock(ModBlocks.OOZING_FLOWER.get(),
                 models().cross(blockTexture(ModBlocks.OOZING_FLOWER.get()).getPath(), blockTexture(ModBlocks.OOZING_FLOWER.get())).renderType("cutout"));
 
