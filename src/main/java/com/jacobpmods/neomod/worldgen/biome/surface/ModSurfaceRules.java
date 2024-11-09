@@ -10,20 +10,23 @@ import org.spongepowered.include.com.google.common.collect.ImmutableList;
 
 
 public class ModSurfaceRules {
-
-
     private static final SurfaceRules.RuleSource MOD_DIRT = makeStateRule(ModBlocks.GHOSTLY_DIRT.get());
     private static final SurfaceRules.RuleSource MOD_GRASS_BLOCK = makeStateRule(ModBlocks.GHOSTLY_GRASS_BLOCK.get());
     private static final SurfaceRules.RuleSource MOD_STONE_BLOCK = makeStateRule(ModBlocks.GHOSTLY_STONE.get());
     private static final SurfaceRules.RuleSource BEDROCK = makeStateRule(Blocks.BEDROCK);
     private static final SurfaceRules.RuleSource OOZING_FLOWER = makeStateRule(ModBlocks.OOZING_FLOWER.get()); // Define the rule for the flower
 
+    private static final SurfaceRules.RuleSource MOD_BLOODY_GRASS_BLOCK = makeStateRule(ModBlocks.BLOODY_GRASS_BLOCK.get());
+
+
     public static SurfaceRules.RuleSource makeRules() {
         SurfaceRules.ConditionSource isAtOrAboveWaterlevel = SurfaceRules.waterBlockCheck(-1, 0);
+
+        //Ghostly Biome
         SurfaceRules.RuleSource myRules = SurfaceRules.ifTrue(
                 SurfaceRules.isBiome(ModBiomes.GHOSTLY_BIOME), SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, MOD_GRASS_BLOCK)
-        );
 
+        );
         SurfaceRules.RuleSource flowerRule = SurfaceRules.ifTrue(
                 SurfaceRules.isBiome(ModBiomes.GHOSTLY_BIOME),
                 SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, OOZING_FLOWER)
@@ -34,8 +37,7 @@ public class ModSurfaceRules {
                 flowerRule
         )),MOD_DIRT);
 
-        // Combined rules for the GHOSTLY_BIOME
-        SurfaceRules.RuleSource modBiomeRules = SurfaceRules.sequence(
+        SurfaceRules.RuleSource modGhostlyBiomeRules = SurfaceRules.sequence(
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(ModBiomes.GHOSTLY_BIOME),
                         SurfaceRules.sequence(
                                 SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, grassSurface),
@@ -46,10 +48,36 @@ public class ModSurfaceRules {
         );
 
 
+
+        //Bloody Biome
+        SurfaceRules.RuleSource bloodyRules = SurfaceRules.ifTrue(
+                SurfaceRules.isBiome(ModBiomes.BLOOD_GARDEN_BIOME), SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, MOD_BLOODY_GRASS_BLOCK)
+
+        );
+
+        SurfaceRules.RuleSource bloodyGrassSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(isAtOrAboveWaterlevel, SurfaceRules.sequence(
+                bloodyRules,
+                MOD_BLOODY_GRASS_BLOCK
+        )),MOD_DIRT);
+
+        SurfaceRules.RuleSource modBloodyBiomeRules = SurfaceRules.sequence(
+                SurfaceRules.ifTrue(SurfaceRules.isBiome(ModBiomes.BLOOD_GARDEN_BIOME),
+                        SurfaceRules.sequence(
+                                SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, bloodyGrassSurface),
+                                SurfaceRules.ifTrue(SurfaceRules.UNDER_FLOOR, MOD_DIRT),
+                                MOD_STONE_BLOCK
+                        )
+                )
+        );
+
+
+
+
         ImmutableList.Builder<SurfaceRules.RuleSource> builder = ImmutableList.builder();
 
         builder.add(SurfaceRules.ifTrue(SurfaceRules.verticalGradient("bedrock_floor", VerticalAnchor.bottom(), VerticalAnchor.aboveBottom(5)), BEDROCK));
-        builder.add(modBiomeRules);
+        builder.add(modGhostlyBiomeRules);
+        builder.add(modBloodyBiomeRules);
 
         return SurfaceRules.sequence(builder.build().toArray(SurfaceRules.RuleSource[]::new));
     }

@@ -15,12 +15,17 @@ public class ModNoiseGeneratorSettings {
     public static final ResourceKey<NoiseGeneratorSettings> GHOSTLY_BIOME_GENERATION = ResourceKey.create(
             Registries.NOISE_SETTINGS, ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID,"ghostly_dim")
     );
+
+   /* public static final ResourceKey<NoiseGeneratorSettings> BLOODY_GARDEN_BIOME_GENERATION = ResourceKey.create(
+            Registries.NOISE_SETTINGS, ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID,"bloody_dim")
+    );*/
+
     public static void bootstrap(BootstrapContext<NoiseGeneratorSettings> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
         var biomes = context.lookup(Registries.BIOME);
-
-        // Trees
         NoiseGeneratorSettings settings =  NoiseGeneratorSettings.overworld(context, false, true);
+
+        //Ghostly Biome
         context.register(GHOSTLY_BIOME_GENERATION,
                 new NoiseGeneratorSettings(
                         new NoiseSettings(0, 384, 1, 2),
@@ -36,5 +41,22 @@ public class ModNoiseGeneratorSettings {
                         false
                 )
         );
+
+      /*  context.register(BLOODY_GARDEN_BIOME_GENERATION,
+                new NoiseGeneratorSettings(
+                        new NoiseSettings(0, 384, 1, 2),
+                        ModBlocks.GHOSTLY_STONE.get().defaultBlockState(),
+                        settings.defaultFluid(),
+                        settings.noiseRouter(),
+                        ModSurfaceRules.makeRules(),
+                        settings.spawnTarget(),
+                        settings.seaLevel(),
+                        false,
+                        false,
+                        false,
+                        false
+                )
+        );*/
+
     }
 }

@@ -17,6 +17,8 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_TREE_GHOSTLY = registerKey("add_tree_ghostly");
     public static final ResourceKey<BiomeModifier> ADD_OOZING_FLOWER = registerKey("add_oozing_flower");
 
+    public static final ResourceKey<BiomeModifier> ADD_TREE_BLOODY = registerKey("add_tree_bloody");
+
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
         var biomes = context.lookup(Registries.BIOME);
@@ -38,6 +40,15 @@ public class ModBiomeModifiers {
                 ghostlyBiomes,
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.OOZING_FLOWER_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
+
+
+        HolderSet<Biome> bloodgardenBiome = HolderSet.direct(biomes.getOrThrow(ModBiomes.BLOOD_GARDEN_BIOME));
+        context.register(ADD_TREE_BLOODY, new BiomeModifiers.AddFeaturesBiomeModifier(
+                bloodgardenBiome, // I assume change this to a different biome for it to spawn else where.
+                // For multiple biomes use: HolderSet.direct(biomes.getOrThrow(Biomes.PLAINS), biomes.getOrThrow(Biomes.BIRCH_FOREST))
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.BLOODY_TREE_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+
 
 
 
