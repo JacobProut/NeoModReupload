@@ -13,6 +13,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.*;
@@ -25,9 +26,12 @@ import net.minecraft.world.level.border.WorldBorder;
 import net.minecraft.world.level.dimension.DimensionType;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraft.world.level.portal.DimensionTransition;
+import net.minecraft.world.level.portal.PortalShape;
 import net.minecraft.world.phys.HitResult;
+import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
 import java.util.Optional;
@@ -176,7 +180,7 @@ public class GhostlyPortalBlock extends Block implements Portal {
             post = DimensionTransition.PLAY_PORTAL_SOUND.then(DimensionTransition.PLACE_PORTAL_TICKET);
         }
 
-        return NetherPortalBlock.getDimensionTransitionFromExit(entity, pos, rect, level, post);
+        return getDimensionTransitionFromExit(entity, pos, rect, level, post);
     }
 
     @Override
@@ -187,7 +191,7 @@ public class GhostlyPortalBlock extends Block implements Portal {
     }
 
 
-    /*private static DimensionTransition getDimensionTransitionFromExit(
+    private static DimensionTransition getDimensionTransitionFromExit(
             Entity entity, BlockPos pos, BlockUtil.FoundRectangle rectangle, ServerLevel level, DimensionTransition.PostDimensionTransition postDimensionTransition
     ) {
         BlockState blockstate = entity.level().getBlockState(pos);
@@ -234,14 +238,14 @@ public class GhostlyPortalBlock extends Block implements Portal {
         double d4 = 0.5 + offset.z();
         boolean flag = direction$axis == Direction.Axis.X;
         Vec3 vec31 = new Vec3((double)blockpos.getX() + (flag ? d2 : d4), (double)blockpos.getY() + d3, (double)blockpos.getZ() + (flag ? d4 : d2));
-        Vec3 vec32 = PortalShape.findCollisionFreePosition(vec31, level, entity, entitydimensions);
+        Vec3 vec32 = GhostlyPortalShape.findCollisionFreePosition(vec31, level, entity, entitydimensions);
         return new DimensionTransition(level, vec32, vec3, yRot + (float)i, xRot, postDimensionTransition);
     }
 
     @Override
-    public Portal.Transition getLocalTransition() {
+    public Portal.@NotNull Transition getLocalTransition() {
         return Portal.Transition.CONFUSION;
     }
-*/
+
 
 }
