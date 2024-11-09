@@ -117,6 +117,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.LOG_GHOSTLY.get(),1)
                 .unlockedBy(getHasName(ModBlocks.LOG_GHOSTLY.get()), has(ModBlocks.LOG_GHOSTLY.get())).save(recipeOutput);
 
+        //Bloody Log to planks Craft Recipe
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.PLANKS_BLOODY.get(), 4)
+                .requires(ModBlocks.LOG_BLOODY.get(),1)
+                .unlockedBy(getHasName(ModBlocks.LOG_BLOODY.get()), has(ModBlocks.LOG_BLOODY.get())).save(recipeOutput);
+
     }
     protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
                                       float pExperience, int pCookingTIme, String pGroup) {
