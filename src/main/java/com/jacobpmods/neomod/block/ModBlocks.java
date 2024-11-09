@@ -139,9 +139,17 @@ public class ModBlocks {
             .strength(2f).sound(SoundType.WOOD)));
 
 
+    //Bloody Grass/Dirt
+    public static final DeferredBlock<Block> BLOODY_GRASS_BLOCK = registerBlock("bloody_grass_block",
+            GhostlyBlock::new);
+
+   /* public static final DeferredBlock<Block> BLOODY_DIRT = registerBlock("ghostly_dirt",
+            GhostlyDirtBlock::new);*/
+
+
     public static final DeferredBlock<Block> BLOODY_SAPLING = registerBlock("bloody_sapling",
             () -> new ModSaplingBlock(ModTreeGrowers.BLOODY, BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_SAPLING)
-                    .strength(0.2f).sound(SoundType.CHERRY_SAPLING),  ModBlocks.GHOSTLY_GRASS_BLOCK.get(), ModBlocks.GHOSTLY_DIRT.get(), Blocks.GRASS_BLOCK, Blocks.DIRT));
+                    .strength(0.2f).sound(SoundType.CHERRY_SAPLING), ModBlocks.BLOODY_GRASS_BLOCK.get(), ModBlocks.GHOSTLY_GRASS_BLOCK.get(), ModBlocks.GHOSTLY_DIRT.get(), Blocks.GRASS_BLOCK, Blocks.DIRT));
 
 
     public static final DeferredBlock<Block> PLANKS_BLOODY = registerBlock("planks_bloody", () ->new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
@@ -163,13 +171,6 @@ public class ModBlocks {
     });
 
 
-
-    //Ghostly Grass/Dirt
-    public static final DeferredBlock<Block> BLOODY_GRASS_BLOCK = registerBlock("bloody_grass_block",
-            GhostlyBlock::new);
-
-   /* public static final DeferredBlock<Block> BLOODY_DIRT = registerBlock("ghostly_dirt",
-            GhostlyDirtBlock::new);*/
 
 
 
