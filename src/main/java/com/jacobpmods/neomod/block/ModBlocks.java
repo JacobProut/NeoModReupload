@@ -164,6 +164,12 @@ public class ModBlocks {
 
 
 
+    //Ghostly Grass/Dirt
+    public static final DeferredBlock<Block> BLOODY_GRASS_BLOCK = registerBlock("bloody_grass_block",
+            GhostlyBlock::new);
+
+   /* public static final DeferredBlock<Block> BLOODY_DIRT = registerBlock("ghostly_dirt",
+            GhostlyDirtBlock::new);*/
 
 
 

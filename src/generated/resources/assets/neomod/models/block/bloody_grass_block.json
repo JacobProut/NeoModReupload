@@ -1,0 +1,13 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "neomod:block/ghostly_dirt",
+    "up": "neomod:block/bloody_grass_top",
+    "north": "neomod:block/bloody_grass_block",
+    "south": "neomod:block/bloody_grass_block",
+    "west": "neomod:block/bloody_grass_block",
+    "east": "neomod:block/bloody_grass_block"
+  }
+}
+
+

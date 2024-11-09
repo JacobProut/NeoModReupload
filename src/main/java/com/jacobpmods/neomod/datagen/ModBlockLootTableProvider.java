@@ -31,12 +31,16 @@ public class ModBlockLootTableProvider  extends BlockLootSubProvider {
 
         dropSelf(ModBlocks.NEXON_BLOCK.get());
         dropSelf(ModBlocks.NEXON_ORE_BLOCK.get());
+
+        //Grass Blocks
         dropSelf(ModBlocks.GHOSTLY_GRASS_BLOCK.get());
         dropSelf(ModBlocks.GHOSTLY_DIRT.get());
+        dropSelf(ModBlocks.BLOODY_GRASS_BLOCK.get());
+        //dropSelf(ModBlocks.BLOODY_DIRT.get());
+
         dropSelf(ModBlocks.GHOSTLY_WEB.get());
         dropSelf(ModBlocks.GHOSTLY_STONE.get());
         dropSelf(ModBlocks.PEDESTAL.get());
-        //dropSelf(ModBlocks.GHOSTLY_PORTAL_BLOCK.get());
         dropSelf(ModBlocks.BONE_BRICK.get());
 
         this.add(ModBlocks.NEXON_ORE_BLOCK.get(),

@@ -22,8 +22,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
         System.out.println("Registering block states and models");
         blockWithItem(ModBlocks.NEXON_BLOCK);
         blockWithItem(ModBlocks.NEXON_ORE_BLOCK);
+
+        //Grass Blocks
         blockWithItem(ModBlocks.GHOSTLY_GRASS_BLOCK);
         blockWithItem(ModBlocks.GHOSTLY_DIRT);
+        blockWithItem(ModBlocks.BLOODY_GRASS_BLOCK);
+       // blockWithItem(ModBlocks.BLOODY_DIRT);
+
+
         blockWithItem(ModBlocks.BONE_BRICK);
 
 
