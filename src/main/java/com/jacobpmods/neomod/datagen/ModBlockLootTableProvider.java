@@ -65,6 +65,11 @@ public class ModBlockLootTableProvider  extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.LOG_BLOODY.get());
         this.dropSelf(ModBlocks.PLANKS_BLOODY.get());
 
+
+        dropSelf(ModBlocks.SKULL_N_BONES.get());
+        /*this.add(ModBlocks.SKULL_N_BONES.get(),
+                block -> createMultipleOreDrops(ModBlocks.SKULL_N_BONES.get(), ModItems.SUPERIOR_BONES.get(), 1, 2));*/
+
     }
 
 

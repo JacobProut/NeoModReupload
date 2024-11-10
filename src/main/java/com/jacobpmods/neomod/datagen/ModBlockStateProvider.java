@@ -63,6 +63,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlock(ModBlocks.OOZING_FLOWER.get(),
                 models().cross(blockTexture(ModBlocks.OOZING_FLOWER.get()).getPath(), blockTexture(ModBlocks.OOZING_FLOWER.get())).renderType("cutout"));
 
+        blockWithItem(ModBlocks.SKULL_N_BONES);
 
         System.out.println("Finished registering block states and models");
     }

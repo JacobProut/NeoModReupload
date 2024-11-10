@@ -172,6 +172,10 @@ public class ModBlocks {
 
 
 
+    public static final DeferredBlock<Block> SKULL_N_BONES = registerBlock("skull_n_bones", () ->new Block(BlockBehaviour.Properties.of()
+            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+
+
 
 
 

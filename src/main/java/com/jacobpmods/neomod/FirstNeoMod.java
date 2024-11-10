@@ -104,6 +104,7 @@ public class FirstNeoMod {
             event.accept(ModBlocks.GHOSTLY_SAPLING);
             event.accept(ModBlocks.GHOSTLY_STONE);
             event.accept(ModBlocks.BLOODY_SAPLING);
+            event.accept(ModBlocks.SKULL_N_BONES);
 
 
             //Teleporter?

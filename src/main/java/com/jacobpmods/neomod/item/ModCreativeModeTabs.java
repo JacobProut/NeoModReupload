@@ -86,6 +86,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.PLANKS_GHOSTLY.get());
                         output.accept(ModBlocks.PLANKS_BLOODY.get());
 
+                        output.accept(ModBlocks.SKULL_N_BONES.get());
+
                     }).build());
 
 
