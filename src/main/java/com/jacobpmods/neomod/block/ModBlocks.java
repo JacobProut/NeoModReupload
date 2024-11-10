@@ -1,10 +1,7 @@
 package com.jacobpmods.neomod.block;
 
 import com.jacobpmods.neomod.FirstNeoMod;
-import com.jacobpmods.neomod.block.custom.ModFlammableRotatedPillarBlock;
-import com.jacobpmods.neomod.block.custom.ModFlowerBlock;
-import com.jacobpmods.neomod.block.custom.ModSaplingBlock;
-import com.jacobpmods.neomod.block.custom.PedestalBlock;
+import com.jacobpmods.neomod.block.custom.*;
 import com.jacobpmods.neomod.block.custom.portal.GhostlyPortalBlock;
 import com.jacobpmods.neomod.block.terrainblocks.GhostlyBlock;
 import com.jacobpmods.neomod.block.terrainblocks.GhostlyDirtBlock;
@@ -172,7 +169,7 @@ public class ModBlocks {
 
 
 
-    public static final DeferredBlock<Block> SKULL_N_BONES = registerBlock("skull_n_bones", () ->new Block(BlockBehaviour.Properties.of()
+    public static final DeferredBlock<SkullNBones> SKULL_N_BONES = registerBlock("skull_n_bones", () ->new SkullNBones(BlockBehaviour.Properties.of()
             .strength(2f).requiresCorrectToolForDrops().noCollission().sound(SoundType.STONE)));
 
 
