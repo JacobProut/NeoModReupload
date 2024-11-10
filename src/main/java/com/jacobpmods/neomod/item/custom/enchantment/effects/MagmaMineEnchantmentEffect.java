@@ -42,7 +42,7 @@ public record MagmaMineEnchantmentEffect(int level) implements EnchantmentEntity
                 Block.popResource(level, blockPos, new ItemStack(Items.GOLD_INGOT)); // Drop gold ingot
             } else if (blockState.is(ModBlocks.NEXON_ORE_BLOCK)) {
                 level.setBlockAndUpdate(blockPos, Blocks.AIR.defaultBlockState());
-                Block.popResource(level, blockPos, new ItemStack(ModItems.heatednexon.get()));
+                Block.popResource(level, blockPos, new ItemStack(ModItems.HEATED_NEXON.get()));
             }
             // You can add more ores and their respective drops here
 

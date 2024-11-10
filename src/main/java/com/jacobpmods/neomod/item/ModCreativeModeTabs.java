@@ -18,25 +18,25 @@ public class ModCreativeModeTabs {
     public static final Supplier<CreativeModeTab> JACOBS_MODDED_ITEMS_TAB = CREATIVE_MODE_TABS.register("jacobs_modded_items_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.nexon.get()))
                     .title(Component.translatable("Jacobs Modded items")).displayItems((itemDisplayParameters, output) -> {
-                        output.accept(ModItems.speedapple.get());
-                        output.accept(ModItems.fireball.get());
+                        output.accept(ModItems.SPEED_APPLE.get());
+                        output.accept(ModItems.FIRE_BALL.get());
 
                         //Nexon Items
                         output.accept(ModItems.nexon.get());
-                        output.accept(ModItems.heatednexon.get());
-                        output.accept(ModItems.nexoningot.get());
-                        output.accept(ModItems.nexonreinforcedingot.get());
+                        output.accept(ModItems.HEATED_NEXON.get());
+                        output.accept(ModItems.NEXON_INGOT.get());
+                        output.accept(ModItems.NEXON_REINFORCED_INGOT.get());
                         output.accept(ModBlocks.NEXON_BLOCK.get());
                         output.accept(ModBlocks.NEXON_ORE_BLOCK.get());
-                        output.accept(ModItems.nexonpickaxe.get());
-                        output.accept(ModItems.nexonhoe.get());
-                        output.accept(ModItems.nexonshovel.get());
-                        output.accept(ModItems.nexonsword.get());
-                        output.accept(ModItems.nexonaxe.get());
-                        output.accept(ModItems.nexonhelmet);
-                        output.accept(ModItems.nexonchestplate);
-                        output.accept(ModItems.nexonleggings);
-                        output.accept(ModItems.nexonboots);
+                        output.accept(ModItems.NEXON_PICKAXE.get());
+                        output.accept(ModItems.NEXON_HOE.get());
+                        output.accept(ModItems.NEXON_SHOVEL.get());
+                        output.accept(ModItems.NEXON_SWORD.get());
+                        output.accept(ModItems.NEXON_AXE.get());
+                        output.accept(ModItems.NEXON_HELMET);
+                        output.accept(ModItems.NEXON_CHESTPLATE);
+                        output.accept(ModItems.NEXON_LEGGINGS);
+                        output.accept(ModItems.NEXON_BOOTS);
 
                         //Spawn Eggs
                         output.accept(ModItems.SKELETAL_ZOMBIE_SPAWN_EGG);

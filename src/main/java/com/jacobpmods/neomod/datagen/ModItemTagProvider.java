@@ -38,49 +38,49 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModBlocks.PLANKS_BLOODY.get().asItem());
 
         tag(SWORDS)
-                .add(ModItems.nexonsword.get());
+                .add(ModItems.NEXON_SWORD.get());
 
         tag(SWORD_ENCHANTABLE)
-                .add(ModItems.nexonsword.get());
+                .add(ModItems.NEXON_SWORD.get());
 
         tag(MINING_ENCHANTABLE)
-                .add(ModItems.nexonpickaxe.get());
+                .add(ModItems.NEXON_PICKAXE.get());
 
         tag(ARMOR_ENCHANTABLE)
-                .add(ModItems.nexonhelmet.get())
-                .add(ModItems.nexonchestplate.get())
-                .add(ModItems.nexonleggings.get())
-                .add(ModItems.nexonboots.get());
+                .add(ModItems.NEXON_HELMET.get())
+                .add(ModItems.NEXON_CHESTPLATE.get())
+                .add(ModItems.NEXON_LEGGINGS.get())
+                .add(ModItems.NEXON_BOOTS.get());
 
         //Unbreaking 3 Enchantment
         tag(DURABILITY_ENCHANTABLE)
-                .add(ModItems.nexonhelmet.get())
-                .add(ModItems.nexonchestplate.get())
-                .add(ModItems.nexonleggings.get())
-                .add(ModItems.nexonboots.get())
-                .add(ModItems.nexonsword.get())
-                .add(ModItems.nexonaxe.get())
-                .add(ModItems.nexonhoe.get())
-                .add(ModItems.nexonshovel.get());
+                .add(ModItems.NEXON_HELMET.get())
+                .add(ModItems.NEXON_CHESTPLATE.get())
+                .add(ModItems.NEXON_LEGGINGS.get())
+                .add(ModItems.NEXON_BOOTS.get())
+                .add(ModItems.NEXON_SWORD.get())
+                .add(ModItems.NEXON_AXE.get())
+                .add(ModItems.NEXON_HOE.get())
+                .add(ModItems.NEXON_SHOVEL.get());
 
 
         tag(HEAD_ARMOR_ENCHANTABLE)
-                .add(ModItems.nexonhelmet.get());
+                .add(ModItems.NEXON_HELMET.get());
 
         tag(CHEST_ARMOR_ENCHANTABLE)
-                .add(ModItems.nexonchestplate.get());
+                .add(ModItems.NEXON_CHESTPLATE.get());
 
         tag(LEG_ARMOR_ENCHANTABLE)
-                .add(ModItems.nexonleggings.get());
+                .add(ModItems.NEXON_LEGGINGS.get());
 
         tag(FOOT_ARMOR_ENCHANTABLE)
-                .add(ModItems.nexonboots.get());
+                .add(ModItems.NEXON_BOOTS.get());
 
         this.tag(TRIMMABLE_ARMOR)
-                .add(ModItems.nexonhelmet.get())
-                .add(ModItems.nexonchestplate.get())
-                .add(ModItems.nexonleggings.get())
-                .add(ModItems.nexonboots.get());
+                .add(ModItems.NEXON_HELMET.get())
+                .add(ModItems.NEXON_CHESTPLATE.get())
+                .add(ModItems.NEXON_LEGGINGS.get())
+                .add(ModItems.NEXON_BOOTS.get());
 
     }
 }

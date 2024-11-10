@@ -16,42 +16,42 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(FirstNeoMod.MOD_ID);
 
-    public static final DeferredItem<Item> speedapple = ITEMS.register("speedapple", () -> new speedapple(new Item.Properties().food(new FoodProperties.Builder().nutrition(4).saturationModifier(0.3F).build())));
-    public static final DeferredItem<Item> fireball = ITEMS.register("throwablefireball", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> SPEED_APPLE = ITEMS.register("speedapple", () -> new speedapple(new Item.Properties().food(new FoodProperties.Builder().nutrition(4).saturationModifier(0.3F).build())));
+    public static final DeferredItem<Item> FIRE_BALL = ITEMS.register("throwablefireball", () -> new Item(new Item.Properties()));
 
 
     public static final DeferredItem<Item> nexon = ITEMS.register("nexon", () -> new Item(new Item.Properties()));
-    public static final DeferredItem<Item> heatednexon = ITEMS.register("nexonheated", () -> new Item(new Item.Properties()));
-    public static final DeferredItem<Item> nexoningot = ITEMS.register("nexoningot", () -> new Item(new Item.Properties()));
-    public static final DeferredItem<Item> nexonreinforcedingot = ITEMS.register("nexonreinforcedingot", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> HEATED_NEXON = ITEMS.register("nexonheated", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> NEXON_INGOT = ITEMS.register("nexoningot", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> NEXON_REINFORCED_INGOT = ITEMS.register("nexonreinforcedingot", () -> new Item(new Item.Properties()));
 
-    public static final DeferredItem<Item> nexonpickaxe = ITEMS.register("nexonpickaxe",
+    public static final DeferredItem<Item> NEXON_PICKAXE = ITEMS.register("nexonpickaxe",
             () -> new NexonPickaxe(ModToolTiers.NEXON, new Item.Properties().fireResistant()
                     .attributes(NexonPickaxe.createAttributes(ModToolTiers.NEXON,1.0F, -2.8F))));
 
-    public static final DeferredItem<Item> nexonshovel = ITEMS.register("nexonshovel",
+    public static final DeferredItem<Item> NEXON_SHOVEL = ITEMS.register("nexonshovel",
             () -> new ShovelItem(ModToolTiers.NEXON, new Item.Properties().fireResistant()
                     .attributes(ShovelItem.createAttributes(ModToolTiers.NEXON,1.5F, -3.0F))));
 
-    public static final DeferredItem<Item> nexonhoe = ITEMS.register("nexonhoe",
+    public static final DeferredItem<Item> NEXON_HOE = ITEMS.register("nexonhoe",
             () -> new HoeItem(ModToolTiers.NEXON, new Item.Properties().fireResistant()
                     .attributes(HoeItem.createAttributes(ModToolTiers.NEXON,0, -3.0F))));
 
-    public static final DeferredItem<Item> nexonsword = ITEMS.register("nexonsword",
+    public static final DeferredItem<Item> NEXON_SWORD = ITEMS.register("nexonsword",
             () -> new SwordItem(ModToolTiers.NEXON, new Item.Properties().fireResistant()
                     .attributes(SwordItem.createAttributes(ModToolTiers.NEXON,5, -2.4F))));
 
-    public static final DeferredItem<Item> nexonaxe = ITEMS.register("nexonaxe",
+    public static final DeferredItem<Item> NEXON_AXE = ITEMS.register("nexonaxe",
             () -> new NexonAxe(ModToolTiers.NEXON, new Item.Properties().fireResistant()
                     .attributes(NexonAxe.createAttributes(ModToolTiers.NEXON,6, -3.2F))));
 
-    public static final DeferredItem<Item> nexonhelmet = ITEMS.register("nexonhelmet",
+    public static final DeferredItem<Item> NEXON_HELMET = ITEMS.register("nexonhelmet",
             () -> new ModArmorItem(ModArmorMaterials.NEXON, ArmorItem.Type.HELMET, new Item.Properties().fireResistant().durability(ArmorItem.Type.HELMET.getDurability(42))));
-    public static final DeferredItem<Item> nexonchestplate = ITEMS.register("nexonchestplate",
+    public static final DeferredItem<Item> NEXON_CHESTPLATE = ITEMS.register("nexonchestplate",
             () -> new ModArmorItem(ModArmorMaterials.NEXON, ArmorItem.Type.CHESTPLATE, new Item.Properties().fireResistant().durability(ArmorItem.Type.CHESTPLATE.getDurability(42))));
-    public static final DeferredItem<Item> nexonleggings = ITEMS.register("nexonleggings",
+    public static final DeferredItem<Item> NEXON_LEGGINGS = ITEMS.register("nexonleggings",
             () -> new ModArmorItem(ModArmorMaterials.NEXON, ArmorItem.Type.LEGGINGS, new Item.Properties().fireResistant().durability(ArmorItem.Type.LEGGINGS.getDurability(42))));
-    public static final DeferredItem<Item> nexonboots = ITEMS.register("nexonboots",
+    public static final DeferredItem<Item> NEXON_BOOTS = ITEMS.register("nexonboots",
             () -> new ModArmorItem(ModArmorMaterials.NEXON, ArmorItem.Type.BOOTS, new Item.Properties().fireResistant().durability(ArmorItem.Type.BOOTS.getDurability(42))));
 
 

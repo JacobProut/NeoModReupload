@@ -25,16 +25,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         //Nexon Ore Smelting/Blasting Methods
         List<ItemLike> NEXON_SMELTABLES= List.of(ModItems.nexon.get()); //Can add other nexon items here that can be smelted.
-        oreSmelting(recipeOutput, NEXON_SMELTABLES, RecipeCategory.MISC, ModItems.heatednexon.get(), 0.30f, 200, "nexon");
-        oreBlasting(recipeOutput, NEXON_SMELTABLES, RecipeCategory.MISC, ModItems.heatednexon.get(), 0.30f, 100, "nexon");
+        oreSmelting(recipeOutput, NEXON_SMELTABLES, RecipeCategory.MISC, ModItems.HEATED_NEXON.get(), 0.30f, 200, "nexon");
+        oreBlasting(recipeOutput, NEXON_SMELTABLES, RecipeCategory.MISC, ModItems.HEATED_NEXON.get(), 0.30f, 100, "nexon");
 
         //Nexon Block Recipe
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.NEXON_BLOCK.get(), 1)
                 .pattern("AAA")
                 .pattern("AAA")
                 .pattern("AAA")
-                .define('A', ModItems.nexoningot.get())
-                .unlockedBy(getHasName(ModItems.nexoningot.get()), has(ModItems.nexoningot.get())).save(recipeOutput);
+                .define('A', ModItems.NEXON_INGOT.get())
+                .unlockedBy(getHasName(ModItems.NEXON_INGOT.get()), has(ModItems.NEXON_INGOT.get())).save(recipeOutput);
 
         // 9 Nexon from Block Recipe
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.nexon.get(), 9)
@@ -43,67 +43,67 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 
         //Nexon ingot Craft Recipe
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.nexoningot.get(), 1)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.NEXON_INGOT.get(), 1)
                 .pattern("HHH")
                 .pattern("HHH")
                 .pattern("HHH")
-                .define('H', ModItems.heatednexon.get())
-                .unlockedBy(getHasName(ModItems.nexoningot.get()), has(ModItems.nexoningot.get())).save(recipeOutput);
+                .define('H', ModItems.HEATED_NEXON.get())
+                .unlockedBy(getHasName(ModItems.NEXON_INGOT.get()), has(ModItems.NEXON_INGOT.get())).save(recipeOutput);
 
         //Nexon Reinforced Ingot Craft Recipe
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.nexonreinforcedingot.get(), 1)
-                .requires(ModItems.nexoningot.get(),1)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.NEXON_REINFORCED_INGOT.get(), 1)
+                .requires(ModItems.NEXON_INGOT.get(),1)
                 .requires(Items.NETHERITE_INGOT, 1)
-                .unlockedBy(getHasName(ModItems.nexoningot.get()), has(ModItems.nexoningot.get())).save(recipeOutput);
+                .unlockedBy(getHasName(ModItems.NEXON_INGOT.get()), has(ModItems.NEXON_INGOT.get())).save(recipeOutput);
 
         //Nexon Pickaxe Craft Recipe
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.nexonpickaxe.get(), 1)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.NEXON_PICKAXE.get(), 1)
                 .pattern("AAA")
                 .pattern(" S ")
                 .pattern(" S ")
-                .define('A', ModItems.nexonreinforcedingot.get())
+                .define('A', ModItems.NEXON_REINFORCED_INGOT.get())
                 .define('S', Items.STICK)
-                .unlockedBy(getHasName(ModItems.nexonreinforcedingot.get()), has(ModItems.nexonreinforcedingot.get())).save(recipeOutput);
+                .unlockedBy(getHasName(ModItems.NEXON_REINFORCED_INGOT.get()), has(ModItems.NEXON_REINFORCED_INGOT.get())).save(recipeOutput);
 
 
         //Nexon Helmet Craft Recipe
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.nexonhelmet.get(), 1)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.NEXON_HELMET.get(), 1)
                 .pattern("HRH")
                 .pattern("R R")
                 .pattern("   ")
-                .define('H', ModItems.heatednexon.get())
-                .define('R', ModItems.nexonreinforcedingot.get())
-                .unlockedBy(getHasName(ModItems.nexonreinforcedingot.get()), has(ModItems.nexonreinforcedingot.get())).save(recipeOutput);
+                .define('H', ModItems.HEATED_NEXON.get())
+                .define('R', ModItems.NEXON_REINFORCED_INGOT.get())
+                .unlockedBy(getHasName(ModItems.NEXON_REINFORCED_INGOT.get()), has(ModItems.NEXON_REINFORCED_INGOT.get())).save(recipeOutput);
 
         //Nexon Chestplate Craft Recipe
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.nexonchestplate.get(), 1)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.NEXON_CHESTPLATE.get(), 1)
                 .pattern("R R")
                 .pattern("HRH")
                 .pattern("RHR")
-                .define('H', ModItems.heatednexon.get())
-                .define('R', ModItems.nexonreinforcedingot.get())
-                .unlockedBy(getHasName(ModItems.nexonreinforcedingot.get()), has(ModItems.nexonreinforcedingot.get())).save(recipeOutput);
+                .define('H', ModItems.HEATED_NEXON.get())
+                .define('R', ModItems.NEXON_REINFORCED_INGOT.get())
+                .unlockedBy(getHasName(ModItems.NEXON_REINFORCED_INGOT.get()), has(ModItems.NEXON_REINFORCED_INGOT.get())).save(recipeOutput);
 
         //Nexon Leggings Craft Recipe
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.nexonleggings.get(), 1)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.NEXON_LEGGINGS.get(), 1)
                 .pattern("RHR")
                 .pattern("H H")
                 .pattern("R R")
-                .define('H', ModItems.heatednexon.get())
-                .define('R', ModItems.nexonreinforcedingot.get())
-                .unlockedBy(getHasName(ModItems.nexonreinforcedingot.get()), has(ModItems.nexonreinforcedingot.get())).save(recipeOutput);
+                .define('H', ModItems.HEATED_NEXON.get())
+                .define('R', ModItems.NEXON_REINFORCED_INGOT.get())
+                .unlockedBy(getHasName(ModItems.NEXON_REINFORCED_INGOT.get()), has(ModItems.NEXON_REINFORCED_INGOT.get())).save(recipeOutput);
 
         //Nexon Boots Craft Recipe
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.nexonboots.get(), 1)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.NEXON_BOOTS.get(), 1)
                 .pattern("R R")
                 .pattern("H H")
                 .pattern("   ")
-                .define('H', ModItems.heatednexon.get())
-                .define('R', ModItems.nexonreinforcedingot.get())
-                .unlockedBy(getHasName(ModItems.nexonreinforcedingot.get()), has(ModItems.nexonreinforcedingot.get())).save(recipeOutput);
+                .define('H', ModItems.HEATED_NEXON.get())
+                .define('R', ModItems.NEXON_REINFORCED_INGOT.get())
+                .unlockedBy(getHasName(ModItems.NEXON_REINFORCED_INGOT.get()), has(ModItems.NEXON_REINFORCED_INGOT.get())).save(recipeOutput);
 
         //Speed apple
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.speedapple.get(), 1)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SPEED_APPLE.get(), 1)
                 .pattern("SSS")
                 .pattern("SAS")
                 .pattern("SSS")

@@ -82,14 +82,14 @@ public class FirstNeoMod {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.nexon);
-            event.accept(ModItems.heatednexon);
-            event.accept(ModItems.nexoningot);
-            event.accept(ModItems.nexonreinforcedingot);
-            event.accept(ModItems.nexonaxe);
-            event.accept(ModItems.nexonpickaxe);
-            event.accept(ModItems.nexonhoe);
-            event.accept(ModItems.nexonshovel);
-            event.accept(ModItems.nexonsword);
+            event.accept(ModItems.HEATED_NEXON);
+            event.accept(ModItems.NEXON_INGOT);
+            event.accept(ModItems.NEXON_REINFORCED_INGOT);
+            event.accept(ModItems.NEXON_AXE);
+            event.accept(ModItems.NEXON_PICKAXE);
+            event.accept(ModItems.NEXON_HOE);
+            event.accept(ModItems.NEXON_SHOVEL);
+            event.accept(ModItems.NEXON_SWORD);
             event.accept(ModItems.UNDEAD_BONE);
 
         }

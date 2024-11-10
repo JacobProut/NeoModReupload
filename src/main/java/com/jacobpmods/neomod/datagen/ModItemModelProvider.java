@@ -45,30 +45,30 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        basicItem(ModItems.fireball.get());
-        basicItem(ModItems.speedapple.get());
+        basicItem(ModItems.FIRE_BALL.get());
+        basicItem(ModItems.SPEED_APPLE.get());
 
         //Fluids
         basicItem(ModFluids.POISONED_WATER_BUCKET.get());
 
         //Nexon
         basicItem(ModItems.nexon.get());
-        basicItem(ModItems.heatednexon.get());
-        basicItem(ModItems.nexoningot.get());
-        basicItem(ModItems.nexonreinforcedingot.get());
+        basicItem(ModItems.HEATED_NEXON.get());
+        basicItem(ModItems.NEXON_INGOT.get());
+        basicItem(ModItems.NEXON_REINFORCED_INGOT.get());
 
         //Nexon Tools
-        handheldItem(ModItems.nexonpickaxe);
-        handheldItem(ModItems.nexonhoe);
-        handheldItem(ModItems.nexonshovel);
-        handheldItem(ModItems.nexonsword);
-        handheldItem(ModItems.nexonaxe);
+        handheldItem(ModItems.NEXON_PICKAXE);
+        handheldItem(ModItems.NEXON_HOE);
+        handheldItem(ModItems.NEXON_SHOVEL);
+        handheldItem(ModItems.NEXON_SWORD);
+        handheldItem(ModItems.NEXON_AXE);
 
         //Nexon Armor
-        trimmedArmorItem(ModItems.nexonhelmet);
-        trimmedArmorItem(ModItems.nexonchestplate);
-        trimmedArmorItem(ModItems.nexonleggings);
-        trimmedArmorItem(ModItems.nexonboots);
+        trimmedArmorItem(ModItems.NEXON_HELMET);
+        trimmedArmorItem(ModItems.NEXON_CHESTPLATE);
+        trimmedArmorItem(ModItems.NEXON_LEGGINGS);
+        trimmedArmorItem(ModItems.NEXON_BOOTS);
 
         //Saplings
         saplingItem(ModBlocks.GHOSTLY_SAPLING);
