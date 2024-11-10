@@ -2,7 +2,9 @@ package com.jacobpmods.neomod.block.custom;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.monster.Skeleton;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -20,6 +22,7 @@ import static net.neoforged.neoforge.common.ItemAbilities.SHOVEL_DIG;
 
 public class SkullNBones extends Block {
     public static final VoxelShape SHAPE = box(0, 0, 0, 16, 8, 16);
+
     public SkullNBones(Properties properties) {
         super(properties);
     }
@@ -29,10 +32,6 @@ public class SkullNBones extends Block {
         return SHAPE;
     }
 
-
-    //Replace Skeleton with a superior variant(Harder than wither skeleton).
-    //Change handheld item to a new item that is created from the ghostly dimension
-    //Add an animation or particles for when the skeleton spawns
     @Override
     public @NotNull BlockState playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
         if (!level.isClientSide) {
@@ -43,16 +42,33 @@ public class SkullNBones extends Block {
                 // Drop bones
                 Block.popResource((ServerLevel) level, pos, new ItemStack(Items.BONE, 2)); // Adjust quantity as needed
             } else {
-                // Spawn a skeleton
+                // Spawn a skeleton with a 25% chance of dropping its held item
                 Skeleton skeleton = EntityType.SKELETON.create(level);
                 if (skeleton != null) {
                     skeleton.setPos(pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5);
+
+                    // Determine if the skeleton should spawn with a stick (25% chance)
+                    if (RandomSource.create().nextFloat() < 0.25f) {
+                        ItemStack stick = new ItemStack(Items.STICK);
+                        skeleton.setItemSlot(EquipmentSlot.MAINHAND, stick);
+                        // Set a 50% drop chance for the stick if it has one
+                        skeleton.setDropChance(EquipmentSlot.MAINHAND, 0.60f);
+                    }
+                    // Spawn the skeleton into the world
                     level.addFreshEntity(skeleton);
+
+                    // Placeholder for adding particles or animations for spawn effect
+                    // spawnSpawnParticles(level, pos);
                 }
             }
-            level.gameEvent(player, GameEvent.BLOCK_DESTROY, pos); // Optional: Trigger block destroy event
+            level.gameEvent(player, GameEvent.BLOCK_DESTROY, pos); // Trigger block destroy event
         }
         super.playerWillDestroy(level, pos, state, player); // Call the superclass to handle any additional effects
         return state;
+    }
+
+    // Optional: Placeholder method for adding particles or animations during spawn
+    private void spawnSpawnParticles(Level level, BlockPos pos) {
+        // Example: Add particle effects here
     }
 }
