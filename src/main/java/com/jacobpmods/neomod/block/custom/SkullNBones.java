@@ -38,7 +38,7 @@ public class SkullNBones extends Block {
     public @NotNull BlockState playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
         if (!level.isClientSide) {
             ItemStack heldItem = player.getMainHandItem();
-            boolean correctTool = heldItem.canPerformAction(SHOVEL_DIG) && heldItem.is(Items.IRON_SHOVEL);
+            boolean correctTool = heldItem.canPerformAction(SHOVEL_DIG) && heldItem.is(Items.IRON_SHOVEL) || heldItem.is(Items.DIAMOND_SHOVEL) || heldItem.is(ModItems.NEXON_SHOVEL);
 
             if (correctTool) {
                 // Drop bones
