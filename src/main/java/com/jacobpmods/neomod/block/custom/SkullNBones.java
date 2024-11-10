@@ -1,6 +1,8 @@
 package com.jacobpmods.neomod.block.custom;
 
+import com.jacobpmods.neomod.item.ModItems;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.EntityType;
@@ -49,16 +51,16 @@ public class SkullNBones extends Block {
 
                     // Determine if the skeleton should spawn with a stick (25% chance)
                     if (RandomSource.create().nextFloat() < 0.25f) {
-                        ItemStack stick = new ItemStack(Items.STICK);
+                        ItemStack stick = new ItemStack(ModItems.UNDEAD_BONE.get());
                         skeleton.setItemSlot(EquipmentSlot.MAINHAND, stick);
-                        // Set a 50% drop chance for the stick if it has one
+                        // Set a 60% drop chance for the stick if it has one
                         skeleton.setDropChance(EquipmentSlot.MAINHAND, 0.60f);
                     }
                     // Spawn the skeleton into the world
                     level.addFreshEntity(skeleton);
 
                     // Placeholder for adding particles or animations for spawn effect
-                    // spawnSpawnParticles(level, pos);
+                     spawnSpawnParticles((ServerLevel) level, pos);
                 }
             }
             level.gameEvent(player, GameEvent.BLOCK_DESTROY, pos); // Trigger block destroy event
@@ -67,8 +69,24 @@ public class SkullNBones extends Block {
         return state;
     }
 
-    // Optional: Placeholder method for adding particles or animations during spawn
-    private void spawnSpawnParticles(Level level, BlockPos pos) {
-        // Example: Add particle effects here
+
+    // Method to add "rising from the ground" particle effects
+    private void spawnSpawnParticles(ServerLevel level, BlockPos pos) {
+        // Dust particles rising from the ground
+        for (int i = 0; i < 20; i++) {
+            double xOffset = level.random.nextGaussian() * 0.1;
+            double zOffset = level.random.nextGaussian() * 0.1;
+            level.sendParticles(ParticleTypes.POOF, pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5, 1, xOffset, 0.1, zOffset, 0.05);
+        }
+
+        // More particles as skeleton "rises"
+        level.scheduleTick(pos, this, 10); // Delay for added particles
+
+        for (int i = 0; i < 10; i++) {
+            double xOffset = level.random.nextGaussian() * 0.1;
+            double yOffset = level.random.nextFloat() * 0.3;
+            double zOffset = level.random.nextGaussian() * 0.1;
+            level.sendParticles(ParticleTypes.SMOKE, pos.getX() + 0.5, pos.getY() + yOffset, pos.getZ() + 0.5, 1, xOffset, 0.1, zOffset, 0.1);
+        }
     }
 }
