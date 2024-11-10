@@ -38,10 +38,10 @@ public class ModDimensions {
                 false, // hasCeiling
                 false, // ultraWarm
                 true, // natural
-                1.0, // coordinateScale
+                8.0, // coordinateScale
                 true, // bedWorks
                 false, // respawnAnchorWorks
-                -64, // minY
+                0, // minY
                 256, // height
                 256, // logicalHeight
                 BlockTags.INFINIBURN_OVERWORLD, // infiniburn
