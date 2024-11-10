@@ -1,4 +1,4 @@
-// 1.21.1	2024-11-09T17:54:45.0167716	Registries
+// 1.21.1	2024-11-09T18:21:11.1024581	Registries
 f3f806ed4a62cf01acdf1239421b6f38970bc782 data/neomod/dimension/ghostly.json
 d6265a6cfda1ff5e67e1c67af60c56cac1e1982e data/neomod/dimension_type/ghostly_type.json
 c9b78bb3763603d079f3dbf3fbacbabac5f49e1d data/neomod/enchantment/ice_barrage_melee.json
@@ -8,8 +8,8 @@ ae3ba0606bdc3c5c1b6d12aff6656aa98feeb63b data/neomod/enchantment/magma_mine.json
 d45ddce2c52a87e8d20599069175367359a3af7f data/neomod/neoforge/biome_modifier/add_tree_ghostly.json
 4d334b2580eba867fa755e73f83e6fb708497718 data/neomod/worldgen/biome/blood_garden_biome.json
 7f0491336f6320a140be7eb55d6c6c2bdf2b49da data/neomod/worldgen/biome/ghostly_biome.json
-bfc916104bdc3c2f7689e6adba5bae12d11c4e59 data/neomod/worldgen/configured_feature/bloody.json
-0270389b49ad780ae97980b6632c3bcdfff18176 data/neomod/worldgen/configured_feature/ghostly.json
+b490514034bcb547c1950757bdff0180d1b518c9 data/neomod/worldgen/configured_feature/bloody.json
+46080b3bcafeacba0aa26445354314e12c675641 data/neomod/worldgen/configured_feature/ghostly.json
 007be0371a4a90aa5293793661c72c00179912b7 data/neomod/worldgen/configured_feature/oozing_flower.json
 e17562e23fbfdca53f286825f300e607d34cbf4d data/neomod/worldgen/noise_settings/ghostly_dim.json
 22a71884308348483f8afb094c42c737e4c8d5c3 data/neomod/worldgen/placed_feature/bloody_tree_placed.json
