@@ -90,6 +90,7 @@ public class FirstNeoMod {
             event.accept(ModItems.nexonhoe);
             event.accept(ModItems.nexonshovel);
             event.accept(ModItems.nexonsword);
+            event.accept(ModItems.UNDEAD_BONE);
 
         }
 

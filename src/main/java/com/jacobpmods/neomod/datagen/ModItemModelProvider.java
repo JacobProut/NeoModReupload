@@ -81,7 +81,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         //Flowers
         flowerItem(ModBlocks.OOZING_FLOWER);
 
-
+        handheldItem(ModItems.UNDEAD_BONE.get());
 
     }
 
