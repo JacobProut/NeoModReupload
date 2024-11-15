@@ -4,6 +4,7 @@ import com.jacobpmods.neomod.FirstNeoMod;
 import com.jacobpmods.neomod.entity.ModEntities;
 import com.jacobpmods.neomod.item.custom.ModArmorItem;
 import com.jacobpmods.neomod.item.custom.food.speedapple;
+import com.jacobpmods.neomod.item.custom.igniter.PortalIgniter;
 import com.jacobpmods.neomod.item.custom.tools.NexonAxe;
 import com.jacobpmods.neomod.item.custom.tools.NexonPickaxe;
 import net.minecraft.world.food.FoodProperties;
@@ -17,7 +18,7 @@ public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(FirstNeoMod.MOD_ID);
 
     public static final DeferredItem<Item> SPEED_APPLE = ITEMS.register("speedapple", () -> new speedapple(new Item.Properties().food(new FoodProperties.Builder().nutrition(4).saturationModifier(0.3F).build())));
-    public static final DeferredItem<Item> FIRE_BALL = ITEMS.register("throwablefireball", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<PortalIgniter> FIRE_BALL = ITEMS.register("throwablefireball", PortalIgniter::new);
 
 
     public static final DeferredItem<Item> nexon = ITEMS.register("nexon", () -> new Item(new Item.Properties()));

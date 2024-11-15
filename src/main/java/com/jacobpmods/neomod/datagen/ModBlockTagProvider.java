@@ -12,6 +12,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.concurrent.CompletableFuture;
 
 import static com.jacobpmods.neomod.util.ModTags.Blocks.NEEDS_NEXON_TOOL;
+import static com.jacobpmods.neomod.util.ModTags.Blocks.PORTAL_FRAME;
 import static net.minecraft.tags.BlockTags.*;
 import static net.neoforged.neoforge.common.Tags.Blocks.NEEDS_NETHERITE_TOOL;
 
@@ -89,6 +90,10 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         this.tag(SAPLINGS)
                 .add(ModBlocks.GHOSTLY_SAPLING.get())
                 .add(ModBlocks.BLOODY_SAPLING.get());
+
+        this.tag(PORTAL_FRAME)
+                .add(ModBlocks.BONE_BRICK.get());
+
 
     }
 }

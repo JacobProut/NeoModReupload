@@ -25,7 +25,7 @@ public class GhostlyPortalShape {
     public static final int MAX_WIDTH = 21;
     private static final int MIN_HEIGHT = 2;
     public static final int MAX_HEIGHT = 21;
-    private static final BlockBehaviour.StatePredicate FRAME = (state, level, pos) -> state.is(ModTags.Blocks.GHOSTLY_PORTAL_BLOCKS);
+    private static final BlockBehaviour.StatePredicate FRAME = (state, level, pos) -> state.is(ModTags.Blocks.PORTAL_FRAME);
     private final LevelAccessor level;
     private final Direction.Axis axis;
     private final Direction rightDir;

@@ -1,4 +1,4 @@
-// 1.21.1	2024-11-09T15:01:56.3180169	Tags for minecraft:block mod id neomod
+// 1.21.1	2024-11-15T01:52:00.2431318	Tags for minecraft:block mod id neomod
 f5fbb319f25c4056dadc32c54493627182dc4ab6 data/minecraft/tags/block/dirt.json
 acec1d17d5229dc15c4c3dc5f8095e5624c35dce data/minecraft/tags/block/flowers.json
 cdc899dde00cb15e2170f0a866271497533205a6 data/minecraft/tags/block/incorrect_for_diamond_tool.json
@@ -15,3 +15,4 @@ ac3c884022f5a161f793d2a7f9d814466ec169b4 data/minecraft/tags/block/portals.json
 40c7f88c4ac255e6ed8eb06c7c90495e03b821de data/minecraft/tags/block/saplings.json
 0c1f9c1ea432787bc7f25694d692ecfaffa1cdac data/neoforge/tags/block/needs_netherite_tool.json
 2caee6fbacae166e2b2ee470fe31675dde7d82cc data/neomod/tags/block/needs_nexon_tool.json
+2582b968b1869d9386809dc309b0b20bae2beb33 data/neomod/tags/block/portal_frame.json

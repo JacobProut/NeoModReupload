@@ -17,6 +17,8 @@ public class ModTags {
 
         public static final TagKey<Block> GHOSTLY_PORTAL_BLOCKS = createTag("ghostly_portal_blocks");
 
+        public static final TagKey<Block> PORTAL_FRAME = createTag("portal_frame");
+
         private static TagKey<Block> createTag(String name) {
             return BlockTags.create(ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID, name));
         }
