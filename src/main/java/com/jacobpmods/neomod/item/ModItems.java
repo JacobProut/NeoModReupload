@@ -3,6 +3,7 @@ package com.jacobpmods.neomod.item;
 import com.jacobpmods.neomod.FirstNeoMod;
 import com.jacobpmods.neomod.entity.ModEntities;
 import com.jacobpmods.neomod.item.custom.ModArmorItem;
+import com.jacobpmods.neomod.item.custom.curiosItems.RingOfUndeadStrength;
 import com.jacobpmods.neomod.item.custom.food.speedapple;
 import com.jacobpmods.neomod.item.custom.igniter.PortalIgniter;
 import com.jacobpmods.neomod.item.custom.tools.NexonAxe;
@@ -55,8 +56,12 @@ public class ModItems {
     public static final DeferredItem<Item> NEXON_BOOTS = ITEMS.register("nexonboots",
             () -> new ModArmorItem(ModArmorMaterials.NEXON, ArmorItem.Type.BOOTS, new Item.Properties().fireResistant().durability(ArmorItem.Type.BOOTS.getDurability(42))));
 
-
     public static final DeferredItem<Item> UNDEAD_BONE = ITEMS.register("undead_bone", () -> new Item(new Item.Properties()));
+
+
+    //rings
+    public static final DeferredItem<Item> UNDEAD_STRENGTH_RING = ITEMS.register("undead_strength_ring", RingOfUndeadStrength::new);
+
 
     public static final DeferredItem<Item> SKELETAL_ZOMBIE_SPAWN_EGG = ITEMS.register("skeletal_zombie_egg",
             () -> new DeferredSpawnEggItem(ModEntities.SKELETAL_ZOMBIE, 0xFFFFFF, 0xD3D3D3, new Item.Properties()));

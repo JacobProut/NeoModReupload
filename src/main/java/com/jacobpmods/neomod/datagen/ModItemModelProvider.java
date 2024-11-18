@@ -83,6 +83,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         handheldItem(ModItems.UNDEAD_BONE.get());
 
+        basicItem(ModItems.UNDEAD_STRENGTH_RING.get());
+
     }
 
     public void flowerItem(DeferredBlock<Block> block) {

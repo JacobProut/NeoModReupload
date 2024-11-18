@@ -26,11 +26,14 @@ public class CuriosDataGen extends CuriosDataProvider {
                 .addSlots("bracelet")
                 .addSlots("ring");
 
+        //this typa method to create new slots
         /*this.createSlot("ring")
                 .size(1)
                 .renderToggle(true)
                 .dropRule(ICurio.DropRule.ALWAYS_KEEP)
                 .addCosmetic(true);*/
+
+
     }
 
 

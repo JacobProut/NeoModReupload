@@ -89,6 +89,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SKULL_N_BONES.get());
                         output.accept(ModItems.UNDEAD_BONE.get());
 
+                        //Rings
+                        output.accept(ModItems.UNDEAD_STRENGTH_RING.get());
+
                     }).build());
 
 
