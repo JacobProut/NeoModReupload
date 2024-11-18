@@ -1,4 +1,4 @@
-// 1.21.1	2024-11-17T19:14:07.1453791	Item Models: neomod
+// 1.21.1	2024-11-17T23:46:18.6039722	Item Models: neomod
 cbd57698a1698700f87943fff09389d5d15b6106 assets/neomod/models/item/bloody_sapling.json
 14c5b11b47fba897b1c341bb9e5a2cd24017678c assets/neomod/models/item/ghostly_sapling.json
 bb1db9b27e848db13a425e9df60ae7e1765aabe7 assets/neomod/models/item/nexon.json
@@ -58,6 +58,7 @@ b0b585b09e3ccc2666abbf50c269d9c2cb8133f9 assets/neomod/models/item/oozing_flower
 1959b294b841ca63537cbf06722b63bfa5c0e8d7 assets/neomod/models/item/poisoned_water_bucket.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/neomod/models/item/skeletal_enderman_egg.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/neomod/models/item/skeletal_zombie_egg.json
+f8171fe4b496de7f2610cbee61e76b679a285234 assets/neomod/models/item/soul_split_necklace.json
 66b7a359dbf78b96087c99c975d23fe33fe89f32 assets/neomod/models/item/speedapple.json
 8cdbb68239453abf6c2fd16ce7169d890fd8615f assets/neomod/models/item/throwablefireball.json
 de1e7adecaca9f063d2ca1e159e2370834d2c89c assets/neomod/models/item/undead_bone.json

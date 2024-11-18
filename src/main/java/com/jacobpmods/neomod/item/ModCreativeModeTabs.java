@@ -92,6 +92,10 @@ public class ModCreativeModeTabs {
                         //Rings
                         output.accept(ModItems.UNDEAD_STRENGTH_RING.get());
 
+                        //Necklaces
+                        output.accept(ModItems.SOUL_SPLIT_NECKLACE.get());
+
+
                     }).build());
 
 

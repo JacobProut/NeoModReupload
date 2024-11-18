@@ -1,7 +1,6 @@
 package com.jacobpmods.neomod;
 
 import com.jacobpmods.neomod.block.ModBlocks;
-import com.jacobpmods.neomod.worldgen.dimension.ModPoiTypes;
 import com.jacobpmods.neomod.block.entity.custom.ModBlockEntities;
 import com.jacobpmods.neomod.block.entity.renderer.PedestalBlockEntityRenderer;
 import com.jacobpmods.neomod.entity.ModEntities;
@@ -16,6 +15,7 @@ import com.jacobpmods.neomod.item.ModItems;
 import com.jacobpmods.neomod.item.custom.enchantment.ModEnchantmentEffects;
 import com.jacobpmods.neomod.screen.ModMenuTypes;
 import com.jacobpmods.neomod.screen.custom.PedestalScreen;
+import com.jacobpmods.neomod.worldgen.dimension.ModPoiTypes;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -108,7 +108,6 @@ public class FirstNeoMod {
             event.accept(ModBlocks.SKULL_N_BONES);
 
 
-            //Teleporter?
             event.accept(ModBlocks.GHOSTLY_WEB);
         }
 

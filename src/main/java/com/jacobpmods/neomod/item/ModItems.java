@@ -4,6 +4,7 @@ import com.jacobpmods.neomod.FirstNeoMod;
 import com.jacobpmods.neomod.entity.ModEntities;
 import com.jacobpmods.neomod.item.custom.ModArmorItem;
 import com.jacobpmods.neomod.item.custom.curiosItems.RingOfUndeadStrength;
+import com.jacobpmods.neomod.item.custom.curiosItems.SoulSplitNecklace;
 import com.jacobpmods.neomod.item.custom.food.speedapple;
 import com.jacobpmods.neomod.item.custom.igniter.PortalIgniter;
 import com.jacobpmods.neomod.item.custom.tools.NexonAxe;
@@ -62,6 +63,8 @@ public class ModItems {
     //rings
     public static final DeferredItem<Item> UNDEAD_STRENGTH_RING = ITEMS.register("undead_strength_ring", RingOfUndeadStrength::new);
 
+    //Necklaces
+    public static final DeferredItem<Item> SOUL_SPLIT_NECKLACE = ITEMS.register("soul_split_necklace", SoulSplitNecklace::new);
 
     public static final DeferredItem<Item> SKELETAL_ZOMBIE_SPAWN_EGG = ITEMS.register("skeletal_zombie_egg",
             () -> new DeferredSpawnEggItem(ModEntities.SKELETAL_ZOMBIE, 0xFFFFFF, 0xD3D3D3, new Item.Properties()));
