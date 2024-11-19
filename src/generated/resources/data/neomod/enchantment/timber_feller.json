@@ -1,0 +1,32 @@
+{
+  "anvil_cost": 3,
+  "description": {
+    "translate": "enchantment.neomod.timber_feller"
+  },
+  "effects": {
+    "minecraft:hit_block": [
+      {
+        "effect": {
+          "type": "neomod:timber_feller",
+          "level": 1
+        }
+      }
+    ]
+  },
+  "exclusive_set": "#minecraft:exclusive_set/mining",
+  "max_cost": {
+    "base": 2,
+    "per_level_above_first": 8
+  },
+  "max_level": 1,
+  "min_cost": {
+    "base": 2,
+    "per_level_above_first": 4
+  },
+  "primary_items": "#minecraft:axes",
+  "slots": [
+    "mainhand"
+  ],
+  "supported_items": "#minecraft:enchantable/mining",
+  "weight": 5
+}

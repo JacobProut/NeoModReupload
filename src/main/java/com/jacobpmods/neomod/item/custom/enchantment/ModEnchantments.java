@@ -3,6 +3,7 @@ package com.jacobpmods.neomod.item.custom.enchantment;
 import com.jacobpmods.neomod.FirstNeoMod;
 import com.jacobpmods.neomod.item.custom.enchantment.effects.IceBarrageMeleeEnchantmentEffect;
 import com.jacobpmods.neomod.item.custom.enchantment.effects.MagmaMineEnchantmentEffect;
+import com.jacobpmods.neomod.item.custom.enchantment.effects.TimberFellerEnchantmentEffect;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
@@ -21,6 +22,8 @@ public class ModEnchantments {
     public static final ResourceKey<Enchantment> ICE_BARRAGE_MELEE = ResourceKey.create(Registries.ENCHANTMENT,
             ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID, "ice_barrage_melee"));
 
+    public static final ResourceKey<Enchantment> TIMBER_FELLER = ResourceKey.create(Registries.ENCHANTMENT,
+            ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID, "timber_feller"));
 
 
     public static void bootstrap(BootstrapContext<Enchantment> context) {
@@ -40,6 +43,16 @@ public class ModEnchantments {
                         .withEffect(EnchantmentEffectComponents.POST_ATTACK, EnchantmentTarget.ATTACKER,
                                 EnchantmentTarget.VICTIM, new IceBarrageMeleeEnchantmentEffect(1))
         );
+
+
+        register(context, TIMBER_FELLER, Enchantment.enchantment(Enchantment.definition(items.getOrThrow(ItemTags.MINING_ENCHANTABLE),
+                        items.getOrThrow(ItemTags.AXES), 5, 1,
+                        Enchantment.dynamicCost(2, 4), Enchantment.dynamicCost(2, 8), 3, EquipmentSlotGroup.MAINHAND))
+                        .exclusiveWith(enchantment.getOrThrow(EnchantmentTags.MINING_EXCLUSIVE))
+                        .withEffect(EnchantmentEffectComponents.HIT_BLOCK, new TimberFellerEnchantmentEffect(1))
+        );
+
+
     }
 
     private static void register(BootstrapContext<Enchantment> context, ResourceKey<Enchantment> key, Enchantment.Builder builder) {

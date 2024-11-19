@@ -3,6 +3,7 @@ package com.jacobpmods.neomod.item.custom.enchantment;
 import com.jacobpmods.neomod.FirstNeoMod;
 import com.jacobpmods.neomod.item.custom.enchantment.effects.IceBarrageMeleeEnchantmentEffect;
 import com.jacobpmods.neomod.item.custom.enchantment.effects.MagmaMineEnchantmentEffect;
+import com.jacobpmods.neomod.item.custom.enchantment.effects.TimberFellerEnchantmentEffect;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.enchantment.effects.EnchantmentEntityEffect;
@@ -21,6 +22,8 @@ public class ModEnchantmentEffects {
     public static final Supplier<MapCodec<? extends EnchantmentEntityEffect>> ICE_BARRAGE_MELEE =
             registerEnchantmentEffect("ice_barrage_melee", IceBarrageMeleeEnchantmentEffect.CODEC);
 
+    public static final Supplier<MapCodec<? extends EnchantmentEntityEffect>> TIMBER_FELLER =
+            registerEnchantmentEffect("timber_feller", TimberFellerEnchantmentEffect.CODEC);
 
 
     private static Supplier<MapCodec<? extends EnchantmentEntityEffect>> registerEnchantmentEffect(String name, MapCodec<? extends EnchantmentEntityEffect> codec) {
