@@ -83,8 +83,12 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         handheldItem(ModItems.UNDEAD_BONE.get());
 
+        //curios worn items
         basicItem(ModItems.UNDEAD_STRENGTH_RING.get());
         basicItem(ModItems.SOUL_SPLIT_NECKLACE.get());
+
+        //Berries
+        basicItem(ModItems.BLOOD_BONE_FRUIT_BERRIES.get());
 
     }
 

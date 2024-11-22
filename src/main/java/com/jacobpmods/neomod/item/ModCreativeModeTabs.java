@@ -95,6 +95,9 @@ public class ModCreativeModeTabs {
                         //Necklaces
                         output.accept(ModItems.SOUL_SPLIT_NECKLACE.get());
 
+                        //Berries
+                        output.accept(ModItems.BLOOD_BONE_FRUIT_BERRIES.get());
+
 
                     }).build());
 

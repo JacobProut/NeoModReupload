@@ -1,7 +1,8 @@
-// 1.21.1	2024-11-10T13:37:20.416263	Loot Tables
+// 1.21.1	2024-11-22T16:31:09.7031974	Loot Tables
 28fa21e9b7ce066e58835deff5edbe255402a473 data/neomod/loot_table/blocks/bloody_grass_block.json
 54a5d5a044a131f0544f194e4c0bf8d66032baaa data/neomod/loot_table/blocks/bloody_leaves.json
 3c4eab000d13357be5ea4cbfc63c4d9e5d44212c data/neomod/loot_table/blocks/bloody_sapling.json
+061fe19eb3535e3531ba46a563546e996c57b7d2 data/neomod/loot_table/blocks/blood_bone_blossom_bush.json
 a726584b71cb1de562c73ac6e1964ecfb0795cc0 data/neomod/loot_table/blocks/bone_brick.json
 949c0cfe594371241204a73bc540e5cd2fa0e419 data/neomod/loot_table/blocks/ghostly_dirt.json
 0b76ad76d4f7d34c5699bd51a5df409839e50bd8 data/neomod/loot_table/blocks/ghostly_grass_block.json

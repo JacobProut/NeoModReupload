@@ -175,6 +175,10 @@ public class ModBlocks {
 
 
 
+    public static final DeferredBlock<Block> BLOOD_BONE_FRUIT_BUSH = BLOCKS.register("blood_bone_blossom_bush",
+            () -> new BloodBoneBlossomBushBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH)));
+
+
 
 
 

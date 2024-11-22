@@ -1,6 +1,7 @@
 package com.jacobpmods.neomod.item;
 
 import com.jacobpmods.neomod.FirstNeoMod;
+import com.jacobpmods.neomod.block.ModBlocks;
 import com.jacobpmods.neomod.entity.ModEntities;
 import com.jacobpmods.neomod.item.custom.ModArmorItem;
 import com.jacobpmods.neomod.item.custom.curiosItems.RingOfUndeadStrength;
@@ -70,6 +71,14 @@ public class ModItems {
             () -> new DeferredSpawnEggItem(ModEntities.SKELETAL_ZOMBIE, 0xFFFFFF, 0xD3D3D3, new Item.Properties()));
     public static final DeferredItem<Item> SKELETAL_ENDERMAN_SPAWN_EGG = ITEMS.register("skeletal_enderman_egg",
             () -> new DeferredSpawnEggItem(ModEntities.SKELETAL_ENDERMAN, 0xFFFFFF, 0xD3D3D3, new Item.Properties()));
+
+
+
+    //Berries
+    public static final DeferredItem<Item> BLOOD_BONE_FRUIT_BERRIES = ITEMS.register("blood_bone_fruit_berries",
+            () -> new ItemNameBlockItem(ModBlocks.BLOOD_BONE_FRUIT_BUSH.get(), new Item.Properties().food(ModFoodProperties.BLOOD_BONE_FRUIT_BERRY)));
+
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

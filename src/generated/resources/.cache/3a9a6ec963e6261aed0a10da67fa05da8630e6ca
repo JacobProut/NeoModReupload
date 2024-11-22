@@ -1,7 +1,8 @@
-// 1.21.1	2024-11-10T13:48:36.5302191	Block States: neomod
+// 1.21.1	2024-11-22T16:31:09.7011972	Block States: neomod
 7cdda68cd3b983e7648bc220e1950f59e5edd79d assets/neomod/blockstates/bloody_grass_block.json
 38cd5a8f9f9dfea6a001af7bdd29bcdbff0bda8b assets/neomod/blockstates/bloody_leaves.json
 0d4f9ebe95107b234bc945220a6fdf18e8ab1b86 assets/neomod/blockstates/bloody_sapling.json
+69d79edcae34c64d67311c27fdd6482da3b24dc0 assets/neomod/blockstates/blood_bone_blossom_bush.json
 76a6fb4695ad34c86a551b23a42ea9855786a46b assets/neomod/blockstates/bone_brick.json
 8de1f0006f8c2e13875e1dbbfa8e1c8fa9849129 assets/neomod/blockstates/ghostly_dirt.json
 bc873194310b166f995eb341b1ff2b9bc5b0630d assets/neomod/blockstates/ghostly_grass_block.json
@@ -23,6 +24,10 @@ d34a28ffc8f91fe8ac55d802eed4a80360966588 assets/neomod/blockstates/stripped_ghos
 71fbee0a77494cc6c99836139442346750b1b90d assets/neomod/models/block/bloody_grass_block.json
 ffde8c41f7f384fdd6f185108f396cec91a2a395 assets/neomod/models/block/bloody_leaves.json
 82f62a1ac40ca2e7f3038b0640d0f73bd0c96eb7 assets/neomod/models/block/bloody_sapling.json
+649a2fd04b545009aacfce6cc50e1667345b2b52 assets/neomod/models/block/blood_bone_blossom_bush_stage0.json
+cc6ffaf1769383cafbd30d6fda0b73f97d0a1a3b assets/neomod/models/block/blood_bone_blossom_bush_stage1.json
+0918c242bdaa623030a5f1e3fed6f8d039769256 assets/neomod/models/block/blood_bone_blossom_bush_stage2.json
+0f41858017e6ce649041f98854f8a9f3a3c1828d assets/neomod/models/block/blood_bone_blossom_bush_stage3.json
 42d578077c031c64c2d6187244cdacbb1050b1fe assets/neomod/models/block/bone_brick.json
 51827f0f8328b6990bdbe46f0771fe69b7a3fe0b assets/neomod/models/block/ghostly_dirt.json
 31eeb8ff686ca4ef259a2519bab003cce6468924 assets/neomod/models/block/ghostly_grass_block.json

@@ -2,15 +2,21 @@ package com.jacobpmods.neomod.datagen;
 
 import com.jacobpmods.neomod.FirstNeoMod;
 import com.jacobpmods.neomod.block.ModBlocks;
+import com.jacobpmods.neomod.block.custom.BloodBoneBlossomBushBlock;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RotatedPillarBlock;
+import net.minecraft.world.level.block.SweetBerryBushBlock;
+import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
+import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
+
+import java.util.function.Function;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -65,7 +71,21 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         blockWithItem(ModBlocks.SKULL_N_BONES);
 
-        System.out.println("Finished registering block states and models");
+        makeBush(((BloodBoneBlossomBushBlock) ModBlocks.BLOOD_BONE_FRUIT_BUSH.get()), "blood_bone_blossom_bush_stage", "blood_bone_blossom_bush_stage");
+    }
+
+    public void makeBush(SweetBerryBushBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> states(state, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    private ConfiguredModel[] states(BlockState state, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().cross(modelName + state.getValue(BloodBoneBlossomBushBlock.AGE),
+                ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID, "block/" + textureName + state.getValue(BloodBoneBlossomBushBlock.AGE))).renderType("cutout"));
+
+        return models;
     }
 
 

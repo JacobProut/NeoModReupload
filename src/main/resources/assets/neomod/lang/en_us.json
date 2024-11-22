@@ -32,7 +32,7 @@
   "item.neomod.undead_strength_ring": "Undead Strength Ring",
   "item.neomod.soul_split_necklace": "Necklace of Soul Split",
 
-
+  "item.neomod.blood_bone_fruit_berries": "Blood Bone Berries",
 
 
 
@@ -67,8 +67,11 @@
   "block.neomod.ghostly_portal_block": "Ghostly Portal Block",
 
   "block.neomod.oozing_flower": "Oozing Flower",
+  "block.neomod.blood_bone_blossom_bush": "Blood Bone Fruit Bush",
 
   "block.neomod.skull_n_bones": "Skull n Bones",
+
+
 
 
   "enchantment.neomod.magma_mine": "Magma Mine",
