@@ -8,7 +8,7 @@
         {
           "biome": "neomod:ghostly_biome",
           "parameters": {
-            "continentalness": 0.0,
+            "continentalness": 0.2,
             "depth": 0.0,
             "erosion": 0.0,
             "humidity": 0.0,
@@ -20,7 +20,7 @@
         {
           "biome": "neomod:blood_garden_biome",
           "parameters": {
-            "continentalness": 0.0,
+            "continentalness": 0.5,
             "depth": 0.0,
             "erosion": 0.2,
             "humidity": 0.2,
