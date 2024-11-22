@@ -1,5 +1,6 @@
 package com.jacobpmods.neomod.block.custom;
 
+import com.jacobpmods.neomod.block.ModBlocks;
 import com.jacobpmods.neomod.item.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
@@ -7,9 +8,11 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.FarmBlock;
 import net.minecraft.world.level.block.SweetBerryBushBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -47,4 +50,9 @@ public class BloodBoneBlossomBushBlock extends SweetBerryBushBlock {
         }
     }
 
+
+    protected boolean mayPlaceOn(BlockState state, BlockGetter level, BlockPos pos) {
+        return state.is(ModBlocks.GHOSTLY_GRASS_BLOCK)  || state.is(ModBlocks.GHOSTLY_DIRT)||
+                state.is(ModBlocks.BLOODY_GRASS_BLOCK) || state.getBlock() instanceof FarmBlock;
+    }
 }

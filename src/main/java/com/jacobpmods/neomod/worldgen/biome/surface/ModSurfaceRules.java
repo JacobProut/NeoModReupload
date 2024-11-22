@@ -17,6 +17,7 @@ public class ModSurfaceRules {
     private static final SurfaceRules.RuleSource OOZING_FLOWER = makeStateRule(ModBlocks.OOZING_FLOWER.get()); // Define the rule for the flower
 
     private static final SurfaceRules.RuleSource MOD_BLOODY_GRASS_BLOCK = makeStateRule(ModBlocks.BLOODY_GRASS_BLOCK.get());
+    private static final SurfaceRules.RuleSource BLOOD_BONE_BUSH = makeStateRule(ModBlocks.BLOOD_BONE_FRUIT_BUSH.get());
 
 
     public static SurfaceRules.RuleSource makeRules() {
