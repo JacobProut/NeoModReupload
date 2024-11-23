@@ -22,10 +22,9 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-public record IceBarrageMeleeEnchantmentEffect(int level) implements EnchantmentEntityEffect {
-    public static final MapCodec<IceBarrageMeleeEnchantmentEffect> CODEC = RecordCodecBuilder.mapCodec(instance ->
-            instance.group(Codec.INT.fieldOf("level").forGetter(IceBarrageMeleeEnchantmentEffect::level))
-                    .apply(instance, IceBarrageMeleeEnchantmentEffect::new));
+public record IceBarrageMeleeEnchantmentEffect() implements EnchantmentEntityEffect {
+    public static final MapCodec<IceBarrageMeleeEnchantmentEffect> CODEC = MapCodec.unit(IceBarrageMeleeEnchantmentEffect::new);
+
 
     private static final long ICE_DURATION_SECONDS_LVL_1 = 2; // Duration in seconds
     private static final long ICE_DURATION_SECONDS_LVL_2 = 4; // Duration in seconds

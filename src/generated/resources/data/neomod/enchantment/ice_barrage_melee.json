@@ -8,8 +8,7 @@
       {
         "affected": "victim",
         "effect": {
-          "type": "neomod:ice_barrage_melee",
-          "level": 1
+          "type": "neomod:ice_barrage_melee"
         },
         "enchanted": "attacker"
       }

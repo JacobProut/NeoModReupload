@@ -34,14 +34,14 @@ public class ModEnchantments {
                 items.getOrThrow(ItemTags.PICKAXES), 5, 1,
                 Enchantment.dynamicCost(2, 4), Enchantment.dynamicCost(2, 8), 3, EquipmentSlotGroup.MAINHAND))
                 .exclusiveWith(enchantment.getOrThrow(EnchantmentTags.MINING_EXCLUSIVE))
-                .withEffect(EnchantmentEffectComponents.HIT_BLOCK, new MagmaMineEnchantmentEffect(1))
+                .withEffect(EnchantmentEffectComponents.HIT_BLOCK, new MagmaMineEnchantmentEffect())
         );
 
         register(context, ICE_BARRAGE_MELEE, Enchantment.enchantment(Enchantment.definition(items.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
                         items.getOrThrow(ItemTags.SWORDS), 5, 3,
                         Enchantment.dynamicCost(2, 4), Enchantment.dynamicCost(2, 8), 3, EquipmentSlotGroup.MAINHAND))
                         .withEffect(EnchantmentEffectComponents.POST_ATTACK, EnchantmentTarget.ATTACKER,
-                                EnchantmentTarget.VICTIM, new IceBarrageMeleeEnchantmentEffect(1))
+                                EnchantmentTarget.VICTIM, new IceBarrageMeleeEnchantmentEffect())
         );
 
 
@@ -49,7 +49,7 @@ public class ModEnchantments {
                         items.getOrThrow(ItemTags.AXES), 5, 1,
                         Enchantment.dynamicCost(2, 4), Enchantment.dynamicCost(2, 8), 3, EquipmentSlotGroup.MAINHAND))
                         .exclusiveWith(enchantment.getOrThrow(EnchantmentTags.MINING_EXCLUSIVE))
-                        .withEffect(EnchantmentEffectComponents.HIT_BLOCK, new TimberFellerEnchantmentEffect(1))
+                        .withEffect(EnchantmentEffectComponents.HIT_BLOCK, new TimberFellerEnchantmentEffect())
         );
 
 

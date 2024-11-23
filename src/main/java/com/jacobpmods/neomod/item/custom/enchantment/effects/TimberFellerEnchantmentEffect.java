@@ -17,13 +17,8 @@ import net.minecraft.world.phys.Vec3;
 import java.util.HashSet;
 import java.util.Set;
 
-public record TimberFellerEnchantmentEffect(int level) implements EnchantmentEntityEffect {
-
-    public static final MapCodec<TimberFellerEnchantmentEffect> CODEC = RecordCodecBuilder.mapCodec(instance ->
-            instance.group(Codec.INT.fieldOf("level").forGetter(TimberFellerEnchantmentEffect::level))
-                    .apply(instance, TimberFellerEnchantmentEffect::new));
-
-
+public record TimberFellerEnchantmentEffect() implements EnchantmentEntityEffect {
+    public static final MapCodec<TimberFellerEnchantmentEffect> CODEC = MapCodec.unit(TimberFellerEnchantmentEffect::new);
 
     @Override
     public void apply(ServerLevel level, int enchantmentLevel, EnchantedItemInUse item, Entity entity, Vec3 origin) {

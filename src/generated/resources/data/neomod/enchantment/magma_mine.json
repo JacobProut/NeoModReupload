@@ -7,8 +7,7 @@
     "minecraft:hit_block": [
       {
         "effect": {
-          "type": "neomod:magma_mine",
-          "level": 1
+          "type": "neomod:magma_mine"
         }
       }
     ]

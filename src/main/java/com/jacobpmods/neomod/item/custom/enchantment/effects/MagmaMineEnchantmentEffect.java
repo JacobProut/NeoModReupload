@@ -20,11 +20,8 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 
-public record MagmaMineEnchantmentEffect(int level) implements EnchantmentEntityEffect {
-    public static final MapCodec<MagmaMineEnchantmentEffect> CODEC = RecordCodecBuilder.mapCodec(instance ->
-            instance.group(Codec.INT.fieldOf("level").forGetter(MagmaMineEnchantmentEffect::level))
-                    .apply(instance, MagmaMineEnchantmentEffect::new));
-
+public record MagmaMineEnchantmentEffect() implements EnchantmentEntityEffect {
+    public static final MapCodec<MagmaMineEnchantmentEffect> CODEC = MapCodec.unit(MagmaMineEnchantmentEffect::new);
 
     @Override
     public void apply(ServerLevel level, int enchantmentLevel, EnchantedItemInUse item, Entity entity, Vec3 origin) {
