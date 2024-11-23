@@ -22,6 +22,7 @@ public class ModPlacedFeatures {
 
 
     public static final ResourceKey<PlacedFeature> BLOODY_TREE_PLACED_KEY = registerKey("bloody_tree_placed");
+    public static final ResourceKey<PlacedFeature> BLOODY_BONE_BUSH_KEY = registerKey("bloody_bone_bush");
 
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
@@ -35,6 +36,8 @@ public class ModPlacedFeatures {
         register(context, BLOODY_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BLOODY_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2), ModBlocks.BLOODY_SAPLING.get()));
 
+        register(context, BLOODY_BONE_BUSH_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BLOOD_BONE_BUSH),
+                List.of(RarityFilter.onAverageOnceEvery(15), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
 
     }
 
