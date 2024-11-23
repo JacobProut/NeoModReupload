@@ -6,6 +6,7 @@ import com.jacobpmods.neomod.entity.ModEntities;
 import com.jacobpmods.neomod.item.custom.ModArmorItem;
 import com.jacobpmods.neomod.item.custom.curiosItems.RingOfUndeadStrength;
 import com.jacobpmods.neomod.item.custom.curiosItems.SoulSplitNecklace;
+import com.jacobpmods.neomod.blockItems.BloodBoneBerry;
 import com.jacobpmods.neomod.item.custom.food.speedapple;
 import com.jacobpmods.neomod.item.custom.igniter.PortalIgniter;
 import com.jacobpmods.neomod.item.custom.tools.NexonAxe;
@@ -76,7 +77,8 @@ public class ModItems {
 
     //Berries
     public static final DeferredItem<Item> BLOOD_BONE_FRUIT_BERRIES = ITEMS.register("blood_bone_fruit_berries",
-            () -> new ItemNameBlockItem(ModBlocks.BLOOD_BONE_FRUIT_BUSH.get(), new Item.Properties().food(ModFoodProperties.BLOOD_BONE_FRUIT_BERRY)));
+            () -> new BloodBoneBerry(ModBlocks.BLOOD_BONE_FRUIT_BUSH.get(), new Item.Properties().food(ModFoodProperties.BLOOD_BONE_FRUIT_BERRY)));
+
 
 
 
