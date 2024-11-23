@@ -20,7 +20,7 @@ public class BloodBoneBerry extends BlockItem {
     @Override
     public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity entity) {
         if (!level.isClientSide) {
-            entity.addEffect(new MobEffectInstance(MobEffects.HEALTH_BOOST, 2400, 1));
+            entity.addEffect(new MobEffectInstance(MobEffects.HEALTH_BOOST, 2400, 0));
         }
 
         return super.finishUsingItem(stack, level, entity);
