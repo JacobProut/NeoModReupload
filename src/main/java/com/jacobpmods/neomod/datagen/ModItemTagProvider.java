@@ -41,7 +41,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.NEXON_SWORD.get());
 
         tag(SWORD_ENCHANTABLE)
-                .add(ModItems.NEXON_SWORD.get());
+                .add(ModItems.NEXON_SWORD.get())
+                .add(ModItems.SCYTHE.get());
 
         tag(MINING_ENCHANTABLE)
                 .add(ModItems.NEXON_PICKAXE.get());

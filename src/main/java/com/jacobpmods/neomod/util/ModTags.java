@@ -15,7 +15,7 @@ public class ModTags {
         public static final TagKey<Block> NEEDS_NEXON_TOOL = createTag("needs_nexon_tool");
         public static final TagKey<Block> INCORRECT_FOR_NEXON_TOOL = createTag("incorrect_for_netherite_tool");
 
-        public static final TagKey<Block> GHOSTLY_PORTAL_BLOCKS = createTag("ghostly_portal_blocks");
+        public static final TagKey<Block> INCORRECT_FOR_SCYTHE = createTag("incorrect_for_scythe_tool");
 
         public static final TagKey<Block> PORTAL_FRAME = createTag("portal_frame");
 

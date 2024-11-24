@@ -90,6 +90,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         //Berries
         basicItem(ModItems.BLOOD_BONE_FRUIT_BERRIES.get());
 
+        handheldItem(ModItems.SCYTHE);
+
     }
 
     public void flowerItem(DeferredBlock<Block> block) {

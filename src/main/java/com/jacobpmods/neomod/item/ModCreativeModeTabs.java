@@ -98,6 +98,8 @@ public class ModCreativeModeTabs {
                         //Berries
                         output.accept(ModItems.BLOOD_BONE_FRUIT_BERRIES.get());
 
+                        output.accept(ModItems.SCYTHE.get());
+
 
                     }).build());
 

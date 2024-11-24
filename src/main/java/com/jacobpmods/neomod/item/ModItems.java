@@ -79,7 +79,9 @@ public class ModItems {
     public static final DeferredItem<Item> BLOOD_BONE_FRUIT_BERRIES = ITEMS.register("blood_bone_fruit_berries",
             () -> new BloodBoneBerry(ModBlocks.BLOOD_BONE_FRUIT_BUSH.get(), new Item.Properties().food(ModFoodProperties.BLOOD_BONE_FRUIT_BERRY)));
 
-
+    public static final DeferredItem<Item> SCYTHE = ITEMS.register("scythe",
+            () -> new SwordItem(ModToolTiers.SCYTHE, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(ModToolTiers.SCYTHE,5, -2.3F))));
 
 
     public static void register(IEventBus eventBus) {
