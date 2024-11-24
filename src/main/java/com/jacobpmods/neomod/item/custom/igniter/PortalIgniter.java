@@ -34,6 +34,15 @@ public class PortalIgniter extends Item {
                 return InteractionResult.sidedSuccess(context.getLevel().isClientSide());
             }
         }
+
+        if (context.getLevel().dimension() == Level.END || context.getLevel().dimension() == ModDimensions.GHOSTLY_LEVEL_KEY) {
+            BlockPos framePos = context.getClickedPos().relative(context.getClickedFace());
+            Optional<GhostlyPortalShape> optional = findPortalShape(context.getLevel(), framePos, shape -> shape.isValid() && shape.getPortalBlocks() == 0, Direction.Axis.X);
+            if (optional.isPresent()) {
+                optional.get().createPortalBlocks();
+                return InteractionResult.sidedSuccess(context.getLevel().isClientSide());
+            }
+        }
         return InteractionResult.FAIL;
     }
 
