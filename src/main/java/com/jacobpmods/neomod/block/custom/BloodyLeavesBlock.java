@@ -1,15 +1,11 @@
 package com.jacobpmods.neomod.block.custom;
 
-import com.jacobpmods.neomod.block.ModBlocks;
 import com.jacobpmods.neomod.particles.ModParticlesTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.particles.ItemParticleOption;
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.util.ParticleUtils;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.CherryLeavesBlock;
 import net.minecraft.world.level.block.LeavesBlock;
 import net.minecraft.world.level.block.state.BlockState;
 
@@ -23,7 +19,7 @@ public class BloodyLeavesBlock extends LeavesBlock {
     public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource random) {
         super.animateTick(state, level, pos, random);
 
-        if (random.nextInt(10) == 0) { // Frequency of particle spawning
+        if (random.nextInt(2) == 0) { // Frequency of particle spawning | orig 10 [Speed of drips]
             BlockPos belowPos = pos.below();
             BlockState belowState = level.getBlockState(belowPos);
 
@@ -36,7 +32,7 @@ public class BloodyLeavesBlock extends LeavesBlock {
 
                 // Add your custom particle
                 ParticleUtils.spawnParticleBelow(level, pos, random, ModParticlesTypes.DRIPPING_BLOOD.get());
-                level.addParticle(ModParticlesTypes.DRIPPING_BLOOD.get(), x, y, z, 0, -0.05, 0); // Adjust velocity for a slow fall
+                level.addParticle(ModParticlesTypes.FALLING_BLOOD.get(), x, y, z, 0, 1.0, 0); // Adjust velocity for a slow fall
             }
         }
     }

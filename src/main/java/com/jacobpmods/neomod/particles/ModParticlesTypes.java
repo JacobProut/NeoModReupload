@@ -13,11 +13,10 @@ public class ModParticlesTypes {
 
     public static final DeferredHolder<ParticleType<?>, SimpleParticleType> DRIPPING_BLOOD = PARTICLES.register("blood_particle",
             () -> new SimpleParticleType(false));
-
     public static final DeferredHolder<ParticleType<?>, SimpleParticleType> FALLING_BLOOD = PARTICLES.register("falling_blood",
             () -> new SimpleParticleType(false));
-
     public static final DeferredHolder<ParticleType<?>, SimpleParticleType> SPLASH = PARTICLES.register("splash", () -> new SimpleParticleType(false));
+
 
     public static void register(IEventBus eventBus) {
         PARTICLES.register(eventBus);
