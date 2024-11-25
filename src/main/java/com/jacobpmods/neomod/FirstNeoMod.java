@@ -13,10 +13,11 @@ import com.jacobpmods.neomod.item.ModArmorMaterials;
 import com.jacobpmods.neomod.item.ModCreativeModeTabs;
 import com.jacobpmods.neomod.item.ModItems;
 import com.jacobpmods.neomod.item.custom.enchantment.ModEnchantmentEffects;
+import com.jacobpmods.neomod.particles.ModParticleFactories;
+import com.jacobpmods.neomod.particles.ModParticlesTypes;
 import com.jacobpmods.neomod.screen.ModMenuTypes;
 import com.jacobpmods.neomod.screen.custom.PedestalScreen;
 import com.jacobpmods.neomod.worldgen.dimension.ModPoiTypes;
-import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRenderers;
@@ -36,16 +37,12 @@ import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsE
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
-import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(FirstNeoMod.MOD_ID)
 public class FirstNeoMod {
     public static final String MOD_ID = "neomod";
-    private static final Logger LOGGER = LogUtils.getLogger();
 
-    // The constructor for the mod class is the first code that is run when your mod is loaded.
-    // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     public FirstNeoMod(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
         NeoForge.EVENT_BUS.register(this);
@@ -53,29 +50,28 @@ public class FirstNeoMod {
         ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
-
         ModEnchantmentEffects.register(modEventBus);
-
         ModArmorMaterials.register(modEventBus);
-
         ModEntities.register(modEventBus);
         ModBlockEntities.register(modEventBus);
-
         ModFluidTypes.register(modEventBus);
         ModFluids.register(modEventBus);
-
         ModMenuTypes.register(modEventBus);
         ModPoiTypes.register(modEventBus);
 
+        modEventBus.addListener(ModParticleFactories::registerParticleFactories);
 
-        // Register the item to a creative tab
+
+        ModParticlesTypes.register(modEventBus);
+
+
         modEventBus.addListener(this::addCreative);
 
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-
+        //CuriosRendererRegistry.register(SOUL_SPLIT_NECKLACE.get().asItem(), () -> new CuriosRenderer());
     }
 
     // Add the example block item to the building blocks tab

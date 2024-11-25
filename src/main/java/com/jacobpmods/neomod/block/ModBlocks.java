@@ -113,7 +113,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> OOZING_FLOWER = registerBlock("oozing_flower",
             () -> new ModFlowerBlock(MobEffects.HARM, 2, BlockBehaviour.Properties.ofFullCopy(Blocks.ALLIUM)));
 
-    public static final DeferredBlock<Block> BLOODY_LEAVES = registerBlock("bloody_leaves", () ->new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)
+    public static final DeferredBlock<Block> BLOODY_LEAVES = registerBlock("bloody_leaves", () ->new BloodyLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)
             .strength(0.2f).sound(SoundType.CHERRY_LEAVES)) {
         @Override
         public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
