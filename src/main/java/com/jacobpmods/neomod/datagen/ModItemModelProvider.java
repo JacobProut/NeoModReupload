@@ -91,6 +91,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.BLOOD_BONE_FRUIT_BERRIES.get());
 
         handheldItem(ModItems.SCYTHE);
+        handheldItem(ModItems.BONE_SWORD);
 
     }
 

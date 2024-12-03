@@ -83,6 +83,9 @@ public class ModItems {
             () -> new SwordItem(ModToolTiers.SCYTHE, new Item.Properties()
                     .attributes(SwordItem.createAttributes(ModToolTiers.SCYTHE,5, -2.3F))));
 
+    public static final DeferredItem<Item> BONE_SWORD = ITEMS.register("bone_sword",
+            () -> new SwordItem(ModToolTiers.BONE, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(ModToolTiers.BONE,4, -2.3F))));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

@@ -38,11 +38,13 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModBlocks.PLANKS_BLOODY.get().asItem());
 
         tag(SWORDS)
-                .add(ModItems.NEXON_SWORD.get());
+                .add(ModItems.NEXON_SWORD.get())
+                .add(ModItems.BONE_SWORD.get());
 
         tag(SWORD_ENCHANTABLE)
                 .add(ModItems.NEXON_SWORD.get())
-                .add(ModItems.SCYTHE.get());
+                .add(ModItems.SCYTHE.get())
+                .add(ModItems.BONE_SWORD.get());
 
         tag(MINING_ENCHANTABLE)
                 .add(ModItems.NEXON_PICKAXE.get());

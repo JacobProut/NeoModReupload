@@ -66,39 +66,43 @@ public class ModCreativeModeTabs {
                         output.accept(ModFluids.POISONED_WATER_BUCKET);
 
                         //Portals
-                        output.accept(ModBlocks.GHOSTLY_PORTAL_BLOCK.get());
+                        output.accept(ModBlocks.GHOSTLY_PORTAL_BLOCK);
 
                         //Flowers
-                        output.accept(ModBlocks.OOZING_FLOWER.get());
+                        output.accept(ModBlocks.OOZING_FLOWER);
 
                         //Leaves
-                        output.accept(ModBlocks.GHOSTLY_LEAVES.get());
-                        output.accept(ModBlocks.BLOODY_LEAVES.get());
+                        output.accept(ModBlocks.GHOSTLY_LEAVES);
+                        output.accept(ModBlocks.BLOODY_LEAVES);
 
                         //Saplings
-                        output.accept(ModBlocks.GHOSTLY_SAPLING.get());
-                        output.accept(ModBlocks.BLOODY_SAPLING.get());
+                        output.accept(ModBlocks.GHOSTLY_SAPLING);
+                        output.accept(ModBlocks.BLOODY_SAPLING);
 
                         //Logs/Wood
-                        output.accept(ModBlocks.LOG_BLOODY.get());
+                        output.accept(ModBlocks.LOG_BLOODY);
 
                         //Planks
-                        output.accept(ModBlocks.PLANKS_GHOSTLY.get());
-                        output.accept(ModBlocks.PLANKS_BLOODY.get());
+                        output.accept(ModBlocks.PLANKS_GHOSTLY);
+                        output.accept(ModBlocks.PLANKS_BLOODY);
 
-                        output.accept(ModBlocks.SKULL_N_BONES.get());
-                        output.accept(ModItems.UNDEAD_BONE.get());
+                        output.accept(ModBlocks.SKULL_N_BONES);
+                        output.accept(ModItems.UNDEAD_BONE);
 
                         //Rings
-                        output.accept(ModItems.UNDEAD_STRENGTH_RING.get());
+                        output.accept(ModItems.UNDEAD_STRENGTH_RING);
 
                         //Necklaces
-                        output.accept(ModItems.SOUL_SPLIT_NECKLACE.get());
+                        output.accept(ModItems.SOUL_SPLIT_NECKLACE);
 
                         //Berries
-                        output.accept(ModItems.BLOOD_BONE_FRUIT_BERRIES.get());
+                        output.accept(ModItems.BLOOD_BONE_FRUIT_BERRIES);
 
                         output.accept(ModItems.SCYTHE.get());
+                        output.accept(ModItems.BONE_SWORD.get());
+
+                        //Vines
+                        output.accept(ModBlocks.BLOODY_VINE.get());
 
 
                     }).build());

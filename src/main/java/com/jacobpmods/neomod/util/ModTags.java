@@ -17,6 +17,7 @@ public class ModTags {
 
         public static final TagKey<Block> INCORRECT_FOR_SCYTHE = createTag("incorrect_for_scythe_tool");
 
+        public static final TagKey<Block> INCORRECT_FOR_BONE_TOOL = createTag("incorrect_for_bone_tool");
         public static final TagKey<Block> PORTAL_FRAME = createTag("portal_frame");
 
         private static TagKey<Block> createTag(String name) {
