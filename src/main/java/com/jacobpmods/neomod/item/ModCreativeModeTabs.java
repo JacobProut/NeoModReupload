@@ -38,6 +38,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.NEXON_LEGGINGS);
                         output.accept(ModItems.NEXON_BOOTS);
 
+                        output.accept(ModItems.SHATTERED_FRAGMENT.get());
+                        output.accept(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get());
+
                         //Spawn Eggs
                         output.accept(ModItems.SKELETAL_ZOMBIE_SPAWN_EGG);
                         output.accept(ModItems.SKELETAL_ENDERMAN_SPAWN_EGG);
@@ -102,7 +105,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.BONE_SWORD.get());
 
                         //Vines
-                        output.accept(ModBlocks.BLOODY_VINE.get());
+                        //output.accept(ModBlocks.BLOODY_VINE.get());
 
 
                     }).build());

@@ -35,6 +35,8 @@
   "item.neomod.blood_bone_fruit_berries": "Blood Bone Berries",
   "item.neomod.scythe": "Scythe",
   "item.neomod.bone_sword": "Bone Sword",
+  "item.neomod.shattered_fragment": "Shattered Fragment",
+
 
 
 
@@ -44,6 +46,8 @@
 
   "block.neomod.nexon_block": "Nexon Block",
   "block.neomod.nexon_ore_block": "Nexon Ore Block",
+  "block.neomod.shattered_fragment_ore_block": "Shattered Fragment Ore Block",
+
   "block.neomod.ghostly_grass_block": "Ghostly Grass",
   "block.neomod.ghostly_grass_top": "Ghostly Grass top",
   "block.neomod.ghostly_dirt": "Ghostly Dirt",

@@ -93,6 +93,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.SCYTHE);
         handheldItem(ModItems.BONE_SWORD);
 
+        basicItem(ModItems.SHATTERED_FRAGMENT.get());
+
     }
 
     public void flowerItem(DeferredBlock<Block> block) {

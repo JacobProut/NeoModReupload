@@ -87,6 +87,8 @@ public class ModItems {
             () -> new SwordItem(ModToolTiers.BONE, new Item.Properties()
                     .attributes(SwordItem.createAttributes(ModToolTiers.BONE,4, -2.3F))));
 
+    public static final DeferredItem<Item> SHATTERED_FRAGMENT = ITEMS.register("shattered_fragment", () -> new Item(new Item.Properties()));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

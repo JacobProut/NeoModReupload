@@ -9,6 +9,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SweetBerryBushBlock;
+import net.minecraft.world.level.block.VineBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
@@ -26,8 +27,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         System.out.println("Registering block states and models");
+        //ORES
         blockWithItem(ModBlocks.NEXON_BLOCK);
         blockWithItem(ModBlocks.NEXON_ORE_BLOCK);
+        blockWithItem(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK);
 
         //Grass Blocks
         blockWithItem(ModBlocks.GHOSTLY_GRASS_BLOCK);
@@ -72,8 +75,20 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.SKULL_N_BONES);
 
         makeBush(((BloodBoneBlossomBushBlock) ModBlocks.BLOOD_BONE_FRUIT_BUSH.get()), "blood_bone_blossom_bush_stage", "blood_bone_blossom_bush_stage");
-    }
 
+        //NEEDS TO BE FIXED
+       // vineBlock(ModBlocks.BLOODY_VINE);
+   }
+
+    private void vineBlock(DeferredBlock<VineBlock> deferredBlock) {
+        getVariantBuilder(deferredBlock.get())
+                .forAllStates(state -> {
+                    String path = BuiltInRegistries.BLOCK.getKey(deferredBlock.get()).getPath();
+                    return ConfiguredModel.builder()
+                            .modelFile(models().singleTexture(path, mcLoc("block/vine"), "vine", blockTexture(deferredBlock.get())))
+                            .build();
+                });
+    }
     public void makeBush(SweetBerryBushBlock block, String modelName, String textureName) {
         Function<BlockState, ConfiguredModel[]> function = state -> states(state, modelName, textureName);
 

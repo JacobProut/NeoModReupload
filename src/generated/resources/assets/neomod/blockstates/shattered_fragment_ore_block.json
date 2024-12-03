@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "neomod:block/shattered_fragment_ore_block"
+    }
+  }
+}

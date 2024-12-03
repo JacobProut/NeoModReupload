@@ -179,7 +179,28 @@ public class ModBlocks {
             () -> new BloodBoneBlossomBushBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH)));
 
 
+    public static final DeferredBlock<Block> SHATTERED_FRAGMENT_ORE_BLOCK = registerBlock("shattered_fragment_ore_block", () ->new Block(BlockBehaviour.Properties.of()
+            .strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST_CLUSTER)));
 
+    /*public static final DeferredBlock<Block> SHATTERED_FRAGMENT_BLOCK = registerBlock("shattered_fragment_block", () ->new Block(BlockBehaviour.Properties.of()
+            .strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST_CLUSTER)));*/
+
+
+ /*   public static final DeferredBlock<VineBlock> BLOODY_VINE = registerBlock("bloody_vine", () -> new BloodyVine(
+            BlockBehaviour.Properties.ofFullCopy(Blocks.VINE)
+                    .mapColor(MapColor.PLANT)
+                    .replaceable()
+                    .noCollission()
+                    .randomTicks()
+                    .strength(0.2F)
+                    .sound(SoundType.VINE)
+                    .ignitedByLava()
+                    .pushReaction(PushReaction.DESTROY)
+    ));
+*/
+            //BlockBehaviour.Properties.ofFullCopy(Blocks.VINE)
+
+            //.noOcclusion().noCollission().instabreak().sound(SoundType.VINE)));
 
 
 

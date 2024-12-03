@@ -1,6 +1,7 @@
 {
   "values": [
     "neomod:nexon_block",
-    "neomod:nexon_ore_block"
+    "neomod:nexon_ore_block",
+    "neomod:shattered_fragment_ore_block"
   ]
 }

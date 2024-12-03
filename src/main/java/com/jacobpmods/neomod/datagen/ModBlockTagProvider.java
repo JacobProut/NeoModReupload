@@ -25,7 +25,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
     protected void addTags(HolderLookup.Provider provider) {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.NEXON_BLOCK.get())
-                .add(ModBlocks.NEXON_ORE_BLOCK.get());
+                .add(ModBlocks.NEXON_ORE_BLOCK.get())
+                .add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get());
 
         tag(MINEABLE_WITH_AXE)
                 .add(ModBlocks.LOG_GHOSTLY.get())
@@ -40,27 +41,33 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(NEEDS_NETHERITE_TOOL)
                 .add(ModBlocks.NEXON_ORE_BLOCK.get())
                 .add(ModBlocks.NEXON_BLOCK.get())
-                .addTag(NEEDS_NETHERITE_TOOL);
+                .addTag(NEEDS_NETHERITE_TOOL)
+                .add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get());
 
         tag(INCORRECT_FOR_DIAMOND_TOOL)
                 .add(ModBlocks.NEXON_ORE_BLOCK.get())
-                .add(ModBlocks.NEXON_BLOCK.get());
+                .add(ModBlocks.NEXON_BLOCK.get())
+                .add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get());
 
         tag(INCORRECT_FOR_IRON_TOOL)
                 .add(ModBlocks.NEXON_ORE_BLOCK.get())
-                .add(ModBlocks.NEXON_BLOCK.get());
+                .add(ModBlocks.NEXON_BLOCK.get())
+                .add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get());
 
         tag(INCORRECT_FOR_GOLD_TOOL)
                 .add(ModBlocks.NEXON_ORE_BLOCK.get())
-                .add(ModBlocks.NEXON_BLOCK.get());
+                .add(ModBlocks.NEXON_BLOCK.get())
+                .add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get());
 
         tag(INCORRECT_FOR_STONE_TOOL)
                 .add(ModBlocks.NEXON_ORE_BLOCK.get())
-                .add(ModBlocks.NEXON_BLOCK.get());
+                .add(ModBlocks.NEXON_BLOCK.get())
+                .add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get());
 
         tag(INCORRECT_FOR_WOODEN_TOOL)
                 .add(ModBlocks.NEXON_ORE_BLOCK.get())
-                .add(ModBlocks.NEXON_BLOCK.get());
+                .add(ModBlocks.NEXON_BLOCK.get())
+                .add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get());
 
         tag(DIRT)
                 .add(ModBlocks.GHOSTLY_DIRT.get());
@@ -79,6 +86,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         this.tag(PORTALS)
                 .add(ModBlocks.GHOSTLY_PORTAL_BLOCK.get());
+        this.tag(PORTAL_FRAME)
+                .add(ModBlocks.BONE_BRICK.get());
 
         tag(FLOWERS)
                 .add(ModBlocks.OOZING_FLOWER.get());
@@ -91,8 +100,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.GHOSTLY_SAPLING.get())
                 .add(ModBlocks.BLOODY_SAPLING.get());
 
-        this.tag(PORTAL_FRAME)
-                .add(ModBlocks.BONE_BRICK.get());
+
+       /* tag(CLIMBABLE)
+                .add(ModBlocks.BLOODY_VINE.get());*/
 
 
     }
