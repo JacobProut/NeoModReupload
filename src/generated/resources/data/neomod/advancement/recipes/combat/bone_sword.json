@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_shattered_fragment": {
+      "conditions": {
+        "items": [
+          {
+            "items": "neomod:shattered_fragment"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "neomod:bone_sword"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_shattered_fragment"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "neomod:bone_sword"
+    ]
+  }
+}

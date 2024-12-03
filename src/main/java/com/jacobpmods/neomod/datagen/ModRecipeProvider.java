@@ -122,6 +122,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.LOG_BLOODY.get(),1)
                 .unlockedBy(getHasName(ModBlocks.LOG_BLOODY.get()), has(ModBlocks.LOG_BLOODY.get())).save(recipeOutput);
 
+        //Bone Sword[Uncharged] Craft Recipe
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.BONE_SWORD.get(), 1)
+                .pattern("FUF")
+                .pattern("FUF")
+                .pattern("FNF")
+                .define('F', ModItems.SHATTERED_FRAGMENT.get())
+                .define('U', ModItems.UNDEAD_BONE.get())
+                .define('N', Items.NETHERITE_SWORD)
+                .unlockedBy(getHasName(ModItems.SHATTERED_FRAGMENT.get()), has(ModItems.SHATTERED_FRAGMENT.get())).save(recipeOutput);
+
+
     }
     protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
                                       float pExperience, int pCookingTIme, String pGroup) {

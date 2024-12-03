@@ -15,7 +15,7 @@ public class ModToolTiers {
     public static final Tier SCYTHE = new SimpleTier(ModTags.Blocks.INCORRECT_FOR_SCYTHE,3000, 11, 5f, 15,
             () -> Ingredient.of(STICK));
 
-    public static final Tier BONE = new SimpleTier(ModTags.Blocks.INCORRECT_FOR_BONE_TOOL,1500, 12, 4f, 15,
+    public static final Tier BONE = new SimpleTier(ModTags.Blocks.INCORRECT_FOR_BONE_TOOL,1200, 11, 5f, 15,
             () -> Ingredient.of(ModItems.UNDEAD_BONE));
 
 

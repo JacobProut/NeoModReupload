@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "F": {
+      "item": "neomod:shattered_fragment"
+    },
+    "N": {
+      "item": "minecraft:netherite_sword"
+    },
+    "U": {
+      "item": "neomod:undead_bone"
+    }
+  },
+  "pattern": [
+    "FUF",
+    "FUF",
+    "FNF"
+  ],
+  "result": {
+    "count": 1,
+    "id": "neomod:bone_sword"
+  }
+}
