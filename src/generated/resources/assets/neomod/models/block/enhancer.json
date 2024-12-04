@@ -1,6 +1,8 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/orientable",
   "textures": {
-    "all": "neomod:block/enhancer"
+    "front": "neomod:block/enhancer_front",
+    "side": "neomod:block/enhancer_side",
+    "top": "neomod:block/enhancer_top"
   }
 }

@@ -1,7 +1,19 @@
 {
   "variants": {
-    "": {
+    "facing=east": {
+      "model": "neomod:block/enhancer",
+      "y": 90
+    },
+    "facing=north": {
       "model": "neomod:block/enhancer"
+    },
+    "facing=south": {
+      "model": "neomod:block/enhancer",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "neomod:block/enhancer",
+      "y": 270
     }
   }
 }
