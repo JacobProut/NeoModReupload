@@ -103,6 +103,7 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.SCYTHE.get());
                         output.accept(ModItems.BONE_SWORD.get());
+                        output.accept(ModItems.SKELETAL_BLOOD_SHARD.get());
 
                         output.accept(ModBlocks.ENHANCER.get());
 

@@ -89,6 +89,8 @@ public class ModItems {
 
     public static final DeferredItem<Item> SHATTERED_FRAGMENT = ITEMS.register("shattered_fragment", () -> new Item(new Item.Properties()));
 
+    public static final DeferredItem<Item> SKELETAL_BLOOD_SHARD = ITEMS.register("skeletal_blood_shard", () -> new Item(new Item.Properties()));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
