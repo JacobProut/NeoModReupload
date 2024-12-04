@@ -1,7 +1,6 @@
 {
   "values": [
     "neomod:nexon_ore_block",
-    "neomod:nexon_block",
-    "#neomod:needs_nexon_tool"
+    "neomod:nexon_block"
   ]
 }

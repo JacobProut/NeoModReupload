@@ -11,8 +11,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
 
-import static com.jacobpmods.neomod.util.ModTags.Blocks.NEEDS_NEXON_TOOL;
-import static com.jacobpmods.neomod.util.ModTags.Blocks.PORTAL_FRAME;
+import static com.jacobpmods.neomod.util.ModTags.Blocks.*;
 import static net.minecraft.tags.BlockTags.*;
 import static net.neoforged.neoforge.common.Tags.Blocks.NEEDS_NETHERITE_TOOL;
 
@@ -34,15 +33,15 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(NEEDS_NEXON_TOOL)
                 .add(ModBlocks.NEXON_ORE_BLOCK.get())
-                .add(ModBlocks.NEXON_BLOCK.get())
-                        .addTag(NEEDS_NEXON_TOOL);
+                .add(ModBlocks.NEXON_BLOCK.get());
+                //.addTag(NEEDS_NEXON_TOOL);
 
 
         tag(NEEDS_NETHERITE_TOOL)
                 .add(ModBlocks.NEXON_ORE_BLOCK.get())
                 .add(ModBlocks.NEXON_BLOCK.get())
-                .addTag(NEEDS_NETHERITE_TOOL)
                 .add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get());
+                //.addTag(NEEDS_NETHERITE_TOOL)
 
         tag(INCORRECT_FOR_DIAMOND_TOOL)
                 .add(ModBlocks.NEXON_ORE_BLOCK.get())
