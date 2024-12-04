@@ -1,5 +1,6 @@
 package com.jacobpmods.neomod.block.entity.custom;
 
+import com.jacobpmods.neomod.block.entity.ModBlockEntities;
 import com.jacobpmods.neomod.screen.custom.PedestalMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;

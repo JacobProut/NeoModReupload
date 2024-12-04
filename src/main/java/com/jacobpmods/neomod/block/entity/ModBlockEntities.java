@@ -1,7 +1,9 @@
-package com.jacobpmods.neomod.block.entity.custom;
+package com.jacobpmods.neomod.block.entity;
 
 import com.jacobpmods.neomod.FirstNeoMod;
 import com.jacobpmods.neomod.block.ModBlocks;
+import com.jacobpmods.neomod.block.entity.custom.EnhancerBlockEntity;
+import com.jacobpmods.neomod.block.entity.custom.PedestalBlockEntity;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.bus.api.IEventBus;
@@ -16,6 +18,11 @@ public class ModBlockEntities {
     public static final Supplier<BlockEntityType<PedestalBlockEntity>> PEDESTAL_BE =
             BLOCK_ENTITIES.register("pedestal_be", () -> BlockEntityType.Builder.of(
                     PedestalBlockEntity::new, ModBlocks.PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<EnhancerBlockEntity>> ENHANCER_BE =
+            BLOCK_ENTITIES.register("enhancer_be", () -> BlockEntityType.Builder.of(
+                    EnhancerBlockEntity::new, ModBlocks.ENHANCER.get()).build(null));
+
 
 
     public static void register(IEventBus eventBus) {

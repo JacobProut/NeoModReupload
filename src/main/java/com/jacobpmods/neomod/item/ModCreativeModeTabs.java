@@ -104,6 +104,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.SCYTHE.get());
                         output.accept(ModItems.BONE_SWORD.get());
 
+                        output.accept(ModBlocks.ENHANCER.get());
+
                         //Vines
                         //output.accept(ModBlocks.BLOODY_VINE.get());
 

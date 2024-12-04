@@ -1,7 +1,7 @@
 package com.jacobpmods.neomod;
 
 import com.jacobpmods.neomod.block.ModBlocks;
-import com.jacobpmods.neomod.block.entity.custom.ModBlockEntities;
+import com.jacobpmods.neomod.block.entity.ModBlockEntities;
 import com.jacobpmods.neomod.block.entity.renderer.PedestalBlockEntityRenderer;
 import com.jacobpmods.neomod.entity.ModEntities;
 import com.jacobpmods.neomod.entity.client.skeletal.enderman.SkeletalEndermanRender;
@@ -16,6 +16,7 @@ import com.jacobpmods.neomod.item.custom.enchantment.ModEnchantmentEffects;
 import com.jacobpmods.neomod.particles.ModParticleFactories;
 import com.jacobpmods.neomod.particles.ModParticlesTypes;
 import com.jacobpmods.neomod.screen.ModMenuTypes;
+import com.jacobpmods.neomod.screen.custom.EnhancerScreen;
 import com.jacobpmods.neomod.screen.custom.PedestalScreen;
 import com.jacobpmods.neomod.worldgen.dimension.ModPoiTypes;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -60,10 +61,9 @@ public class FirstNeoMod {
         ModPoiTypes.register(modEventBus);
 
         modEventBus.addListener(ModParticleFactories::registerParticleFactories);
-
-
         ModParticlesTypes.register(modEventBus);
 
+        //ModTreeDecorators.TREE_DECORATORS.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
 
@@ -148,6 +148,8 @@ public class FirstNeoMod {
         @SubscribeEvent
         public static void registerScreens(RegisterMenuScreensEvent event) {
             event.register(ModMenuTypes.PEDESTAL_MENU.get(), PedestalScreen::new);
+            event.register(ModMenuTypes.ENHANCER_MENU.get(), EnhancerScreen::new);
+
         }
 
     }

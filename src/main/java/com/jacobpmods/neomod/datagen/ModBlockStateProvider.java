@@ -38,6 +38,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.BLOODY_GRASS_BLOCK);
        // blockWithItem(ModBlocks.BLOODY_DIRT);
 
+        blockWithItem(ModBlocks.ENHANCER);
 
         blockWithItem(ModBlocks.BONE_BRICK);
 

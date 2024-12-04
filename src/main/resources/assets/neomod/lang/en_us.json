@@ -1,5 +1,6 @@
 {
   "blockentity.neomod.pedestal": "Pedestal",
+  "blockentity.neomod.enhancer": "Enhancer",
 
 
   "item.neomod.speedapple": "Speed Apple",
@@ -80,6 +81,7 @@
   "block.neomod.skull_n_bones": "Skull n Bones",
   "block.neomod.bloody_vine": "Bloody Vines",
 
+  "block.neomod.enhancer": "Enhancer",
 
 
   "enchantment.neomod.magma_mine": "Magma Mine",

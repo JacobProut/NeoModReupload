@@ -2,6 +2,8 @@ package com.jacobpmods.neomod.block;
 
 import com.jacobpmods.neomod.FirstNeoMod;
 import com.jacobpmods.neomod.block.custom.*;
+import com.jacobpmods.neomod.block.custom.blockentities.EnhancerBlock;
+import com.jacobpmods.neomod.block.custom.blockentities.PedestalBlock;
 import com.jacobpmods.neomod.block.custom.portal.GhostlyPortalBlock;
 import com.jacobpmods.neomod.block.terrainblocks.GhostlyBlock;
 import com.jacobpmods.neomod.block.terrainblocks.GhostlyDirtBlock;
@@ -184,6 +186,9 @@ public class ModBlocks {
 
     /*public static final DeferredBlock<Block> SHATTERED_FRAGMENT_BLOCK = registerBlock("shattered_fragment_block", () ->new Block(BlockBehaviour.Properties.of()
             .strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST_CLUSTER)));*/
+
+    public static final DeferredBlock<Block> ENHANCER = registerBlock("enhancer",
+            () -> new EnhancerBlock(BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops()));
 
 
  /*   public static final DeferredBlock<VineBlock> BLOODY_VINE = registerBlock("bloody_vine", () -> new BloodyVine(

@@ -1,4 +1,4 @@
-package com.jacobpmods.neomod.block.custom;
+package com.jacobpmods.neomod.block.custom.blockentities;
 
 import com.jacobpmods.neomod.block.entity.custom.PedestalBlockEntity;
 import com.mojang.serialization.MapCodec;
