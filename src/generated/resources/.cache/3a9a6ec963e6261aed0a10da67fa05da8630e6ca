@@ -1,9 +1,10 @@
-// 1.21.1	2024-12-03T03:20:11.7060936	Block States: neomod
+// 1.21.1	2024-12-04T04:42:07.1662288	Block States: neomod
 7cdda68cd3b983e7648bc220e1950f59e5edd79d assets/neomod/blockstates/bloody_grass_block.json
 38cd5a8f9f9dfea6a001af7bdd29bcdbff0bda8b assets/neomod/blockstates/bloody_leaves.json
 0d4f9ebe95107b234bc945220a6fdf18e8ab1b86 assets/neomod/blockstates/bloody_sapling.json
 69d79edcae34c64d67311c27fdd6482da3b24dc0 assets/neomod/blockstates/blood_bone_blossom_bush.json
 76a6fb4695ad34c86a551b23a42ea9855786a46b assets/neomod/blockstates/bone_brick.json
+077892a3ac6d6b1e219d255b66b8a24a10e980ca assets/neomod/blockstates/enhancer.json
 8de1f0006f8c2e13875e1dbbfa8e1c8fa9849129 assets/neomod/blockstates/ghostly_dirt.json
 bc873194310b166f995eb341b1ff2b9bc5b0630d assets/neomod/blockstates/ghostly_grass_block.json
 1523c4ffec60e28c7c808031cf5a9ceae5e9e3d4 assets/neomod/blockstates/ghostly_leaves.json
@@ -30,6 +31,7 @@ cc6ffaf1769383cafbd30d6fda0b73f97d0a1a3b assets/neomod/models/block/blood_bone_b
 0918c242bdaa623030a5f1e3fed6f8d039769256 assets/neomod/models/block/blood_bone_blossom_bush_stage2.json
 0f41858017e6ce649041f98854f8a9f3a3c1828d assets/neomod/models/block/blood_bone_blossom_bush_stage3.json
 42d578077c031c64c2d6187244cdacbb1050b1fe assets/neomod/models/block/bone_brick.json
+dfdd01090a533ba964b56aa086893f8e7ae18faf assets/neomod/models/block/enhancer.json
 51827f0f8328b6990bdbe46f0771fe69b7a3fe0b assets/neomod/models/block/ghostly_dirt.json
 31eeb8ff686ca4ef259a2519bab003cce6468924 assets/neomod/models/block/ghostly_grass_block.json
 51d3210f7ac861899d4fdc576dbd481b70468b6c assets/neomod/models/block/ghostly_leaves.json
@@ -56,6 +58,7 @@ effa0e08f5f0450af69579c3e4c38f70d496cdba assets/neomod/models/block/wood_ghostly
 2626dda2dcd65286a49807761dbb5b88953d5a98 assets/neomod/models/item/bloody_grass_block.json
 6d716863f21a549df449490f22efc0527d794438 assets/neomod/models/item/bloody_leaves.json
 7a123e7e3ac487f6e14da58e5379fa22b8f62869 assets/neomod/models/item/bone_brick.json
+2d8f7ad5c688a2fa42ead453ba100c90ea334db9 assets/neomod/models/item/enhancer.json
 201359fa2b3e2ce60b2e834891a919d2cff9991c assets/neomod/models/item/ghostly_dirt.json
 30e23e8fb71f56bac27b1b2d09a496377b8e19d5 assets/neomod/models/item/ghostly_grass_block.json
 40c3d7df993da2c81c5d973b957d65be448a09a5 assets/neomod/models/item/ghostly_leaves.json
