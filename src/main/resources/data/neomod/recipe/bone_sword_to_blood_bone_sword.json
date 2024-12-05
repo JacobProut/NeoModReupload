@@ -1,6 +1,9 @@
 {
   "type": "neomod:enhancing",
-  "ingredient": {
+  "ingredient1": {
+    "item": "neomod:skeletal_blood_shard"
+  },
+  "ingredient2": {
     "item": "neomod:bone_sword"
   },
   "result": {

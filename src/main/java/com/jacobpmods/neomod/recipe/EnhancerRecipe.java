@@ -13,11 +13,12 @@ import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
 
-public record EnhancerRecipe(Ingredient inputItem, ItemStack output) implements Recipe<EnhancerRecipeInput> {
+public record EnhancerRecipe(Ingredient inputItem1, Ingredient inputItem2, ItemStack output) implements Recipe<EnhancerRecipeInput> {
     @Override
     public NonNullList<Ingredient> getIngredients() {
         NonNullList<Ingredient> list = NonNullList.create();
-        list.add(inputItem);
+        list.add(inputItem1);
+        list.add(inputItem2);
         return list;
     }
 
@@ -26,8 +27,8 @@ public record EnhancerRecipe(Ingredient inputItem, ItemStack output) implements 
         if(level.isClientSide()) {
             return false;
         }
-        
-        return inputItem.test(input.getItem(0));
+
+        return inputItem1.test(input.getItem(0)) && inputItem2.test(input.getItem(1));
     }
 
     @Override
@@ -57,16 +58,19 @@ public record EnhancerRecipe(Ingredient inputItem, ItemStack output) implements 
 
     public static class Serializer implements RecipeSerializer<EnhancerRecipe> {
 
+
         public static final MapCodec<EnhancerRecipe> CODEC = RecordCodecBuilder.mapCodec(inst -> inst.group(
-                Ingredient.CODEC_NONEMPTY.fieldOf("ingredient").forGetter(EnhancerRecipe::inputItem),
+                Ingredient.CODEC_NONEMPTY.fieldOf("ingredient1").forGetter(EnhancerRecipe::inputItem1),
+                Ingredient.CODEC_NONEMPTY.fieldOf("ingredient2").forGetter(EnhancerRecipe::inputItem2),
                 ItemStack.CODEC.fieldOf("result").forGetter(EnhancerRecipe::output)
         ).apply(inst, EnhancerRecipe::new));
+
         public static final StreamCodec<RegistryFriendlyByteBuf, EnhancerRecipe> STREAM_CODEC =
                 StreamCodec.composite(
-                        Ingredient.CONTENTS_STREAM_CODEC, EnhancerRecipe::inputItem,
+                        Ingredient.CONTENTS_STREAM_CODEC, EnhancerRecipe::inputItem1,
+                        Ingredient.CONTENTS_STREAM_CODEC, EnhancerRecipe::inputItem2,
                         ItemStack.STREAM_CODEC, EnhancerRecipe::output,
                         EnhancerRecipe::new);
-
         @Override
         public MapCodec<EnhancerRecipe> codec() {
             return CODEC;

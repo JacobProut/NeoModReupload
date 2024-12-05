@@ -169,7 +169,7 @@ public class EnhancerBlockEntity extends BlockEntity implements MenuProvider {
     }
 
     private Optional<RecipeHolder<EnhancerRecipe>> getCurrentRecipe() {
-        return this.level.getRecipeManager().getRecipeFor(ModRecipes.ENHANCER_TYPE.get(), new EnhancerRecipeInput(itemStackHandler.getStackInSlot(INPUT_SLOT)), level);
+        return this.level.getRecipeManager().getRecipeFor(ModRecipes.ENHANCER_TYPE.get(), new EnhancerRecipeInput(itemStackHandler.getStackInSlot(ENHANCER_CHARGE_ITEM_SLOT), itemStackHandler.getStackInSlot(INPUT_SLOT)), level);
     }
 
     private boolean canInsertItemIntoOutputSlot(ItemStack output) {
