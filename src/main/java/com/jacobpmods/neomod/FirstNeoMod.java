@@ -15,6 +15,7 @@ import com.jacobpmods.neomod.item.ModItems;
 import com.jacobpmods.neomod.item.custom.enchantment.ModEnchantmentEffects;
 import com.jacobpmods.neomod.particles.ModParticleFactories;
 import com.jacobpmods.neomod.particles.ModParticlesTypes;
+import com.jacobpmods.neomod.recipe.ModRecipes;
 import com.jacobpmods.neomod.screen.ModMenuTypes;
 import com.jacobpmods.neomod.screen.custom.EnhancerScreen;
 import com.jacobpmods.neomod.screen.custom.PedestalScreen;
@@ -62,6 +63,8 @@ public class FirstNeoMod {
 
         modEventBus.addListener(ModParticleFactories::registerParticleFactories);
         ModParticlesTypes.register(modEventBus);
+
+        ModRecipes.registers(modEventBus);
 
         //ModTreeDecorators.TREE_DECORATORS.register(modEventBus);
 

@@ -2,7 +2,9 @@ package com.jacobpmods.neomod.block.entity.custom;
 
 import com.jacobpmods.neomod.block.custom.blockentities.EnhancerBlock;
 import com.jacobpmods.neomod.block.entity.ModBlockEntities;
-import com.jacobpmods.neomod.item.ModItems;
+import com.jacobpmods.neomod.recipe.EnhancerRecipe;
+import com.jacobpmods.neomod.recipe.EnhancerRecipeInput;
+import com.jacobpmods.neomod.recipe.ModRecipes;
 import com.jacobpmods.neomod.screen.custom.EnhancerMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
@@ -19,11 +21,14 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.items.ItemStackHandler;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.Optional;
 
 public class EnhancerBlockEntity extends BlockEntity implements MenuProvider {
     public final ItemStackHandler itemStackHandler = new ItemStackHandler(3) {
@@ -131,8 +136,8 @@ public class EnhancerBlockEntity extends BlockEntity implements MenuProvider {
     }
 
     private void craftItem() {
-        //REPLACE WITH ENHANCED BONE SWORD
-        ItemStack output = new ItemStack(ModItems.nexon.get());
+        Optional<RecipeHolder<EnhancerRecipe>> recipe = getCurrentRecipe();
+        ItemStack output = recipe.get().value().output();
 
         itemStackHandler.extractItem(INPUT_SLOT, 1, false);
         itemStackHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(output.getItem(),
@@ -154,13 +159,17 @@ public class EnhancerBlockEntity extends BlockEntity implements MenuProvider {
     }
 
     private boolean hasRecipe() {
-        ItemStack input = new ItemStack(ModItems.BONE_SWORD.get());
+        Optional<RecipeHolder<EnhancerRecipe>> recipe = getCurrentRecipe();
+        if(recipe.isEmpty()) {
+            return false;
+        }
 
-        //CHANGE THIS TO ENHANCED BONE SWORD
-        ItemStack output = new ItemStack(ModItems.nexon.get());
+        ItemStack output = recipe.get().value().getResultItem(null);
+        return canInsertAmountIntoOutputSlot(output.getCount()) && canInsertItemIntoOutputSlot(output);
+    }
 
-        return canInsertAmountIntoOutputSlot(output.getCount()) && canInsertItemIntoOutputSlot(output) &&
-                this.itemStackHandler.getStackInSlot(INPUT_SLOT).getItem() == input.getItem();
+    private Optional<RecipeHolder<EnhancerRecipe>> getCurrentRecipe() {
+        return this.level.getRecipeManager().getRecipeFor(ModRecipes.ENHANCER_TYPE.get(), new EnhancerRecipeInput(itemStackHandler.getStackInSlot(INPUT_SLOT)), level);
     }
 
     private boolean canInsertItemIntoOutputSlot(ItemStack output) {
