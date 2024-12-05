@@ -31,7 +31,7 @@ public class EnhancerMenu extends AbstractContainerMenu {
         addPlayerHotbar(inv);
 
         //THESE ARE THE LOCATIONS OF THE GUI SLOTS ABOVE INVENTORY!
-        this.addSlot(new SlotItemHandler(this.blockEntity.itemStackHandler, 0,9,63));
+        this.addSlot(new SlotItemHandler(this.blockEntity.itemStackHandler, 0,21,37));
         this.addSlot(new SlotItemHandler(this.blockEntity.itemStackHandler, 1,54,37));
         this.addSlot(new SlotItemHandler(this.blockEntity.itemStackHandler, 2,113,37));
 

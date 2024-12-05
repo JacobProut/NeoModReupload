@@ -15,7 +15,7 @@ public class EnhancerScreen extends AbstractContainerScreen<EnhancerMenu> {
     private static final ResourceLocation ARROW_TEXTURE =
             ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID, "textures/gui/enhancer/arrow_progress.png");
     private static final ResourceLocation CRYSTAL_TEXTURE =
-            ResourceLocation.parse("textures/block/amethyst_cluster.png");
+            ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID,"textures/item/skeletal_blood_shard.png");
 
     public EnhancerScreen(EnhancerMenu menu, Inventory inventory, Component title) {
         super(menu, inventory, title);
@@ -57,7 +57,7 @@ public class EnhancerScreen extends AbstractContainerScreen<EnhancerMenu> {
     //REFER TO 33:30 in Kaupens Custom Block Entity method to learn how to properly set these
     private void renderProgressCrystal(GuiGraphics guiGraphics, int x, int y) {
         if(menu.isCrafting()) {
-            guiGraphics.blit(CRYSTAL_TEXTURE, x + 112, y + 16 + 16 - menu.getScaledCrystalProgress(), 0,
+            guiGraphics.blit(CRYSTAL_TEXTURE, x + 22, y + 21 + 16 - menu.getScaledCrystalProgress(), 0,
                     16 - menu.getScaledCrystalProgress(), 16, menu.getScaledCrystalProgress(), 16, 16);
         }
     }
