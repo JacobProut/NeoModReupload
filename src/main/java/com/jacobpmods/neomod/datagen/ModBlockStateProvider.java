@@ -38,11 +38,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.BLOODY_GRASS_BLOCK);
        // blockWithItem(ModBlocks.BLOODY_DIRT);
 
-        horizontalBlock(ModBlocks.ENHANCER.get(), models().orientable("neomod:enhancer",
+        /*horizontalBlock(ModBlocks.ENHANCER.get(), models().orientable("neomod:enhancer",
                 //using "mcLoc" allows you to use minecraft blocks. like "block/blast_furnace_side"
                 modLoc("block/enhancer_side"),
                 modLoc("block/enhancer_front"),
-                modLoc("block/enhancer_top")));
+                modLoc("block/enhancer_top")));*/
         blockItem(ModBlocks.ENHANCER);
 
         blockWithItem(ModBlocks.BONE_BRICK);

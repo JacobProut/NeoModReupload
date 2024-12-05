@@ -4,8 +4,14 @@ import com.jacobpmods.neomod.block.entity.ModBlockEntities;
 import com.jacobpmods.neomod.block.entity.custom.EnhancerBlockEntity;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.core.particles.ItemParticleOption;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.SimpleMenuProvider;
@@ -20,12 +26,14 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.Nullable;
 
 public class EnhancerBlock extends BaseEntityBlock {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
+    public static final BooleanProperty LIT = BlockStateProperties.LIT;
     public static final MapCodec<EnhancerBlock> CODEC = simpleCodec(EnhancerBlock::new);
     public EnhancerBlock(Properties properties) {
         super(properties);
@@ -52,12 +60,12 @@ public class EnhancerBlock extends BaseEntityBlock {
     @Nullable
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext blockPlaceContext) {
-        return this.defaultBlockState().setValue(FACING, blockPlaceContext.getHorizontalDirection().getOpposite());
+        return this.defaultBlockState().setValue(FACING, blockPlaceContext.getHorizontalDirection().getOpposite()).setValue(LIT, false);
     }
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> blockBlockStateBuilder) {
-        blockBlockStateBuilder.add(FACING);
+        blockBlockStateBuilder.add(FACING, LIT);
     }
 
     /* Block Entity */
@@ -104,4 +112,31 @@ public class EnhancerBlock extends BaseEntityBlock {
         return createTickerHelper(pBlockEntityType, ModBlockEntities.ENHANCER_BE.get(),
                 (pLevel1, pPos, pState1, pBlockEntity) -> pBlockEntity.tick(pLevel1, pPos, pState1));
     }
+
+    /* LIT */
+    @Override
+    public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource random) {
+        if (!state.getValue(LIT)) {
+            return;
+        }
+        double xPos = (double)pos.getX() + 0.5;
+        double yPos = pos.getY();
+        double zPos = (double)pos.getZ() + 0.5;
+        if (random.nextDouble() < 0.15) {
+                                                                                                        // Volume     ,   Pitch
+            level.playLocalSound(xPos, yPos, zPos, SoundEvents.AMETHYST_BLOCK_CHIME, SoundSource.BLOCKS, 0.5f, 0.5f, false);
+        }
+        Direction direction = state.getValue(FACING);
+        Direction.Axis axis = direction.getAxis();
+        double defaultOffset = random.nextDouble() * 0.6 - 0.3;
+        double xOffsets = axis == Direction.Axis.X ? (double)direction.getStepX() * 0.52 : defaultOffset;
+        double yOffset = random.nextDouble() * 6.0 / 8.0;
+        double zOffset = axis == Direction.Axis.Z ? (double)direction.getStepZ() * 0.52 : defaultOffset;
+        level.addParticle(ParticleTypes.SMOKE, xPos + xOffsets, yPos + yOffset, zPos + zOffset, 0.0, 0.0, 0.0);
+        if(level.getBlockEntity(pos) instanceof EnhancerBlockEntity enhancerBlockEntity && !enhancerBlockEntity.itemStackHandler.getStackInSlot(1).isEmpty()) {
+            level.addParticle(new ItemParticleOption(ParticleTypes.ITEM, enhancerBlockEntity.itemStackHandler.getStackInSlot(1)),
+                    xPos + xOffsets, yPos + yOffset, zPos + zOffset, 0.0, 0.0, 0.0);
+        }
+    }
+
 }

@@ -1,5 +1,6 @@
 package com.jacobpmods.neomod.block.entity.custom;
 
+import com.jacobpmods.neomod.block.custom.blockentities.EnhancerBlock;
 import com.jacobpmods.neomod.block.entity.ModBlockEntities;
 import com.jacobpmods.neomod.item.ModItems;
 import com.jacobpmods.neomod.screen.custom.EnhancerMenu;
@@ -111,6 +112,7 @@ public class EnhancerBlockEntity extends BlockEntity implements MenuProvider {
     public void tick(Level level, BlockPos pos, BlockState state) {
         if(hasRecipe() && isOutputSlotEmptyOrReceivable()) {
             increaseCraftingProgress();
+            level.setBlockAndUpdate(pos, state.setValue(EnhancerBlock.LIT, true));
             setChanged(level, pos, state);
 
             if(hasCraftingFinished()) {
@@ -119,6 +121,7 @@ public class EnhancerBlockEntity extends BlockEntity implements MenuProvider {
             }
         } else  {
             resetProgress();
+            level.setBlockAndUpdate(pos, state.setValue(EnhancerBlock.LIT, false));
         }
     }
 
