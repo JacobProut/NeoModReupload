@@ -22,6 +22,15 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.SPEED_APPLE.get());
                         output.accept(ModItems.FIRE_BALL.get());
 
+                        //Spawn Eggs
+                        output.accept(ModItems.SKELETAL_ZOMBIE_SPAWN_EGG);
+                        output.accept(ModItems.SKELETAL_ENDERMAN_SPAWN_EGG);
+
+                        //Tools
+                        output.accept(ModItems.SCYTHE);
+                        output.accept(ModItems.BONE_SWORD);
+                        output.accept(ModItems.BLOOD_BONE_SWORD);
+
                         //Nexon Items
                         output.accept(ModItems.nexon);
                         output.accept(ModItems.HEATED_NEXON);
@@ -39,21 +48,19 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.NEXON_LEGGINGS);
                         output.accept(ModItems.NEXON_BOOTS);
 
-                        output.accept(ModItems.SHATTERED_FRAGMENT);
-                        output.accept(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK);
-
-                        //Spawn Eggs
-                        output.accept(ModItems.SKELETAL_ZOMBIE_SPAWN_EGG);
-                        output.accept(ModItems.SKELETAL_ENDERMAN_SPAWN_EGG);
-
                         //Nexon Blocks
                         output.accept(ModBlocks.NEXON_BLOCK);
                         output.accept(ModBlocks.NEXON_ORE_BLOCK);
 
+
+                        output.accept(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK);
+                        output.accept(ModItems.SHATTERED_FRAGMENT);
+                        output.accept(ModItems.SKELETAL_BLOOD_SHARD);
+
                         //Grass Blocks
                         output.accept(ModBlocks.GHOSTLY_GRASS_BLOCK);
-                        output.accept(ModBlocks.GHOSTLY_DIRT);
                         output.accept(ModBlocks.BLOODY_GRASS_BLOCK);
+                        output.accept(ModBlocks.GHOSTLY_DIRT);
                         //output.accept(ModBlocks.BLOODY_DIRT.get());
 
 
@@ -65,9 +72,9 @@ public class ModCreativeModeTabs {
 
                         //Stone-CobbleStone Blocks
                         output.accept(ModBlocks.GHOSTLY_STONE);
-                        output.accept(ModBlocks.GHOSTLY_COBBLESTONE);
                         output.accept(ModBlocks.GHOSTLY_STONE_STAIRS);
                         output.accept(ModBlocks.GHOSTLY_STONE_SLAB);
+                        output.accept(ModBlocks.GHOSTLY_COBBLESTONE);
                         output.accept(ModBlocks.GHOSTLY_COBBLESTONE_STAIRS);
                         output.accept(ModBlocks.GHOSTLY_COBBLESTONE_SLAB);
                         output.accept(ModBlocks.GHOSTLY_STONE_BRICKS);
@@ -76,10 +83,10 @@ public class ModCreativeModeTabs {
 
                         //Logs/Wood
                         output.accept(ModBlocks.LOG_GHOSTLY);
-                        output.accept(ModBlocks.LOG_BLOODY);
                         output.accept(ModBlocks.GHOSTLY_PLANKS);
                         output.accept(ModBlocks.GHOSTLY_PLANK_STAIRS);
                         output.accept(ModBlocks.GHOSTLY_PLANK_SLAB);
+                        output.accept(ModBlocks.LOG_BLOODY);
                         output.accept(ModBlocks.PLANKS_BLOODY);
                         output.accept(ModBlocks.BLOODY_PLANK_STAIRS);
                         output.accept(ModBlocks.BLOODY_PLANK_SLAB);
@@ -105,10 +112,6 @@ public class ModCreativeModeTabs {
                         //Portals
                         output.accept(ModBlocks.GHOSTLY_PORTAL_BLOCK);
 
-
-                        output.accept(ModBlocks.SKULL_N_BONES);
-                        output.accept(ModItems.UNDEAD_BONE);
-
                         //Rings
                         output.accept(ModItems.UNDEAD_STRENGTH_RING);
 
@@ -118,18 +121,12 @@ public class ModCreativeModeTabs {
                         //Berries
                         output.accept(ModItems.BLOOD_BONE_FRUIT_BERRIES);
 
-                        output.accept(ModItems.SCYTHE);
-                        output.accept(ModItems.BONE_SWORD);
-                        output.accept(ModItems.BLOOD_BONE_SWORD);
-                        output.accept(ModItems.SKELETAL_BLOOD_SHARD);
-
+                        output.accept(ModBlocks.SKULL_N_BONES);
+                        output.accept(ModItems.UNDEAD_BONE);
+                        output.accept(ModBlocks.GHOSTLY_WEB);
 
                         //Vines
                         //output.accept(ModBlocks.BLOODY_VINE.get());
-
-
-
-                        output.accept(ModBlocks.GHOSTLY_WEB);
 
                     }).build());
 
