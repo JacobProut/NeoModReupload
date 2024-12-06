@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "neomod:block/planks_bloody",
+    "side": "neomod:block/planks_bloody",
+    "top": "neomod:block/planks_bloody"
+  }
+}

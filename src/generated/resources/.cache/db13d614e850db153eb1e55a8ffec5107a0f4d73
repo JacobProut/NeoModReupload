@@ -1,4 +1,4 @@
-// 1.21.1	2024-12-05T23:09:14.6627407	Tags for minecraft:block mod id neomod
+// 1.21.1	2024-12-05T23:56:18.0504859	Tags for minecraft:block mod id neomod
 f5fbb319f25c4056dadc32c54493627182dc4ab6 data/minecraft/tags/block/dirt.json
 acec1d17d5229dc15c4c3dc5f8095e5624c35dce data/minecraft/tags/block/flowers.json
 dd59028367a06f3223363dca901f59663e5b7206 data/minecraft/tags/block/incorrect_for_diamond_tool.json
@@ -7,12 +7,14 @@ dd59028367a06f3223363dca901f59663e5b7206 data/minecraft/tags/block/incorrect_for
 88a18702880bd540d5a6f00f75053ef501a03226 data/minecraft/tags/block/incorrect_for_stone_tool.json
 88a18702880bd540d5a6f00f75053ef501a03226 data/minecraft/tags/block/incorrect_for_wooden_tool.json
 2b722fc860f48a1ebb6da07709c2d8ffdffa5eb0 data/minecraft/tags/block/leaves.json
-2cb95d639d66db75ec0a90f6c6afdb1319eeacae data/minecraft/tags/block/logs_that_burn.json
-5e76e30ffbbb576b7b46fdc1493ade7c6ade4270 data/minecraft/tags/block/mineable/axe.json
+9834f93de3cbd25fc4dc72d19d394b6a1e9deb1b data/minecraft/tags/block/logs_that_burn.json
+9834f93de3cbd25fc4dc72d19d394b6a1e9deb1b data/minecraft/tags/block/mineable/axe.json
 3dcb3423322a8da72f068b05fb6389d3f906325a data/minecraft/tags/block/mineable/pickaxe.json
 0cf0c01099e2e8f641c4cb12d5e51c3e9c66090c data/minecraft/tags/block/planks.json
 ac3c884022f5a161f793d2a7f9d814466ec169b4 data/minecraft/tags/block/portals.json
 40c7f88c4ac255e6ed8eb06c7c90495e03b821de data/minecraft/tags/block/saplings.json
+a2f440985c09e4e099356e9ec5e0a08123a2f29e data/minecraft/tags/block/slabs.json
+84fe0c7c1661b9e56f3f13c3115394ad882fd81f data/minecraft/tags/block/stairs.json
 89a29aabd132ca987e952aa64e2228f65f5a535c data/neoforge/tags/block/needs_netherite_tool.json
 4bbbda2f700f306ebb99f50d0395687954e890e0 data/neomod/tags/block/needs_nexon_tool.json
 2582b968b1869d9386809dc309b0b20bae2beb33 data/neomod/tags/block/portal_frame.json

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "ghostly_plank",
+  "key": {
+    "#": {
+      "item": "neomod:planks_ghostly"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "neomod:ghostly_plank_stairs"
+  }
+}

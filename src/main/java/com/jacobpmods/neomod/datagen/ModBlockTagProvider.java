@@ -39,7 +39,12 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(MINEABLE_WITH_AXE)
                 .add(ModBlocks.LOG_GHOSTLY.get())
-                .add(ModBlocks.PLANKS_GHOSTLY.get());
+                .add(ModBlocks.GHOSTLY_PLANKS.get())
+                .add(ModBlocks.GHOSTLY_PLANK_STAIRS.get())
+                .add(ModBlocks.GHOSTLY_PLANK_SLAB.get())
+                .add(ModBlocks.BLOODY_PLANK_STAIRS.get())
+                .add(ModBlocks.BLOODY_PLANK_SLAB.get())
+                .add(ModBlocks.LOG_BLOODY.get());
 
         tag(NEEDS_NEXON_TOOL)
                 .add(ModBlocks.NEXON_ORE_BLOCK.get())
@@ -153,22 +158,24 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         this.tag(LOGS_THAT_BURN)
                 .add(ModBlocks.LOG_GHOSTLY.get())
-                .add(ModBlocks.WOOD_GHOSTLY.get())
-                .add(ModBlocks.STRIPPED_GHOSTLY_LOG.get())
-                .add(ModBlocks.STRIPPED_GHOSTLY_WOOD.get())
+                .add(ModBlocks.GHOSTLY_PLANKS.get())
+                .add(ModBlocks.GHOSTLY_PLANK_STAIRS.get())
+                .add(ModBlocks.GHOSTLY_PLANK_SLAB.get())
+                .add(ModBlocks.BLOODY_PLANK_STAIRS.get())
+                .add(ModBlocks.BLOODY_PLANK_SLAB.get())
                 .add(ModBlocks.LOG_BLOODY.get());
 
         this.tag(PLANKS)
-                .add(ModBlocks.PLANKS_GHOSTLY.get())
+                .add(ModBlocks.GHOSTLY_PLANKS.get())
                 .add(ModBlocks.PLANKS_BLOODY.get());
 
-        this.tag(PORTALS)
-                .add(ModBlocks.GHOSTLY_PORTAL_BLOCK.get());
-        this.tag(PORTAL_FRAME)
-                .add(ModBlocks.BONE_BRICK.get());
+        this.tag(SLABS)
+                .add(ModBlocks.GHOSTLY_PLANK_SLAB.get())
+                .add(ModBlocks.BLOODY_PLANK_SLAB.get());
 
-        tag(FLOWERS)
-                .add(ModBlocks.OOZING_FLOWER.get());
+        this.tag(STAIRS)
+                .add(ModBlocks.GHOSTLY_PLANK_STAIRS.get())
+                .add(ModBlocks.BLOODY_PLANK_STAIRS.get());
 
         this.tag(LEAVES)
                 .add(ModBlocks.GHOSTLY_LEAVES.get())
@@ -178,6 +185,13 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.GHOSTLY_SAPLING.get())
                 .add(ModBlocks.BLOODY_SAPLING.get());
 
+        tag(FLOWERS)
+                .add(ModBlocks.OOZING_FLOWER.get());
+
+        this.tag(PORTALS)
+                .add(ModBlocks.GHOSTLY_PORTAL_BLOCK.get());
+        this.tag(PORTAL_FRAME)
+                .add(ModBlocks.BONE_BRICK.get());
 
        /* tag(CLIMBABLE)
                 .add(ModBlocks.BLOODY_VINE.get());*/

@@ -113,7 +113,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 
         //Ghostly Log to planks Craft Recipe
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.PLANKS_GHOSTLY.get(), 4)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.GHOSTLY_PLANKS.get(), 4)
                 .requires(ModBlocks.LOG_GHOSTLY.get(),1)
                 .unlockedBy(getHasName(ModBlocks.LOG_GHOSTLY.get()), has(ModBlocks.LOG_GHOSTLY.get())).save(recipeOutput);
 
@@ -147,6 +147,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BONE_BRICK_SLAB.get(), ModBlocks.BONE_BRICK.get());
         stairBuilder(ModBlocks.BONE_BRICK_STAIRS.get(), Ingredient.of(ModBlocks.BONE_BRICK.get())).group("bone_brick")
                 .unlockedBy("has_bone_brick", has(ModBlocks.BONE_BRICK.get())).save(recipeOutput);
+
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GHOSTLY_PLANK_SLAB.get(), ModBlocks.GHOSTLY_PLANKS.get());
+        stairBuilder(ModBlocks.GHOSTLY_PLANK_STAIRS.get(), Ingredient.of(ModBlocks.GHOSTLY_PLANKS.get())).group("ghostly_plank")
+                .unlockedBy("has_ghostly_plank", has(ModBlocks.GHOSTLY_PLANKS.get())).save(recipeOutput);
+
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLOODY_PLANK_SLAB.get(), ModBlocks.PLANKS_BLOODY.get());
+        stairBuilder(ModBlocks.BLOODY_PLANK_STAIRS.get(), Ingredient.of(ModBlocks.PLANKS_BLOODY.get())).group("bloody_plank")
+                .unlockedBy("has_ghostly_plank", has(ModBlocks.PLANKS_BLOODY.get())).save(recipeOutput);
 
     }
     protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,

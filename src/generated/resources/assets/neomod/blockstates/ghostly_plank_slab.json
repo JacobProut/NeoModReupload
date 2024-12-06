@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "neomod:block/ghostly_plank_slab"
+    },
+    "type=double": {
+      "model": "neomod:block/planks_ghostly"
+    },
+    "type=top": {
+      "model": "neomod:block/ghostly_plank_slab_top"
+    }
+  }
+}

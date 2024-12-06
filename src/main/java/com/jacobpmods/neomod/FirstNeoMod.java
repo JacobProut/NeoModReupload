@@ -99,7 +99,7 @@ public class FirstNeoMod {
             event.accept(ModBlocks.GHOSTLY_GRASS_BLOCK);
             event.accept(ModBlocks.GHOSTLY_DIRT);
             event.accept(ModBlocks.LOG_GHOSTLY);
-            event.accept(ModBlocks.PLANKS_GHOSTLY);
+            event.accept(ModBlocks.GHOSTLY_PLANKS);
             event.accept(ModBlocks.GHOSTLY_LEAVES);
             event.accept(ModBlocks.GHOSTLY_SAPLING);
             event.accept(ModBlocks.GHOSTLY_STONE);

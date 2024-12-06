@@ -34,7 +34,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModBlocks.LOG_BLOODY.get().asItem());
 
         tag(PLANKS)
-                .add(ModBlocks.PLANKS_GHOSTLY.get().asItem())
+                .add(ModBlocks.GHOSTLY_PLANKS.get().asItem())
                 .add(ModBlocks.PLANKS_BLOODY.get().asItem());
 
         tag(SWORDS)

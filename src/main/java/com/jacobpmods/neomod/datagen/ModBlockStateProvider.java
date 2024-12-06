@@ -67,37 +67,45 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.BONE_BRICK_SLAB);
 
         System.out.println("Block states and models:logBlock-axisBlock's");
-        logBlock(((RotatedPillarBlock) ModBlocks.LOG_GHOSTLY.get()));
-        axisBlock(((RotatedPillarBlock) ModBlocks.WOOD_GHOSTLY.get()), blockTexture(ModBlocks.LOG_GHOSTLY.get()), blockTexture(ModBlocks.LOG_GHOSTLY.get()));
-        logBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_GHOSTLY_LOG.get()));
-        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_GHOSTLY_WOOD.get()), blockTexture(ModBlocks.STRIPPED_GHOSTLY_LOG.get()), blockTexture(ModBlocks.STRIPPED_GHOSTLY_LOG.get()));
 
 
         blockItem(ModBlocks.LOG_GHOSTLY);
+        logBlock(((RotatedPillarBlock) ModBlocks.LOG_GHOSTLY.get()));
         blockItem(ModBlocks.WOOD_GHOSTLY);
+        axisBlock(((RotatedPillarBlock) ModBlocks.WOOD_GHOSTLY.get()), blockTexture(ModBlocks.LOG_GHOSTLY.get()), blockTexture(ModBlocks.LOG_GHOSTLY.get()));
         blockItem(ModBlocks.STRIPPED_GHOSTLY_LOG);
+        logBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_GHOSTLY_LOG.get()));
         blockItem(ModBlocks.STRIPPED_GHOSTLY_WOOD);
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_GHOSTLY_WOOD.get()), blockTexture(ModBlocks.STRIPPED_GHOSTLY_LOG.get()), blockTexture(ModBlocks.STRIPPED_GHOSTLY_LOG.get()));
 
-        blockWithItem(ModBlocks.GHOSTLY_WEB);
-
-
-        blockWithItem(ModBlocks.PLANKS_GHOSTLY);
+        blockWithItem(ModBlocks.GHOSTLY_PLANKS);
+        stairsBlock(((StairBlock) ModBlocks.GHOSTLY_PLANK_STAIRS.get()), blockTexture(ModBlocks.GHOSTLY_PLANKS.get()));
+        blockItem(ModBlocks.GHOSTLY_PLANK_STAIRS);
+        slabBlock(((SlabBlock) ModBlocks.GHOSTLY_PLANK_SLAB.get()), blockTexture(ModBlocks.GHOSTLY_PLANKS.get()), blockTexture(ModBlocks.GHOSTLY_PLANKS.get()));
+        blockItem(ModBlocks.GHOSTLY_PLANK_SLAB);
         leavesBlock(ModBlocks.GHOSTLY_LEAVES);
         saplingBlock(ModBlocks.GHOSTLY_SAPLING);
 
-        leavesBlock(ModBlocks.BLOODY_LEAVES);
-        logBlock(((RotatedPillarBlock) ModBlocks.LOG_BLOODY.get()));
+        //ADD ROTATION PLACEMENT FOR BLOODY LOGS
         blockItem(ModBlocks.LOG_BLOODY);
-        saplingBlock(ModBlocks.BLOODY_SAPLING);
+        logBlock(((RotatedPillarBlock) ModBlocks.LOG_BLOODY.get()));
+
         blockWithItem(ModBlocks.PLANKS_BLOODY);
+        stairsBlock(((StairBlock) ModBlocks.BLOODY_PLANK_STAIRS.get()), blockTexture(ModBlocks.PLANKS_BLOODY.get()));
+        blockItem(ModBlocks.BLOODY_PLANK_STAIRS);
+        slabBlock(((SlabBlock) ModBlocks.BLOODY_PLANK_SLAB.get()), blockTexture(ModBlocks.PLANKS_BLOODY.get()), blockTexture(ModBlocks.PLANKS_BLOODY.get()));
+        blockItem(ModBlocks.BLOODY_PLANK_SLAB);
+        leavesBlock(ModBlocks.BLOODY_LEAVES);
+        saplingBlock(ModBlocks.BLOODY_SAPLING);
 
 
         simpleBlock(ModBlocks.OOZING_FLOWER.get(),
                 models().cross(blockTexture(ModBlocks.OOZING_FLOWER.get()).getPath(), blockTexture(ModBlocks.OOZING_FLOWER.get())).renderType("cutout"));
 
-        blockWithItem(ModBlocks.SKULL_N_BONES);
-
         makeBush(((BloodBoneBlossomBushBlock) ModBlocks.BLOOD_BONE_FRUIT_BUSH.get()), "blood_bone_blossom_bush_stage", "blood_bone_blossom_bush_stage");
+
+        blockWithItem(ModBlocks.GHOSTLY_WEB);
+        blockWithItem(ModBlocks.SKULL_N_BONES);
 
         //NEEDS TO BE FIXED
        // vineBlock(ModBlocks.BLOODY_VINE);

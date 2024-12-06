@@ -34,19 +34,15 @@ public class ModBlockLootTableProvider  extends BlockLootSubProvider {
     protected void generate() {
         dropSelf(ModBlocks.NEXON_BLOCK.get());
         dropSelf(ModBlocks.NEXON_ORE_BLOCK.get());
+        this.add(ModBlocks.NEXON_ORE_BLOCK.get(),
+                block -> createMultipleOreDrops(ModBlocks.NEXON_ORE_BLOCK.get(), ModItems.nexon.get(), 1, 2));
 
         //Grass Blocks
         dropSelf(ModBlocks.GHOSTLY_GRASS_BLOCK.get());
         dropSelf(ModBlocks.GHOSTLY_DIRT.get());
         dropSelf(ModBlocks.BLOODY_GRASS_BLOCK.get());
-        //dropSelf(ModBlocks.BLOODY_DIRT.get());
 
-        dropSelf(ModBlocks.GHOSTLY_WEB.get());
-        dropSelf(ModBlocks.PEDESTAL.get());
-
-        dropSelf(ModBlocks.BONE_BRICK.get());
-        dropSelf(ModBlocks.GHOSTLY_STONE_BRICKS.get());
-        dropSelf(ModBlocks.GHOSTLY_COBBLESTONE.get());
+        //Stone Blocks
         this.add(ModBlocks.GHOSTLY_STONE.get(), block -> this.createSilkTouchDispatchTable(
                 ModBlocks.GHOSTLY_STONE.get(),
                 this.applyExplosionDecay(
@@ -57,43 +53,51 @@ public class ModBlockLootTableProvider  extends BlockLootSubProvider {
         dropSelf(ModBlocks.GHOSTLY_STONE_STAIRS.get());
         this.add(ModBlocks.GHOSTLY_STONE_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.GHOSTLY_STONE_SLAB.get()));
-
+        dropSelf(ModBlocks.GHOSTLY_STONE_BRICKS.get());
         dropSelf(ModBlocks.GHOSTLY_STONEBRICK_STAIRS.get());
         this.add(ModBlocks.GHOSTLY_STONEBRICK_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.GHOSTLY_STONEBRICK_SLAB.get()));
-
+        dropSelf(ModBlocks.GHOSTLY_COBBLESTONE.get());
         dropSelf(ModBlocks.GHOSTLY_COBBLESTONE_STAIRS.get());
         this.add(ModBlocks.GHOSTLY_COBBLESTONE_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.GHOSTLY_COBBLESTONE_SLAB.get()));
-
+        dropSelf(ModBlocks.BONE_BRICK.get());
         dropSelf(ModBlocks.BONE_BRICK_STAIRS.get());
         this.add(ModBlocks.BONE_BRICK_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.BONE_BRICK_SLAB.get()));
 
-        dropSelf(ModBlocks.ENHANCER.get());
 
-        this.add(ModBlocks.NEXON_ORE_BLOCK.get(),
-                block -> createMultipleOreDrops(ModBlocks.NEXON_ORE_BLOCK.get(), ModItems.nexon.get(), 1, 2));
-
+        //Wood Blocks
         this.dropSelf(ModBlocks.LOG_GHOSTLY.get());
         this.dropSelf(ModBlocks.STRIPPED_GHOSTLY_LOG.get());
         this.dropSelf(ModBlocks.WOOD_GHOSTLY.get());
         this.dropSelf(ModBlocks.STRIPPED_GHOSTLY_WOOD.get());
-        this.dropSelf(ModBlocks.PLANKS_GHOSTLY.get());
-        this.dropSelf(ModBlocks.GHOSTLY_SAPLING.get());
-        this.dropSelf(ModBlocks.OOZING_FLOWER.get());
-
-
+        this.dropSelf(ModBlocks.GHOSTLY_PLANKS.get());
+        dropSelf(ModBlocks.GHOSTLY_PLANK_STAIRS.get());
+        this.add(ModBlocks.GHOSTLY_PLANK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.GHOSTLY_PLANK_SLAB.get()));
         this.add(ModBlocks.GHOSTLY_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.GHOSTLY_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.dropSelf(ModBlocks.GHOSTLY_SAPLING.get());
 
-        this.dropSelf(ModBlocks.BLOODY_SAPLING.get());
-        this.add(ModBlocks.BLOODY_LEAVES.get(), block ->
-                createLeavesDrops(block, ModBlocks.BLOODY_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
-        dropSelf(ModBlocks.BLOODY_LEAVES.get());
         this.dropSelf(ModBlocks.LOG_BLOODY.get());
         this.dropSelf(ModBlocks.PLANKS_BLOODY.get());
+        dropSelf(ModBlocks.BLOODY_PLANK_STAIRS.get());
+        this.add(ModBlocks.BLOODY_PLANK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.BLOODY_PLANK_SLAB.get()));
+        this.add(ModBlocks.BLOODY_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.BLOODY_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.dropSelf(ModBlocks.BLOODY_SAPLING.get());
 
+
+        //Flowers
+        this.dropSelf(ModBlocks.OOZING_FLOWER.get());
+
+        //Block Entities
+        dropSelf(ModBlocks.PEDESTAL.get());
+        dropSelf(ModBlocks.ENHANCER.get());
+
+        dropSelf(ModBlocks.GHOSTLY_WEB.get());
 
         dropSelf(ModBlocks.SKULL_N_BONES.get());
         /*this.add(ModBlocks.SKULL_N_BONES.get(),

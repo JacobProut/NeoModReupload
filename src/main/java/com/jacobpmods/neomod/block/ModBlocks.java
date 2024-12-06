@@ -25,22 +25,20 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import java.util.function.Supplier;
 
 public class ModBlocks {
-
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(FirstNeoMod.MOD_ID);
 
     public static final DeferredBlock<Block> NEXON_BLOCK = registerBlock("nexon_block", () ->new Block(BlockBehaviour.Properties.of()
             .strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST_CLUSTER)));
-
     public static final DeferredBlock<Block> NEXON_ORE_BLOCK = registerBlock("nexon_ore_block", () ->new Block(BlockBehaviour.Properties.of()
             .strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST_CLUSTER)));
 
-    //Ghostly Grass/Dirt
-    public static final DeferredBlock<Block> GHOSTLY_GRASS_BLOCK = registerBlock("ghostly_grass_block",
-            GhostlyBlock::new);
-    public static final DeferredBlock<Block> GHOSTLY_DIRT = registerBlock("ghostly_dirt",
-            GhostlyDirtBlock::new);
-    public static final DeferredBlock<Block> GHOSTLY_STONE_BRICKS = registerBlock("ghostly_stone_bricks", () ->new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)
-            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+    //Grass & Dirt Blocks
+    public static final DeferredBlock<Block> GHOSTLY_GRASS_BLOCK = registerBlock("ghostly_grass_block", GhostlyBlock::new);
+    public static final DeferredBlock<Block> BLOODY_GRASS_BLOCK = registerBlock("bloody_grass_block", GhostlyBlock::new);
+    public static final DeferredBlock<Block> GHOSTLY_DIRT = registerBlock("ghostly_dirt", GhostlyDirtBlock::new);
+
+
+   //Stone Related
     public static final DeferredBlock<Block> GHOSTLY_STONE = registerBlock("ghostly_stone", () ->new Block(BlockBehaviour.Properties.of()
             .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
     public static final DeferredBlock<Block> GHOSTLY_COBBLESTONE = registerBlock("ghostly_cobblestone", () ->new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)
@@ -48,6 +46,8 @@ public class ModBlocks {
     public static final DeferredBlock<Block> GHOSTLY_STONE_STAIRS = registerBlock("ghostly_stone_stairs", () ->new StairBlock(ModBlocks.GHOSTLY_STONE.get().defaultBlockState(), BlockBehaviour.Properties.of()
             .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
     public static final DeferredBlock<Block> GHOSTLY_STONE_SLAB = registerBlock("ghostly_stone_slab", () ->new SlabBlock(BlockBehaviour.Properties.of()
+            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+    public static final DeferredBlock<Block> GHOSTLY_STONE_BRICKS = registerBlock("ghostly_stone_bricks", () ->new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)
             .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
     public static final DeferredBlock<Block> GHOSTLY_STONEBRICK_STAIRS = registerBlock("ghostly_stone_brick_stairs", () ->new StairBlock(ModBlocks.GHOSTLY_STONE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.of()
             .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
@@ -58,6 +58,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> GHOSTLY_COBBLESTONE_SLAB = registerBlock("ghostly_cobblestone_slab", () ->new SlabBlock(BlockBehaviour.Properties.of()
             .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
+    //Bone Blocks
     public static final DeferredBlock<Block> BONE_BRICK = registerBlock("bone_brick", () ->new Block(BlockBehaviour.Properties.of()
             .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
     public static final DeferredBlock<Block> BONE_BRICK_STAIRS = registerBlock("bone_brick_stairs", () ->new StairBlock(ModBlocks.BONE_BRICK.get().defaultBlockState(), BlockBehaviour.Properties.of()
@@ -69,16 +70,13 @@ public class ModBlocks {
     //Ghostly Wood items
     public static final DeferredBlock<Block> LOG_GHOSTLY = registerBlock("log_ghostly", () ->new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)
             .strength(2f).sound(SoundType.WOOD)));
-
     public static final DeferredBlock<Block> STRIPPED_GHOSTLY_LOG = registerBlock("stripped_ghostly_log", () ->new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_LOG)
             .strength(1f).sound(SoundType.WOOD)));
-
     public static final DeferredBlock<Block> WOOD_GHOSTLY = registerBlock("wood_ghostly", () ->new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD)
             .strength(2f).sound(SoundType.WOOD)));
-
     public static final DeferredBlock<Block> STRIPPED_GHOSTLY_WOOD = registerBlock("stripped_ghostly_wood", () ->new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_WOOD)
             .strength(1f).sound(SoundType.WOOD)));
-    public static final DeferredBlock<Block> PLANKS_GHOSTLY = registerBlock("planks_ghostly", () ->new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
+    public static final DeferredBlock<Block> GHOSTLY_PLANKS = registerBlock("planks_ghostly", () ->new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
             .strength(1f).sound(SoundType.WOOD)) {
         @Override
         public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
@@ -95,7 +93,10 @@ public class ModBlocks {
             return 5;
         }
     });
-
+    public static final DeferredBlock<Block> GHOSTLY_PLANK_STAIRS = registerBlock("ghostly_plank_stairs", () ->new StairBlock(ModBlocks.GHOSTLY_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.of()
+            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.WOOD)));
+    public static final DeferredBlock<Block> GHOSTLY_PLANK_SLAB = registerBlock("ghostly_plank_slab", () ->new SlabBlock(BlockBehaviour.Properties.of()
+            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.WOOD)));
     public static final DeferredBlock<Block> GHOSTLY_LEAVES = registerBlock("ghostly_leaves", () ->new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)
             .strength(0.2f).sound(SoundType.CHERRY_LEAVES)) {
         @Override
@@ -113,25 +114,35 @@ public class ModBlocks {
             return 30;
         }
     });
-
     public static final DeferredBlock<Block> GHOSTLY_SAPLING = registerBlock("ghostly_sapling",
             () -> new ModSaplingBlock(ModTreeGrowers.GHOSTLY, BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_SAPLING)
             .strength(0.2f).sound(SoundType.CHERRY_SAPLING),  ModBlocks.GHOSTLY_GRASS_BLOCK.get(), ModBlocks.GHOSTLY_DIRT.get(), Blocks.GRASS_BLOCK, Blocks.DIRT));
 
 
-    //will edit later. PLACEHOLDER FOR TELEPORTER TO DIMENSION
-    public static final DeferredBlock<Block> GHOSTLY_WEB = registerBlock("ghostly_web", () ->new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBWEB)
-            .strength(1f).sound(SoundType.COBWEB)));
+    public static final DeferredBlock<Block> LOG_BLOODY = registerBlock("log_bloody", () ->new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)
+            .strength(2f).sound(SoundType.WOOD)));
+    public static final DeferredBlock<Block> PLANKS_BLOODY = registerBlock("planks_bloody", () ->new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
+            .strength(1f).sound(SoundType.WOOD)) {
+        @Override
+        public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+            return true;
+        }
 
-    public static final DeferredBlock<Block> PEDESTAL = registerBlock("pedestal", () ->new PedestalBlock(BlockBehaviour.Properties.of()
-            .strength(7f).destroyTime(100000).noOcclusion().sound(SoundType.STONE)));
+        @Override
+        public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+            return 20;
+        }
 
-    public static final DeferredBlock<GhostlyPortalBlock> GHOSTLY_PORTAL_BLOCK = registerBlock("ghostly_portal_block", () ->new GhostlyPortalBlock(BlockBehaviour.Properties.of()
-            .strength(7f).destroyTime(100000).sound(SoundType.GLASS)));
+        @Override
+        public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+            return 5;
+        }
+    });
 
-
-    public static final DeferredBlock<Block> OOZING_FLOWER = registerBlock("oozing_flower",
-            () -> new ModFlowerBlock(MobEffects.HARM, 2, BlockBehaviour.Properties.ofFullCopy(Blocks.ALLIUM)));
+    public static final DeferredBlock<Block> BLOODY_PLANK_STAIRS = registerBlock("bloody_plank_stairs", () ->new StairBlock(ModBlocks.PLANKS_BLOODY.get().defaultBlockState(), BlockBehaviour.Properties.of()
+            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.WOOD)));
+    public static final DeferredBlock<Block> BLOODY_PLANK_SLAB = registerBlock("bloody_plank_slab", () ->new SlabBlock(BlockBehaviour.Properties.of()
+            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.WOOD)));
 
     public static final DeferredBlock<Block> BLOODY_LEAVES = registerBlock("bloody_leaves", () ->new BloodyLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)
             .strength(0.2f).sound(SoundType.CHERRY_LEAVES)) {
@@ -150,42 +161,32 @@ public class ModBlocks {
             return 30;
         }
     });
-
-
-    public static final DeferredBlock<Block> LOG_BLOODY = registerBlock("log_bloody", () ->new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)
-            .strength(2f).sound(SoundType.WOOD)));
-
-
-    //Bloody Grass/Dirt
-    public static final DeferredBlock<Block> BLOODY_GRASS_BLOCK = registerBlock("bloody_grass_block",
-            GhostlyBlock::new);
-
-   /* public static final DeferredBlock<Block> BLOODY_DIRT = registerBlock("ghostly_dirt",
-            GhostlyDirtBlock::new);*/
-
-
     public static final DeferredBlock<Block> BLOODY_SAPLING = registerBlock("bloody_sapling",
             () -> new ModSaplingBlock(ModTreeGrowers.BLOODY, BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_SAPLING)
                     .strength(0.2f).sound(SoundType.CHERRY_SAPLING), ModBlocks.BLOODY_GRASS_BLOCK.get(), ModBlocks.GHOSTLY_GRASS_BLOCK.get(), ModBlocks.GHOSTLY_DIRT.get(), Blocks.GRASS_BLOCK, Blocks.DIRT));
 
 
-    public static final DeferredBlock<Block> PLANKS_BLOODY = registerBlock("planks_bloody", () ->new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
-            .strength(1f).sound(SoundType.WOOD)) {
-        @Override
-        public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-            return true;
-        }
 
-        @Override
-        public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-            return 20;
-        }
 
-        @Override
-        public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-            return 5;
-        }
-    });
+    public static final DeferredBlock<Block> GHOSTLY_WEB = registerBlock("ghostly_web", () ->new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBWEB)
+            .strength(1f).sound(SoundType.COBWEB)));
+
+    public static final DeferredBlock<Block> PEDESTAL = registerBlock("pedestal", () ->new PedestalBlock(BlockBehaviour.Properties.of()
+            .strength(7f).destroyTime(100000).noOcclusion().sound(SoundType.STONE)));
+
+    public static final DeferredBlock<GhostlyPortalBlock> GHOSTLY_PORTAL_BLOCK = registerBlock("ghostly_portal_block", () ->new GhostlyPortalBlock(BlockBehaviour.Properties.of()
+            .strength(7f).destroyTime(100000).sound(SoundType.GLASS)));
+
+
+    public static final DeferredBlock<Block> OOZING_FLOWER = registerBlock("oozing_flower",
+            () -> new ModFlowerBlock(MobEffects.HARM, 2, BlockBehaviour.Properties.ofFullCopy(Blocks.ALLIUM)));
+
+
+
+    //Bloody Grass/Dirt
+
+
+
 
 
 

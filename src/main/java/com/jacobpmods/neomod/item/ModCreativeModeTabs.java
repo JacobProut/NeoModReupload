@@ -5,6 +5,7 @@ import com.jacobpmods.neomod.block.ModBlocks;
 import com.jacobpmods.neomod.fluid.ModFluids;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.Mob;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;
@@ -56,15 +57,11 @@ public class ModCreativeModeTabs {
                         //output.accept(ModBlocks.BLOODY_DIRT.get());
 
 
-                        output.accept(ModBlocks.LOG_GHOSTLY);
-                        output.accept(ModBlocks.GHOSTLY_WEB);
-
-
-                        //Brick Blocks
+                        //Bone Blocks
                         output.accept(ModBlocks.BONE_BRICK);
                         output.accept(ModBlocks.BONE_BRICK_STAIRS);
                         output.accept(ModBlocks.BONE_BRICK_SLAB);
-                        output.accept(ModBlocks.GHOSTLY_STONE_BRICKS);
+
 
                         //Stone-CobbleStone Blocks
                         output.accept(ModBlocks.GHOSTLY_STONE);
@@ -73,20 +70,19 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.GHOSTLY_STONE_SLAB);
                         output.accept(ModBlocks.GHOSTLY_COBBLESTONE_STAIRS);
                         output.accept(ModBlocks.GHOSTLY_COBBLESTONE_SLAB);
+                        output.accept(ModBlocks.GHOSTLY_STONE_BRICKS);
                         output.accept(ModBlocks.GHOSTLY_STONEBRICK_STAIRS);
                         output.accept(ModBlocks.GHOSTLY_STONEBRICK_SLAB);
 
-                        //Custom Block Models
-                        output.accept(ModBlocks.PEDESTAL);
-
-                        //Fluids
-                        output.accept(ModFluids.POISONED_WATER_BUCKET);
-
-                        //Portals
-                        output.accept(ModBlocks.GHOSTLY_PORTAL_BLOCK);
-
-                        //Flowers
-                        output.accept(ModBlocks.OOZING_FLOWER);
+                        //Logs/Wood
+                        output.accept(ModBlocks.LOG_GHOSTLY);
+                        output.accept(ModBlocks.LOG_BLOODY);
+                        output.accept(ModBlocks.GHOSTLY_PLANKS);
+                        output.accept(ModBlocks.GHOSTLY_PLANK_STAIRS);
+                        output.accept(ModBlocks.GHOSTLY_PLANK_SLAB);
+                        output.accept(ModBlocks.PLANKS_BLOODY);
+                        output.accept(ModBlocks.BLOODY_PLANK_STAIRS);
+                        output.accept(ModBlocks.BLOODY_PLANK_SLAB);
 
                         //Leaves
                         output.accept(ModBlocks.GHOSTLY_LEAVES);
@@ -96,12 +92,19 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.GHOSTLY_SAPLING);
                         output.accept(ModBlocks.BLOODY_SAPLING);
 
-                        //Logs/Wood
-                        output.accept(ModBlocks.LOG_BLOODY);
+                        //Flowers
+                        output.accept(ModBlocks.OOZING_FLOWER);
 
-                        //Planks
-                        output.accept(ModBlocks.PLANKS_GHOSTLY);
-                        output.accept(ModBlocks.PLANKS_BLOODY);
+                        //Custom Block Models
+                        output.accept(ModBlocks.PEDESTAL);
+                        output.accept(ModBlocks.ENHANCER);
+
+                        //Fluids
+                        output.accept(ModFluids.POISONED_WATER_BUCKET);
+
+                        //Portals
+                        output.accept(ModBlocks.GHOSTLY_PORTAL_BLOCK);
+
 
                         output.accept(ModBlocks.SKULL_N_BONES);
                         output.accept(ModItems.UNDEAD_BONE);
@@ -117,14 +120,16 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.SCYTHE);
                         output.accept(ModItems.BONE_SWORD);
+                        output.accept(ModItems.BLOOD_BONE_SWORD);
                         output.accept(ModItems.SKELETAL_BLOOD_SHARD);
 
-                        output.accept(ModBlocks.ENHANCER);
+
                         //Vines
                         //output.accept(ModBlocks.BLOODY_VINE.get());
 
-                        output.accept(ModItems.BLOOD_BONE_SWORD);
 
+
+                        output.accept(ModBlocks.GHOSTLY_WEB);
 
                     }).build());
 

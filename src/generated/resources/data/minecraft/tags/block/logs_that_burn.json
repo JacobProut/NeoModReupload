@@ -1,9 +1,11 @@
 {
   "values": [
     "neomod:log_ghostly",
-    "neomod:wood_ghostly",
-    "neomod:stripped_ghostly_log",
-    "neomod:stripped_ghostly_wood",
+    "neomod:planks_ghostly",
+    "neomod:ghostly_plank_stairs",
+    "neomod:ghostly_plank_slab",
+    "neomod:bloody_plank_stairs",
+    "neomod:bloody_plank_slab",
     "neomod:log_bloody"
   ]
 }
