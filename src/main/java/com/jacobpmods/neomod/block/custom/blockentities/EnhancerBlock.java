@@ -134,7 +134,7 @@ public class EnhancerBlock extends BaseEntityBlock {
         double zOffset = axis == Direction.Axis.Z ? (double)direction.getStepZ() * 0.52 : defaultOffset;
         level.addParticle(ParticleTypes.SMOKE, xPos + xOffsets, yPos + yOffset, zPos + zOffset, 0.0, 0.0, 0.0);
         if(level.getBlockEntity(pos) instanceof EnhancerBlockEntity enhancerBlockEntity && !enhancerBlockEntity.itemStackHandler.getStackInSlot(1).isEmpty()) {
-            level.addParticle(new ItemParticleOption(ParticleTypes.ITEM, enhancerBlockEntity.itemStackHandler.getStackInSlot(1)),
+            level.addParticle(new ItemParticleOption(ParticleTypes.ITEM, enhancerBlockEntity.itemStackHandler.getStackInSlot(0)),
                     xPos + xOffsets, yPos + yOffset, zPos + zOffset, 0.0, 0.0, 0.0);
         }
     }
