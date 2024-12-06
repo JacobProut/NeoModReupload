@@ -45,11 +45,26 @@ public class ModBlocks {
             .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
     public static final DeferredBlock<Block> GHOSTLY_COBBLESTONE = registerBlock("ghostly_cobblestone", () ->new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)
             .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
-
-    public static final DeferredBlock<Block> GHOSTLY_STONE_STAIRS = registerBlock("ghostly_stone_stairs", () ->new StairBlock(ModBlocks.GHOSTLY_COBBLESTONE.get().defaultBlockState(), BlockBehaviour.Properties.of()
+    public static final DeferredBlock<Block> GHOSTLY_STONE_STAIRS = registerBlock("ghostly_stone_stairs", () ->new StairBlock(ModBlocks.GHOSTLY_STONE.get().defaultBlockState(), BlockBehaviour.Properties.of()
             .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
     public static final DeferredBlock<Block> GHOSTLY_STONE_SLAB = registerBlock("ghostly_stone_slab", () ->new SlabBlock(BlockBehaviour.Properties.of()
             .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+    public static final DeferredBlock<Block> GHOSTLY_STONEBRICK_STAIRS = registerBlock("ghostly_stone_brick_stairs", () ->new StairBlock(ModBlocks.GHOSTLY_STONE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.of()
+            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+    public static final DeferredBlock<Block> GHOSTLY_STONEBRICK_SLAB = registerBlock("ghostly_stone_brick_slab", () ->new SlabBlock(BlockBehaviour.Properties.of()
+            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+    public static final DeferredBlock<Block> GHOSTLY_COBBLESTONE_STAIRS = registerBlock("ghostly_cobblestone_stairs", () ->new StairBlock(ModBlocks.GHOSTLY_COBBLESTONE.get().defaultBlockState(), BlockBehaviour.Properties.of()
+            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+    public static final DeferredBlock<Block> GHOSTLY_COBBLESTONE_SLAB = registerBlock("ghostly_cobblestone_slab", () ->new SlabBlock(BlockBehaviour.Properties.of()
+            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+
+    public static final DeferredBlock<Block> BONE_BRICK = registerBlock("bone_brick", () ->new Block(BlockBehaviour.Properties.of()
+            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+    public static final DeferredBlock<Block> BONE_BRICK_STAIRS = registerBlock("bone_brick_stairs", () ->new StairBlock(ModBlocks.BONE_BRICK.get().defaultBlockState(), BlockBehaviour.Properties.of()
+            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+    public static final DeferredBlock<Block> BONE_BRICK_SLAB = registerBlock("bone_brick_slab", () ->new SlabBlock(BlockBehaviour.Properties.of()
+            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+
 
     //Ghostly Wood items
     public static final DeferredBlock<Block> LOG_GHOSTLY = registerBlock("log_ghostly", () ->new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)
@@ -114,8 +129,6 @@ public class ModBlocks {
     public static final DeferredBlock<GhostlyPortalBlock> GHOSTLY_PORTAL_BLOCK = registerBlock("ghostly_portal_block", () ->new GhostlyPortalBlock(BlockBehaviour.Properties.of()
             .strength(7f).destroyTime(100000).sound(SoundType.GLASS)));
 
-    public static final DeferredBlock<Block> BONE_BRICK = registerBlock("bone_brick", () ->new Block(BlockBehaviour.Properties.of()
-            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
     public static final DeferredBlock<Block> OOZING_FLOWER = registerBlock("oozing_flower",
             () -> new ModFlowerBlock(MobEffects.HARM, 2, BlockBehaviour.Properties.ofFullCopy(Blocks.ALLIUM)));

@@ -8,6 +8,10 @@
     "neomod:ghostly_cobblestone",
     "neomod:ghostly_stone_slab",
     "neomod:ghostly_stone_stairs",
-    "neomod:bone_brick"
+    "neomod:ghostly_cobblestone_stairs",
+    "neomod:ghostly_cobblestone_slab",
+    "neomod:bone_brick",
+    "neomod:bone_brick_stairs",
+    "neomod:bone_brick_slab"
   ]
 }

@@ -58,6 +58,18 @@ public class ModBlockLootTableProvider  extends BlockLootSubProvider {
         this.add(ModBlocks.GHOSTLY_STONE_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.GHOSTLY_STONE_SLAB.get()));
 
+        dropSelf(ModBlocks.GHOSTLY_STONEBRICK_STAIRS.get());
+        this.add(ModBlocks.GHOSTLY_STONEBRICK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.GHOSTLY_STONEBRICK_SLAB.get()));
+
+        dropSelf(ModBlocks.GHOSTLY_COBBLESTONE_STAIRS.get());
+        this.add(ModBlocks.GHOSTLY_COBBLESTONE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.GHOSTLY_COBBLESTONE_SLAB.get()));
+
+        dropSelf(ModBlocks.BONE_BRICK_STAIRS.get());
+        this.add(ModBlocks.BONE_BRICK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.BONE_BRICK_SLAB.get()));
+
         dropSelf(ModBlocks.ENHANCER.get());
 
         this.add(ModBlocks.NEXON_ORE_BLOCK.get(),

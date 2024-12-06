@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "ghostly_cobblestone",
+  "key": {
+    "#": {
+      "item": "neomod:ghostly_cobblestone"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "neomod:ghostly_cobblestone_stairs"
+  }
+}

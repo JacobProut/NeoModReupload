@@ -31,7 +31,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.GHOSTLY_COBBLESTONE.get())
                 .add(ModBlocks.GHOSTLY_STONE_SLAB.get())
                 .add(ModBlocks.GHOSTLY_STONE_STAIRS.get())
-                .add(ModBlocks.BONE_BRICK.get());
+                .add(ModBlocks.GHOSTLY_COBBLESTONE_STAIRS.get())
+                .add(ModBlocks.GHOSTLY_COBBLESTONE_SLAB.get())
+                .add(ModBlocks.BONE_BRICK.get())
+                .add(ModBlocks.BONE_BRICK_STAIRS.get())
+                .add(ModBlocks.BONE_BRICK_SLAB.get());
 
         tag(MINEABLE_WITH_AXE)
                 .add(ModBlocks.LOG_GHOSTLY.get())
@@ -44,7 +48,12 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.GHOSTLY_STONE_BRICKS.get())
                 .add(ModBlocks.GHOSTLY_STONE_SLAB.get())
                 .add(ModBlocks.GHOSTLY_STONE_STAIRS.get())
-                .add(ModBlocks.GHOSTLY_COBBLESTONE.get());
+                .add(ModBlocks.GHOSTLY_COBBLESTONE.get())
+                .add(ModBlocks.GHOSTLY_COBBLESTONE_STAIRS.get())
+                .add(ModBlocks.GHOSTLY_COBBLESTONE_SLAB.get())
+                .add(ModBlocks.BONE_BRICK.get())
+                .add(ModBlocks.BONE_BRICK_STAIRS.get())
+                .add(ModBlocks.BONE_BRICK_SLAB.get());
                 //.addTag(NEEDS_NEXON_TOOL);
 
 
@@ -55,7 +64,12 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.GHOSTLY_STONE_SLAB.get())
                 .add(ModBlocks.GHOSTLY_STONE_STAIRS.get())
                 .add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get())
-                .add(ModBlocks.GHOSTLY_COBBLESTONE.get());
+                .add(ModBlocks.GHOSTLY_COBBLESTONE.get())
+                .add(ModBlocks.GHOSTLY_COBBLESTONE_STAIRS.get())
+                .add(ModBlocks.GHOSTLY_COBBLESTONE_SLAB.get())
+                .add(ModBlocks.BONE_BRICK.get())
+                .add(ModBlocks.BONE_BRICK_STAIRS.get())
+                .add(ModBlocks.BONE_BRICK_SLAB.get());
                 //.addTag(NEEDS_NETHERITE_TOOL)
 
         tag(INCORRECT_FOR_DIAMOND_TOOL)
@@ -67,7 +81,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.GHOSTLY_STONE_STAIRS.get())
                 .add(ModBlocks.GHOSTLY_STONE_BRICKS.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE.get())
-                .add(ModBlocks.BONE_BRICK.get());
+                .add(ModBlocks.GHOSTLY_COBBLESTONE_STAIRS.get())
+                .add(ModBlocks.GHOSTLY_COBBLESTONE_SLAB.get())
+                .add(ModBlocks.BONE_BRICK.get())
+                .add(ModBlocks.BONE_BRICK_STAIRS.get())
+                .add(ModBlocks.BONE_BRICK_SLAB.get());
 
         tag(INCORRECT_FOR_IRON_TOOL)
                 .add(ModBlocks.NEXON_ORE_BLOCK.get())
@@ -77,7 +95,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.GHOSTLY_STONE_STAIRS.get())
                 .add(ModBlocks.GHOSTLY_STONE_BRICKS.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE.get())
+                .add(ModBlocks.GHOSTLY_COBBLESTONE_STAIRS.get())
+                .add(ModBlocks.GHOSTLY_COBBLESTONE_SLAB.get())
                 .add(ModBlocks.BONE_BRICK.get())
+                .add(ModBlocks.BONE_BRICK_STAIRS.get())
+                .add(ModBlocks.BONE_BRICK_SLAB.get())
                 .add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get());
 
         tag(INCORRECT_FOR_GOLD_TOOL)
@@ -88,7 +110,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.GHOSTLY_STONE_STAIRS.get())
                 .add(ModBlocks.GHOSTLY_STONE_BRICKS.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE.get())
+                .add(ModBlocks.GHOSTLY_COBBLESTONE_STAIRS.get())
+                .add(ModBlocks.GHOSTLY_COBBLESTONE_SLAB.get())
                 .add(ModBlocks.BONE_BRICK.get())
+                .add(ModBlocks.BONE_BRICK_STAIRS.get())
+                .add(ModBlocks.BONE_BRICK_SLAB.get())
                 .add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get());
 
         tag(INCORRECT_FOR_STONE_TOOL)
@@ -99,7 +125,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.GHOSTLY_STONE_STAIRS.get())
                 .add(ModBlocks.GHOSTLY_STONE_BRICKS.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE.get())
+                .add(ModBlocks.GHOSTLY_COBBLESTONE_STAIRS.get())
+                .add(ModBlocks.GHOSTLY_COBBLESTONE_SLAB.get())
                 .add(ModBlocks.BONE_BRICK.get())
+                .add(ModBlocks.BONE_BRICK_STAIRS.get())
+                .add(ModBlocks.BONE_BRICK_SLAB.get())
                 .add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get());
 
         tag(INCORRECT_FOR_WOODEN_TOOL)
@@ -110,7 +140,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.GHOSTLY_STONE_STAIRS.get())
                 .add(ModBlocks.GHOSTLY_STONE_BRICKS.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE.get())
+                .add(ModBlocks.GHOSTLY_COBBLESTONE_STAIRS.get())
+                .add(ModBlocks.GHOSTLY_COBBLESTONE_SLAB.get())
                 .add(ModBlocks.BONE_BRICK.get())
+                .add(ModBlocks.BONE_BRICK_STAIRS.get())
+                .add(ModBlocks.BONE_BRICK_SLAB.get())
                 .add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get());
 
         tag(DIRT)

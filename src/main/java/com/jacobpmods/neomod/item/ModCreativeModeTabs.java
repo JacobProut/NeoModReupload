@@ -62,6 +62,8 @@ public class ModCreativeModeTabs {
 
                         //Brick Blocks
                         output.accept(ModBlocks.BONE_BRICK);
+                        output.accept(ModBlocks.BONE_BRICK_STAIRS);
+                        output.accept(ModBlocks.BONE_BRICK_SLAB);
                         output.accept(ModBlocks.GHOSTLY_STONE_BRICKS);
 
                         //Stone-CobbleStone Blocks
@@ -69,6 +71,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.GHOSTLY_COBBLESTONE);
                         output.accept(ModBlocks.GHOSTLY_STONE_STAIRS);
                         output.accept(ModBlocks.GHOSTLY_STONE_SLAB);
+                        output.accept(ModBlocks.GHOSTLY_COBBLESTONE_STAIRS);
+                        output.accept(ModBlocks.GHOSTLY_COBBLESTONE_SLAB);
+                        output.accept(ModBlocks.GHOSTLY_STONEBRICK_STAIRS);
+                        output.accept(ModBlocks.GHOSTLY_STONEBRICK_SLAB);
 
                         //Custom Block Models
                         output.accept(ModBlocks.PEDESTAL);

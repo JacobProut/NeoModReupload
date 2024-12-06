@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "neomod:block/bone_brick_slab"
+    },
+    "type=double": {
+      "model": "neomod:block/bone_brick"
+    },
+    "type=top": {
+      "model": "neomod:block/bone_brick_slab_top"
+    }
+  }
+}

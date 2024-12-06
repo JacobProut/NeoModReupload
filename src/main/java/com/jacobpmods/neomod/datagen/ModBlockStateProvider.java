@@ -43,13 +43,28 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.ENHANCER);
 
         blockWithItem(ModBlocks.GHOSTLY_STONE);
-        blockWithItem(ModBlocks.GHOSTLY_COBBLESTONE);
-        blockWithItem(ModBlocks.BONE_BRICK);
-        blockWithItem(ModBlocks.GHOSTLY_STONE_BRICKS);
         stairsBlock(((StairBlock) ModBlocks.GHOSTLY_STONE_STAIRS.get()), blockTexture(ModBlocks.GHOSTLY_STONE.get()));
         blockItem(ModBlocks.GHOSTLY_STONE_STAIRS);
         slabBlock(((SlabBlock) ModBlocks.GHOSTLY_STONE_SLAB.get()), blockTexture(ModBlocks.GHOSTLY_STONE.get()), blockTexture(ModBlocks.GHOSTLY_STONE.get()));
         blockItem(ModBlocks.GHOSTLY_STONE_SLAB);
+
+        blockWithItem(ModBlocks.GHOSTLY_COBBLESTONE);
+        stairsBlock(((StairBlock) ModBlocks.GHOSTLY_COBBLESTONE_STAIRS.get()), blockTexture(ModBlocks.GHOSTLY_COBBLESTONE.get()));
+        blockItem(ModBlocks.GHOSTLY_COBBLESTONE_STAIRS);
+        slabBlock(((SlabBlock) ModBlocks.GHOSTLY_COBBLESTONE_SLAB.get()), blockTexture(ModBlocks.GHOSTLY_COBBLESTONE.get()), blockTexture(ModBlocks.GHOSTLY_COBBLESTONE.get()));
+        blockItem(ModBlocks.GHOSTLY_COBBLESTONE_SLAB);
+
+        blockWithItem(ModBlocks.GHOSTLY_STONE_BRICKS);
+        stairsBlock(((StairBlock) ModBlocks.GHOSTLY_STONEBRICK_STAIRS.get()), blockTexture(ModBlocks.GHOSTLY_STONE_BRICKS.get()));
+        blockItem(ModBlocks.GHOSTLY_STONEBRICK_STAIRS);
+        slabBlock(((SlabBlock) ModBlocks.GHOSTLY_STONEBRICK_SLAB.get()), blockTexture(ModBlocks.GHOSTLY_STONE_BRICKS.get()), blockTexture(ModBlocks.GHOSTLY_STONE_BRICKS.get()));
+        blockItem(ModBlocks.GHOSTLY_STONEBRICK_SLAB);
+
+        blockWithItem(ModBlocks.BONE_BRICK);
+        stairsBlock(((StairBlock) ModBlocks.BONE_BRICK_STAIRS.get()), blockTexture(ModBlocks.BONE_BRICK.get()));
+        blockItem(ModBlocks.BONE_BRICK_STAIRS);
+        slabBlock(((SlabBlock) ModBlocks.BONE_BRICK_SLAB.get()), blockTexture(ModBlocks.BONE_BRICK.get()), blockTexture(ModBlocks.BONE_BRICK.get()));
+        blockItem(ModBlocks.BONE_BRICK_SLAB);
 
         System.out.println("Block states and models:logBlock-axisBlock's");
         logBlock(((RotatedPillarBlock) ModBlocks.LOG_GHOSTLY.get()));

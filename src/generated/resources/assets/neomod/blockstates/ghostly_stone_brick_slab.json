@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "neomod:block/ghostly_stone_brick_slab"
+    },
+    "type=double": {
+      "model": "neomod:block/ghostly_stone_bricks"
+    },
+    "type=top": {
+      "model": "neomod:block/ghostly_stone_brick_slab_top"
+    }
+  }
+}

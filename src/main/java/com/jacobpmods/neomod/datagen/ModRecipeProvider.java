@@ -136,6 +136,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         stairBuilder(ModBlocks.GHOSTLY_STONE_STAIRS.get(), Ingredient.of(ModBlocks.GHOSTLY_STONE.get())).group("ghostly_stone")
                 .unlockedBy("has_ghostly_stone", has(ModBlocks.GHOSTLY_STONE.get())).save(recipeOutput);
 
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GHOSTLY_COBBLESTONE_SLAB.get(), ModBlocks.GHOSTLY_COBBLESTONE.get());
+        stairBuilder(ModBlocks.GHOSTLY_COBBLESTONE_STAIRS.get(), Ingredient.of(ModBlocks.GHOSTLY_COBBLESTONE.get())).group("ghostly_cobblestone")
+                .unlockedBy("has_ghostly_cobblestone", has(ModBlocks.GHOSTLY_COBBLESTONE.get())).save(recipeOutput);
+
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GHOSTLY_STONEBRICK_SLAB.get(), ModBlocks.GHOSTLY_STONE_BRICKS.get());
+        stairBuilder(ModBlocks.GHOSTLY_STONEBRICK_STAIRS.get(), Ingredient.of(ModBlocks.GHOSTLY_STONE_BRICKS.get())).group("ghostly_stone_brick")
+                .unlockedBy("has_ghostly_stone_brick", has(ModBlocks.GHOSTLY_STONE_BRICKS.get())).save(recipeOutput);
+
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BONE_BRICK_SLAB.get(), ModBlocks.BONE_BRICK.get());
+        stairBuilder(ModBlocks.BONE_BRICK_STAIRS.get(), Ingredient.of(ModBlocks.BONE_BRICK.get())).group("bone_brick")
+                .unlockedBy("has_bone_brick", has(ModBlocks.BONE_BRICK.get())).save(recipeOutput);
+
     }
     protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
                                       float pExperience, int pCookingTIme, String pGroup) {
