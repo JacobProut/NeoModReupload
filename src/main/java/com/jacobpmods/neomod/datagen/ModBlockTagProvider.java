@@ -29,6 +29,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.GHOSTLY_STONE.get())
                 .add(ModBlocks.GHOSTLY_STONE_BRICKS.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE.get())
+                .add(ModBlocks.GHOSTLY_STONE_SLAB.get())
+                .add(ModBlocks.GHOSTLY_STONE_STAIRS.get())
                 .add(ModBlocks.BONE_BRICK.get());
 
         tag(MINEABLE_WITH_AXE)
@@ -40,6 +42,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.NEXON_BLOCK.get())
                 .add(ModBlocks.GHOSTLY_STONE.get())
                 .add(ModBlocks.GHOSTLY_STONE_BRICKS.get())
+                .add(ModBlocks.GHOSTLY_STONE_SLAB.get())
+                .add(ModBlocks.GHOSTLY_STONE_STAIRS.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE.get());
                 //.addTag(NEEDS_NEXON_TOOL);
 
@@ -48,6 +52,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.NEXON_ORE_BLOCK.get())
                 .add(ModBlocks.NEXON_BLOCK.get())
                 .add(ModBlocks.GHOSTLY_STONE.get())
+                .add(ModBlocks.GHOSTLY_STONE_SLAB.get())
+                .add(ModBlocks.GHOSTLY_STONE_STAIRS.get())
                 .add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE.get());
                 //.addTag(NEEDS_NETHERITE_TOOL)
@@ -57,6 +63,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.NEXON_BLOCK.get())
                 .add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get())
                 .add(ModBlocks.GHOSTLY_STONE.get())
+                .add(ModBlocks.GHOSTLY_STONE_SLAB.get())
+                .add(ModBlocks.GHOSTLY_STONE_STAIRS.get())
                 .add(ModBlocks.GHOSTLY_STONE_BRICKS.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE.get())
                 .add(ModBlocks.BONE_BRICK.get());
@@ -65,6 +73,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.NEXON_ORE_BLOCK.get())
                 .add(ModBlocks.NEXON_BLOCK.get())
                 .add(ModBlocks.GHOSTLY_STONE.get())
+                .add(ModBlocks.GHOSTLY_STONE_SLAB.get())
+                .add(ModBlocks.GHOSTLY_STONE_STAIRS.get())
                 .add(ModBlocks.GHOSTLY_STONE_BRICKS.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE.get())
                 .add(ModBlocks.BONE_BRICK.get())
@@ -74,6 +84,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.NEXON_ORE_BLOCK.get())
                 .add(ModBlocks.NEXON_BLOCK.get())
                 .add(ModBlocks.GHOSTLY_STONE.get())
+                .add(ModBlocks.GHOSTLY_STONE_SLAB.get())
+                .add(ModBlocks.GHOSTLY_STONE_STAIRS.get())
                 .add(ModBlocks.GHOSTLY_STONE_BRICKS.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE.get())
                 .add(ModBlocks.BONE_BRICK.get())
@@ -83,6 +95,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.NEXON_ORE_BLOCK.get())
                 .add(ModBlocks.NEXON_BLOCK.get())
                 .add(ModBlocks.GHOSTLY_STONE.get())
+                .add(ModBlocks.GHOSTLY_STONE_SLAB.get())
+                .add(ModBlocks.GHOSTLY_STONE_STAIRS.get())
                 .add(ModBlocks.GHOSTLY_STONE_BRICKS.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE.get())
                 .add(ModBlocks.BONE_BRICK.get())
@@ -92,6 +106,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.NEXON_ORE_BLOCK.get())
                 .add(ModBlocks.NEXON_BLOCK.get())
                 .add(ModBlocks.GHOSTLY_STONE.get())
+                .add(ModBlocks.GHOSTLY_STONE_SLAB.get())
+                .add(ModBlocks.GHOSTLY_STONE_STAIRS.get())
                 .add(ModBlocks.GHOSTLY_STONE_BRICKS.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE.get())
                 .add(ModBlocks.BONE_BRICK.get())

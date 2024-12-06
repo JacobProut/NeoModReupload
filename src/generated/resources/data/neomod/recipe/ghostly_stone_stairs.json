@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "ghostly_stone",
+  "key": {
+    "#": {
+      "item": "neomod:ghostly_stone"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "neomod:ghostly_stone_stairs"
+  }
+}

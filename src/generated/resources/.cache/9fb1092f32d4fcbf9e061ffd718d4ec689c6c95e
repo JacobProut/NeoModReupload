@@ -1,4 +1,6 @@
-// 1.21.1	2024-12-03T03:42:01.1020366	Recipes
+// 1.21.1	2024-12-05T22:40:50.5766362	Recipes
+87020e206b812a2da3d9b22d0cd2c6987c76e7d4 data/neomod/advancement/recipes/building_blocks/ghostly_stone_slab.json
+b39623a6f041982b5cfc9a00cd2d48c451304e0e data/neomod/advancement/recipes/building_blocks/ghostly_stone_stairs.json
 79685b9a1f1a4649ed9b73240dd5988327dc325e data/neomod/advancement/recipes/combat/bone_sword.json
 6518f0e64c1c3f2cd06daa2a142160c9ae546ce0 data/neomod/advancement/recipes/misc/nexon.json
 d0a6a65c6e485618a44dfcbb361df24f97701e58 data/neomod/advancement/recipes/misc/nexonboots.json
@@ -15,6 +17,8 @@ def39c5467fa78549886cd463131efd25de3fb5c data/neomod/advancement/recipes/misc/pl
 b451da62cfc1aed5b5ac66ee3a15de709127cb8c data/neomod/advancement/recipes/misc/planks_ghostly.json
 d0ab2442cabfa90ce0dc16a7a303d6043644cf75 data/neomod/advancement/recipes/misc/speedapple.json
 60b8f5a62c22deb9395dfccb44a9525c056ad91a data/neomod/recipe/bone_sword.json
+69e9614180abc85cb6182acd905edad03c189ce7 data/neomod/recipe/ghostly_stone_slab.json
+8c0087d9dbf4da6a653e6dbba1b334a41589a57b data/neomod/recipe/ghostly_stone_stairs.json
 154fac8170696c79ed93c80768e30fc0bbb75bc7 data/neomod/recipe/nexon.json
 9eabc0d16e80963aec94e0f9f82f06383e64ec33 data/neomod/recipe/nexonboots.json
 d25d14da278a30aa866d88808b7a441e6d64b9f5 data/neomod/recipe/nexonchestplate.json

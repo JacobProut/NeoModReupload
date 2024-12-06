@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "neomod:block/ghostly_stone",
+    "side": "neomod:block/ghostly_stone",
+    "top": "neomod:block/ghostly_stone"
+  }
+}

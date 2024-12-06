@@ -67,6 +67,8 @@ public class ModCreativeModeTabs {
                         //Stone-CobbleStone Blocks
                         output.accept(ModBlocks.GHOSTLY_STONE);
                         output.accept(ModBlocks.GHOSTLY_COBBLESTONE);
+                        output.accept(ModBlocks.GHOSTLY_STONE_STAIRS);
+                        output.accept(ModBlocks.GHOSTLY_STONE_SLAB);
 
                         //Custom Block Models
                         output.accept(ModBlocks.PEDESTAL);

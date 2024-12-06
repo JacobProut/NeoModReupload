@@ -32,15 +32,6 @@ public class ModBlockLootTableProvider  extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-
-        this.add(ModBlocks.GHOSTLY_STONE.get(), block -> this.createSilkTouchDispatchTable(
-                ModBlocks.GHOSTLY_STONE.get(),
-                this.applyExplosionDecay(
-                        block,
-                        LootItem.lootTableItem(ModBlocks.GHOSTLY_COBBLESTONE.get())
-                )
-        ));
-
         dropSelf(ModBlocks.NEXON_BLOCK.get());
         dropSelf(ModBlocks.NEXON_ORE_BLOCK.get());
 
@@ -52,9 +43,20 @@ public class ModBlockLootTableProvider  extends BlockLootSubProvider {
 
         dropSelf(ModBlocks.GHOSTLY_WEB.get());
         dropSelf(ModBlocks.PEDESTAL.get());
+
         dropSelf(ModBlocks.BONE_BRICK.get());
         dropSelf(ModBlocks.GHOSTLY_STONE_BRICKS.get());
         dropSelf(ModBlocks.GHOSTLY_COBBLESTONE.get());
+        this.add(ModBlocks.GHOSTLY_STONE.get(), block -> this.createSilkTouchDispatchTable(
+                ModBlocks.GHOSTLY_STONE.get(),
+                this.applyExplosionDecay(
+                        block,
+                        LootItem.lootTableItem(ModBlocks.GHOSTLY_COBBLESTONE.get())
+                )
+        ));
+        dropSelf(ModBlocks.GHOSTLY_STONE_STAIRS.get());
+        this.add(ModBlocks.GHOSTLY_STONE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.GHOSTLY_STONE_SLAB.get()));
 
         dropSelf(ModBlocks.ENHANCER.get());
 

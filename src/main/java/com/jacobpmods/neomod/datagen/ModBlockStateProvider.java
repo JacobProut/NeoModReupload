@@ -6,10 +6,7 @@ import com.jacobpmods.neomod.block.custom.BloodBoneBlossomBushBlock;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.RotatedPillarBlock;
-import net.minecraft.world.level.block.SweetBerryBushBlock;
-import net.minecraft.world.level.block.VineBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
@@ -49,7 +46,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.GHOSTLY_COBBLESTONE);
         blockWithItem(ModBlocks.BONE_BRICK);
         blockWithItem(ModBlocks.GHOSTLY_STONE_BRICKS);
-
+        stairsBlock(((StairBlock) ModBlocks.GHOSTLY_STONE_STAIRS.get()), blockTexture(ModBlocks.GHOSTLY_STONE.get()));
+        blockItem(ModBlocks.GHOSTLY_STONE_STAIRS);
+        slabBlock(((SlabBlock) ModBlocks.GHOSTLY_STONE_SLAB.get()), blockTexture(ModBlocks.GHOSTLY_STONE.get()), blockTexture(ModBlocks.GHOSTLY_STONE.get()));
+        blockItem(ModBlocks.GHOSTLY_STONE_SLAB);
 
         System.out.println("Block states and models:logBlock-axisBlock's");
         logBlock(((RotatedPillarBlock) ModBlocks.LOG_GHOSTLY.get()));
