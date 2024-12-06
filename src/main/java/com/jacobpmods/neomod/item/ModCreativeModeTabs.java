@@ -22,48 +22,54 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.FIRE_BALL.get());
 
                         //Nexon Items
-                        output.accept(ModItems.nexon.get());
-                        output.accept(ModItems.HEATED_NEXON.get());
-                        output.accept(ModItems.NEXON_INGOT.get());
-                        output.accept(ModItems.NEXON_REINFORCED_INGOT.get());
-                        output.accept(ModBlocks.NEXON_BLOCK.get());
-                        output.accept(ModBlocks.NEXON_ORE_BLOCK.get());
-                        output.accept(ModItems.NEXON_PICKAXE.get());
-                        output.accept(ModItems.NEXON_HOE.get());
-                        output.accept(ModItems.NEXON_SHOVEL.get());
-                        output.accept(ModItems.NEXON_SWORD.get());
-                        output.accept(ModItems.NEXON_AXE.get());
+                        output.accept(ModItems.nexon);
+                        output.accept(ModItems.HEATED_NEXON);
+                        output.accept(ModItems.NEXON_INGOT);
+                        output.accept(ModItems.NEXON_REINFORCED_INGOT);
+                        output.accept(ModBlocks.NEXON_BLOCK);
+                        output.accept(ModBlocks.NEXON_ORE_BLOCK);
+                        output.accept(ModItems.NEXON_PICKAXE);
+                        output.accept(ModItems.NEXON_HOE);
+                        output.accept(ModItems.NEXON_SHOVEL);
+                        output.accept(ModItems.NEXON_SWORD);
+                        output.accept(ModItems.NEXON_AXE);
                         output.accept(ModItems.NEXON_HELMET);
                         output.accept(ModItems.NEXON_CHESTPLATE);
                         output.accept(ModItems.NEXON_LEGGINGS);
                         output.accept(ModItems.NEXON_BOOTS);
 
-                        output.accept(ModItems.SHATTERED_FRAGMENT.get());
-                        output.accept(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get());
+                        output.accept(ModItems.SHATTERED_FRAGMENT);
+                        output.accept(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK);
 
                         //Spawn Eggs
                         output.accept(ModItems.SKELETAL_ZOMBIE_SPAWN_EGG);
                         output.accept(ModItems.SKELETAL_ENDERMAN_SPAWN_EGG);
 
                         //Nexon Blocks
-                        output.accept(ModBlocks.NEXON_BLOCK.get());
-                        output.accept(ModBlocks.NEXON_ORE_BLOCK.get());
+                        output.accept(ModBlocks.NEXON_BLOCK);
+                        output.accept(ModBlocks.NEXON_ORE_BLOCK);
 
                         //Grass Blocks
-                        output.accept(ModBlocks.GHOSTLY_GRASS_BLOCK.get());
-                        output.accept(ModBlocks.GHOSTLY_DIRT.get());
-                        output.accept(ModBlocks.BLOODY_GRASS_BLOCK.get());
+                        output.accept(ModBlocks.GHOSTLY_GRASS_BLOCK);
+                        output.accept(ModBlocks.GHOSTLY_DIRT);
+                        output.accept(ModBlocks.BLOODY_GRASS_BLOCK);
                         //output.accept(ModBlocks.BLOODY_DIRT.get());
 
 
-                        output.accept(ModBlocks.LOG_GHOSTLY.get());
-                        output.accept(ModBlocks.GHOSTLY_WEB.get());
+                        output.accept(ModBlocks.LOG_GHOSTLY);
+                        output.accept(ModBlocks.GHOSTLY_WEB);
 
-                        //BONE ITEMS
-                        output.accept(ModBlocks.BONE_BRICK.get());
+
+                        //Brick Blocks
+                        output.accept(ModBlocks.BONE_BRICK);
+                        output.accept(ModBlocks.GHOSTLY_STONE_BRICKS);
+
+                        //Stone-CobbleStone Blocks
+                        output.accept(ModBlocks.GHOSTLY_STONE);
+                        output.accept(ModBlocks.GHOSTLY_COBBLESTONE);
 
                         //Custom Block Models
-                        output.accept(ModBlocks.PEDESTAL.get());
+                        output.accept(ModBlocks.PEDESTAL);
 
                         //Fluids
                         output.accept(ModFluids.POISONED_WATER_BUCKET);
@@ -101,16 +107,15 @@ public class ModCreativeModeTabs {
                         //Berries
                         output.accept(ModItems.BLOOD_BONE_FRUIT_BERRIES);
 
-                        output.accept(ModItems.SCYTHE.get());
-                        output.accept(ModItems.BONE_SWORD.get());
-                        output.accept(ModItems.SKELETAL_BLOOD_SHARD.get());
+                        output.accept(ModItems.SCYTHE);
+                        output.accept(ModItems.BONE_SWORD);
+                        output.accept(ModItems.SKELETAL_BLOOD_SHARD);
 
-                        output.accept(ModBlocks.ENHANCER.get());
-
+                        output.accept(ModBlocks.ENHANCER);
                         //Vines
                         //output.accept(ModBlocks.BLOODY_VINE.get());
 
-                        output.accept(ModItems.BLOOD_BONE_SWORD.get());
+                        output.accept(ModItems.BLOOD_BONE_SWORD);
 
 
                     }).build());

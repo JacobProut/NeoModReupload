@@ -42,6 +42,12 @@ public class ModBlocks {
             GhostlyBlock::new);
     public static final DeferredBlock<Block> GHOSTLY_DIRT = registerBlock("ghostly_dirt",
             GhostlyDirtBlock::new);
+    public static final DeferredBlock<Block> GHOSTLY_STONE_BRICKS = registerBlock("ghostly_stone_bricks", () ->new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)
+            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+    public static final DeferredBlock<Block> GHOSTLY_STONE = registerBlock("ghostly_stone", () ->new Block(BlockBehaviour.Properties.of()
+            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+    public static final DeferredBlock<Block> GHOSTLY_COBBLESTONE = registerBlock("ghostly_cobblestone", () ->new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)
+            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
     //Ghostly Wood items
     public static final DeferredBlock<Block> LOG_GHOSTLY = registerBlock("log_ghostly", () ->new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)
@@ -99,9 +105,6 @@ public class ModBlocks {
     //will edit later. PLACEHOLDER FOR TELEPORTER TO DIMENSION
     public static final DeferredBlock<Block> GHOSTLY_WEB = registerBlock("ghostly_web", () ->new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBWEB)
             .strength(1f).sound(SoundType.COBWEB)));
-
-    public static final DeferredBlock<Block> GHOSTLY_STONE = registerBlock("ghostly_stone", () ->new Block(BlockBehaviour.Properties.of()
-            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
     public static final DeferredBlock<Block> PEDESTAL = registerBlock("pedestal", () ->new PedestalBlock(BlockBehaviour.Properties.of()
             .strength(7f).destroyTime(100000).noOcclusion().sound(SoundType.STONE)));

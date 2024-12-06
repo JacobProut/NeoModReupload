@@ -45,7 +45,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 modLoc("block/enhancer_top")));*/
         blockItem(ModBlocks.ENHANCER);
 
+        blockWithItem(ModBlocks.GHOSTLY_STONE);
+        blockWithItem(ModBlocks.GHOSTLY_COBBLESTONE);
         blockWithItem(ModBlocks.BONE_BRICK);
+        blockWithItem(ModBlocks.GHOSTLY_STONE_BRICKS);
 
 
         System.out.println("Block states and models:logBlock-axisBlock's");
@@ -61,7 +64,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.STRIPPED_GHOSTLY_WOOD);
 
         blockWithItem(ModBlocks.GHOSTLY_WEB);
-        blockWithItem(ModBlocks.GHOSTLY_STONE);
 
 
         blockWithItem(ModBlocks.PLANKS_GHOSTLY);
