@@ -110,6 +110,8 @@ public class ModCreativeModeTabs {
                         //Vines
                         //output.accept(ModBlocks.BLOODY_VINE.get());
 
+                        output.accept(ModItems.BLOOD_BONE_SWORD.get());
+
 
                     }).build());
 

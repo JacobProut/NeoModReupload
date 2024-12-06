@@ -92,6 +92,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         handheldItem(ModItems.SCYTHE);
         handheldItem(ModItems.BONE_SWORD);
+        handheldItem(ModItems.BLOOD_BONE_SWORD);
 
         basicItem(ModItems.SHATTERED_FRAGMENT.get());
         basicItem(ModItems.SKELETAL_BLOOD_SHARD.get());

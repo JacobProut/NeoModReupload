@@ -87,6 +87,10 @@ public class ModItems {
             () -> new SwordItem(ModToolTiers.BONE, new Item.Properties()
                     .attributes(SwordItem.createAttributes(ModToolTiers.BONE, 3, -2.3F))));
 
+    public static final DeferredItem<Item> BLOOD_BONE_SWORD = ITEMS.register("blood_bone_sword",
+            () -> new SwordItem(ModToolTiers.BONE, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(ModToolTiers.BONE, 4, -2.3F))));
+
     public static final DeferredItem<Item> SHATTERED_FRAGMENT = ITEMS.register("shattered_fragment", () -> new Item(new Item.Properties()));
 
     public static final DeferredItem<Item> SKELETAL_BLOOD_SHARD = ITEMS.register("skeletal_blood_shard", () -> new Item(new Item.Properties()));
