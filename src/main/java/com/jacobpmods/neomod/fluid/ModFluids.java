@@ -30,7 +30,7 @@ public class ModFluids {
     public static final Supplier<FlowingFluid> FLOWING_POISONED_WATER = FLUIDS.register("flowing_poisoned_water",
             () -> new BaseFlowingFluid.Flowing(ModFluids.POISONED_WATER_PROPERTIES));
     public static final DeferredBlock<LiquidBlock> POISONED_WATER_BLOCK = ModBlocks.BLOCKS.register("poisoned_water_block",
-            () -> new PoisonedWaterBlock(ModFluids.SOURCE_POISONED_WATER.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.WATER).noLootTable()));
+            () -> new PoisonedWaterBlock(ModFluids.SOURCE_POISONED_WATER.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.WATER).noLootTable().liquid()));
     public static final DeferredItem<Item> POISONED_WATER_BUCKET = ModItems.ITEMS.registerItem("poisoned_water_bucket",
             properties -> new BucketItem(ModFluids.SOURCE_POISONED_WATER.get(), properties.craftRemainder(Items.BUCKET).stacksTo(1)));
     public static final BaseFlowingFluid.Properties POISONED_WATER_PROPERTIES = new BaseFlowingFluid.Properties(
