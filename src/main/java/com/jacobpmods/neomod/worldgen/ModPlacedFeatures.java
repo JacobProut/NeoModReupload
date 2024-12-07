@@ -23,6 +23,7 @@ public class ModPlacedFeatures {
 
     public static final ResourceKey<PlacedFeature> BLOODY_TREE_PLACED_KEY = registerKey("bloody_tree_placed");
     public static final ResourceKey<PlacedFeature> BLOODY_BONE_BUSH_KEY = registerKey("bloody_bone_bush");
+    public static final ResourceKey<PlacedFeature> SKULL_N_BONES_BLOCK_KEY = registerKey("skull_n_bones_block");
 
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
@@ -39,8 +40,17 @@ public class ModPlacedFeatures {
         register(context, BLOODY_BONE_BUSH_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BLOOD_BONE_BUSH),
                 List.of(RarityFilter.onAverageOnceEvery(15), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
 
-    }
+       /* register(context, SKULL_N_BONES_BLOCK_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SKULL_N_BONE_BLOCK),
+                List.of(RarityFilter.onAverageOnceEvery(15), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));*/
 
+        register(context, SKULL_N_BONES_BLOCK_KEY,
+                configuredFeatures.getOrThrow(ModConfiguredFeatures.SKULL_N_BONE_BLOCK),
+                List.of(
+                        RarityFilter.onAverageOnceEvery(2),
+                        PlacementUtils.HEIGHTMAP_TOP_SOLID, //TOP_SOLID NEEDED TO MAKE SURE IT DOESN'T SPAWN ON WATER AS MUCH
+                        BiomeFilter.biome()
+                ));
+    }
 
 
     private static ResourceKey<PlacedFeature> registerKey(String name) {

@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "neomod:blood_garden_biome",
+  "features": "neomod:skull_n_bones_block",
+  "step": "vegetal_decoration"
+}

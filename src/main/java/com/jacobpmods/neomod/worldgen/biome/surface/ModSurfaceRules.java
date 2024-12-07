@@ -18,6 +18,7 @@ public class ModSurfaceRules {
 
     private static final SurfaceRules.RuleSource MOD_BLOODY_GRASS_BLOCK = makeStateRule(ModBlocks.BLOODY_GRASS_BLOCK.get());
     private static final SurfaceRules.RuleSource BLOOD_BONE_BUSH = makeStateRule(ModBlocks.BLOOD_BONE_FRUIT_BUSH.get());
+    private static final SurfaceRules.RuleSource SKULL_N_BONES_BLOCK = makeStateRule(ModBlocks.SKULL_N_BONES.get());
 
 
     public static SurfaceRules.RuleSource makeRules() {
@@ -57,14 +58,20 @@ public class ModSurfaceRules {
         );
 
         SurfaceRules.RuleSource bushRule = SurfaceRules.ifTrue(
+                SurfaceRules.isBiome(ModBiomes.BLOOD_GARDEN_BIOME), SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, BLOOD_BONE_BUSH)
+        );
+
+        //WHY IS IT SPAWNING ON WATER/POISONED WATER & AIR
+        SurfaceRules.RuleSource skullNBonesRule = SurfaceRules.ifTrue(
                 SurfaceRules.isBiome(ModBiomes.BLOOD_GARDEN_BIOME),
-                SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, BLOOD_BONE_BUSH)
+                SurfaceRules.ifTrue(isAtOrAboveWaterlevel, SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SKULL_N_BONES_BLOCK))
         );
 
         SurfaceRules.RuleSource bloodyGrassSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(isAtOrAboveWaterlevel, SurfaceRules.sequence(
                 bloodyRules,
                 MOD_BLOODY_GRASS_BLOCK,
-                bushRule
+                bushRule,
+                skullNBonesRule
         )),MOD_DIRT);
 
         SurfaceRules.RuleSource modBloodyBiomeRules = SurfaceRules.sequence(

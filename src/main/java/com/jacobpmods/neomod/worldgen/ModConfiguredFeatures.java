@@ -26,9 +26,10 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> GHOSTLY_KEY = registerKey("ghostly");
     public static final ResourceKey<ConfiguredFeature<?, ?>> OOZING_FLOWER = registerKey("oozing_flower");
 
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BLOODY_KEY = registerKey("bloody");
     public static final ResourceKey<ConfiguredFeature<?, ?>> BLOOD_BONE_BUSH = registerKey("blood_bone_bush");
 
-    public static final ResourceKey<ConfiguredFeature<?, ?>> BLOODY_KEY = registerKey("bloody");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> SKULL_N_BONE_BLOCK = registerKey("skull_n_bone_block");
 
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
@@ -52,14 +53,24 @@ public class ModConfiguredFeatures {
                 BlockStateProvider.simple(ModBlocks.BLOODY_LEAVES.get()), //Specifies what blocks for leaves
                 new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3), //|Determines how leaves are placed around the trunk| Radius of foliage blob at top most part of tree, Controls the foliage radius as you go downwards from the top[For each level, the radius decrease 'Said' blocks, The number of layers of leaves that will be placed starting from the top of the trunk downwards.
                 new TwoLayersFeatureSize(1, 0, 1))
-                .dirt(BlockStateProvider.simple(ModBlocks.GHOSTLY_DIRT.get())) // Custom soil block
+                .dirt(BlockStateProvider.simple(ModBlocks.GHOSTLY_DIRT.get())) //Custom Soil Block
+                //.decorators(List.of(VinesFeature.TREE))
                 .build() //|Controls the number of layers at the top of the tree where branches can spawn| The size of the truck that can be uninterrupted at the base, the additional radius added to first layer, additional height for second layer
         );
 
-        register(context, BLOOD_BONE_BUSH, Feature.FLOWER, new RandomPatchConfiguration(32, 6, 2,
+        register(context, BLOOD_BONE_BUSH, Feature.FLOWER, new RandomPatchConfiguration(12, 6, 2,
                 PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.BLOOD_BONE_FRUIT_BUSH.get().defaultBlockState().setValue(BloodBoneBlossomBushBlock.AGE, 3))))));
 
+        register(context, SKULL_N_BONE_BLOCK, Feature.RANDOM_PATCH, new RandomPatchConfiguration(2, 7, 0,
+                PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.SKULL_N_BONES.get().defaultBlockState())))));
+
     }
+    //Random Patch info
+    //The first number (Tries) is the maximum number of patches that can be generated in a chunk. It defines how many patches of the feature can appear.
+    //The second number (xzSpread) defines the size of each patch. It controls the maximum number of blocks in each patch.
+    //The third number (ySpread) is the spread radius in each direction. This means that the blocks will spread out randomly in a 2x2 block area around the placement point, giving a sense of randomness.
+
+
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
         return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID, name));
     }

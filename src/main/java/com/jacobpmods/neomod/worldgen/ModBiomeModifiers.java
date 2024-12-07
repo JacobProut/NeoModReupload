@@ -20,6 +20,8 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_TREE_BLOODY = registerKey("add_tree_bloody");
     public static final ResourceKey<BiomeModifier> ADD_BLOODY_BUSH = registerKey("add_bloody_bush");
 
+    public static final ResourceKey<BiomeModifier> ADD_SKULL_N_BONES = registerKey("add_skull_n_bones");
+
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
         var biomes = context.lookup(Registries.BIOME);
@@ -55,6 +57,10 @@ public class ModBiomeModifiers {
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.BLOODY_BONE_BUSH_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
+        context.register(ADD_SKULL_N_BONES, new BiomeModifiers.AddFeaturesBiomeModifier(
+                bloodgardenBiome,
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.SKULL_N_BONES_BLOCK_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
 
 
     }
