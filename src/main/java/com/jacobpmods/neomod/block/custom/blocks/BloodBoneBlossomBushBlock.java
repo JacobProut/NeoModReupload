@@ -1,4 +1,4 @@
-package com.jacobpmods.neomod.block.custom;
+package com.jacobpmods.neomod.block.custom.blocks;
 
 import com.jacobpmods.neomod.block.ModBlocks;
 import com.jacobpmods.neomod.item.ModItems;

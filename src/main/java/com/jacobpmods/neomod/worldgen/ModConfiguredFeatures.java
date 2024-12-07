@@ -2,7 +2,7 @@ package com.jacobpmods.neomod.worldgen;
 
 import com.jacobpmods.neomod.FirstNeoMod;
 import com.jacobpmods.neomod.block.ModBlocks;
-import com.jacobpmods.neomod.block.custom.BloodBoneBlossomBushBlock;
+import com.jacobpmods.neomod.block.custom.blocks.BloodBoneBlossomBushBlock;
 import com.mojang.logging.LogUtils;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;

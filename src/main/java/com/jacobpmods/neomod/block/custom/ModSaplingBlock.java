@@ -1,4 +1,4 @@
-package com.jacobpmods.neomod.block;
+package com.jacobpmods.neomod.block.custom;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;

@@ -2,7 +2,7 @@ package com.jacobpmods.neomod.datagen;
 
 import com.jacobpmods.neomod.FirstNeoMod;
 import com.jacobpmods.neomod.block.ModBlocks;
-import com.jacobpmods.neomod.block.custom.BloodBoneBlossomBushBlock;
+import com.jacobpmods.neomod.block.custom.blocks.BloodBoneBlossomBushBlock;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;

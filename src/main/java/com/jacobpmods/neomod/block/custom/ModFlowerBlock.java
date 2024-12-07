@@ -1,4 +1,4 @@
-package com.jacobpmods.neomod.block;
+package com.jacobpmods.neomod.block.custom;
 
 import com.jacobpmods.neomod.block.ModBlocks;
 import net.minecraft.core.BlockPos;
