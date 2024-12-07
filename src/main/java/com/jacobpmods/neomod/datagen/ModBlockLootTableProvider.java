@@ -99,7 +99,7 @@ public class ModBlockLootTableProvider  extends BlockLootSubProvider {
 
         dropSelf(ModBlocks.GHOSTLY_WEB.get());
 
-        dropSelf(ModBlocks.SKULL_N_BONES.get());
+        dropNothing(ModBlocks.SKULL_N_BONES.get());
         /*this.add(ModBlocks.SKULL_N_BONES.get(),
                 block -> createMultipleOreDrops(ModBlocks.SKULL_N_BONES.get(), ModItems.SUPERIOR_BONES.get(), 1, 2));*/
 
@@ -130,6 +130,11 @@ public class ModBlockLootTableProvider  extends BlockLootSubProvider {
 
     }
 
+    protected void dropNothing(Block block) {
+        this.add(block, b -> LootTable.lootTable()
+                .withPool(LootPool.lootPool())  // Empty pool, no drops
+        );
+    }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {
         HolderLookup.RegistryLookup<Enchantment> registrylookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);

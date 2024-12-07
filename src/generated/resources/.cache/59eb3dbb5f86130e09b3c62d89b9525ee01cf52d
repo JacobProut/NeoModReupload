@@ -1,4 +1,4 @@
-// 1.21.1	2024-12-05T23:56:18.0514859	Loot Tables
+// 1.21.1	2024-12-07T03:26:24.8520034	Loot Tables
 28fa21e9b7ce066e58835deff5edbe255402a473 data/neomod/loot_table/blocks/bloody_grass_block.json
 f956fd080751781ca9357b001560809acf5f7b57 data/neomod/loot_table/blocks/bloody_leaves.json
 194824ddeed35b0bd591334ae1cc8455f0c116a6 data/neomod/loot_table/blocks/bloody_plank_slab.json
@@ -34,7 +34,7 @@ e4b5477f35d273d3da293181f3d4d95b3c247283 data/neomod/loot_table/blocks/pedestal.
 e418591b8d81df2fe50d8d9e87fbe0d2285d7e7b data/neomod/loot_table/blocks/planks_bloody.json
 ea58b2119b60934ce8f6d399cea6db8005b28a85 data/neomod/loot_table/blocks/planks_ghostly.json
 69467e28d6972131bd6479e9d49f33c5713ab99a data/neomod/loot_table/blocks/shattered_fragment_ore_block.json
-75db3fc01820b55344e8bf910346464f749ff76f data/neomod/loot_table/blocks/skull_n_bones.json
+b63d00230b73657a96df2e3940017f6fa7f12f55 data/neomod/loot_table/blocks/skull_n_bones.json
 1cc0f80c4717f0499554ce1e6ca0d64b5d0385ed data/neomod/loot_table/blocks/stripped_ghostly_log.json
 bca6b85db088aaa3b9fced8df5365c576a0b93d2 data/neomod/loot_table/blocks/stripped_ghostly_wood.json
 d4824bd0c5d551876e92da58a18f3d76c86dd0e4 data/neomod/loot_table/blocks/wood_ghostly.json
