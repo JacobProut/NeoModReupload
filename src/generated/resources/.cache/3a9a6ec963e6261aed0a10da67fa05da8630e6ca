@@ -1,4 +1,4 @@
-// 1.21.1	2024-12-05T23:57:31.1247539	Block States: neomod
+// 1.21.1	2024-12-07T03:37:30.3818533	Block States: neomod
 7cdda68cd3b983e7648bc220e1950f59e5edd79d assets/neomod/blockstates/bloody_grass_block.json
 38cd5a8f9f9dfea6a001af7bdd29bcdbff0bda8b assets/neomod/blockstates/bloody_leaves.json
 77cd793082b79c9e54fe8fab3c36a9f0a7c5683d assets/neomod/blockstates/bloody_plank_slab.json
@@ -81,7 +81,7 @@ e6f66ec7f9dce60822cbdc0463c441b92306a9f7 assets/neomod/models/block/ghostly_ston
 0811da092d970009b08e66418e923a2cd81ece23 assets/neomod/models/block/ghostly_stone_stairs.json
 6cc8434e03987c969d1394812f393cb588727d77 assets/neomod/models/block/ghostly_stone_stairs_inner.json
 4b2f38643f383febb7f9ccde1280ee19b4cee727 assets/neomod/models/block/ghostly_stone_stairs_outer.json
-f8771cbe584c7c27dfa59d0fad9660eaf44f8a5c assets/neomod/models/block/ghostly_web.json
+c4b664d86223b1161f5d3b24d41efe09413decf0 assets/neomod/models/block/ghostly_web.json
 4c5f7473bbfe02bdc8a68966c67df5f0f00fab31 assets/neomod/models/block/log_bloody.json
 ebc493e422a93835ef53bae56d8eac2513eb7d6c assets/neomod/models/block/log_bloody_horizontal.json
 c81bae0ff7e538514c778eea74ea5777fa05fc06 assets/neomod/models/block/log_ghostly.json

@@ -104,7 +104,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         makeBush(((BloodBoneBlossomBushBlock) ModBlocks.BLOOD_BONE_FRUIT_BUSH.get()), "blood_bone_blossom_bush_stage", "blood_bone_blossom_bush_stage");
 
-        blockWithItem(ModBlocks.GHOSTLY_WEB);
+        blockItem(ModBlocks.GHOSTLY_WEB);
+        simpleBlock(ModBlocks.GHOSTLY_WEB.get(),
+                models().cross("ghostly_web", modLoc("block/ghostly_web")).renderType("cutout"));
         blockWithItem(ModBlocks.SKULL_N_BONES);
 
         //NEEDS TO BE FIXED
