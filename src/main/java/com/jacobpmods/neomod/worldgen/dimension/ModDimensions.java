@@ -57,7 +57,7 @@ public class ModDimensions {
 
         NoiseBasedChunkGenerator wrappedChunkGenerator = new NoiseBasedChunkGenerator(
                 new FixedBiomeSource(biomeRegistry.getOrThrow(ModBiomes.GHOSTLY_BIOME)),
-                noiseGenSettings.getOrThrow(ModNoiseGeneratorSettings.GHOSTLY_BIOME_GENERATION)
+                noiseGenSettings.getOrThrow(ModNoiseGeneratorSettings.GHOSTLY_DIMENSION_GENERATION)
         );
 
         //ORIGINAL
@@ -84,7 +84,7 @@ public class ModDimensions {
                                         Climate.parameters(0.4F, 0.3F, 0.2F, 0.1F, 0.0F, 0.0F, 0.0F), biomeRegistry.getOrThrow(Biomes.DARK_FOREST))*/
 
                         ))),
-                noiseGenSettings.getOrThrow(ModNoiseGeneratorSettings.GHOSTLY_BIOME_GENERATION));
+                noiseGenSettings.getOrThrow(ModNoiseGeneratorSettings.GHOSTLY_DIMENSION_GENERATION));
 
         //Putting wrappedChunkGenerator for the last argument in this statement will make it so only the provided biome to be in the dimension
         //Using noiseBasedChunkGenerator will allow multiple biomes in the dimension
