@@ -8,6 +8,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityDimensions;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
@@ -157,7 +158,10 @@ public class GhostlyPortalShape {
         BlockState blockstate = ModBlocks.GHOSTLY_PORTAL_BLOCK.get().defaultBlockState().setValue(GhostlyPortalBlock.AXIS, this.axis);
         BlockPos.betweenClosed(this.bottomLeft, this.bottomLeft.relative(Direction.UP, this.height - 1).relative(this.rightDir, this.width - 1)).forEach(pos -> this.level.setBlock(pos, blockstate, 18));
     }
-
+    public void createPortalBlocks(Level level) {
+        BlockState blockstate = ModBlocks.GHOSTLY_PORTAL_BLOCK.get().defaultBlockState().setValue(GhostlyPortalBlock.AXIS, this.axis);
+        BlockPos.betweenClosed(this.bottomLeft, this.bottomLeft.relative(Direction.UP, this.height - 1).relative(this.rightDir, this.width - 1)).forEach(pos -> this.level.setBlock(pos, blockstate, 18));
+    }
     public boolean isComplete() {
         return this.isValid() && this.numPortalBlocks == this.width * this.height;
     }
