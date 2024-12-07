@@ -6,6 +6,7 @@ import com.jacobpmods.neomod.block.custom.blockentities.EnhancerBlock;
 import com.jacobpmods.neomod.block.custom.blockentities.PedestalBlock;
 import com.jacobpmods.neomod.block.custom.blocks.BloodBoneBlossomBushBlock;
 import com.jacobpmods.neomod.block.custom.blocks.BloodyLeavesBlock;
+import com.jacobpmods.neomod.block.custom.blocks.GhostlyWeb;
 import com.jacobpmods.neomod.block.custom.blocks.SkullNBones;
 import com.jacobpmods.neomod.block.custom.portal.GhostlyPortalBlock;
 import com.jacobpmods.neomod.block.terrainblocks.GhostlyBlock;
@@ -21,6 +22,7 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -181,8 +183,8 @@ public class ModBlocks {
             .strength(0.2f).instabreak().noCollission().sound(SoundType.STONE)));
 
 
-    public static final DeferredBlock<Block> GHOSTLY_WEB = registerBlock("ghostly_web", () ->new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBWEB)
-            .strength(1f).noOcclusion().sound(SoundType.COBWEB)));
+    public static final DeferredBlock<Block> GHOSTLY_WEB = registerBlock("ghostly_web", () ->new GhostlyWeb(BlockBehaviour.Properties.ofFullCopy(Blocks.COBWEB)
+            .strength(4.0f).noOcclusion().noCollission().forceSolidOn().requiresCorrectToolForDrops().pushReaction(PushReaction.DESTROY).sound(SoundType.COBWEB)));
 
 
 
