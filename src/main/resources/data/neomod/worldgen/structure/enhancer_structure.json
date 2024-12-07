@@ -41,5 +41,22 @@
         }
       ]
     }
+  },
+  "terrain_adaptation": "none",
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 15,
+    "separation": 5,
+    "salt": 12345678,
+    "exclusion_zones": [
+      {
+        "other_set": "minecraft:water",
+        "chunk_count": 1
+      },
+      {
+        "other_set": "neomod:modfluids/poisoned_water_block",
+        "chunk_count": 1
+      }
+    ]
   }
 }
