@@ -20,6 +20,7 @@ import com.jacobpmods.neomod.screen.ModMenuTypes;
 import com.jacobpmods.neomod.screen.custom.EnhancerScreen;
 import com.jacobpmods.neomod.screen.custom.PedestalScreen;
 import com.jacobpmods.neomod.worldgen.dimension.ModPoiTypes;
+import com.jacobpmods.neomod.worldgen.tree.treeDecorators.ModTreeDecorators;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRenderers;
@@ -66,7 +67,7 @@ public class FirstNeoMod {
 
         ModRecipes.registers(modEventBus);
 
-        //ModTreeDecorators.TREE_DECORATORS.register(modEventBus);
+        ModTreeDecorators.TREE_DECORATORS.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
 

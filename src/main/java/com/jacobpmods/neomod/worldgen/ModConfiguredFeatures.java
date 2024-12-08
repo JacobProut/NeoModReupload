@@ -3,6 +3,7 @@ package com.jacobpmods.neomod.worldgen;
 import com.jacobpmods.neomod.FirstNeoMod;
 import com.jacobpmods.neomod.block.ModBlocks;
 import com.jacobpmods.neomod.block.custom.blocks.BloodBoneBlossomBushBlock;
+import com.jacobpmods.neomod.worldgen.tree.treeDecorators.BloodVineDecorator;
 import com.mojang.logging.LogUtils;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -20,6 +21,8 @@ import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSi
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
+
+import java.util.List;
 
 public class ModConfiguredFeatures {
     // Configured Features -> Placed Features -> Placed inside of world Via BiomeModifiers
@@ -54,7 +57,7 @@ public class ModConfiguredFeatures {
                 new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3), //|Determines how leaves are placed around the trunk| Radius of foliage blob at top most part of tree, Controls the foliage radius as you go downwards from the top[For each level, the radius decrease 'Said' blocks, The number of layers of leaves that will be placed starting from the top of the trunk downwards.
                 new TwoLayersFeatureSize(1, 0, 1))
                 .dirt(BlockStateProvider.simple(ModBlocks.GHOSTLY_DIRT.get())) //Custom Soil Block
-                //.decorators(List.of(VinesFeature.TREE))
+                .decorators(List.of(new BloodVineDecorator(0.25F)))
                 .build() //|Controls the number of layers at the top of the tree where branches can spawn| The size of the truck that can be uninterrupted at the base, the additional radius added to first layer, additional height for second layer
         );
 
