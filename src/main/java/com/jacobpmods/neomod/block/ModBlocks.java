@@ -251,7 +251,7 @@ public class ModBlocks {
 
 
     //Portal Blocks
-    public static final DeferredBlock<GhostlyPortalBlock> GHOSTLY_PORTAL_BLOCK = registerBlock("ghostly_portal_block", () ->new GhostlyPortalBlock(BlockBehaviour.Properties.of()
+    public static final DeferredBlock<Block> GHOSTLY_PORTAL_BLOCK = registerBlock("ghostly_portal_block", () ->new GhostlyPortalBlock(BlockBehaviour.Properties.of()
             .strength(7f).destroyTime(100000).sound(SoundType.GLASS)));
 
  /*   public static final DeferredBlock<VineBlock> BLOODY_VINE = registerBlock("bloody_vine", () -> new BloodyVine(

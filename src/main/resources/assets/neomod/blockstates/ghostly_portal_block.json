@@ -1,7 +1,6 @@
 {
   "variants": {
-    "": {
-      "model": "neomod:block/ghostly_portal_block"
-    }
+    "axis=z": { "model": "neomod:block/ghostly_portal_block_ew" },
+    "axis=x": { "model": "neomod:block/ghostly_portal_block_ns" }
   }
 }
