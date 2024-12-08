@@ -68,18 +68,30 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BONE_BRICK);
                         output.accept(ModBlocks.BONE_BRICK_STAIRS);
                         output.accept(ModBlocks.BONE_BRICK_SLAB);
+                        output.accept(ModBlocks.BONE_BRICK_FENCE);
+                        output.accept(ModBlocks.BONE_BRICK_FENCE_GATE);
+                        output.accept(ModBlocks.BONE_BRICK_WALL);
 
 
                         //Stone-CobbleStone Blocks
                         output.accept(ModBlocks.GHOSTLY_STONE);
                         output.accept(ModBlocks.GHOSTLY_STONE_STAIRS);
                         output.accept(ModBlocks.GHOSTLY_STONE_SLAB);
+                        output.accept(ModBlocks.GHOSTLY_STONE_FENCE);
+                        output.accept(ModBlocks.GHOSTLY_STONE_FENCE_GATE);
+                        output.accept(ModBlocks.GHOSTLY_STONE_WALL);
                         output.accept(ModBlocks.GHOSTLY_COBBLESTONE);
                         output.accept(ModBlocks.GHOSTLY_COBBLESTONE_STAIRS);
                         output.accept(ModBlocks.GHOSTLY_COBBLESTONE_SLAB);
+                        output.accept(ModBlocks.GHOSTLY_COBBLESTONE_FENCE);
+                        output.accept(ModBlocks.GHOSTLY_COBBLESTONE_FENCE_GATE);
+                        output.accept(ModBlocks.GHOSTLY_COBBLESTONE_WALL);
                         output.accept(ModBlocks.GHOSTLY_STONE_BRICKS);
                         output.accept(ModBlocks.GHOSTLY_STONEBRICK_STAIRS);
                         output.accept(ModBlocks.GHOSTLY_STONEBRICK_SLAB);
+                        output.accept(ModBlocks.GHOSTLY_STONEBRICK_FENCE);
+                        output.accept(ModBlocks.GHOSTLY_STONEBRICK_FENCE_GATE);
+                        output.accept(ModBlocks.GHOSTLY_STONEBRICK_WALL);
 
                         //Logs/Wood
                         output.accept(ModBlocks.LOG_GHOSTLY);

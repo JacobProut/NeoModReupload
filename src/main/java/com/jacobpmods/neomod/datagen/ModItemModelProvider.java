@@ -99,6 +99,17 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         basicItem(ModItems.UNDEAD_KEY.get());
 
+        fenceItem(ModBlocks.GHOSTLY_STONE_FENCE, ModBlocks.GHOSTLY_STONE);
+        fenceItem(ModBlocks.GHOSTLY_COBBLESTONE_FENCE, ModBlocks.GHOSTLY_COBBLESTONE);
+        fenceItem(ModBlocks.GHOSTLY_STONEBRICK_FENCE, ModBlocks.GHOSTLY_STONE_BRICKS);
+        fenceItem(ModBlocks.BONE_BRICK_FENCE, ModBlocks.BONE_BRICK);
+
+        wallItem(ModBlocks.GHOSTLY_STONE_WALL, ModBlocks.GHOSTLY_STONE);
+        wallItem(ModBlocks.GHOSTLY_COBBLESTONE_WALL, ModBlocks.GHOSTLY_COBBLESTONE);
+        wallItem(ModBlocks.GHOSTLY_STONEBRICK_WALL, ModBlocks.GHOSTLY_STONE_BRICKS);
+        wallItem(ModBlocks.BONE_BRICK_WALL, ModBlocks.BONE_BRICK);
+
+
     }
 
     public void flowerItem(DeferredBlock<Block> block) {
@@ -156,6 +167,21 @@ public class ModItemModelProvider extends ItemModelProvider {
         return withExistingParent(item.getId().getPath(),
                 ResourceLocation.parse("item/handheld")).texture("layer0",
                 ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID, "item/" + item.getId().getPath()));
+    }
+    public void fenceItem(DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {
+        this.withExistingParent(block.getId().getPath(), mcLoc("block/fence_inventory"))
+                .texture("texture",  ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID,
+                        "block/" + baseBlock.getId().getPath()));
+    }
+    public void wallItem(DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {
+        this.withExistingParent(block.getId().getPath(), mcLoc("block/wall_inventory"))
+                .texture("wall",  ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID,
+                        "block/" + baseBlock.getId().getPath()));
+    }
+
+    private void baseItem(DeferredBlock<Block> block, DeferredBlock<Block> baseBlock, String name, String key){
+        this.withExistingParent(block.getId().getPath(), mcLoc("block/"+ name +"_inventory"))
+                .texture(key, ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID, "block/" + baseBlock.getId().getPath()));
     }
 
 

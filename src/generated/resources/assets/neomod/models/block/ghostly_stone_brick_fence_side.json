@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_side",
+  "textures": {
+    "texture": "neomod:block/ghostly_stone_bricks"
+  }
+}

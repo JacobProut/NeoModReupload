@@ -193,6 +193,22 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         this.tag(PORTAL_FRAME)
                 .add(ModBlocks.BONE_BRICK.get());
 
+        tag(FENCES)
+                .add(ModBlocks.GHOSTLY_STONE_FENCE.get())
+                .add(ModBlocks.GHOSTLY_COBBLESTONE_FENCE.get())
+                .add(ModBlocks.GHOSTLY_STONEBRICK_FENCE.get())
+                .add(ModBlocks.BONE_BRICK_FENCE.get());
+        tag(FENCE_GATES)
+                .add(ModBlocks.GHOSTLY_STONE_FENCE_GATE.get())
+                .add(ModBlocks.GHOSTLY_COBBLESTONE_FENCE_GATE.get())
+                .add(ModBlocks.GHOSTLY_STONEBRICK_FENCE_GATE.get())
+                .add(ModBlocks.BONE_BRICK_FENCE_GATE.get());
+        tag(WALLS)
+                .add(ModBlocks.GHOSTLY_STONE_WALL.get())
+                .add(ModBlocks.GHOSTLY_COBBLESTONE_WALL.get())
+                .add(ModBlocks.GHOSTLY_STONEBRICK_WALL.get())
+                .add(ModBlocks.BONE_BRICK_WALL.get());
+
        /* tag(CLIMBABLE)
                 .add(ModBlocks.BLOODY_VINE.get());*/
 

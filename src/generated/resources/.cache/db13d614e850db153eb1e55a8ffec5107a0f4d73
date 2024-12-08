@@ -1,5 +1,7 @@
-// 1.21.1	2024-12-07T03:52:36.7238727	Tags for minecraft:block mod id neomod
+// 1.21.1	2024-12-07T22:16:49.7501433	Tags for minecraft:block mod id neomod
 f5fbb319f25c4056dadc32c54493627182dc4ab6 data/minecraft/tags/block/dirt.json
+3890c44f3e5ef672c47f0dc2a5343b0d8830ed3c data/minecraft/tags/block/fences.json
+c8c253a0d0406959bdb652dc247dd2a8461c0436 data/minecraft/tags/block/fence_gates.json
 acec1d17d5229dc15c4c3dc5f8095e5624c35dce data/minecraft/tags/block/flowers.json
 dd59028367a06f3223363dca901f59663e5b7206 data/minecraft/tags/block/incorrect_for_diamond_tool.json
 88a18702880bd540d5a6f00f75053ef501a03226 data/minecraft/tags/block/incorrect_for_gold_tool.json
@@ -15,6 +17,7 @@ ac3c884022f5a161f793d2a7f9d814466ec169b4 data/minecraft/tags/block/portals.json
 40c7f88c4ac255e6ed8eb06c7c90495e03b821de data/minecraft/tags/block/saplings.json
 a2f440985c09e4e099356e9ec5e0a08123a2f29e data/minecraft/tags/block/slabs.json
 84fe0c7c1661b9e56f3f13c3115394ad882fd81f data/minecraft/tags/block/stairs.json
+99735be177937cce35ac9b7ec9b7030235fe058d data/minecraft/tags/block/walls.json
 89a29aabd132ca987e952aa64e2228f65f5a535c data/neoforge/tags/block/needs_netherite_tool.json
 4bbbda2f700f306ebb99f50d0395687954e890e0 data/neomod/tags/block/needs_nexon_tool.json
 2582b968b1869d9386809dc309b0b20bae2beb33 data/neomod/tags/block/portal_frame.json

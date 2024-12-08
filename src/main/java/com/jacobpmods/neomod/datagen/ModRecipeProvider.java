@@ -132,6 +132,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('N', Items.NETHERITE_SWORD)
                 .unlockedBy(getHasName(ModItems.SHATTERED_FRAGMENT.get()), has(ModItems.SHATTERED_FRAGMENT.get())).save(recipeOutput);
 
+        // Slabs
         slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GHOSTLY_STONE_SLAB.get(), ModBlocks.GHOSTLY_STONE.get());
         stairBuilder(ModBlocks.GHOSTLY_STONE_STAIRS.get(), Ingredient.of(ModBlocks.GHOSTLY_STONE.get())).group("ghostly_stone")
                 .unlockedBy("has_ghostly_stone", has(ModBlocks.GHOSTLY_STONE.get())).save(recipeOutput);
@@ -155,6 +156,34 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLOODY_PLANK_SLAB.get(), ModBlocks.PLANKS_BLOODY.get());
         stairBuilder(ModBlocks.BLOODY_PLANK_STAIRS.get(), Ingredient.of(ModBlocks.PLANKS_BLOODY.get())).group("bloody_plank")
                 .unlockedBy("has_ghostly_plank", has(ModBlocks.PLANKS_BLOODY.get())).save(recipeOutput);
+
+
+        // Walls
+        wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GHOSTLY_STONE_WALL.get(), ModBlocks.GHOSTLY_STONE.get());
+        wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GHOSTLY_COBBLESTONE_WALL.get(), ModBlocks.GHOSTLY_COBBLESTONE.get());
+        wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GHOSTLY_STONEBRICK_WALL.get(), ModBlocks.GHOSTLY_STONE_BRICKS.get());
+        wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BONE_BRICK_WALL.get(), ModBlocks.BONE_BRICK.get());
+
+        // Fences
+        fenceBuilder(ModBlocks.GHOSTLY_STONE_FENCE.get(), Ingredient.of(ModBlocks.GHOSTLY_STONE.get())).group("ghostly_stone")
+                .unlockedBy("has_ghostly_stone", has(ModBlocks.GHOSTLY_STONE.get())).save(recipeOutput);
+        fenceBuilder(ModBlocks.GHOSTLY_COBBLESTONE_FENCE.get(), Ingredient.of(ModBlocks.GHOSTLY_COBBLESTONE.get())).group("ghostly_cobblestone")
+                .unlockedBy("has_ghostly_cobblestone", has(ModBlocks.GHOSTLY_COBBLESTONE.get())).save(recipeOutput);
+        fenceBuilder(ModBlocks.GHOSTLY_STONEBRICK_FENCE.get(), Ingredient.of(ModBlocks.GHOSTLY_STONE_BRICKS.get())).group("ghostly_stone_bricks")
+                .unlockedBy("has_ghostly_stonebricks", has(ModBlocks.GHOSTLY_STONE_BRICKS.get())).save(recipeOutput);
+        fenceBuilder(ModBlocks.BONE_BRICK_FENCE.get(), Ingredient.of(ModBlocks.BONE_BRICK.get())).group("bone_bricks")
+                .unlockedBy("has_bone_brick", has(ModBlocks.BONE_BRICK.get())).save(recipeOutput);
+
+
+        // Fence Gates
+        fenceGateBuilder(ModBlocks.GHOSTLY_STONE_FENCE_GATE.get(), Ingredient.of(ModBlocks.GHOSTLY_STONE.get())).group("ghostly_stone")
+                .unlockedBy("has_ghostly_stone", has(ModBlocks.GHOSTLY_STONE.get())).save(recipeOutput);
+        fenceGateBuilder(ModBlocks.GHOSTLY_COBBLESTONE_FENCE_GATE.get(), Ingredient.of(ModBlocks.GHOSTLY_COBBLESTONE.get())).group("ghostly_cobblestone")
+                .unlockedBy("has_ghostly_cobblestone", has(ModBlocks.GHOSTLY_COBBLESTONE.get())).save(recipeOutput);
+        fenceGateBuilder(ModBlocks.GHOSTLY_STONEBRICK_FENCE_GATE.get(), Ingredient.of(ModBlocks.GHOSTLY_STONE_BRICKS.get())).group("ghostly_stone_bricks")
+                .unlockedBy("has_ghostly_stonebricks", has(ModBlocks.GHOSTLY_STONE_BRICKS.get())).save(recipeOutput);
+        fenceGateBuilder(ModBlocks.BONE_BRICK_FENCE_GATE.get(), Ingredient.of(ModBlocks.BONE_BRICK.get())).group("bone_bricks")
+                .unlockedBy("has_bone_brick", has(ModBlocks.BONE_BRICK.get())).save(recipeOutput);
 
     }
     protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,

@@ -53,18 +53,32 @@ public class ModBlockLootTableProvider  extends BlockLootSubProvider {
         dropSelf(ModBlocks.GHOSTLY_STONE_STAIRS.get());
         this.add(ModBlocks.GHOSTLY_STONE_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.GHOSTLY_STONE_SLAB.get()));
-        dropSelf(ModBlocks.GHOSTLY_STONE_BRICKS.get());
-        dropSelf(ModBlocks.GHOSTLY_STONEBRICK_STAIRS.get());
-        this.add(ModBlocks.GHOSTLY_STONEBRICK_SLAB.get(),
-                block -> createSlabItemTable(ModBlocks.GHOSTLY_STONEBRICK_SLAB.get()));
+        dropSelf(ModBlocks.GHOSTLY_STONE_FENCE.get());
+        dropSelf(ModBlocks.GHOSTLY_STONE_FENCE_GATE.get());
+        dropSelf(ModBlocks.GHOSTLY_STONE_WALL.get());
         dropSelf(ModBlocks.GHOSTLY_COBBLESTONE.get());
         dropSelf(ModBlocks.GHOSTLY_COBBLESTONE_STAIRS.get());
         this.add(ModBlocks.GHOSTLY_COBBLESTONE_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.GHOSTLY_COBBLESTONE_SLAB.get()));
+        dropSelf(ModBlocks.GHOSTLY_COBBLESTONE_FENCE.get());
+        dropSelf(ModBlocks.GHOSTLY_COBBLESTONE_FENCE_GATE.get());
+        dropSelf(ModBlocks.GHOSTLY_COBBLESTONE_WALL.get());
+        dropSelf(ModBlocks.GHOSTLY_STONE_BRICKS.get());
+        dropSelf(ModBlocks.GHOSTLY_STONEBRICK_STAIRS.get());
+        this.add(ModBlocks.GHOSTLY_STONEBRICK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.GHOSTLY_STONEBRICK_SLAB.get()));
+        dropSelf(ModBlocks.GHOSTLY_STONEBRICK_FENCE.get());
+        dropSelf(ModBlocks.GHOSTLY_STONEBRICK_FENCE_GATE.get());
+        dropSelf(ModBlocks.GHOSTLY_STONEBRICK_WALL.get());
+
+        //Bone Brick Blocks
         dropSelf(ModBlocks.BONE_BRICK.get());
         dropSelf(ModBlocks.BONE_BRICK_STAIRS.get());
         this.add(ModBlocks.BONE_BRICK_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.BONE_BRICK_SLAB.get()));
+        dropSelf(ModBlocks.BONE_BRICK_FENCE.get());
+        dropSelf(ModBlocks.BONE_BRICK_FENCE_GATE.get());
+        dropSelf(ModBlocks.BONE_BRICK_WALL.get());
 
 
         //Wood Blocks

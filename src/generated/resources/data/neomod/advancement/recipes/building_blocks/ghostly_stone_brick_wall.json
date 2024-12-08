@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_ghostly_stone_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "neomod:ghostly_stone_bricks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "neomod:ghostly_stone_brick_wall"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_ghostly_stone_bricks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "neomod:ghostly_stone_brick_wall"
+    ]
+  }
+}

@@ -47,24 +47,42 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.GHOSTLY_STONE_STAIRS);
         slabBlock(((SlabBlock) ModBlocks.GHOSTLY_STONE_SLAB.get()), blockTexture(ModBlocks.GHOSTLY_STONE.get()), blockTexture(ModBlocks.GHOSTLY_STONE.get()));
         blockItem(ModBlocks.GHOSTLY_STONE_SLAB);
+        fenceBlock(((FenceBlock) ModBlocks.GHOSTLY_STONE_FENCE.get()), blockTexture(ModBlocks.GHOSTLY_STONE.get()));
+        blockItem(ModBlocks.GHOSTLY_STONE_FENCE_GATE);
+        fenceGateBlock(((FenceGateBlock) ModBlocks.GHOSTLY_STONE_FENCE_GATE.get()), blockTexture(ModBlocks.GHOSTLY_STONE.get()));
+        wallBlock(((WallBlock) ModBlocks.GHOSTLY_STONE_WALL.get()), blockTexture(ModBlocks.GHOSTLY_STONE.get()));
 
         blockWithItem(ModBlocks.GHOSTLY_COBBLESTONE);
         stairsBlock(((StairBlock) ModBlocks.GHOSTLY_COBBLESTONE_STAIRS.get()), blockTexture(ModBlocks.GHOSTLY_COBBLESTONE.get()));
         blockItem(ModBlocks.GHOSTLY_COBBLESTONE_STAIRS);
         slabBlock(((SlabBlock) ModBlocks.GHOSTLY_COBBLESTONE_SLAB.get()), blockTexture(ModBlocks.GHOSTLY_COBBLESTONE.get()), blockTexture(ModBlocks.GHOSTLY_COBBLESTONE.get()));
         blockItem(ModBlocks.GHOSTLY_COBBLESTONE_SLAB);
+        fenceBlock(((FenceBlock) ModBlocks.GHOSTLY_COBBLESTONE_FENCE.get()), blockTexture(ModBlocks.GHOSTLY_COBBLESTONE.get()));
+        blockItem(ModBlocks.GHOSTLY_COBBLESTONE_FENCE_GATE);
+        fenceGateBlock(((FenceGateBlock) ModBlocks.GHOSTLY_COBBLESTONE_FENCE_GATE.get()), blockTexture(ModBlocks.GHOSTLY_COBBLESTONE.get()));
+        wallBlock(((WallBlock) ModBlocks.GHOSTLY_COBBLESTONE_WALL.get()), blockTexture(ModBlocks.GHOSTLY_COBBLESTONE.get()));
+
 
         blockWithItem(ModBlocks.GHOSTLY_STONE_BRICKS);
         stairsBlock(((StairBlock) ModBlocks.GHOSTLY_STONEBRICK_STAIRS.get()), blockTexture(ModBlocks.GHOSTLY_STONE_BRICKS.get()));
         blockItem(ModBlocks.GHOSTLY_STONEBRICK_STAIRS);
         slabBlock(((SlabBlock) ModBlocks.GHOSTLY_STONEBRICK_SLAB.get()), blockTexture(ModBlocks.GHOSTLY_STONE_BRICKS.get()), blockTexture(ModBlocks.GHOSTLY_STONE_BRICKS.get()));
         blockItem(ModBlocks.GHOSTLY_STONEBRICK_SLAB);
+        fenceBlock(((FenceBlock) ModBlocks.GHOSTLY_STONEBRICK_FENCE.get()), blockTexture(ModBlocks.GHOSTLY_STONE_BRICKS.get()));
+        blockItem(ModBlocks.GHOSTLY_STONEBRICK_FENCE_GATE);
+        fenceGateBlock(((FenceGateBlock) ModBlocks.GHOSTLY_STONEBRICK_FENCE_GATE.get()), blockTexture(ModBlocks.GHOSTLY_STONE_BRICKS.get()));
+        wallBlock(((WallBlock) ModBlocks.GHOSTLY_STONEBRICK_WALL.get()), blockTexture(ModBlocks.GHOSTLY_STONE_BRICKS.get()));
 
         blockWithItem(ModBlocks.BONE_BRICK);
         stairsBlock(((StairBlock) ModBlocks.BONE_BRICK_STAIRS.get()), blockTexture(ModBlocks.BONE_BRICK.get()));
         blockItem(ModBlocks.BONE_BRICK_STAIRS);
         slabBlock(((SlabBlock) ModBlocks.BONE_BRICK_SLAB.get()), blockTexture(ModBlocks.BONE_BRICK.get()), blockTexture(ModBlocks.BONE_BRICK.get()));
         blockItem(ModBlocks.BONE_BRICK_SLAB);
+        fenceBlock(((FenceBlock) ModBlocks.BONE_BRICK_FENCE.get()), blockTexture(ModBlocks.BONE_BRICK.get()));
+        blockItem(ModBlocks.BONE_BRICK_FENCE_GATE);
+        fenceGateBlock(((FenceGateBlock) ModBlocks.BONE_BRICK_FENCE_GATE.get()), blockTexture(ModBlocks.BONE_BRICK.get()));
+        wallBlock(((WallBlock) ModBlocks.BONE_BRICK_WALL.get()), blockTexture(ModBlocks.BONE_BRICK.get()));
+
 
         System.out.println("Block states and models:logBlock-axisBlock's");
 
@@ -122,6 +140,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
                             .build();
                 });
     }
+
     public void makeBush(SweetBerryBushBlock block, String modelName, String textureName) {
         Function<BlockState, ConfiguredModel[]> function = state -> states(state, modelName, textureName);
 

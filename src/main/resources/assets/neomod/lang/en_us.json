@@ -82,19 +82,30 @@
   "block.neomod.ghostly_stone": "Ghostly Stone",
   "block.neomod.ghostly_stone_slab": "Ghostly Slab",
   "block.neomod.ghostly_stone_stairs": "Ghostly Stone Stairs",
+  "block.neomod.ghostly_stone_fence": "Ghostly Stone Fence",
+  "block.neomod.ghostly_stone_fence_gate": "Ghostly Stone Fence Gate",
+  "block.neomod.ghostly_stone_wall": "Ghostly Stone Wall",
 
   "block.neomod.ghostly_cobblestone": "Ghostly Cobblestone",
   "block.neomod.ghostly_cobblestone_slab": "Ghostly Cobblestone Slab",
   "block.neomod.ghostly_cobblestone_stairs": "Ghostly Cobblestone Stairs",
+  "block.neomod.ghostly_cobblestone_fence": "Ghostly Cobblestone Fence",
+  "block.neomod.ghostly_cobblestone_fence_gate": "Ghostly Cobblestone Fence Gate",
+  "block.neomod.ghostly_cobblestone_wall": "Ghostly Cobblestone Wall",
 
   "block.neomod.ghostly_stone_bricks": "Ghostly Stone Bricks",
   "block.neomod.ghostly_stone_brick_slab": "Ghostly Stone Brick Slab",
   "block.neomod.ghostly_stone_brick_stairs": "Ghostly Stone Brick Stairs",
+  "block.neomod.ghostly_stone_brick_fence": "Ghostly Stone Brick Fence",
+  "block.neomod.ghostly_stone_brick_fence_gate": "Ghostly Stone Brick Fence Gate",
+  "block.neomod.ghostly_stone_brick_wall": "Ghostly Stone Brick Wall",
 
   "block.neomod.bone_brick": "Bone Brick Block",
   "block.neomod.bone_brick_slab": "Bone Brick Slab",
   "block.neomod.bone_brick_stairs": "Bone Brick Stairs",
-
+  "block.neomod.bone_brick_fence": "Bone Brick Fence",
+  "block.neomod.bone_brick_fence_gate": "Bone Brick Fence Gate",
+  "block.neomod.bone_brick_wall": "Bone Brick Wall",
 
 
 
