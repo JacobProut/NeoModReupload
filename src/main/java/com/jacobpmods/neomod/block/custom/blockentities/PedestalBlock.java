@@ -1,11 +1,8 @@
 package com.jacobpmods.neomod.block.custom.blockentities;
 
-import com.jacobpmods.neomod.block.ModBlocks;
-import com.jacobpmods.neomod.block.custom.portal.setup.GhostlyPortalShape;
 import com.jacobpmods.neomod.block.entity.custom.PedestalBlockEntity;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
@@ -70,30 +67,6 @@ public class PedestalBlock extends BaseEntityBlock {
         super.onRemove(state, level, pos, newState, movedByPiston);
     }
 
-    /*@Override
-    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
-
-        if(level.getBlockEntity(pos) instanceof PedestalBlockEntity pedestalBlockEntity) {
-            if(player.isCrouching() && !level.isClientSide()) {
-                ((ServerPlayer) player).openMenu(new SimpleMenuProvider(pedestalBlockEntity, Component.literal("pedestal")), pos);
-                return ItemInteractionResult.SUCCESS;
-            }
-
-            if(pedestalBlockEntity.inventory.getStackInSlot(0).isEmpty() && !stack.isEmpty()) {
-                pedestalBlockEntity.inventory.insertItem(0, stack.copy(), false);
-                stack.shrink(1);
-                level.playSound(player, pos, SoundEvents.ITEM_PICKUP, SoundSource.BLOCKS, 1f, 2f);
-            } else if (stack.isEmpty()) {
-                ItemStack stackOnPedestal = pedestalBlockEntity.inventory.extractItem(0, 1, false);
-                player.setItemInHand(InteractionHand.MAIN_HAND, stackOnPedestal);
-                pedestalBlockEntity.clearContents();
-                level.playSound(player, pos, SoundEvents.ITEM_PICKUP, SoundSource.BLOCKS, 1f, 1f);
-            }
-        }
-        return ItemInteractionResult.SUCCESS;
-    }
-*/
-
     @Override
     protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         if (level.getBlockEntity(pos) instanceof PedestalBlockEntity pedestalBlockEntity) {
@@ -107,7 +80,7 @@ public class PedestalBlock extends BaseEntityBlock {
                 // Check if the item is a golden apple
                 if (stack.is(Items.GOLDEN_APPLE)) {
                     // Logic to spawn ghostly portal
-                    if (spawnGhostlyPortal(level, pos)) {
+                    if (openGhostlyPortal(level, pos)) {
                         stack.shrink(1); // Consume the golden apple
                         level.playSound(null, pos, SoundEvents.END_PORTAL_SPAWN, SoundSource.BLOCKS, 1f, 1f);
                         return ItemInteractionResult.SUCCESS;
@@ -130,7 +103,7 @@ public class PedestalBlock extends BaseEntityBlock {
         return ItemInteractionResult.SUCCESS;
     }
 
-    private boolean spawnGhostlyPortal(Level level, BlockPos pedestalPos) {
+    private boolean openGhostlyPortal(Level level, BlockPos pedestalPos) {
         int searchRadius = 15; // Define the search radius around the pedestal
         boolean portalOpened = false; // Track if any portal blocks were created
 
@@ -153,6 +126,7 @@ public class PedestalBlock extends BaseEntityBlock {
                     double y = mutablePos.getY() + level.random.nextDouble();
                     double z = mutablePos.getZ() + level.random.nextDouble();
                     level.addParticle(ParticleTypes.PORTAL, x, y, z, 0, 0, 0);
+                    level.addParticle(ParticleTypes.EXPLOSION, x,y,z,0,0,0);
                 }
 
                 portalOpened = true; // Mark portal block creation
@@ -166,4 +140,30 @@ public class PedestalBlock extends BaseEntityBlock {
 
         return portalOpened;
     }
+
+    //Original
+    /*@Override
+    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
+
+        if(level.getBlockEntity(pos) instanceof PedestalBlockEntity pedestalBlockEntity) {
+            if(player.isCrouching() && !level.isClientSide()) {
+                ((ServerPlayer) player).openMenu(new SimpleMenuProvider(pedestalBlockEntity, Component.literal("pedestal")), pos);
+                return ItemInteractionResult.SUCCESS;
+            }
+
+            if(pedestalBlockEntity.inventory.getStackInSlot(0).isEmpty() && !stack.isEmpty()) {
+                pedestalBlockEntity.inventory.insertItem(0, stack.copy(), false);
+                stack.shrink(1);
+                level.playSound(player, pos, SoundEvents.ITEM_PICKUP, SoundSource.BLOCKS, 1f, 2f);
+            } else if (stack.isEmpty()) {
+                ItemStack stackOnPedestal = pedestalBlockEntity.inventory.extractItem(0, 1, false);
+                player.setItemInHand(InteractionHand.MAIN_HAND, stackOnPedestal);
+                pedestalBlockEntity.clearContents();
+                level.playSound(player, pos, SoundEvents.ITEM_PICKUP, SoundSource.BLOCKS, 1f, 1f);
+            }
+        }
+        return ItemInteractionResult.SUCCESS;
+    }
+    */
+
 }
