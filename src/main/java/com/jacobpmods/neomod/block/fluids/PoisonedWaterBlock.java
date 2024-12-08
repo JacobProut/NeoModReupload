@@ -20,9 +20,7 @@ public class PoisonedWaterBlock extends LiquidBlock {
         if (entity instanceof LivingEntity livingEntity) {
             // Check if the entity already has a poison effect
             if (!livingEntity.hasEffect(MobEffects.POISON)) {
-                // Apply poison effect continuously while the entity is in the fluid
-                // Apply poison effect (duration 200 ticks = 10 seconds, level 0 = Poison I)
-                livingEntity.addEffect(new MobEffectInstance(MobEffects.POISON, 40, 1, true, false, true));
+                livingEntity.addEffect(new MobEffectInstance(MobEffects.POISON, 40, 1, true, false, false));
             }
             super.entityInside(state, level, pos, entity);
         }
