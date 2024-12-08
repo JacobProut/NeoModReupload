@@ -135,19 +135,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 models().cross("ghostly_web", modLoc("block/ghostly_web")).renderType("cutout"));
         blockWithItem(ModBlocks.SKULL_N_BONES);
 
-        //NEEDS TO BE FIXED
-       // vineBlock(ModBlocks.BLOODY_VINE);
+        simpleBlock(ModBlocks.GHOSTLY_PORTAL_BLOCK.get());
    }
-
-    private void vineBlock(DeferredBlock<VineBlock> deferredBlock) {
-        getVariantBuilder(deferredBlock.get())
-                .forAllStates(state -> {
-                    String path = BuiltInRegistries.BLOCK.getKey(deferredBlock.get()).getPath();
-                    return ConfiguredModel.builder()
-                            .modelFile(models().singleTexture(path, mcLoc("block/vine"), "vine", blockTexture(deferredBlock.get())))
-                            .build();
-                });
-    }
 
     public void makeBush(SweetBerryBushBlock block, String modelName, String textureName) {
         Function<BlockState, ConfiguredModel[]> function = state -> states(state, modelName, textureName);
