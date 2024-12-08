@@ -163,6 +163,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GHOSTLY_COBBLESTONE_WALL.get(), ModBlocks.GHOSTLY_COBBLESTONE.get());
         wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GHOSTLY_STONEBRICK_WALL.get(), ModBlocks.GHOSTLY_STONE_BRICKS.get());
         wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BONE_BRICK_WALL.get(), ModBlocks.BONE_BRICK.get());
+        wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GHOSTLY_PLANK_WALL.get(), ModBlocks.GHOSTLY_PLANKS.get());
+        wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLOODY_PLANK_WALL.get(), ModBlocks.PLANKS_BLOODY.get());
 
         // Fences
         fenceBuilder(ModBlocks.GHOSTLY_STONE_FENCE.get(), Ingredient.of(ModBlocks.GHOSTLY_STONE.get())).group("ghostly_stone")
@@ -173,7 +175,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_ghostly_stonebricks", has(ModBlocks.GHOSTLY_STONE_BRICKS.get())).save(recipeOutput);
         fenceBuilder(ModBlocks.BONE_BRICK_FENCE.get(), Ingredient.of(ModBlocks.BONE_BRICK.get())).group("bone_bricks")
                 .unlockedBy("has_bone_brick", has(ModBlocks.BONE_BRICK.get())).save(recipeOutput);
-
+        fenceBuilder(ModBlocks.GHOSTLY_PLANK_FENCE.get(), Ingredient.of(ModBlocks.GHOSTLY_PLANKS.get())).group("ghostly_planks")
+                .unlockedBy("has_ghostly_planks", has(ModBlocks.GHOSTLY_PLANKS.get())).save(recipeOutput);
+        fenceBuilder(ModBlocks.BLOODY_PLANK_FENCE.get(), Ingredient.of(ModBlocks.PLANKS_BLOODY.get())).group("bloody_planks")
+                .unlockedBy("has_bloody_planks", has(ModBlocks.PLANKS_BLOODY.get())).save(recipeOutput);
 
         // Fence Gates
         fenceGateBuilder(ModBlocks.GHOSTLY_STONE_FENCE_GATE.get(), Ingredient.of(ModBlocks.GHOSTLY_STONE.get())).group("ghostly_stone")
@@ -184,6 +189,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_ghostly_stonebricks", has(ModBlocks.GHOSTLY_STONE_BRICKS.get())).save(recipeOutput);
         fenceGateBuilder(ModBlocks.BONE_BRICK_FENCE_GATE.get(), Ingredient.of(ModBlocks.BONE_BRICK.get())).group("bone_bricks")
                 .unlockedBy("has_bone_brick", has(ModBlocks.BONE_BRICK.get())).save(recipeOutput);
+        fenceGateBuilder(ModBlocks.GHOSTLY_PLANK_FENCE_GATE.get(), Ingredient.of(ModBlocks.GHOSTLY_PLANKS.get())).group("ghostly_planks")
+                .unlockedBy("has_ghostly_planks", has(ModBlocks.GHOSTLY_PLANKS.get())).save(recipeOutput);
+        fenceGateBuilder(ModBlocks.BLOODY_PLANK_FENCE_GATE.get(), Ingredient.of(ModBlocks.PLANKS_BLOODY.get())).group("bloody_planks")
+                .unlockedBy("has_bloody_planks", has(ModBlocks.PLANKS_BLOODY.get())).save(recipeOutput);
 
     }
     protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,

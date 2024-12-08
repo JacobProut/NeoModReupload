@@ -3,6 +3,8 @@
     "neomod:ghostly_stone_wall",
     "neomod:ghostly_cobblestone_wall",
     "neomod:ghostly_stone_brick_wall",
-    "neomod:bone_brick_wall"
+    "neomod:bone_brick_wall",
+    "neomod:ghostly_plank_wall",
+    "neomod:bloody_plank_wall"
   ]
 }

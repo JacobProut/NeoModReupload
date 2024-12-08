@@ -98,10 +98,16 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.GHOSTLY_PLANKS);
                         output.accept(ModBlocks.GHOSTLY_PLANK_STAIRS);
                         output.accept(ModBlocks.GHOSTLY_PLANK_SLAB);
+                        output.accept(ModBlocks.GHOSTLY_PLANK_FENCE);
+                        output.accept(ModBlocks.GHOSTLY_PLANK_FENCE_GATE);
+                        output.accept(ModBlocks.GHOSTLY_PLANK_WALL);
                         output.accept(ModBlocks.LOG_BLOODY);
                         output.accept(ModBlocks.PLANKS_BLOODY);
                         output.accept(ModBlocks.BLOODY_PLANK_STAIRS);
                         output.accept(ModBlocks.BLOODY_PLANK_SLAB);
+                        output.accept(ModBlocks.BLOODY_PLANK_FENCE);
+                        output.accept(ModBlocks.BLOODY_PLANK_FENCE_GATE);
+                        output.accept(ModBlocks.BLOODY_PLANK_WALL);
 
                         //Leaves
                         output.accept(ModBlocks.GHOSTLY_LEAVES);

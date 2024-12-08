@@ -64,6 +64,9 @@
   "block.neomod.planks_ghostly": "Ghostly Planks",
   "block.neomod.ghostly_plank_stairs": "Ghostly Stairs",
   "block.neomod.ghostly_plank_slab": "Ghostly Slab",
+  "block.neomod.ghostly_plank_fence": "Ghostly Plank Fence",
+  "block.neomod.ghostly_plank_fence_gate": "Ghostly Plank Fence Gate",
+  "block.neomod.ghostly_plank_wall": "Ghostly Plank Wall",
   "block.neomod.stripped_ghostly_log": "Stripped Ghostly Log",
   "block.neomod.stripped_ghostly_log_top": "Stripped Ghostly Log Top",
 
@@ -71,6 +74,9 @@
   "block.neomod.planks_bloody": "Bloody Planks",
   "block.neomod.bloody_plank_stairs": "Bloody Stairs",
   "block.neomod.bloody_plank_slab": "Bloody Slab",
+  "block.neomod.bloody_plank_fence": "Bloody Plank Fence",
+  "block.neomod.bloody_plank_fence_gate": "Bloody Plank Fence Gate",
+  "block.neomod.bloody_plank_wall": "Bloody Plank Wall",
 
   "block.neomod.ghostly_leaves": "Ghostly Leaves",
   "block.neomod.bloody_leaves": "Bloody Leaves",

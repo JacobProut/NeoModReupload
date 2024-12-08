@@ -103,11 +103,15 @@ public class ModItemModelProvider extends ItemModelProvider {
         fenceItem(ModBlocks.GHOSTLY_COBBLESTONE_FENCE, ModBlocks.GHOSTLY_COBBLESTONE);
         fenceItem(ModBlocks.GHOSTLY_STONEBRICK_FENCE, ModBlocks.GHOSTLY_STONE_BRICKS);
         fenceItem(ModBlocks.BONE_BRICK_FENCE, ModBlocks.BONE_BRICK);
+        fenceItem(ModBlocks.BLOODY_PLANK_FENCE, ModBlocks.PLANKS_BLOODY);
+        fenceItem(ModBlocks.GHOSTLY_PLANK_FENCE, ModBlocks.GHOSTLY_PLANKS);
 
         wallItem(ModBlocks.GHOSTLY_STONE_WALL, ModBlocks.GHOSTLY_STONE);
         wallItem(ModBlocks.GHOSTLY_COBBLESTONE_WALL, ModBlocks.GHOSTLY_COBBLESTONE);
         wallItem(ModBlocks.GHOSTLY_STONEBRICK_WALL, ModBlocks.GHOSTLY_STONE_BRICKS);
         wallItem(ModBlocks.BONE_BRICK_WALL, ModBlocks.BONE_BRICK);
+        wallItem(ModBlocks.BLOODY_PLANK_WALL, ModBlocks.PLANKS_BLOODY);
+        wallItem(ModBlocks.GHOSTLY_PLANK_WALL, ModBlocks.GHOSTLY_PLANKS);
 
 
     }

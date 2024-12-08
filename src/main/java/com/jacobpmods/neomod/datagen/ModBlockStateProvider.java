@@ -101,6 +101,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.GHOSTLY_PLANK_STAIRS);
         slabBlock(((SlabBlock) ModBlocks.GHOSTLY_PLANK_SLAB.get()), blockTexture(ModBlocks.GHOSTLY_PLANKS.get()), blockTexture(ModBlocks.GHOSTLY_PLANKS.get()));
         blockItem(ModBlocks.GHOSTLY_PLANK_SLAB);
+        fenceBlock(((FenceBlock) ModBlocks.GHOSTLY_PLANK_FENCE.get()), blockTexture(ModBlocks.GHOSTLY_PLANKS.get()));
+        blockItem(ModBlocks.GHOSTLY_PLANK_FENCE_GATE);
+        fenceGateBlock(((FenceGateBlock) ModBlocks.GHOSTLY_PLANK_FENCE_GATE.get()), blockTexture(ModBlocks.GHOSTLY_PLANKS.get()));
+        wallBlock(((WallBlock) ModBlocks.GHOSTLY_PLANK_WALL.get()), blockTexture(ModBlocks.GHOSTLY_PLANKS.get()));
         leavesBlock(ModBlocks.GHOSTLY_LEAVES);
         saplingBlock(ModBlocks.GHOSTLY_SAPLING);
 
@@ -113,6 +117,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.BLOODY_PLANK_STAIRS);
         slabBlock(((SlabBlock) ModBlocks.BLOODY_PLANK_SLAB.get()), blockTexture(ModBlocks.PLANKS_BLOODY.get()), blockTexture(ModBlocks.PLANKS_BLOODY.get()));
         blockItem(ModBlocks.BLOODY_PLANK_SLAB);
+        fenceBlock(((FenceBlock) ModBlocks.BLOODY_PLANK_FENCE.get()), blockTexture(ModBlocks.PLANKS_BLOODY.get()));
+        blockItem(ModBlocks.BLOODY_PLANK_FENCE_GATE);
+        fenceGateBlock(((FenceGateBlock) ModBlocks.BLOODY_PLANK_FENCE_GATE.get()), blockTexture(ModBlocks.PLANKS_BLOODY.get()));
+        wallBlock(((WallBlock) ModBlocks.BLOODY_PLANK_WALL.get()), blockTexture(ModBlocks.PLANKS_BLOODY.get()));
         leavesBlock(ModBlocks.BLOODY_LEAVES);
         saplingBlock(ModBlocks.BLOODY_SAPLING);
 

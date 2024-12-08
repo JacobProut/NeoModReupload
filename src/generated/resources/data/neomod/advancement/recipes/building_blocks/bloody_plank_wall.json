@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_planks_bloody": {
+      "conditions": {
+        "items": [
+          {
+            "items": "neomod:planks_bloody"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "neomod:bloody_plank_wall"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_planks_bloody"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "neomod:bloody_plank_wall"
+    ]
+  }
+}
