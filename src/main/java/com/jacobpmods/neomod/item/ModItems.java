@@ -30,26 +30,33 @@ public class ModItems {
     public static final DeferredItem<Item> NEXON_INGOT = ITEMS.register("nexoningot", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> NEXON_REINFORCED_INGOT = ITEMS.register("nexonreinforcedingot", () -> new Item(new Item.Properties()));
 
+    //Tools and weapons
     public static final DeferredItem<Item> NEXON_PICKAXE = ITEMS.register("nexonpickaxe",
             () -> new NexonPickaxe(ModToolTiers.NEXON, new Item.Properties().fireResistant()
                     .attributes(NexonPickaxe.createAttributes(ModToolTiers.NEXON,1.0F, -2.8F))));
-
     public static final DeferredItem<Item> NEXON_SHOVEL = ITEMS.register("nexonshovel",
             () -> new ShovelItem(ModToolTiers.NEXON, new Item.Properties().fireResistant()
                     .attributes(ShovelItem.createAttributes(ModToolTiers.NEXON,1.5F, -3.0F))));
-
     public static final DeferredItem<Item> NEXON_HOE = ITEMS.register("nexonhoe",
             () -> new HoeItem(ModToolTiers.NEXON, new Item.Properties().fireResistant()
                     .attributes(HoeItem.createAttributes(ModToolTiers.NEXON,0, -3.0F))));
-
     public static final DeferredItem<Item> NEXON_SWORD = ITEMS.register("nexonsword",
             () -> new SwordItem(ModToolTiers.NEXON, new Item.Properties().fireResistant()
                     .attributes(SwordItem.createAttributes(ModToolTiers.NEXON,5, -2.4F))));
-
     public static final DeferredItem<Item> NEXON_AXE = ITEMS.register("nexonaxe",
             () -> new NexonAxe(ModToolTiers.NEXON, new Item.Properties().fireResistant()
                     .attributes(NexonAxe.createAttributes(ModToolTiers.NEXON,6, -3.2F))));
+    public static final DeferredItem<Item> SCYTHE = ITEMS.register("scythe",
+            () -> new SwordItem(ModToolTiers.SCYTHE, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(ModToolTiers.SCYTHE,5, -2.3F))));
+    public static final DeferredItem<Item> BONE_SWORD = ITEMS.register("bone_sword",
+            () -> new SwordItem(ModToolTiers.BONE, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(ModToolTiers.BONE, 3, -2.3F))));
+    public static final DeferredItem<Item> BLOOD_BONE_SWORD = ITEMS.register("blood_bone_sword",
+            () -> new SwordItem(ModToolTiers.BONE, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(ModToolTiers.BONE, 4, -2.3F))));
 
+    //Armor
     public static final DeferredItem<Item> NEXON_HELMET = ITEMS.register("nexonhelmet",
             () -> new ModArmorItem(ModArmorMaterials.NEXON, ArmorItem.Type.HELMET, new Item.Properties().fireResistant().durability(ArmorItem.Type.HELMET.getDurability(42))));
     public static final DeferredItem<Item> NEXON_CHESTPLATE = ITEMS.register("nexonchestplate",
@@ -60,7 +67,7 @@ public class ModItems {
             () -> new ModArmorItem(ModArmorMaterials.NEXON, ArmorItem.Type.BOOTS, new Item.Properties().fireResistant().durability(ArmorItem.Type.BOOTS.getDurability(42))));
 
     public static final DeferredItem<Item> UNDEAD_BONE = ITEMS.register("undead_bone", () -> new Item(new Item.Properties()));
-
+    public static final DeferredItem<Item> UNDEAD_KEY = ITEMS.register("undead_key", () -> new Item(new Item.Properties()));
 
     //rings
     public static final DeferredItem<Item> UNDEAD_STRENGTH_RING = ITEMS.register("undead_strength_ring", RingOfUndeadStrength::new);
@@ -79,17 +86,7 @@ public class ModItems {
     public static final DeferredItem<Item> BLOOD_BONE_FRUIT_BERRIES = ITEMS.register("blood_bone_fruit_berries",
             () -> new BloodBoneBerry(ModBlocks.BLOOD_BONE_FRUIT_BUSH.get(), new Item.Properties().food(ModFoodProperties.BLOOD_BONE_FRUIT_BERRY)));
 
-    public static final DeferredItem<Item> SCYTHE = ITEMS.register("scythe",
-            () -> new SwordItem(ModToolTiers.SCYTHE, new Item.Properties()
-                    .attributes(SwordItem.createAttributes(ModToolTiers.SCYTHE,5, -2.3F))));
 
-    public static final DeferredItem<Item> BONE_SWORD = ITEMS.register("bone_sword",
-            () -> new SwordItem(ModToolTiers.BONE, new Item.Properties()
-                    .attributes(SwordItem.createAttributes(ModToolTiers.BONE, 3, -2.3F))));
-
-    public static final DeferredItem<Item> BLOOD_BONE_SWORD = ITEMS.register("blood_bone_sword",
-            () -> new SwordItem(ModToolTiers.BONE, new Item.Properties()
-                    .attributes(SwordItem.createAttributes(ModToolTiers.BONE, 4, -2.3F))));
 
     public static final DeferredItem<Item> SHATTERED_FRAGMENT = ITEMS.register("shattered_fragment", () -> new Item(new Item.Properties()));
 

@@ -1,4 +1,4 @@
-// 1.21.1	2024-12-05T18:52:39.5519561	Item Models: neomod
+// 1.21.1	2024-12-07T19:43:37.2541813	Item Models: neomod
 cbd57698a1698700f87943fff09389d5d15b6106 assets/neomod/models/item/bloody_sapling.json
 1b2ef9a9694975df4334cb10a2425cbd1cb768e7 assets/neomod/models/item/blood_bone_fruit_berries.json
 89d6a84fc2053a27491ec4bd8db167e91e7b959a assets/neomod/models/item/blood_bone_sword.json
@@ -68,4 +68,5 @@ f8171fe4b496de7f2610cbee61e76b679a285234 assets/neomod/models/item/soul_split_ne
 66b7a359dbf78b96087c99c975d23fe33fe89f32 assets/neomod/models/item/speedapple.json
 8cdbb68239453abf6c2fd16ce7169d890fd8615f assets/neomod/models/item/throwablefireball.json
 de1e7adecaca9f063d2ca1e159e2370834d2c89c assets/neomod/models/item/undead_bone.json
+164b71c8be677073d6f0e007b2d64ad482ceb290 assets/neomod/models/item/undead_key.json
 86dcc0dd591b436fd02bbf6701928bb1ac21ef02 assets/neomod/models/item/undead_strength_ring.json

@@ -123,6 +123,7 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModBlocks.SKULL_N_BONES);
                         output.accept(ModItems.UNDEAD_BONE);
+                        output.accept(ModItems.UNDEAD_KEY);
                         output.accept(ModBlocks.GHOSTLY_WEB);
 
                         //Vines

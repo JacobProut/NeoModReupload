@@ -97,6 +97,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.SHATTERED_FRAGMENT.get());
         basicItem(ModItems.SKELETAL_BLOOD_SHARD.get());
 
+        basicItem(ModItems.UNDEAD_KEY.get());
+
     }
 
     public void flowerItem(DeferredBlock<Block> block) {
