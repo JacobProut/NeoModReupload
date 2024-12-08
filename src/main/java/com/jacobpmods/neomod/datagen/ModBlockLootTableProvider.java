@@ -38,7 +38,13 @@ public class ModBlockLootTableProvider  extends BlockLootSubProvider {
                 block -> createMultipleOreDrops(ModBlocks.NEXON_ORE_BLOCK.get(), ModItems.nexon.get(), 1, 2));
 
         //Grass Blocks
-        dropSelf(ModBlocks.GHOSTLY_GRASS_BLOCK.get());
+        this.add(ModBlocks.GHOSTLY_GRASS_BLOCK.get(), block -> this.createSilkTouchDispatchTable(
+                ModBlocks.GHOSTLY_GRASS_BLOCK.get(),
+                this.applyExplosionDecay(
+                        block,
+                        LootItem.lootTableItem(ModBlocks.GHOSTLY_DIRT.get())
+                )
+        ));
         dropSelf(ModBlocks.GHOSTLY_DIRT.get());
         dropSelf(ModBlocks.BLOODY_GRASS_BLOCK.get());
 
