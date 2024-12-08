@@ -7,14 +7,13 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.GrassBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.lighting.LightEngine;
 
-public class GhostlyBlock extends GrassBlock {
-    public GhostlyBlock() {
+public class BloodyGrassBlock extends GrassBlock {
+    public BloodyGrassBlock() {
         super(Properties.of()
                 .strength(0.6f)  // You can adjust this value
                 .sound(SoundType.GRASS)
@@ -27,7 +26,7 @@ public class GhostlyBlock extends GrassBlock {
         if (!canBeGrass(state, level, pos)) {
             if (!level.isAreaLoaded(pos, 3))
                 return; // Forge: prevent loading unloaded chunks when checking neighbor's light and spreading
-            level.setBlockAndUpdate(pos, ModBlocks.GHOSTLY_GRASS_BLOCK.get().defaultBlockState());
+            level.setBlockAndUpdate(pos, ModBlocks.BLOODY_GRASS_BLOCK.get().defaultBlockState());
         } else {
             if (!level.isAreaLoaded(pos, 3))
                 return; // Forge: prevent loading unloaded chunks when checking neighbor's light and spreading
