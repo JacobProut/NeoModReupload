@@ -1,19 +1,17 @@
 package com.jacobpmods.neomod.block.custom.blockentities;
 
 import com.jacobpmods.neomod.block.entity.custom.PedestalBlockEntity;
+import com.jacobpmods.neomod.item.ModItems;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.ItemInteractionResult;
-import net.minecraft.world.SimpleMenuProvider;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseEntityBlock;
@@ -70,39 +68,46 @@ public class PedestalBlock extends BaseEntityBlock {
     @Override
     protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         if (level.getBlockEntity(pos) instanceof PedestalBlockEntity pedestalBlockEntity) {
-            if (player.isCrouching() && !level.isClientSide()) {
-                ((ServerPlayer) player).openMenu(new SimpleMenuProvider(pedestalBlockEntity, Component.literal("pedestal")), pos);
-                return ItemInteractionResult.SUCCESS;
-            }
-
             // Placing an item on the pedestal
             if (pedestalBlockEntity.inventory.getStackInSlot(0).isEmpty() && !stack.isEmpty()) {
-                // Check if the item is a golden apple
-                if (stack.is(Items.GOLDEN_APPLE)) {
-                    // Logic to spawn ghostly portal
+                if (stack.is(ModItems.UNDEAD_KEY.get())) {
+                    // Logic to spawn the ghostly portal
                     if (openGhostlyPortal(level, pos)) {
-                        stack.shrink(1); // Consume the golden apple
+                        stack.shrink(1); // Consume the key
+                        pedestalBlockEntity.inventory.insertItem(0, new ItemStack(ModItems.UNDEAD_KEY.get()), false); // Place the key in the pedestal
                         level.playSound(null, pos, SoundEvents.END_PORTAL_SPAWN, SoundSource.BLOCKS, 1f, 1f);
-                        return ItemInteractionResult.SUCCESS;
+                        player.displayClientMessage(Component.literal("Portal to Ghostly Dimension has been opened!"), true);
                     } else {
-                        player.displayClientMessage(Component.literal("No valid portal frame nearby!"), true);
+                        player.displayClientMessage(Component.literal("Portal has already been opened!"), true);
                     }
+                    return ItemInteractionResult.SUCCESS;
                 } else {
-                    pedestalBlockEntity.inventory.insertItem(0, stack.copy(), false);
-                    stack.shrink(1);
-                    level.playSound(player, pos, SoundEvents.ITEM_PICKUP, SoundSource.BLOCKS, 1f, 2f);
+                    // Deny non-key items
+                    player.displayClientMessage(Component.literal("Only the Undead Key can be placed on the pedestal!"), true);
+                    level.playSound(player, pos, SoundEvents.VILLAGER_NO, SoundSource.BLOCKS, 1f, 1f);
+                    return ItemInteractionResult.FAIL;
                 }
-            } else if (stack.isEmpty()) {
-                // Removing the item from the pedestal
-                ItemStack stackOnPedestal = pedestalBlockEntity.inventory.extractItem(0, 1, false);
-                player.setItemInHand(InteractionHand.MAIN_HAND, stackOnPedestal);
-                pedestalBlockEntity.clearContents();
-                level.playSound(player, pos, SoundEvents.ITEM_PICKUP, SoundSource.BLOCKS, 1f, 1f);
+            }
+
+            // Attempting to remove an item
+            if (stack.isEmpty()) {
+                ItemStack stackOnPedestal = pedestalBlockEntity.inventory.getStackInSlot(0);
+                if (!stackOnPedestal.isEmpty() && stackOnPedestal.is(ModItems.UNDEAD_KEY.get())) {
+                    // Prevent removal of the key
+                    player.displayClientMessage(Component.literal("The key cannot be removed from the pedestal!"), true);
+                    level.playSound(player, pos, SoundEvents.SHIELD_BLOCK, SoundSource.BLOCKS, 1f, 1f);
+                    return ItemInteractionResult.FAIL;
+                } else {
+                    // Allow removal of non-key items (if ever applicable)
+                    ItemStack removedStack = pedestalBlockEntity.inventory.extractItem(0, 1, false);
+                    player.setItemInHand(InteractionHand.MAIN_HAND, removedStack);
+                    level.playSound(player, pos, SoundEvents.ITEM_PICKUP, SoundSource.BLOCKS, 1f, 1f);
+                    return ItemInteractionResult.SUCCESS;
+                }
             }
         }
         return ItemInteractionResult.SUCCESS;
     }
-
     private boolean openGhostlyPortal(Level level, BlockPos pedestalPos) {
         int searchRadius = 15; // Define the search radius around the pedestal
         boolean portalOpened = false; // Track if any portal blocks were created
