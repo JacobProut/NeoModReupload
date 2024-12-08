@@ -1,4 +1,4 @@
-// 1.21.1	2024-12-07T22:29:00.1534103	Block States: neomod
+// 1.21.1	2024-12-08T03:53:22.3051078	Block States: neomod
 7cdda68cd3b983e7648bc220e1950f59e5edd79d assets/neomod/blockstates/bloody_grass_block.json
 38cd5a8f9f9dfea6a001af7bdd29bcdbff0bda8b assets/neomod/blockstates/bloody_leaves.json
 7a67c398823898c1930f34599520605d2f3abb75 assets/neomod/blockstates/bloody_plank_fence.json
@@ -28,6 +28,7 @@ bc873194310b166f995eb341b1ff2b9bc5b0630d assets/neomod/blockstates/ghostly_grass
 5accd42dbdf9d7937676f627c8a2d171e26d5f0e assets/neomod/blockstates/ghostly_plank_slab.json
 ca934516da3af22defe143d1eee2da5afb779be8 assets/neomod/blockstates/ghostly_plank_stairs.json
 fd0d18579570157e81d54cd778f7d02083770781 assets/neomod/blockstates/ghostly_plank_wall.json
+f4d7d74b0c93c4ecb409404bdfa0a91f8016578b assets/neomod/blockstates/ghostly_portal_block.json
 81a51a1817361c2b81158ddaa3e82722b09fcf60 assets/neomod/blockstates/ghostly_sapling.json
 47c2c7b697feb801c4ffc802248c4a248442f55d assets/neomod/blockstates/ghostly_stone.json
 0ff837e901c548f24c967dd7041e6ccd3fa14f69 assets/neomod/blockstates/ghostly_stone_bricks.json
@@ -122,6 +123,7 @@ fdc6553f75936846a983673a584b9cf9ccc28f2c assets/neomod/models/block/ghostly_plan
 7a37d0afb0c0d3c4bb1617098e404b219667d986 assets/neomod/models/block/ghostly_plank_wall_post.json
 ce4bbc9fc2bd0b3515572ced25dc94db8ddc4ef8 assets/neomod/models/block/ghostly_plank_wall_side.json
 b5b6d36e6e4496fd05ffa242a0bde57463cae68e assets/neomod/models/block/ghostly_plank_wall_side_tall.json
+67ea3e418be07a26c6b84cd78240c0615608b326 assets/neomod/models/block/ghostly_portal_block.json
 53bc887738c87140af122f2e4359fa0a0a94f015 assets/neomod/models/block/ghostly_sapling.json
 463ae8bfbaba3123c0927c99b92867119cc20b28 assets/neomod/models/block/ghostly_stone.json
 5328168a7774a99ca4466582894b4f89afab431c assets/neomod/models/block/ghostly_stone_bricks.json

@@ -1,13 +1,12 @@
 package com.jacobpmods.neomod.block;
 
 import com.jacobpmods.neomod.FirstNeoMod;
-import com.jacobpmods.neomod.block.custom.*;
+import com.jacobpmods.neomod.block.custom.ModFlammableRotatedPillarBlock;
+import com.jacobpmods.neomod.block.custom.ModFlowerBlock;
+import com.jacobpmods.neomod.block.custom.ModSaplingBlock;
 import com.jacobpmods.neomod.block.custom.blockentities.EnhancerBlock;
 import com.jacobpmods.neomod.block.custom.blockentities.PedestalBlock;
-import com.jacobpmods.neomod.block.custom.blocks.BloodBoneBlossomBushBlock;
-import com.jacobpmods.neomod.block.custom.blocks.BloodyLeavesBlock;
-import com.jacobpmods.neomod.block.custom.blocks.GhostlyWeb;
-import com.jacobpmods.neomod.block.custom.blocks.SkullNBones;
+import com.jacobpmods.neomod.block.custom.blocks.*;
 import com.jacobpmods.neomod.block.custom.portal.GhostlyPortalBlock;
 import com.jacobpmods.neomod.block.terrainblocks.GhostlyBlock;
 import com.jacobpmods.neomod.block.terrainblocks.GhostlyDirtBlock;
@@ -216,6 +215,10 @@ public class ModBlocks {
     public static final DeferredBlock<Block> BLOODY_SAPLING = registerBlock("bloody_sapling",
             () -> new ModSaplingBlock(ModTreeGrowers.BLOODY, BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_SAPLING)
                     .strength(0.2f).sound(SoundType.CHERRY_SAPLING), ModBlocks.BLOODY_GRASS_BLOCK.get(), ModBlocks.GHOSTLY_GRASS_BLOCK.get(), ModBlocks.GHOSTLY_DIRT.get(), Blocks.GRASS_BLOCK, Blocks.DIRT));
+    public static final DeferredBlock<Block> BLOODY_VINE = registerBlock("bloody_vine", () -> new BloodyVine(
+            BlockBehaviour.Properties.ofFullCopy(Blocks.VINE).noOcclusion().replaceable().noCollission()
+                    .randomTicks().strength(0.2F).sound(SoundType.VINE).ignitedByLava().pushReaction(PushReaction.DESTROY)));
+
 
     public static final DeferredBlock<SkullNBones> SKULL_N_BONES = registerBlock("skull_n_bones", () ->new SkullNBones(BlockBehaviour.Properties.of()
             .strength(0.2f).instabreak().noCollission().sound(SoundType.STONE)));
@@ -223,10 +226,6 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> GHOSTLY_WEB = registerBlock("ghostly_web", () ->new GhostlyWeb(BlockBehaviour.Properties.ofFullCopy(Blocks.COBWEB)
             .strength(4.0f).noOcclusion().noCollission().forceSolidOn().requiresCorrectToolForDrops().pushReaction(PushReaction.DESTROY).sound(SoundType.COBWEB)));
-
-
-
-
 
 
     //Flowers and Bushes
@@ -254,21 +253,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> GHOSTLY_PORTAL_BLOCK = registerBlock("ghostly_portal_block", () ->new GhostlyPortalBlock(BlockBehaviour.Properties.of()
             .strength(7f).destroyTime(100000).sound(SoundType.GLASS)));
 
- /*   public static final DeferredBlock<VineBlock> BLOODY_VINE = registerBlock("bloody_vine", () -> new BloodyVine(
-            BlockBehaviour.Properties.ofFullCopy(Blocks.VINE)
-                    .mapColor(MapColor.PLANT)
-                    .replaceable()
-                    .noCollission()
-                    .randomTicks()
-                    .strength(0.2F)
-                    .sound(SoundType.VINE)
-                    .ignitedByLava()
-                    .pushReaction(PushReaction.DESTROY)
-    ));
-*/
-            //BlockBehaviour.Properties.ofFullCopy(Blocks.VINE)
 
-            //.noOcclusion().noCollission().instabreak().sound(SoundType.VINE)));
 
 
 

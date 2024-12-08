@@ -145,7 +145,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.GHOSTLY_WEB);
 
                         //Vines
-                        //output.accept(ModBlocks.BLOODY_VINE.get());
+                        output.accept(ModBlocks.BLOODY_VINE.get());
 
                     }).build());
 

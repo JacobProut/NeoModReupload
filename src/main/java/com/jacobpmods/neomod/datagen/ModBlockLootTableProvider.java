@@ -145,7 +145,7 @@ public class ModBlockLootTableProvider  extends BlockLootSubProvider {
                 block -> createMultipleOreDrops(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get(), ModItems.SHATTERED_FRAGMENT.get(), 1, 2));
 
 
-        //dropSelf(ModBlocks.BLOODY_VINE.get());
+        dropSelf(ModBlocks.BLOODY_VINE.get());
 
 
     }

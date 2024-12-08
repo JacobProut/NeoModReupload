@@ -1,4 +1,5 @@
-// 1.21.1	2024-12-07T22:34:49.8342084	Tags for minecraft:block mod id neomod
+// 1.21.1	2024-12-08T03:40:04.817096	Tags for minecraft:block mod id neomod
+30f421389cc533849eac372c7edad97938c38a42 data/minecraft/tags/block/climbable.json
 f5fbb319f25c4056dadc32c54493627182dc4ab6 data/minecraft/tags/block/dirt.json
 bea418f50effe631066670fc1d1c04a861342f3e data/minecraft/tags/block/fences.json
 95b5f113f7883f5b4c6e45ae9dcaeb42fd8f0453 data/minecraft/tags/block/fence_gates.json

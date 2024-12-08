@@ -215,8 +215,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.GHOSTLY_PLANK_WALL.get())
                 .add(ModBlocks.BLOODY_PLANK_WALL.get());;
 
-       /* tag(CLIMBABLE)
-                .add(ModBlocks.BLOODY_VINE.get());*/
+        tag(CLIMBABLE)
+                .add(ModBlocks.BLOODY_VINE.get());
 
 
     }

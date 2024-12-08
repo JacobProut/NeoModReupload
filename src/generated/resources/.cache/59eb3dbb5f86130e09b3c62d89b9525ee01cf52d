@@ -1,4 +1,4 @@
-// 1.21.1	2024-12-07T22:29:00.1569102	Loot Tables
+// 1.21.1	2024-12-08T03:37:49.3105735	Loot Tables
 28fa21e9b7ce066e58835deff5edbe255402a473 data/neomod/loot_table/blocks/bloody_grass_block.json
 f956fd080751781ca9357b001560809acf5f7b57 data/neomod/loot_table/blocks/bloody_leaves.json
 6bb76e79b543d93fbc506679c8d6bed8439fb9ee data/neomod/loot_table/blocks/bloody_plank_fence.json
@@ -7,6 +7,7 @@ f956fd080751781ca9357b001560809acf5f7b57 data/neomod/loot_table/blocks/bloody_le
 08aadb45cd7465f359d198fab3cfbbab04eb996f data/neomod/loot_table/blocks/bloody_plank_stairs.json
 b11cbfe63cfe6d4107ee4f9dee1e7ac95326d780 data/neomod/loot_table/blocks/bloody_plank_wall.json
 3c4eab000d13357be5ea4cbfc63c4d9e5d44212c data/neomod/loot_table/blocks/bloody_sapling.json
+df3ca45ecc2b1ada3c9e78936d6ec7f28683c3a5 data/neomod/loot_table/blocks/bloody_vine.json
 061fe19eb3535e3531ba46a563546e996c57b7d2 data/neomod/loot_table/blocks/blood_bone_blossom_bush.json
 a726584b71cb1de562c73ac6e1964ecfb0795cc0 data/neomod/loot_table/blocks/bone_brick.json
 444ea823a4fd9c8b788d8f6b9f5a1c65a891f737 data/neomod/loot_table/blocks/bone_brick_fence.json
