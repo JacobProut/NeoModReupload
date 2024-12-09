@@ -11,41 +11,52 @@ import net.minecraft.util.Mth;
 
 public class SkeletalZombieModel extends HierarchicalModel<SkeletalZombieEntity> {
     private final ModelPart skeletalZombie;
-    private final ModelPart Body;
-    private final ModelPart Head;
-    private final ModelPart RightArm;
-    private final ModelPart LeftArm;
-    private final ModelPart RightLeg;
-    private final ModelPart LeftLeg;
+    private final ModelPart abovebody;
+    private final ModelPart headgroup;
+    private final ModelPart body;
+    private final ModelPart chest;
+    private final ModelPart leftside;
+    private final ModelPart rightside;
+    private final ModelPart legs;
+    private final ModelPart left;
+    private final ModelPart right;
 
     public SkeletalZombieModel(ModelPart root) {
         this.skeletalZombie = root.getChild("skeletalZombie");
-        this.Body = this.skeletalZombie.getChild("Body");
-        this.Head = this.skeletalZombie.getChild("Head");
-        this.RightArm = this.skeletalZombie.getChild("RightArm");
-        this.LeftArm = this.skeletalZombie.getChild("LeftArm");
-        this.RightLeg = this.skeletalZombie.getChild("RightLeg");
-        this.LeftLeg = this.skeletalZombie.getChild("LeftLeg");
+        this.abovebody = skeletalZombie.getChild("abovebody");
+        this.headgroup = abovebody.getChild("headgroup");
+        this.body = skeletalZombie.getChild("body");
+        this.chest = body.getChild("chest");
+        this.leftside = body.getChild("leftside");
+        this.rightside = body.getChild("rightside");
+        this.legs = skeletalZombie.getChild("legs");
+        this.left = legs.getChild("left");
+        this.right = legs.getChild("right");
     }
 
     public static LayerDefinition createBodyLayer() {
         MeshDefinition meshdefinition = new MeshDefinition();
         PartDefinition partdefinition = meshdefinition.getRoot();
 
-        PartDefinition skeletalZombie = partdefinition.addOrReplaceChild("skeletalZombie", CubeListBuilder.create(), PartPose.offset(0.0F, 24.0F, 0.0F));
+        PartDefinition skeletalZombie = partdefinition.addOrReplaceChild("skeletalZombie", CubeListBuilder.create(), PartPose.offset(0.0F, 4.0F, 0.0F));
 
-        PartDefinition Body = skeletalZombie.addOrReplaceChild("Body", CubeListBuilder.create().texOffs(16, 16).addBox(-4.0F, 0.0F, -2.0F, 8.0F, 12.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -24.0F, 0.0F));
+        PartDefinition abovebody = skeletalZombie.addOrReplaceChild("abovebody", CubeListBuilder.create(), PartPose.offset(0.0F, -3.0F, 0.0F));
 
-        PartDefinition Head = skeletalZombie.addOrReplaceChild("Head", CubeListBuilder.create().texOffs(0, 0).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, new CubeDeformation(0.0F))
-                .texOffs(32, 0).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, new CubeDeformation(0.5F)), PartPose.offset(0.0F, -24.0F, 0.0F));
+        PartDefinition headgroup = abovebody.addOrReplaceChild("headgroup", CubeListBuilder.create().texOffs(0, 0).addBox(-4.0F, -9.0F, -4.0F, 8.0F, 8.0F, 8.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
 
-        PartDefinition RightArm = skeletalZombie.addOrReplaceChild("RightArm", CubeListBuilder.create().texOffs(40, 16).addBox(-3.0F, -2.0F, -2.0F, 4.0F, 12.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offset(-5.0F, -22.0F, 0.0F));
+        PartDefinition body = skeletalZombie.addOrReplaceChild("body", CubeListBuilder.create(), PartPose.offset(0.0F, 20.0F, 0.0F));
 
-        PartDefinition LeftArm = skeletalZombie.addOrReplaceChild("LeftArm", CubeListBuilder.create().texOffs(40, 16).mirror().addBox(-1.0F, -2.0F, -2.0F, 4.0F, 12.0F, 4.0F, new CubeDeformation(0.0F)).mirror(false), PartPose.offset(5.0F, -22.0F, 0.0F));
+        PartDefinition chest = body.addOrReplaceChild("chest", CubeListBuilder.create().texOffs(16, 16).addBox(-4.0F, -1.0F, -2.0F, 8.0F, 12.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -23.0F, 0.0F));
 
-        PartDefinition RightLeg = skeletalZombie.addOrReplaceChild("RightLeg", CubeListBuilder.create().texOffs(0, 16).addBox(-2.0F, 0.0F, -2.0F, 4.0F, 12.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offset(-1.9F, -12.0F, 0.0F));
+        PartDefinition leftside = body.addOrReplaceChild("leftside", CubeListBuilder.create().texOffs(40, 16).mirror().addBox(4.0F, -2.0F, -2.0F, 4.0F, 12.0F, 4.0F, new CubeDeformation(0.0F)).mirror(false), PartPose.offset(0.0F, -22.0F, 0.0F));
 
-        PartDefinition LeftLeg = skeletalZombie.addOrReplaceChild("LeftLeg", CubeListBuilder.create().texOffs(0, 16).mirror().addBox(-2.0F, 0.0F, -2.0F, 4.0F, 12.0F, 4.0F, new CubeDeformation(0.0F)).mirror(false), PartPose.offset(1.9F, -12.0F, 0.0F));
+        PartDefinition rightside = body.addOrReplaceChild("rightside", CubeListBuilder.create().texOffs(40, 16).addBox(-8.0F, -2.0F, -2.0F, 4.0F, 12.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -22.0F, 0.0F));
+
+        PartDefinition legs = skeletalZombie.addOrReplaceChild("legs", CubeListBuilder.create(), PartPose.offset(0.0F, 10.0F, 0.0F));
+
+        PartDefinition left = legs.addOrReplaceChild("left", CubeListBuilder.create().texOffs(0, 16).mirror().addBox(-0.1F, -2.0F, -2.0F, 4.0F, 12.0F, 4.0F, new CubeDeformation(0.0F)).mirror(false), PartPose.offset(0.0F, 0.0F, 0.0F));
+
+        PartDefinition right = legs.addOrReplaceChild("right", CubeListBuilder.create().texOffs(0, 16).addBox(-3.9F, -2.0F, -2.0F, 4.0F, 12.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
 
         return LayerDefinition.create(meshdefinition, 64, 32);
     }
@@ -55,10 +66,10 @@ public class SkeletalZombieModel extends HierarchicalModel<SkeletalZombieEntity>
         this.root().getAllParts().forEach(ModelPart::resetPose);
         this.applyHeadRotation(netHeadYaw, headPitch);
 
-        this.animateWalk(SkeletalZombieAnimations.SKELETAL_ZOMBIE_WALK, limbSwing, limbSwingAmount, 2f, 2.5f); //changes animation speed
+        this.animateWalk(SkeletalZombieAnimations.SKELETAL_ZOMBIE_WALK, limbSwing, limbSwingAmount, 1f, 1f); //changes animation speed
 
-        this.animate(entity.idleAnimationState, SkeletalZombieAnimations.SKELETAL_ZOMBIE_IDLE, 1f, 1f);
-        this.animate(entity.attackAnimationState, SkeletalZombieAnimations.SKELETAL_ZOMBIE_ATTACK, 1f, 1f);
+        this.animate(entity.idleAnimationState, SkeletalZombieAnimations.SKELETAL_ZOMBIE_IDLE, ageInTicks, 1f);
+        this.animate(entity.attackAnimationState, SkeletalZombieAnimations.SKELETAL_ZOMBIE_ATTACK, ageInTicks, 1f);
 
     }
 
@@ -66,8 +77,8 @@ public class SkeletalZombieModel extends HierarchicalModel<SkeletalZombieEntity>
         headYaw = Mth.clamp(headYaw, - 30f, 30f);
         headPitch = Mth.clamp(headPitch, -25f, 45);
 
-        this.Head.yRot = headYaw * ((float)Math.PI / 180f);
-        this.Head.xRot = headPitch * ((float)Math.PI / 180f);
+        this.headgroup.yRot = headYaw * ((float)Math.PI / 180f);
+        this.headgroup.xRot = headPitch * ((float)Math.PI / 180f);
 
     }
 

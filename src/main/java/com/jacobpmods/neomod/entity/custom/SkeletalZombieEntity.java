@@ -1,26 +1,36 @@
 package com.jacobpmods.neomod.entity.custom;
 
+import com.jacobpmods.neomod.entity.ai.SkeletalZombieAttackGoal;
 import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.Difficulty;
 import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
+import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
+import net.minecraft.world.entity.ai.navigation.GroundPathNavigation;
+import net.minecraft.world.entity.ai.util.GoalUtils;
 import net.minecraft.world.entity.animal.IronGolem;
 import net.minecraft.world.entity.animal.Turtle;
 import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.monster.Zombie;
+import net.minecraft.world.entity.monster.ZombifiedPiglin;
 import net.minecraft.world.entity.npc.AbstractVillager;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Blocks;
+
+import java.util.function.Predicate;
 
 public class SkeletalZombieEntity extends Monster {
 
@@ -29,14 +39,15 @@ public class SkeletalZombieEntity extends Monster {
     public final AnimationState attackAnimationState = new AnimationState();
     public int attackAnimationTimeout = 0;
 
-
     public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
 
-    //private final BreakDoorGoal breakDoorGoal;
-    private boolean canBreakDoors;
+
     private static final float BREAK_DOOR_CHANCE = 0.1F;
-   // private static final Predicate<Difficulty> DOOR_BREAKING_PREDICATE;
+    private static final Predicate<Difficulty> DOOR_BREAKING_PREDICATE = p_34284_ -> p_34284_ == Difficulty.HARD;
+    private final BreakDoorGoal breakDoorGoal = new BreakDoorGoal(this, DOOR_BREAKING_PREDICATE);
+    private boolean canBreakDoors;
+
     public SkeletalZombieEntity(EntityType<? extends Monster> entityType, Level level) {
         super(entityType, level);
        // this.breakDoorGoal = breakDoorGoal;
@@ -51,17 +62,9 @@ public class SkeletalZombieEntity extends Monster {
         this.addBehaviourGoals();
     }
 
-    public static AttributeSupplier.Builder createAttributes() {
-        return Monster.createLivingAttributes()
-                .add(Attributes.MAX_HEALTH, 25)
-                .add(Attributes.MOVEMENT_SPEED, 0.23)
-                .add(Attributes.FOLLOW_RANGE,35)
-                .add(Attributes.ATTACK_DAMAGE, 4.5);
-    }
-
     protected void addBehaviourGoals() {
+        this.goalSelector.addGoal(2, new SkeletalZombieAttackGoal(this, 1.0, true));
         this.goalSelector.addGoal(0, new FloatGoal(this));
-        //this.goalSelector.addGoal(2, new SkeletalZombieAttackGoal(this, 1.0, true));
         this.goalSelector.addGoal(6, new MoveThroughVillageGoal(this, 1.0, true, 4, this::canBreakDoors));
         this.goalSelector.addGoal(7, new WaterAvoidingRandomStrollGoal(this, 1.0));
         //this.targetSelector.addGoal(1, (new HurtByTargetGoal(this, new Class[0])).setAlertOthers(new Class[]{ZombifiedPiglin.class}));
@@ -69,16 +72,24 @@ public class SkeletalZombieEntity extends Monster {
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, AbstractVillager.class, false));
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, IronGolem.class, true));
         this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Turtle.class, 10, true, false, Turtle.BABY_ON_LAND_SELECTOR));
+        this.targetSelector.addGoal(1, new HurtByTargetGoal(this));
+    }
+
+    public static AttributeSupplier.Builder createAttributes() {
+        return Monster.createLivingAttributes()
+                .add(Attributes.FOLLOW_RANGE,35.0)
+                .add(Attributes.MOVEMENT_SPEED, 0.23F)
+                .add(Attributes.ATTACK_DAMAGE, 4.5)
+                .add(Attributes.MAX_HEALTH, 25);
 
     }
+
+
+    //          DOOR STUFF
     public boolean canBreakDoors() {
         return this.canBreakDoors;
     }
-    protected boolean supportsBreakDoorGoal() {
-        return true;
-    }
-
-   /* public void setCanBreakDoors(boolean canBreakDoors) {
+    public void setCanBreakDoors(boolean canBreakDoors) {
         if (this.supportsBreakDoorGoal() && GoalUtils.hasGroundPathNavigation(this)) {
             if (this.canBreakDoors != canBreakDoors) {
                 this.canBreakDoors = canBreakDoors;
@@ -93,8 +104,26 @@ public class SkeletalZombieEntity extends Monster {
             this.goalSelector.removeGoal(this.breakDoorGoal);
             this.canBreakDoors = false;
         }
+    }
+    protected boolean supportsBreakDoorGoal() {
+        return true;
+    }
 
-    }*/
+
+
+    @Override
+    public void addAdditionalSaveData(CompoundTag p_34319_) {
+        super.addAdditionalSaveData(p_34319_);
+        p_34319_.putBoolean("IsBaby", this.isBaby());
+        p_34319_.putBoolean("CanBreakDoors", this.canBreakDoors());
+    }
+
+    @Override
+    public void readAdditionalSaveData(CompoundTag p_34305_) {
+        super.readAdditionalSaveData(p_34305_);
+        this.setBaby(p_34305_.getBoolean("IsBaby"));
+        this.setCanBreakDoors(p_34305_.getBoolean("CanBreakDoors"));
+    }
 
 
     static class ZombieAttackTurtleEggGoal extends RemoveBlockGoal {
@@ -115,26 +144,6 @@ public class SkeletalZombieEntity extends Monster {
         }
     }
 
-    private void setupAnimationStates() {
-        if(this.idleAnimationTimeout <= 0) {
-            this.idleAnimationTimeout = 40;
-            this.idleAnimationState.start(this.tickCount);
-        } else {
-            --this.idleAnimationTimeout;
-        }
-
-        if(this.isAttacking() && attackAnimationTimeout <= 0) {
-            attackAnimationTimeout = 20; //length in ticks of animation. 20ticks for 1 second
-            attackAnimationState.start(this.tickCount);
-        } else {
-            --this.attackAnimationTimeout;
-        }
-        if(!this.isAttacking()) {
-            attackAnimationState.stop();
-        }
-
-    }
-
 
     public void setAttacking(boolean attacking) {
         this.entityData.set(ATTACKING, attacking);
@@ -150,6 +159,48 @@ public class SkeletalZombieEntity extends Monster {
         builder.define(ATTACKING, false);
     }
 
+    private void setupAnimationStates() {
+        // If attacking, reset idle animation and force attack animation
+        if (this.isAttacking()) {
+            // Stop idle animation if it's playing and start attack animation
+            if (this.idleAnimationState.isStarted()) {
+                this.idleAnimationState.stop();
+            }
+
+            if (!this.attackAnimationState.isStarted()) {
+                this.attackAnimationState.start(this.tickCount);  // Start the attack animation
+                this.attackAnimationTimeout = 24;  // Reset timeout for attack animation
+            }
+
+            // Countdown attack animation timeout if necessary
+            if (this.attackAnimationTimeout > 0) {
+                --this.attackAnimationTimeout;
+            }
+
+            this.setAttacking(true);  // Ensure attacking state is set
+        } else {
+            // If not attacking, reset attack animation
+            if (this.attackAnimationState.isStarted()) {
+                this.attackAnimationState.stop();
+            }
+
+            // Only start idle animation if not attacking and mob is not targeting
+            if (!this.isAttacking() && !this.targeting()) {
+                if (this.idleAnimationTimeout <= 0) {
+                    this.idleAnimationTimeout = this.random.nextInt(40);  // Reset idle animation timeout
+                    this.idleAnimationState.start(this.tickCount);  // Start idle animation
+                } else {
+                    --this.idleAnimationTimeout;  // Countdown idle animation timeout
+                }
+            }
+
+            this.setAttacking(false);  // Ensure attacking state is reset
+        }
+    }
+
+    private boolean targeting() {
+        return this.getTarget() != null;  // Checks if the mob has a target
+    }
 
     @Override
     public void tick() {
