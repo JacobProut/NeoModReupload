@@ -36,6 +36,13 @@ repositories {
         name = "OctoStudios"
         url = uri("https://maven.octo-studios.com/releases")
     }
+    maven {
+        name = 'GeckoLib'
+        url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+        content {
+            includeGroup("software.bernie.geckolib")
+        }
+    }
 }
 
 base {
@@ -122,6 +129,7 @@ dependencies {
     //curios - for extra wearable slots
     implementation "top.theillusivec4.curios:curios-neoforge:${curios_version}"
 
+    implementation "software.bernie.geckolib:geckolib-neoforge-${minecraft_version}:${geckolib_version}"
 
 
     // Example optional mod dependency with JEI
