@@ -5,6 +5,7 @@ import com.jacobpmods.neomod.block.entity.ModBlockEntities;
 import com.jacobpmods.neomod.block.entity.renderer.PedestalBlockEntityRenderer;
 import com.jacobpmods.neomod.entity.ModEntities;
 import com.jacobpmods.neomod.entity.client.skeletal.enderman.SkeletalEndermanRender;
+import com.jacobpmods.neomod.entity.client.skeletal.guardian.SkeletalGuardianRender;
 import com.jacobpmods.neomod.entity.client.skeletal.zombie.SkeletalZombieRender;
 import com.jacobpmods.neomod.fluid.BaseFluidType;
 import com.jacobpmods.neomod.fluid.ModFluidTypes;
@@ -129,6 +130,7 @@ public class FirstNeoMod {
             //Entities
             EntityRenderers.register(ModEntities.SKELETAL_ZOMBIE.get(), SkeletalZombieRender::new);
             EntityRenderers.register(ModEntities.SKELETAL_ENDERMAN.get(), SkeletalEndermanRender::new);
+            EntityRenderers.register(ModEntities.SKELETAL_GUARDIAN.get(), SkeletalGuardianRender::new);
 
             event.enqueueWork(() -> {
                 ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_POISONED_WATER.get(), RenderType.translucent());

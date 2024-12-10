@@ -25,11 +25,15 @@ public class ModCreativeModeTabs {
                         //Spawn Eggs
                         output.accept(ModItems.SKELETAL_ZOMBIE_SPAWN_EGG);
                         output.accept(ModItems.SKELETAL_ENDERMAN_SPAWN_EGG);
+                        output.accept(ModItems.SKELETAL_GUARDIAN_SPAWN_EGG);
 
                         //Tools
                         output.accept(ModItems.SCYTHE);
                         output.accept(ModItems.BONE_SWORD);
                         output.accept(ModItems.BLOOD_BONE_SWORD);
+
+                        //Skeletal Armor
+                        //output.accept(ModItems.SKELETAL_HELMET);
 
                         //Nexon Items
                         output.accept(ModItems.nexon);

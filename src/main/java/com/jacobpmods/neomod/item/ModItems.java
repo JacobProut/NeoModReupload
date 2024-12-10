@@ -66,6 +66,10 @@ public class ModItems {
     public static final DeferredItem<Item> NEXON_BOOTS = ITEMS.register("nexonboots",
             () -> new ModArmorItem(ModArmorMaterials.NEXON, ArmorItem.Type.BOOTS, new Item.Properties().fireResistant().durability(ArmorItem.Type.BOOTS.getDurability(42))));
 
+    //REPLACE MODARMORMATERIAL WITH CUSTOM BONE ONE
+//    public static final DeferredItem<Item> SKELETAL_HELMET = ITEMS.register("skeletal_helmet",
+//            () -> new ModArmorItem(ModArmorMaterials.SKELETAL, ArmorItem.Type.HELMET, new Item.Properties().fireResistant().durability(ArmorItem.Type.HELMET.getDurability(42))));
+
     public static final DeferredItem<Item> UNDEAD_BONE = ITEMS.register("undead_bone", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> UNDEAD_KEY = ITEMS.register("undead_key", () -> new Item(new Item.Properties()));
 
@@ -79,6 +83,9 @@ public class ModItems {
             () -> new DeferredSpawnEggItem(ModEntities.SKELETAL_ZOMBIE, 0xFFFFFF, 0xD3D3D3, new Item.Properties()));
     public static final DeferredItem<Item> SKELETAL_ENDERMAN_SPAWN_EGG = ITEMS.register("skeletal_enderman_egg",
             () -> new DeferredSpawnEggItem(ModEntities.SKELETAL_ENDERMAN, 0xFFFFFF, 0xD3D3D3, new Item.Properties()));
+
+    public static final DeferredItem<Item> SKELETAL_GUARDIAN_SPAWN_EGG = ITEMS.register("skeletal_guardian_egg",
+            () -> new DeferredSpawnEggItem(ModEntities.SKELETAL_GUARDIAN, 0xFFFFFF, 0xD3D3D3, new Item.Properties()));
 
 
 

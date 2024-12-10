@@ -70,6 +70,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.NEXON_LEGGINGS);
         trimmedArmorItem(ModItems.NEXON_BOOTS);
 
+        //Skeletal Armor
+        //basicItem(ModItems.SKELETAL_HELMET.get());
+       /* getBuilder("skeletal_helmet")
+                .parent(new ModelFile.UncheckedModelFile(mcLoc("item/generated"))) // Base item model
+                .texture("layer0", modLoc("item/skeletal_helmet")); // Texture path
+*/
         //Saplings
         saplingItem(ModBlocks.GHOSTLY_SAPLING);
         saplingItem(ModBlocks.BLOODY_SAPLING);
@@ -77,6 +83,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         //Spawn Eggs
         withExistingParent(ModItems.SKELETAL_ZOMBIE_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         withExistingParent(ModItems.SKELETAL_ENDERMAN_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItems.SKELETAL_GUARDIAN_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 
         //Flowers
         flowerItem(ModBlocks.OOZING_FLOWER);

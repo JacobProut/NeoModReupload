@@ -4,8 +4,10 @@ import com.jacobpmods.neomod.FirstNeoMod;
 import com.jacobpmods.neomod.entity.ModEntities;
 import com.jacobpmods.neomod.entity.client.ModModelLayers;
 import com.jacobpmods.neomod.entity.client.skeletal.enderman.SkeletalEndermanModel;
+import com.jacobpmods.neomod.entity.client.skeletal.guardian.SkeletalGuardianModel;
 import com.jacobpmods.neomod.entity.client.skeletal.zombie.SkeletalZombieModel;
 import com.jacobpmods.neomod.entity.custom.SkeletalEndermanEntity;
+import com.jacobpmods.neomod.entity.custom.SkeletalGuardianEntity;
 import com.jacobpmods.neomod.entity.custom.SkeletalZombieEntity;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -19,6 +21,7 @@ public class ModEventBusEvents {
     public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(ModModelLayers.SKELETAL_ZOMBIE, SkeletalZombieModel::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.SKELETAL_ENDERMAN, SkeletalEndermanModel::createBodyLayer);
+        event.registerLayerDefinition(ModModelLayers.SKELETAL_GUARDIAN, SkeletalGuardianModel::createBodyLayer);
 
     }
 
@@ -26,6 +29,7 @@ public class ModEventBusEvents {
     public static void registerAttributes(EntityAttributeCreationEvent event) {
         event.put(ModEntities.SKELETAL_ZOMBIE.get(), SkeletalZombieEntity.createAttributes().build());
         event.put(ModEntities.SKELETAL_ENDERMAN.get(), SkeletalEndermanEntity.createAttributes().build());
+        event.put(ModEntities.SKELETAL_GUARDIAN.get(), SkeletalGuardianEntity.createAttributes().build());
     }
 
 }
