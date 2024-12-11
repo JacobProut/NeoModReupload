@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "bloody_planks",
+  "ingredients": [
+    {
+      "item": "neomod:planks_bloody"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "neomod:bloody_plank_button"
+  }
+}

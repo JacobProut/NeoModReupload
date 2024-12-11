@@ -75,6 +75,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BONE_BRICK_FENCE);
                         output.accept(ModBlocks.BONE_BRICK_FENCE_GATE);
                         output.accept(ModBlocks.BONE_BRICK_WALL);
+                        output.accept(ModBlocks.BONE_BRICK_PRESSURE_PLATE);
+                        output.accept(ModBlocks.BONE_BRICK_BUTTON);
 
 
                         //Stone-CobbleStone Blocks
@@ -84,18 +86,24 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.GHOSTLY_STONE_FENCE);
                         output.accept(ModBlocks.GHOSTLY_STONE_FENCE_GATE);
                         output.accept(ModBlocks.GHOSTLY_STONE_WALL);
+                        output.accept(ModBlocks.GHOSTLY_STONE_PRESSURE_PLATE);
+                        output.accept(ModBlocks.GHOSTLY_STONE_BUTTON);
                         output.accept(ModBlocks.GHOSTLY_COBBLESTONE);
                         output.accept(ModBlocks.GHOSTLY_COBBLESTONE_STAIRS);
                         output.accept(ModBlocks.GHOSTLY_COBBLESTONE_SLAB);
                         output.accept(ModBlocks.GHOSTLY_COBBLESTONE_FENCE);
                         output.accept(ModBlocks.GHOSTLY_COBBLESTONE_FENCE_GATE);
                         output.accept(ModBlocks.GHOSTLY_COBBLESTONE_WALL);
+                        output.accept(ModBlocks.GHOSTLY_COBBLESTONE_PRESSURE_PLATE);
+                        output.accept(ModBlocks.GHOSTLY_COBBLESTONE_BUTTON);
                         output.accept(ModBlocks.GHOSTLY_STONE_BRICKS);
                         output.accept(ModBlocks.GHOSTLY_STONEBRICK_STAIRS);
                         output.accept(ModBlocks.GHOSTLY_STONEBRICK_SLAB);
                         output.accept(ModBlocks.GHOSTLY_STONEBRICK_FENCE);
                         output.accept(ModBlocks.GHOSTLY_STONEBRICK_FENCE_GATE);
                         output.accept(ModBlocks.GHOSTLY_STONEBRICK_WALL);
+                        output.accept(ModBlocks.GHOSTLY_STONEBRICK_PRESSURE_PLATE);
+                        output.accept(ModBlocks.GHOSTLY_STONEBRICK_BUTTON);
 
                         //Logs/Wood
                         output.accept(ModBlocks.LOG_GHOSTLY);
@@ -105,6 +113,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.GHOSTLY_PLANK_FENCE);
                         output.accept(ModBlocks.GHOSTLY_PLANK_FENCE_GATE);
                         output.accept(ModBlocks.GHOSTLY_PLANK_WALL);
+                        output.accept(ModBlocks.GHOSTLY_PLANK_PRESSURE_PLATE);
+                        output.accept(ModBlocks.GHOSTLY_PLANK_BUTTON);
                         output.accept(ModBlocks.LOG_BLOODY);
                         output.accept(ModBlocks.PLANKS_BLOODY);
                         output.accept(ModBlocks.BLOODY_PLANK_STAIRS);
@@ -112,6 +122,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BLOODY_PLANK_FENCE);
                         output.accept(ModBlocks.BLOODY_PLANK_FENCE_GATE);
                         output.accept(ModBlocks.BLOODY_PLANK_WALL);
+                        output.accept(ModBlocks.BLOODY_PLANK_PRESSURE_PLATE);
+                        output.accept(ModBlocks.BLOODY_PLANK_BUTTON);
 
                         //Leaves
                         output.accept(ModBlocks.GHOSTLY_LEAVES);
@@ -153,6 +165,22 @@ public class ModCreativeModeTabs {
 
                     }).build());
 
+   /* public static final Supplier<CreativeModeTab> MODDED_WEAPONS_AND_TOOLS = CREATIVE_MODE_TABS.register("Weapons and Tools",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.SCYTHE.get()))
+                    .title(Component.translatable("Jacobs Modded Weapons & Tools")).displayItems((itemDisplayParameters, output) -> {
+                        //Tools
+                        output.accept(ModItems.SCYTHE);
+                        output.accept(ModItems.BONE_SWORD);
+                        output.accept(ModItems.BLOOD_BONE_SWORD);
+
+                        output.accept(ModItems.NEXON_PICKAXE);
+                        output.accept(ModItems.NEXON_HOE);
+                        output.accept(ModItems.NEXON_SHOVEL);
+                        output.accept(ModItems.NEXON_SWORD);
+                        output.accept(ModItems.NEXON_AXE);
+
+                    }).build());
+*/
 
 
     public static void register(IEventBus eventBus) {

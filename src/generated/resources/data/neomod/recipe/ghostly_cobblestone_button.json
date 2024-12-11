@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "ghostly_cobblestone",
+  "ingredients": [
+    {
+      "item": "neomod:ghostly_cobblestone"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "neomod:ghostly_cobblestone_button"
+  }
+}

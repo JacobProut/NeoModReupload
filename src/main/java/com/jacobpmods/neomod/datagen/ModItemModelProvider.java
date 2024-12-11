@@ -117,10 +117,15 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.GHOSTLY_COBBLESTONE_WALL, ModBlocks.GHOSTLY_COBBLESTONE);
         wallItem(ModBlocks.GHOSTLY_STONEBRICK_WALL, ModBlocks.GHOSTLY_STONE_BRICKS);
         wallItem(ModBlocks.BONE_BRICK_WALL, ModBlocks.BONE_BRICK);
-        wallItem(ModBlocks.BLOODY_PLANK_WALL, ModBlocks.PLANKS_BLOODY);
         wallItem(ModBlocks.GHOSTLY_PLANK_WALL, ModBlocks.GHOSTLY_PLANKS);
+        wallItem(ModBlocks.BLOODY_PLANK_WALL, ModBlocks.PLANKS_BLOODY);
 
-
+        buttonItem(ModBlocks.GHOSTLY_STONE_BUTTON, ModBlocks.GHOSTLY_STONE);
+        buttonItem(ModBlocks.GHOSTLY_COBBLESTONE_BUTTON, ModBlocks.GHOSTLY_COBBLESTONE);
+        buttonItem(ModBlocks.GHOSTLY_STONEBRICK_BUTTON, ModBlocks.GHOSTLY_STONE_BRICKS);
+        buttonItem(ModBlocks.BONE_BRICK_BUTTON, ModBlocks.BONE_BRICK);
+        buttonItem(ModBlocks.GHOSTLY_PLANK_BUTTON, ModBlocks.GHOSTLY_PLANKS);
+        buttonItem(ModBlocks.BLOODY_PLANK_BUTTON, ModBlocks.PLANKS_BLOODY);
     }
 
     public void flowerItem(DeferredBlock<Block> block) {
@@ -167,6 +172,12 @@ public class ModItemModelProvider extends ItemModelProvider {
                                         "item/" + itemDeferredItem.getId().getPath()));
             });
         }
+    }
+
+    public void buttonItem(DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {
+        this.withExistingParent(block.getId().getPath(), mcLoc("block/button_inventory"))
+                .texture("texture",  ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID,
+                        "block/" + baseBlock.getId().getPath()));
     }
 
     private ItemModelBuilder saplingItem(DeferredBlock<Block> item) {

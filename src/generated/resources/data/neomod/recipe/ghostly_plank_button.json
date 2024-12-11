@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "ghostly_planks",
+  "ingredients": [
+    {
+      "item": "neomod:planks_ghostly"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "neomod:ghostly_plank_button"
+  }
+}

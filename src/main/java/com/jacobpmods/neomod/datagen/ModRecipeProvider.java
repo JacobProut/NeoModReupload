@@ -194,6 +194,29 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         fenceGateBuilder(ModBlocks.BLOODY_PLANK_FENCE_GATE.get(), Ingredient.of(ModBlocks.PLANKS_BLOODY.get())).group("bloody_planks")
                 .unlockedBy("has_bloody_planks", has(ModBlocks.PLANKS_BLOODY.get())).save(recipeOutput);
 
+        // Pressure Plates
+        pressurePlate(recipeOutput, ModBlocks.GHOSTLY_STONE_PRESSURE_PLATE.get(), ModBlocks.GHOSTLY_STONE.get());
+        pressurePlate(recipeOutput, ModBlocks.GHOSTLY_COBBLESTONE_PRESSURE_PLATE.get(), ModBlocks.GHOSTLY_COBBLESTONE.get());
+        pressurePlate(recipeOutput, ModBlocks.GHOSTLY_STONEBRICK_PRESSURE_PLATE.get(), ModBlocks.GHOSTLY_STONE_BRICKS.get());
+        pressurePlate(recipeOutput, ModBlocks.BONE_BRICK_PRESSURE_PLATE.get(), ModBlocks.BONE_BRICK.get());
+        pressurePlate(recipeOutput, ModBlocks.GHOSTLY_PLANK_PRESSURE_PLATE.get(), ModBlocks.GHOSTLY_PLANKS.get());
+        pressurePlate(recipeOutput, ModBlocks.BLOODY_PLANK_PRESSURE_PLATE.get(), ModBlocks.PLANKS_BLOODY.get());
+
+
+        // Buttons
+        buttonBuilder(ModBlocks.GHOSTLY_STONE_BUTTON.get(), Ingredient.of(ModBlocks.GHOSTLY_STONE.get())).group("ghostly_stone")
+                .unlockedBy("has_ghostly_stone", has(ModBlocks.GHOSTLY_STONE.get())).save(recipeOutput);
+        buttonBuilder(ModBlocks.GHOSTLY_COBBLESTONE_BUTTON.get(), Ingredient.of(ModBlocks.GHOSTLY_COBBLESTONE.get())).group("ghostly_cobblestone")
+                .unlockedBy("has_ghostly_cobblestone", has(ModBlocks.GHOSTLY_COBBLESTONE.get())).save(recipeOutput);
+        buttonBuilder(ModBlocks.GHOSTLY_STONEBRICK_BUTTON.get(), Ingredient.of(ModBlocks.GHOSTLY_STONE_BRICKS.get())).group("ghostly_stone_bricks")
+                .unlockedBy("has_ghostly_stone_bricks", has(ModBlocks.GHOSTLY_STONE_BRICKS.get())).save(recipeOutput);
+        buttonBuilder(ModBlocks.BONE_BRICK_BUTTON.get(), Ingredient.of(ModBlocks.BONE_BRICK.get())).group("bone_bricks")
+                .unlockedBy("has_bone_bricks", has(ModBlocks.BONE_BRICK.get())).save(recipeOutput);
+        buttonBuilder(ModBlocks.GHOSTLY_PLANK_BUTTON.get(), Ingredient.of(ModBlocks.GHOSTLY_PLANKS.get())).group("ghostly_planks")
+                .unlockedBy("has_ghostly_planks", has(ModBlocks.GHOSTLY_PLANKS.get())).save(recipeOutput);
+        buttonBuilder(ModBlocks.BLOODY_PLANK_BUTTON.get(), Ingredient.of(ModBlocks.PLANKS_BLOODY.get())).group("bloody_planks")
+                .unlockedBy("has_bloody_planks", has(ModBlocks.PLANKS_BLOODY.get())).save(recipeOutput);
+
     }
     protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
                                       float pExperience, int pCookingTIme, String pGroup) {

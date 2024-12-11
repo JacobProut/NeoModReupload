@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "bone_bricks",
+  "ingredients": [
+    {
+      "item": "neomod:bone_brick"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "neomod:bone_brick_button"
+  }
+}

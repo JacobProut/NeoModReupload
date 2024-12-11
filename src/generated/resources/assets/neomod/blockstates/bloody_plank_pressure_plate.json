@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "neomod:block/bloody_plank_pressure_plate"
+    },
+    "powered=true": {
+      "model": "neomod:block/bloody_plank_pressure_plate_down"
+    }
+  }
+}

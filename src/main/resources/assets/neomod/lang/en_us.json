@@ -69,6 +69,8 @@
   "block.neomod.ghostly_plank_fence": "Ghostly Plank Fence",
   "block.neomod.ghostly_plank_fence_gate": "Ghostly Plank Fence Gate",
   "block.neomod.ghostly_plank_wall": "Ghostly Plank Wall",
+  "block.neomod.ghostly_plank_pressure_plate": "Ghostly Planks Pressure Plate",
+  "block.neomod.ghostly_plank_button": "Ghostly Planks Button",
   "block.neomod.stripped_ghostly_log": "Stripped Ghostly Log",
   "block.neomod.stripped_ghostly_log_top": "Stripped Ghostly Log Top",
 
@@ -79,6 +81,8 @@
   "block.neomod.bloody_plank_fence": "Bloody Plank Fence",
   "block.neomod.bloody_plank_fence_gate": "Bloody Plank Fence Gate",
   "block.neomod.bloody_plank_wall": "Bloody Plank Wall",
+  "block.neomod.bloody_plank_pressure_plate": "Bloody Planks Pressure Plate",
+  "block.neomod.bloody_plank_button": "Bloody Planks Button",
 
   "block.neomod.ghostly_leaves": "Ghostly Leaves",
   "block.neomod.bloody_leaves": "Bloody Leaves",
@@ -93,6 +97,9 @@
   "block.neomod.ghostly_stone_fence": "Ghostly Stone Fence",
   "block.neomod.ghostly_stone_fence_gate": "Ghostly Stone Fence Gate",
   "block.neomod.ghostly_stone_wall": "Ghostly Stone Wall",
+  "block.neomod.ghostly_stone_pressure_plate": "Ghostly Stone Pressure Plate",
+  "block.neomod.ghostly_stone_button": "Ghostly Stone Button",
+
 
   "block.neomod.ghostly_cobblestone": "Ghostly Cobblestone",
   "block.neomod.ghostly_cobblestone_slab": "Ghostly Cobblestone Slab",
@@ -100,6 +107,8 @@
   "block.neomod.ghostly_cobblestone_fence": "Ghostly Cobblestone Fence",
   "block.neomod.ghostly_cobblestone_fence_gate": "Ghostly Cobblestone Fence Gate",
   "block.neomod.ghostly_cobblestone_wall": "Ghostly Cobblestone Wall",
+  "block.neomod.ghostly_cobblestone_pressure_plate": "Ghostly Cobblestone Pressure Plate",
+  "block.neomod.ghostly_cobblestone_button": "Ghostly Cobblestone Button",
 
   "block.neomod.ghostly_stone_bricks": "Ghostly Stone Bricks",
   "block.neomod.ghostly_stone_brick_slab": "Ghostly Stone Brick Slab",
@@ -107,6 +116,8 @@
   "block.neomod.ghostly_stone_brick_fence": "Ghostly Stone Brick Fence",
   "block.neomod.ghostly_stone_brick_fence_gate": "Ghostly Stone Brick Fence Gate",
   "block.neomod.ghostly_stone_brick_wall": "Ghostly Stone Brick Wall",
+  "block.neomod.ghostly_stone_brick_pressure_plate": "Ghostly Stone Brick Pressure Plate",
+  "block.neomod.ghostly_stone_brick_button": "Ghostly Stone Brick Button",
 
   "block.neomod.bone_brick": "Bone Brick Block",
   "block.neomod.bone_brick_slab": "Bone Brick Slab",
@@ -114,6 +125,8 @@
   "block.neomod.bone_brick_fence": "Bone Brick Fence",
   "block.neomod.bone_brick_fence_gate": "Bone Brick Fence Gate",
   "block.neomod.bone_brick_wall": "Bone Brick Wall",
+  "block.neomod.bone_brick_pressure_plate": "Bone Brick Pressure Plate",
+  "block.neomod.bone_brick_button": "Bone Brick Button",
 
 
 

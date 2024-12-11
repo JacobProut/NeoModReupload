@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bone_brick": {
+      "conditions": {
+        "items": [
+          {
+            "items": "neomod:bone_brick"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "neomod:bone_brick_pressure_plate"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_bone_brick"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "neomod:bone_brick_pressure_plate"
+    ]
+  }
+}

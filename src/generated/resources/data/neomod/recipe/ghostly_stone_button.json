@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "ghostly_stone",
+  "ingredients": [
+    {
+      "item": "neomod:ghostly_stone"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "neomod:ghostly_stone_button"
+  }
+}

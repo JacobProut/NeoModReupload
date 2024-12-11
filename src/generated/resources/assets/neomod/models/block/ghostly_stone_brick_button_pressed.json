@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_pressed",
+  "textures": {
+    "texture": "neomod:block/ghostly_stone_bricks"
+  }
+}

@@ -22,6 +22,7 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.bus.api.IEventBus;
@@ -66,6 +67,10 @@ public class ModBlocks {
             .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
     public static final DeferredBlock<Block> GHOSTLY_STONE_WALL = registerBlock("ghostly_stone_wall", () -> new WallBlock(BlockBehaviour.Properties.of()
             .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+    public static final DeferredBlock<Block> GHOSTLY_STONE_PRESSURE_PLATE = registerBlock("ghostly_stone_pressure_plate", () -> new PressurePlateBlock(BlockSetType.STONE, BlockBehaviour.Properties.of()
+            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+    public static final DeferredBlock<Block> GHOSTLY_STONE_BUTTON = registerBlock("ghostly_stone_button", () -> new ButtonBlock(BlockSetType.STONE, 20, BlockBehaviour.Properties.of()
+            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE).noCollission()));
     public static final DeferredBlock<Block> GHOSTLY_COBBLESTONE = registerBlock("ghostly_cobblestone", () ->new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)
             .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
     public static final DeferredBlock<Block> GHOSTLY_COBBLESTONE_STAIRS = registerBlock("ghostly_cobblestone_stairs", () ->new StairBlock(ModBlocks.GHOSTLY_COBBLESTONE.get().defaultBlockState(), BlockBehaviour.Properties.of()
@@ -78,6 +83,10 @@ public class ModBlocks {
             .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
     public static final DeferredBlock<Block> GHOSTLY_COBBLESTONE_WALL = registerBlock("ghostly_cobblestone_wall", () -> new WallBlock(BlockBehaviour.Properties.of()
             .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+    public static final DeferredBlock<Block> GHOSTLY_COBBLESTONE_PRESSURE_PLATE = registerBlock("ghostly_cobblestone_pressure_plate", () -> new PressurePlateBlock(BlockSetType.STONE, BlockBehaviour.Properties.of()
+            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+    public static final DeferredBlock<Block> GHOSTLY_COBBLESTONE_BUTTON = registerBlock("ghostly_cobblestone_button", () -> new ButtonBlock(BlockSetType.STONE, 20, BlockBehaviour.Properties.of()
+            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE).noCollission()));
     public static final DeferredBlock<Block> GHOSTLY_STONE_BRICKS = registerBlock("ghostly_stone_bricks", () ->new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)
             .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
     public static final DeferredBlock<Block> GHOSTLY_STONEBRICK_STAIRS = registerBlock("ghostly_stone_brick_stairs", () ->new StairBlock(ModBlocks.GHOSTLY_STONE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.of()
@@ -90,6 +99,10 @@ public class ModBlocks {
             .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
     public static final DeferredBlock<Block> GHOSTLY_STONEBRICK_WALL = registerBlock("ghostly_stone_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.of()
             .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+    public static final DeferredBlock<Block> GHOSTLY_STONEBRICK_PRESSURE_PLATE = registerBlock("ghostly_stone_brick_pressure_plate", () -> new PressurePlateBlock(BlockSetType.STONE, BlockBehaviour.Properties.of()
+            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+    public static final DeferredBlock<Block> GHOSTLY_STONEBRICK_BUTTON = registerBlock("ghostly_stone_brick_button", () -> new ButtonBlock(BlockSetType.STONE, 20, BlockBehaviour.Properties.of()
+            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE).noCollission()));
 
 
     //Bone Blocks
@@ -105,6 +118,10 @@ public class ModBlocks {
             .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
     public static final DeferredBlock<Block> BONE_BRICK_WALL = registerBlock("bone_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.of()
             .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+    public static final DeferredBlock<Block> BONE_BRICK_PRESSURE_PLATE = registerBlock("bone_brick_pressure_plate", () -> new PressurePlateBlock(BlockSetType.STONE, BlockBehaviour.Properties.of()
+            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+    public static final DeferredBlock<Block> BONE_BRICK_BUTTON = registerBlock("bone_brick_button", () -> new ButtonBlock(BlockSetType.STONE, 20, BlockBehaviour.Properties.of()
+            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE).noCollission()));
 
 
     //Ghostly Wood and Terrain items
@@ -143,6 +160,10 @@ public class ModBlocks {
             .strength(2f).requiresCorrectToolForDrops().sound(SoundType.WOOD)));
     public static final DeferredBlock<Block> GHOSTLY_PLANK_WALL = registerBlock("ghostly_plank_wall", () -> new WallBlock(BlockBehaviour.Properties.of()
             .strength(2f).requiresCorrectToolForDrops().sound(SoundType.WOOD)));
+    public static final DeferredBlock<Block> GHOSTLY_PLANK_PRESSURE_PLATE = registerBlock("ghostly_plank_pressure_plate", () -> new PressurePlateBlock(BlockSetType.OAK, BlockBehaviour.Properties.of()
+            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.WOOD)));
+    public static final DeferredBlock<Block> GHOSTLY_PLANK_BUTTON = registerBlock("ghostly_plank_button", () -> new ButtonBlock(BlockSetType.OAK, 20, BlockBehaviour.Properties.of()
+            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.WOOD).noCollission()));
     public static final DeferredBlock<Block> GHOSTLY_LEAVES = registerBlock("ghostly_leaves", () ->new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)
             .strength(0.2f).sound(SoundType.CHERRY_LEAVES)) {
         @Override
@@ -196,6 +217,10 @@ public class ModBlocks {
             .strength(2f).requiresCorrectToolForDrops().sound(SoundType.WOOD)));
     public static final DeferredBlock<Block> BLOODY_PLANK_WALL = registerBlock("bloody_plank_wall", () -> new WallBlock(BlockBehaviour.Properties.of()
             .strength(2f).requiresCorrectToolForDrops().sound(SoundType.WOOD)));
+    public static final DeferredBlock<Block> BLOODY_PLANK_PRESSURE_PLATE = registerBlock("bloody_plank_pressure_plate", () -> new PressurePlateBlock(BlockSetType.OAK, BlockBehaviour.Properties.of()
+            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+    public static final DeferredBlock<Block> BLOODY_PLANK_BUTTON = registerBlock("bloody_plank_button", () -> new ButtonBlock(BlockSetType.OAK, 20, BlockBehaviour.Properties.of()
+            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE).noCollission()));
     public static final DeferredBlock<Block> BLOODY_LEAVES = registerBlock("bloody_leaves", () ->new BloodyLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)
             .strength(0.2f).sound(SoundType.CHERRY_LEAVES)) {
         @Override

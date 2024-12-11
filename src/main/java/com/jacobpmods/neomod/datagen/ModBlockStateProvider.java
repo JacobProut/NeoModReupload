@@ -51,6 +51,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.GHOSTLY_STONE_FENCE_GATE);
         fenceGateBlock(((FenceGateBlock) ModBlocks.GHOSTLY_STONE_FENCE_GATE.get()), blockTexture(ModBlocks.GHOSTLY_STONE.get()));
         wallBlock(((WallBlock) ModBlocks.GHOSTLY_STONE_WALL.get()), blockTexture(ModBlocks.GHOSTLY_STONE.get()));
+        blockItem(ModBlocks.GHOSTLY_STONE_PRESSURE_PLATE);
+        pressurePlateBlock(((PressurePlateBlock) ModBlocks.GHOSTLY_STONE_PRESSURE_PLATE.get()), blockTexture(ModBlocks.GHOSTLY_STONE.get()));
+        buttonBlock(((ButtonBlock) ModBlocks.GHOSTLY_STONE_BUTTON.get()), blockTexture(ModBlocks.GHOSTLY_STONE.get()));
+
+
 
         blockWithItem(ModBlocks.GHOSTLY_COBBLESTONE);
         stairsBlock(((StairBlock) ModBlocks.GHOSTLY_COBBLESTONE_STAIRS.get()), blockTexture(ModBlocks.GHOSTLY_COBBLESTONE.get()));
@@ -61,6 +66,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.GHOSTLY_COBBLESTONE_FENCE_GATE);
         fenceGateBlock(((FenceGateBlock) ModBlocks.GHOSTLY_COBBLESTONE_FENCE_GATE.get()), blockTexture(ModBlocks.GHOSTLY_COBBLESTONE.get()));
         wallBlock(((WallBlock) ModBlocks.GHOSTLY_COBBLESTONE_WALL.get()), blockTexture(ModBlocks.GHOSTLY_COBBLESTONE.get()));
+        blockItem(ModBlocks.GHOSTLY_COBBLESTONE_PRESSURE_PLATE);
+        pressurePlateBlock(((PressurePlateBlock) ModBlocks.GHOSTLY_COBBLESTONE_PRESSURE_PLATE.get()), blockTexture(ModBlocks.GHOSTLY_COBBLESTONE.get()));
+        buttonBlock(((ButtonBlock) ModBlocks.GHOSTLY_COBBLESTONE_BUTTON.get()), blockTexture(ModBlocks.GHOSTLY_COBBLESTONE.get()));
 
 
         blockWithItem(ModBlocks.GHOSTLY_STONE_BRICKS);
@@ -72,6 +80,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.GHOSTLY_STONEBRICK_FENCE_GATE);
         fenceGateBlock(((FenceGateBlock) ModBlocks.GHOSTLY_STONEBRICK_FENCE_GATE.get()), blockTexture(ModBlocks.GHOSTLY_STONE_BRICKS.get()));
         wallBlock(((WallBlock) ModBlocks.GHOSTLY_STONEBRICK_WALL.get()), blockTexture(ModBlocks.GHOSTLY_STONE_BRICKS.get()));
+        blockItem(ModBlocks.GHOSTLY_STONEBRICK_PRESSURE_PLATE);
+        pressurePlateBlock(((PressurePlateBlock) ModBlocks.GHOSTLY_STONEBRICK_PRESSURE_PLATE.get()), blockTexture(ModBlocks.GHOSTLY_STONE_BRICKS.get()));
+        buttonBlock(((ButtonBlock) ModBlocks.GHOSTLY_STONEBRICK_BUTTON.get()), blockTexture(ModBlocks.GHOSTLY_STONE_BRICKS.get()));
 
         blockWithItem(ModBlocks.BONE_BRICK);
         stairsBlock(((StairBlock) ModBlocks.BONE_BRICK_STAIRS.get()), blockTexture(ModBlocks.BONE_BRICK.get()));
@@ -82,6 +93,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.BONE_BRICK_FENCE_GATE);
         fenceGateBlock(((FenceGateBlock) ModBlocks.BONE_BRICK_FENCE_GATE.get()), blockTexture(ModBlocks.BONE_BRICK.get()));
         wallBlock(((WallBlock) ModBlocks.BONE_BRICK_WALL.get()), blockTexture(ModBlocks.BONE_BRICK.get()));
+        blockItem(ModBlocks.BONE_BRICK_PRESSURE_PLATE);
+        pressurePlateBlock(((PressurePlateBlock) ModBlocks.BONE_BRICK_PRESSURE_PLATE.get()), blockTexture(ModBlocks.BONE_BRICK.get()));
+        buttonBlock(((ButtonBlock) ModBlocks.BONE_BRICK_BUTTON.get()), blockTexture(ModBlocks.BONE_BRICK.get()));
 
 
         System.out.println("Block states and models:logBlock-axisBlock's");
@@ -105,6 +119,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.GHOSTLY_PLANK_FENCE_GATE);
         fenceGateBlock(((FenceGateBlock) ModBlocks.GHOSTLY_PLANK_FENCE_GATE.get()), blockTexture(ModBlocks.GHOSTLY_PLANKS.get()));
         wallBlock(((WallBlock) ModBlocks.GHOSTLY_PLANK_WALL.get()), blockTexture(ModBlocks.GHOSTLY_PLANKS.get()));
+        blockItem(ModBlocks.GHOSTLY_PLANK_PRESSURE_PLATE);
+        pressurePlateBlock(((PressurePlateBlock) ModBlocks.GHOSTLY_PLANK_PRESSURE_PLATE.get()), blockTexture(ModBlocks.GHOSTLY_PLANKS.get()));
+        buttonBlock(((ButtonBlock) ModBlocks.GHOSTLY_PLANK_BUTTON.get()), blockTexture(ModBlocks.GHOSTLY_PLANKS.get()));
         leavesBlock(ModBlocks.GHOSTLY_LEAVES);
         saplingBlock(ModBlocks.GHOSTLY_SAPLING);
 
@@ -121,6 +138,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.BLOODY_PLANK_FENCE_GATE);
         fenceGateBlock(((FenceGateBlock) ModBlocks.BLOODY_PLANK_FENCE_GATE.get()), blockTexture(ModBlocks.PLANKS_BLOODY.get()));
         wallBlock(((WallBlock) ModBlocks.BLOODY_PLANK_WALL.get()), blockTexture(ModBlocks.PLANKS_BLOODY.get()));
+        blockItem(ModBlocks.BLOODY_PLANK_PRESSURE_PLATE);
+        pressurePlateBlock(((PressurePlateBlock) ModBlocks.BLOODY_PLANK_PRESSURE_PLATE.get()), blockTexture(ModBlocks.PLANKS_BLOODY.get()));
+        buttonBlock(((ButtonBlock) ModBlocks.BLOODY_PLANK_BUTTON.get()), blockTexture(ModBlocks.PLANKS_BLOODY.get()));
         leavesBlock(ModBlocks.BLOODY_LEAVES);
         saplingBlock(ModBlocks.BLOODY_SAPLING);
 
