@@ -17,7 +17,7 @@ public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, FirstNeoMod.MOD_ID);
 
     public static final Supplier<CreativeModeTab> JACOBS_MODDED_ITEMS_TAB =
-            CREATIVE_MODE_TABS.register("jacobs_modded_items_tab", () -> CreativeModeTab.builder()
+            CREATIVE_MODE_TABS.register("1_jacobs_modded_items_tab", () -> CreativeModeTab.builder()
                     .icon(() -> new ItemStack(ModItems.nexon.get()))
                     .title(Component.translatable("itemGroup.neomod.modded_items_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
@@ -69,18 +69,6 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.GHOSTLY_DIRT);
                         //output.accept(ModBlocks.BLOODY_DIRT.get());
 
-
-                        //Bone Blocks
-                        output.accept(ModBlocks.BONE_BRICK);
-                        output.accept(ModBlocks.BONE_BRICK_STAIRS);
-                        output.accept(ModBlocks.BONE_BRICK_SLAB);
-                        output.accept(ModBlocks.BONE_BRICK_FENCE);
-                        output.accept(ModBlocks.BONE_BRICK_FENCE_GATE);
-                        output.accept(ModBlocks.BONE_BRICK_WALL);
-                        output.accept(ModBlocks.BONE_BRICK_PRESSURE_PLATE);
-                        output.accept(ModBlocks.BONE_BRICK_BUTTON);
-
-
                         //Stone-CobbleStone Blocks
                         output.accept(ModBlocks.GHOSTLY_STONE);
                         output.accept(ModBlocks.GHOSTLY_STONE_STAIRS);
@@ -106,6 +94,16 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.GHOSTLY_STONEBRICK_WALL);
                         output.accept(ModBlocks.GHOSTLY_STONEBRICK_PRESSURE_PLATE);
                         output.accept(ModBlocks.GHOSTLY_STONEBRICK_BUTTON);
+
+                        //Bone Blocks
+                        output.accept(ModBlocks.BONE_BRICK);
+                        output.accept(ModBlocks.BONE_BRICK_STAIRS);
+                        output.accept(ModBlocks.BONE_BRICK_SLAB);
+                        output.accept(ModBlocks.BONE_BRICK_FENCE);
+                        output.accept(ModBlocks.BONE_BRICK_FENCE_GATE);
+                        output.accept(ModBlocks.BONE_BRICK_WALL);
+                        output.accept(ModBlocks.BONE_BRICK_PRESSURE_PLATE);
+                        output.accept(ModBlocks.BONE_BRICK_BUTTON);
 
                         //Logs/Wood
                         output.accept(ModBlocks.LOG_GHOSTLY);
@@ -167,9 +165,99 @@ public class ModCreativeModeTabs {
 
                     }).build());
 
-    public static final Supplier<CreativeModeTab> MODDED_WEAPONS_AND_TOOLS = CREATIVE_MODE_TABS.register("weapons_and_tools",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.SCYTHE.get()))
-                    .title(Component.translatable("itemGroup.neomod.modded_weapons_and_tools")).displayItems((itemDisplayParameters, output) -> {
+    public static final Supplier<CreativeModeTab> MODDED_BUILDING_BLOCKS =
+            CREATIVE_MODE_TABS.register("2_building_blocks",
+            () -> CreativeModeTab.builder()
+                    .icon(() -> new ItemStack(ModBlocks.GHOSTLY_STONE_BRICKS.get()))
+                    .title(Component.translatable("itemGroup.neomod.modded_building_blocks"))
+                    .displayItems((itemDisplayParameters, output) -> {
+                        //Full Blocks
+                        output.accept(ModBlocks.GHOSTLY_STONE);
+                        output.accept(ModBlocks.GHOSTLY_COBBLESTONE);
+                        output.accept(ModBlocks.GHOSTLY_STONE_BRICKS);
+                        output.accept(ModBlocks.BONE_BRICK);
+                        output.accept(ModBlocks.LOG_GHOSTLY);
+                        output.accept(ModBlocks.GHOSTLY_PLANKS);
+                        output.accept(ModBlocks.LOG_BLOODY);
+                        output.accept(ModBlocks.PLANKS_BLOODY);
+                        output.accept(ModBlocks.GHOSTLY_GRASS_BLOCK);
+                        output.accept(ModBlocks.BLOODY_GRASS_BLOCK);
+                        output.accept(ModBlocks.GHOSTLY_DIRT);
+
+                        //Stairs
+                        output.accept(ModBlocks.GHOSTLY_STONE_STAIRS);
+                        output.accept(ModBlocks.GHOSTLY_COBBLESTONE_STAIRS);
+                        output.accept(ModBlocks.GHOSTLY_STONEBRICK_STAIRS);
+                        output.accept(ModBlocks.BONE_BRICK_STAIRS);
+                        output.accept(ModBlocks.GHOSTLY_PLANK_STAIRS);
+                        output.accept(ModBlocks.BLOODY_PLANK_STAIRS);
+
+                        //Slabs
+                        output.accept(ModBlocks.GHOSTLY_STONE_SLAB);
+                        output.accept(ModBlocks.GHOSTLY_COBBLESTONE_SLAB);
+                        output.accept(ModBlocks.GHOSTLY_STONEBRICK_SLAB);
+                        output.accept(ModBlocks.BONE_BRICK_SLAB);
+                        output.accept(ModBlocks.GHOSTLY_PLANK_SLAB);
+                        output.accept(ModBlocks.GHOSTLY_PLANK_SLAB);
+                        output.accept(ModBlocks.BLOODY_PLANK_SLAB);
+
+                        //Fences
+                        output.accept(ModBlocks.GHOSTLY_STONE_FENCE);
+                        output.accept(ModBlocks.GHOSTLY_COBBLESTONE_FENCE);
+                        output.accept(ModBlocks.GHOSTLY_STONEBRICK_FENCE);
+                        output.accept(ModBlocks.BONE_BRICK_FENCE);
+                        output.accept(ModBlocks.GHOSTLY_PLANK_FENCE);
+                        output.accept(ModBlocks.BLOODY_PLANK_FENCE);
+
+                        //Fence Gates
+                        output.accept(ModBlocks.GHOSTLY_STONE_FENCE_GATE);
+                        output.accept(ModBlocks.GHOSTLY_COBBLESTONE_FENCE_GATE);
+                        output.accept(ModBlocks.GHOSTLY_STONEBRICK_FENCE_GATE);
+                        output.accept(ModBlocks.BONE_BRICK_FENCE_GATE);
+                        output.accept(ModBlocks.GHOSTLY_PLANK_FENCE_GATE);
+                        output.accept(ModBlocks.BLOODY_PLANK_FENCE_GATE);
+
+                        //Walls
+                        output.accept(ModBlocks.GHOSTLY_STONE_WALL);
+                        output.accept(ModBlocks.GHOSTLY_COBBLESTONE_WALL);
+                        output.accept(ModBlocks.GHOSTLY_STONEBRICK_WALL);
+                        output.accept(ModBlocks.BONE_BRICK_WALL);
+                        output.accept(ModBlocks.GHOSTLY_PLANK_WALL);
+                        output.accept(ModBlocks.BLOODY_PLANK_WALL);
+
+                        //Pressure Plates
+                        output.accept(ModBlocks.GHOSTLY_STONE_PRESSURE_PLATE);
+                        output.accept(ModBlocks.GHOSTLY_COBBLESTONE_PRESSURE_PLATE);
+                        output.accept(ModBlocks.GHOSTLY_STONEBRICK_PRESSURE_PLATE);
+                        output.accept(ModBlocks.BONE_BRICK_PRESSURE_PLATE);
+                        output.accept(ModBlocks.GHOSTLY_PLANK_PRESSURE_PLATE);
+                        output.accept(ModBlocks.BLOODY_PLANK_PRESSURE_PLATE);
+
+                        //Buttons
+                        output.accept(ModBlocks.GHOSTLY_STONE_BUTTON);
+                        output.accept(ModBlocks.GHOSTLY_COBBLESTONE_BUTTON);
+                        output.accept(ModBlocks.GHOSTLY_STONEBRICK_BUTTON);
+                        output.accept(ModBlocks.BONE_BRICK_BUTTON);
+                        output.accept(ModBlocks.GHOSTLY_PLANK_BUTTON);
+                        output.accept(ModBlocks.BLOODY_PLANK_BUTTON);
+
+                        //Leaves
+                        output.accept(ModBlocks.GHOSTLY_LEAVES);
+                        output.accept(ModBlocks.BLOODY_LEAVES);
+
+                        //Ore and Ore Blocks
+                        output.accept(ModBlocks.NEXON_BLOCK);
+                        output.accept(ModBlocks.NEXON_ORE_BLOCK);
+                        output.accept(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK);
+
+                    }).build());
+
+    public static final Supplier<CreativeModeTab> MODDED_WEAPONS_AND_TOOLS =
+            CREATIVE_MODE_TABS.register("3_weapons_and_tools",
+            () -> CreativeModeTab.builder()
+                    .icon(() -> new ItemStack(ModItems.SCYTHE.get()))
+                    .title(Component.translatable("itemGroup.neomod.modded_weapons_and_tools"))
+                    .displayItems((itemDisplayParameters, output) -> {
                         //Tools
                         output.accept(ModItems.SCYTHE);
                         output.accept(ModItems.BONE_SWORD);
