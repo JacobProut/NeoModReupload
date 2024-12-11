@@ -1,4 +1,8 @@
 {
+  "itemGroup.neomod.modded_items_tab": "Jacobs Modded Items",
+  "itemGroup.neomod.modded_weapons_and_tools": "Modded Weapons and Tools",
+
+
   "blockentity.neomod.pedestal": "Pedestal",
   "blockentity.neomod.enhancer": "Enhancer",
 

@@ -16,9 +16,11 @@ import java.util.function.Supplier;
 public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, FirstNeoMod.MOD_ID);
 
-    public static final Supplier<CreativeModeTab> JACOBS_MODDED_ITEMS_TAB = CREATIVE_MODE_TABS.register("jacobs_modded_items_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.nexon.get()))
-                    .title(Component.translatable("Jacobs Modded items")).displayItems((itemDisplayParameters, output) -> {
+    public static final Supplier<CreativeModeTab> JACOBS_MODDED_ITEMS_TAB =
+            CREATIVE_MODE_TABS.register("jacobs_modded_items_tab", () -> CreativeModeTab.builder()
+                    .icon(() -> new ItemStack(ModItems.nexon.get()))
+                    .title(Component.translatable("itemGroup.neomod.modded_items_tab"))
+                    .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.SPEED_APPLE.get());
                         output.accept(ModItems.FIRE_BALL.get());
 
@@ -165,22 +167,22 @@ public class ModCreativeModeTabs {
 
                     }).build());
 
-   /* public static final Supplier<CreativeModeTab> MODDED_WEAPONS_AND_TOOLS = CREATIVE_MODE_TABS.register("Weapons and Tools",
+    public static final Supplier<CreativeModeTab> MODDED_WEAPONS_AND_TOOLS = CREATIVE_MODE_TABS.register("weapons_and_tools",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.SCYTHE.get()))
-                    .title(Component.translatable("Jacobs Modded Weapons & Tools")).displayItems((itemDisplayParameters, output) -> {
+                    .title(Component.translatable("itemGroup.neomod.modded_weapons_and_tools")).displayItems((itemDisplayParameters, output) -> {
                         //Tools
                         output.accept(ModItems.SCYTHE);
                         output.accept(ModItems.BONE_SWORD);
                         output.accept(ModItems.BLOOD_BONE_SWORD);
 
+                        output.accept(ModItems.NEXON_SWORD);
                         output.accept(ModItems.NEXON_PICKAXE);
                         output.accept(ModItems.NEXON_HOE);
                         output.accept(ModItems.NEXON_SHOVEL);
-                        output.accept(ModItems.NEXON_SWORD);
                         output.accept(ModItems.NEXON_AXE);
 
                     }).build());
-*/
+
 
 
     public static void register(IEventBus eventBus) {
