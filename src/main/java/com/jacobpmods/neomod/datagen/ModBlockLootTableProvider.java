@@ -121,7 +121,7 @@ public class ModBlockLootTableProvider  extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.GHOSTLY_SAPLING.get());
 
         this.dropSelf(ModBlocks.LOG_BLOODY.get());
-        this.dropSelf(ModBlocks.PLANKS_BLOODY.get());
+        this.dropSelf(ModBlocks.BLOODY_PLANKS.get());
         dropSelf(ModBlocks.BLOODY_PLANK_STAIRS.get());
         this.add(ModBlocks.BLOODY_PLANK_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.BLOODY_PLANK_SLAB.get()));

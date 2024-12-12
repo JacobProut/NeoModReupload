@@ -118,7 +118,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.LOG_GHOSTLY.get()), has(ModBlocks.LOG_GHOSTLY.get())).save(recipeOutput);
 
         //Bloody Log to planks Craft Recipe
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.PLANKS_BLOODY.get(), 4)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.BLOODY_PLANKS.get(), 4)
                 .requires(ModBlocks.LOG_BLOODY.get(),1)
                 .unlockedBy(getHasName(ModBlocks.LOG_BLOODY.get()), has(ModBlocks.LOG_BLOODY.get())).save(recipeOutput);
 
@@ -153,9 +153,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         stairBuilder(ModBlocks.GHOSTLY_PLANK_STAIRS.get(), Ingredient.of(ModBlocks.GHOSTLY_PLANKS.get())).group("ghostly_plank")
                 .unlockedBy("has_ghostly_plank", has(ModBlocks.GHOSTLY_PLANKS.get())).save(recipeOutput);
 
-        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLOODY_PLANK_SLAB.get(), ModBlocks.PLANKS_BLOODY.get());
-        stairBuilder(ModBlocks.BLOODY_PLANK_STAIRS.get(), Ingredient.of(ModBlocks.PLANKS_BLOODY.get())).group("bloody_plank")
-                .unlockedBy("has_ghostly_plank", has(ModBlocks.PLANKS_BLOODY.get())).save(recipeOutput);
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLOODY_PLANK_SLAB.get(), ModBlocks.BLOODY_PLANKS.get());
+        stairBuilder(ModBlocks.BLOODY_PLANK_STAIRS.get(), Ingredient.of(ModBlocks.BLOODY_PLANKS.get())).group("bloody_plank")
+                .unlockedBy("has_ghostly_plank", has(ModBlocks.BLOODY_PLANKS.get())).save(recipeOutput);
 
 
         // Walls
@@ -164,7 +164,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GHOSTLY_STONEBRICK_WALL.get(), ModBlocks.GHOSTLY_STONE_BRICKS.get());
         wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BONE_BRICK_WALL.get(), ModBlocks.BONE_BRICK.get());
         wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GHOSTLY_PLANK_WALL.get(), ModBlocks.GHOSTLY_PLANKS.get());
-        wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLOODY_PLANK_WALL.get(), ModBlocks.PLANKS_BLOODY.get());
+        wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLOODY_PLANK_WALL.get(), ModBlocks.BLOODY_PLANKS.get());
 
         // Fences
         fenceBuilder(ModBlocks.GHOSTLY_STONE_FENCE.get(), Ingredient.of(ModBlocks.GHOSTLY_STONE.get())).group("ghostly_stone")
@@ -177,8 +177,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_bone_brick", has(ModBlocks.BONE_BRICK.get())).save(recipeOutput);
         fenceBuilder(ModBlocks.GHOSTLY_PLANK_FENCE.get(), Ingredient.of(ModBlocks.GHOSTLY_PLANKS.get())).group("ghostly_planks")
                 .unlockedBy("has_ghostly_planks", has(ModBlocks.GHOSTLY_PLANKS.get())).save(recipeOutput);
-        fenceBuilder(ModBlocks.BLOODY_PLANK_FENCE.get(), Ingredient.of(ModBlocks.PLANKS_BLOODY.get())).group("bloody_planks")
-                .unlockedBy("has_bloody_planks", has(ModBlocks.PLANKS_BLOODY.get())).save(recipeOutput);
+        fenceBuilder(ModBlocks.BLOODY_PLANK_FENCE.get(), Ingredient.of(ModBlocks.BLOODY_PLANKS.get())).group("bloody_planks")
+                .unlockedBy("has_bloody_planks", has(ModBlocks.BLOODY_PLANKS.get())).save(recipeOutput);
 
         // Fence Gates
         fenceGateBuilder(ModBlocks.GHOSTLY_STONE_FENCE_GATE.get(), Ingredient.of(ModBlocks.GHOSTLY_STONE.get())).group("ghostly_stone")
@@ -191,8 +191,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_bone_brick", has(ModBlocks.BONE_BRICK.get())).save(recipeOutput);
         fenceGateBuilder(ModBlocks.GHOSTLY_PLANK_FENCE_GATE.get(), Ingredient.of(ModBlocks.GHOSTLY_PLANKS.get())).group("ghostly_planks")
                 .unlockedBy("has_ghostly_planks", has(ModBlocks.GHOSTLY_PLANKS.get())).save(recipeOutput);
-        fenceGateBuilder(ModBlocks.BLOODY_PLANK_FENCE_GATE.get(), Ingredient.of(ModBlocks.PLANKS_BLOODY.get())).group("bloody_planks")
-                .unlockedBy("has_bloody_planks", has(ModBlocks.PLANKS_BLOODY.get())).save(recipeOutput);
+        fenceGateBuilder(ModBlocks.BLOODY_PLANK_FENCE_GATE.get(), Ingredient.of(ModBlocks.BLOODY_PLANKS.get())).group("bloody_planks")
+                .unlockedBy("has_bloody_planks", has(ModBlocks.BLOODY_PLANKS.get())).save(recipeOutput);
 
         // Pressure Plates
         pressurePlate(recipeOutput, ModBlocks.GHOSTLY_STONE_PRESSURE_PLATE.get(), ModBlocks.GHOSTLY_STONE.get());
@@ -200,7 +200,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         pressurePlate(recipeOutput, ModBlocks.GHOSTLY_STONEBRICK_PRESSURE_PLATE.get(), ModBlocks.GHOSTLY_STONE_BRICKS.get());
         pressurePlate(recipeOutput, ModBlocks.BONE_BRICK_PRESSURE_PLATE.get(), ModBlocks.BONE_BRICK.get());
         pressurePlate(recipeOutput, ModBlocks.GHOSTLY_PLANK_PRESSURE_PLATE.get(), ModBlocks.GHOSTLY_PLANKS.get());
-        pressurePlate(recipeOutput, ModBlocks.BLOODY_PLANK_PRESSURE_PLATE.get(), ModBlocks.PLANKS_BLOODY.get());
+        pressurePlate(recipeOutput, ModBlocks.BLOODY_PLANK_PRESSURE_PLATE.get(), ModBlocks.BLOODY_PLANKS.get());
 
 
         // Buttons
@@ -214,8 +214,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_bone_bricks", has(ModBlocks.BONE_BRICK.get())).save(recipeOutput);
         buttonBuilder(ModBlocks.GHOSTLY_PLANK_BUTTON.get(), Ingredient.of(ModBlocks.GHOSTLY_PLANKS.get())).group("ghostly_planks")
                 .unlockedBy("has_ghostly_planks", has(ModBlocks.GHOSTLY_PLANKS.get())).save(recipeOutput);
-        buttonBuilder(ModBlocks.BLOODY_PLANK_BUTTON.get(), Ingredient.of(ModBlocks.PLANKS_BLOODY.get())).group("bloody_planks")
-                .unlockedBy("has_bloody_planks", has(ModBlocks.PLANKS_BLOODY.get())).save(recipeOutput);
+        buttonBuilder(ModBlocks.BLOODY_PLANK_BUTTON.get(), Ingredient.of(ModBlocks.BLOODY_PLANKS.get())).group("bloody_planks")
+                .unlockedBy("has_bloody_planks", has(ModBlocks.BLOODY_PLANKS.get())).save(recipeOutput);
 
     }
     protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,

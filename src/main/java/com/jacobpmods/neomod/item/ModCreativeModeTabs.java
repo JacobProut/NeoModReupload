@@ -5,7 +5,6 @@ import com.jacobpmods.neomod.block.ModBlocks;
 import com.jacobpmods.neomod.fluid.ModFluids;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.entity.Mob;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;
@@ -116,7 +115,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.GHOSTLY_PLANK_PRESSURE_PLATE);
                         output.accept(ModBlocks.GHOSTLY_PLANK_BUTTON);
                         output.accept(ModBlocks.LOG_BLOODY);
-                        output.accept(ModBlocks.PLANKS_BLOODY);
+                        output.accept(ModBlocks.BLOODY_PLANKS);
                         output.accept(ModBlocks.BLOODY_PLANK_STAIRS);
                         output.accept(ModBlocks.BLOODY_PLANK_SLAB);
                         output.accept(ModBlocks.BLOODY_PLANK_FENCE);
@@ -179,7 +178,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.LOG_GHOSTLY);
                         output.accept(ModBlocks.GHOSTLY_PLANKS);
                         output.accept(ModBlocks.LOG_BLOODY);
-                        output.accept(ModBlocks.PLANKS_BLOODY);
+                        output.accept(ModBlocks.BLOODY_PLANKS);
                         output.accept(ModBlocks.GHOSTLY_GRASS_BLOCK);
                         output.accept(ModBlocks.BLOODY_GRASS_BLOCK);
                         output.accept(ModBlocks.GHOSTLY_DIRT);

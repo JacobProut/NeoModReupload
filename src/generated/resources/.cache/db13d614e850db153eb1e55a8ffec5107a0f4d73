@@ -1,4 +1,4 @@
-// 1.21.1	2024-12-08T03:40:04.817096	Tags for minecraft:block mod id neomod
+// 1.21.1	2024-12-12T16:03:53.5645006	Tags for minecraft:block mod id neomod
 30f421389cc533849eac372c7edad97938c38a42 data/minecraft/tags/block/climbable.json
 f5fbb319f25c4056dadc32c54493627182dc4ab6 data/minecraft/tags/block/dirt.json
 bea418f50effe631066670fc1d1c04a861342f3e data/minecraft/tags/block/fences.json
@@ -10,7 +10,7 @@ dd59028367a06f3223363dca901f59663e5b7206 data/minecraft/tags/block/incorrect_for
 88a18702880bd540d5a6f00f75053ef501a03226 data/minecraft/tags/block/incorrect_for_stone_tool.json
 88a18702880bd540d5a6f00f75053ef501a03226 data/minecraft/tags/block/incorrect_for_wooden_tool.json
 2b722fc860f48a1ebb6da07709c2d8ffdffa5eb0 data/minecraft/tags/block/leaves.json
-9834f93de3cbd25fc4dc72d19d394b6a1e9deb1b data/minecraft/tags/block/logs_that_burn.json
+efd0bf5c208079ed02c12e6af775f110a3cb932a data/minecraft/tags/block/logs_that_burn.json
 9834f93de3cbd25fc4dc72d19d394b6a1e9deb1b data/minecraft/tags/block/mineable/axe.json
 3dcb3423322a8da72f068b05fb6389d3f906325a data/minecraft/tags/block/mineable/pickaxe.json
 0cf0c01099e2e8f641c4cb12d5e51c3e9c66090c data/minecraft/tags/block/planks.json

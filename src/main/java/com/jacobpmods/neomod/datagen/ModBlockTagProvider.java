@@ -156,43 +156,44 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.GHOSTLY_DIRT.get());
                 //.add(ModBlocks.BLOODY_DIRT.get())
 
-        this.tag(LOGS_THAT_BURN)
+        tag(LOGS_THAT_BURN)
                 .add(ModBlocks.LOG_GHOSTLY.get())
                 .add(ModBlocks.GHOSTLY_PLANKS.get())
                 .add(ModBlocks.GHOSTLY_PLANK_STAIRS.get())
                 .add(ModBlocks.GHOSTLY_PLANK_SLAB.get())
+                .add(ModBlocks.GHOSTLY_PLANK_WALL.get())
+                .add(ModBlocks.GHOSTLY_PLANK_FENCE.get())
+                .add(ModBlocks.GHOSTLY_PLANK_PRESSURE_PLATE.get())
+                .add(ModBlocks.GHOSTLY_PLANK_BUTTON.get())
+
+                .add(ModBlocks.LOG_BLOODY.get())
+                .add(ModBlocks.BLOODY_PLANKS.get())
                 .add(ModBlocks.BLOODY_PLANK_STAIRS.get())
                 .add(ModBlocks.BLOODY_PLANK_SLAB.get())
-                .add(ModBlocks.LOG_BLOODY.get());
-
-        this.tag(PLANKS)
-                .add(ModBlocks.GHOSTLY_PLANKS.get())
-                .add(ModBlocks.PLANKS_BLOODY.get());
-
-        this.tag(SLABS)
-                .add(ModBlocks.GHOSTLY_PLANK_SLAB.get())
-                .add(ModBlocks.BLOODY_PLANK_SLAB.get());
-
-        this.tag(STAIRS)
-                .add(ModBlocks.GHOSTLY_PLANK_STAIRS.get())
-                .add(ModBlocks.BLOODY_PLANK_STAIRS.get());
-
-        this.tag(LEAVES)
+                .add(ModBlocks.BLOODY_PLANK_WALL.get())
+                .add(ModBlocks.BLOODY_PLANK_FENCE.get())
+                .add(ModBlocks.BLOODY_PLANK_PRESSURE_PLATE.get())
+                .add(ModBlocks.BLOODY_PLANK_BUTTON.get());
+        tag(LEAVES)
                 .add(ModBlocks.GHOSTLY_LEAVES.get())
                 .add(ModBlocks.BLOODY_LEAVES.get());
-
-        this.tag(SAPLINGS)
+        tag(SAPLINGS)
                 .add(ModBlocks.GHOSTLY_SAPLING.get())
                 .add(ModBlocks.BLOODY_SAPLING.get());
-
         tag(FLOWERS)
                 .add(ModBlocks.OOZING_FLOWER.get());
 
-        this.tag(PORTALS)
-                .add(ModBlocks.GHOSTLY_PORTAL_BLOCK.get());
-        this.tag(PORTAL_FRAME)
-                .add(ModBlocks.BONE_BRICK.get());
 
+
+        tag(PLANKS)
+                .add(ModBlocks.GHOSTLY_PLANKS.get())
+                .add(ModBlocks.BLOODY_PLANKS.get());
+        tag(SLABS)
+                .add(ModBlocks.GHOSTLY_PLANK_SLAB.get())
+                .add(ModBlocks.BLOODY_PLANK_SLAB.get());
+        tag(STAIRS)
+                .add(ModBlocks.GHOSTLY_PLANK_STAIRS.get())
+                .add(ModBlocks.BLOODY_PLANK_STAIRS.get());
         tag(FENCES)
                 .add(ModBlocks.GHOSTLY_STONE_FENCE.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE_FENCE.get())
@@ -206,18 +207,23 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.GHOSTLY_STONEBRICK_FENCE_GATE.get())
                 .add(ModBlocks.BONE_BRICK_FENCE_GATE.get())
                 .add(ModBlocks.GHOSTLY_PLANK_FENCE_GATE.get())
-                .add(ModBlocks.BLOODY_PLANK_FENCE_GATE.get());;
+                .add(ModBlocks.BLOODY_PLANK_FENCE_GATE.get());
         tag(WALLS)
                 .add(ModBlocks.GHOSTLY_STONE_WALL.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE_WALL.get())
                 .add(ModBlocks.GHOSTLY_STONEBRICK_WALL.get())
                 .add(ModBlocks.BONE_BRICK_WALL.get())
                 .add(ModBlocks.GHOSTLY_PLANK_WALL.get())
-                .add(ModBlocks.BLOODY_PLANK_WALL.get());;
+                .add(ModBlocks.BLOODY_PLANK_WALL.get());
+
+
+        tag(PORTALS)
+                .add(ModBlocks.GHOSTLY_PORTAL_BLOCK.get());
+        tag(PORTAL_FRAME)
+                .add(ModBlocks.BONE_BRICK.get());
+
 
         tag(CLIMBABLE)
                 .add(ModBlocks.BLOODY_VINE.get());
-
-
     }
 }

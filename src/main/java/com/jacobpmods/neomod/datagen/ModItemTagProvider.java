@@ -35,25 +35,36 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
         tag(PLANKS)
                 .add(ModBlocks.GHOSTLY_PLANKS.get().asItem())
-                .add(ModBlocks.PLANKS_BLOODY.get().asItem());
+                .add(ModBlocks.BLOODY_PLANKS.get().asItem());
 
         tag(SWORDS)
-                //Add enhanced Bone Sword here
+                //Add enhanced Bone Sword here?
+                //No Bone Sword here because i do not want it to have enchantments
                 .add(ModItems.NEXON_SWORD.get());
-
         tag(SWORD_ENCHANTABLE)
                 //Add enhanced Bone Sword here
                 .add(ModItems.NEXON_SWORD.get())
                 .add(ModItems.SCYTHE.get());
 
+        tag(PICKAXES)
+                .add(ModItems.NEXON_PICKAXE.get());
         tag(MINING_ENCHANTABLE)
                 .add(ModItems.NEXON_PICKAXE.get());
+
+        tag(AXES)
+                .add(ModItems.NEXON_AXE.get());
+        tag(SHOVELS)
+                .add(ModItems.NEXON_SHOVEL.get());
+        tag(HOES)
+                .add(ModItems.NEXON_HOE.get());
+
 
         tag(ARMOR_ENCHANTABLE)
                 .add(ModItems.NEXON_HELMET.get())
                 .add(ModItems.NEXON_CHESTPLATE.get())
                 .add(ModItems.NEXON_LEGGINGS.get())
                 .add(ModItems.NEXON_BOOTS.get());
+                //.add(ModItems.SKELETAL_HELMET.get());
 
         //Unbreaking 3 Enchantment
         tag(DURABILITY_ENCHANTABLE)
@@ -65,10 +76,12 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.NEXON_AXE.get())
                 .add(ModItems.NEXON_HOE.get())
                 .add(ModItems.NEXON_SHOVEL.get());
+                //.add(ModItems.SKELETAL_HELMET.get());
 
 
         tag(HEAD_ARMOR_ENCHANTABLE)
                 .add(ModItems.NEXON_HELMET.get());
+                //.add(ModItems.SKELETAL_HELMET.get());
 
         tag(CHEST_ARMOR_ENCHANTABLE)
                 .add(ModItems.NEXON_CHESTPLATE.get());

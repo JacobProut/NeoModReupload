@@ -129,18 +129,18 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.LOG_BLOODY);
         logBlock(((RotatedPillarBlock) ModBlocks.LOG_BLOODY.get()));
 
-        blockWithItem(ModBlocks.PLANKS_BLOODY);
-        stairsBlock(((StairBlock) ModBlocks.BLOODY_PLANK_STAIRS.get()), blockTexture(ModBlocks.PLANKS_BLOODY.get()));
+        blockWithItem(ModBlocks.BLOODY_PLANKS);
+        stairsBlock(((StairBlock) ModBlocks.BLOODY_PLANK_STAIRS.get()), blockTexture(ModBlocks.BLOODY_PLANKS.get()));
         blockItem(ModBlocks.BLOODY_PLANK_STAIRS);
-        slabBlock(((SlabBlock) ModBlocks.BLOODY_PLANK_SLAB.get()), blockTexture(ModBlocks.PLANKS_BLOODY.get()), blockTexture(ModBlocks.PLANKS_BLOODY.get()));
+        slabBlock(((SlabBlock) ModBlocks.BLOODY_PLANK_SLAB.get()), blockTexture(ModBlocks.BLOODY_PLANKS.get()), blockTexture(ModBlocks.BLOODY_PLANKS.get()));
         blockItem(ModBlocks.BLOODY_PLANK_SLAB);
-        fenceBlock(((FenceBlock) ModBlocks.BLOODY_PLANK_FENCE.get()), blockTexture(ModBlocks.PLANKS_BLOODY.get()));
+        fenceBlock(((FenceBlock) ModBlocks.BLOODY_PLANK_FENCE.get()), blockTexture(ModBlocks.BLOODY_PLANKS.get()));
         blockItem(ModBlocks.BLOODY_PLANK_FENCE_GATE);
-        fenceGateBlock(((FenceGateBlock) ModBlocks.BLOODY_PLANK_FENCE_GATE.get()), blockTexture(ModBlocks.PLANKS_BLOODY.get()));
-        wallBlock(((WallBlock) ModBlocks.BLOODY_PLANK_WALL.get()), blockTexture(ModBlocks.PLANKS_BLOODY.get()));
+        fenceGateBlock(((FenceGateBlock) ModBlocks.BLOODY_PLANK_FENCE_GATE.get()), blockTexture(ModBlocks.BLOODY_PLANKS.get()));
+        wallBlock(((WallBlock) ModBlocks.BLOODY_PLANK_WALL.get()), blockTexture(ModBlocks.BLOODY_PLANKS.get()));
         blockItem(ModBlocks.BLOODY_PLANK_PRESSURE_PLATE);
-        pressurePlateBlock(((PressurePlateBlock) ModBlocks.BLOODY_PLANK_PRESSURE_PLATE.get()), blockTexture(ModBlocks.PLANKS_BLOODY.get()));
-        buttonBlock(((ButtonBlock) ModBlocks.BLOODY_PLANK_BUTTON.get()), blockTexture(ModBlocks.PLANKS_BLOODY.get()));
+        pressurePlateBlock(((PressurePlateBlock) ModBlocks.BLOODY_PLANK_PRESSURE_PLATE.get()), blockTexture(ModBlocks.BLOODY_PLANKS.get()));
+        buttonBlock(((ButtonBlock) ModBlocks.BLOODY_PLANK_BUTTON.get()), blockTexture(ModBlocks.BLOODY_PLANKS.get()));
         leavesBlock(ModBlocks.BLOODY_LEAVES);
         saplingBlock(ModBlocks.BLOODY_SAPLING);
 

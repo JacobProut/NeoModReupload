@@ -190,7 +190,7 @@ public class ModBlocks {
     //Bloody Wood and Terrain items
     public static final DeferredBlock<Block> LOG_BLOODY = registerBlock("log_bloody", () ->new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)
             .strength(2f).sound(SoundType.WOOD)));
-    public static final DeferredBlock<Block> PLANKS_BLOODY = registerBlock("planks_bloody", () ->new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
+    public static final DeferredBlock<Block> BLOODY_PLANKS = registerBlock("planks_bloody", () ->new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
             .strength(1f).sound(SoundType.WOOD)) {
         @Override
         public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
@@ -207,7 +207,7 @@ public class ModBlocks {
             return 5;
         }
     });
-    public static final DeferredBlock<Block> BLOODY_PLANK_STAIRS = registerBlock("bloody_plank_stairs", () ->new StairBlock(ModBlocks.PLANKS_BLOODY.get().defaultBlockState(), BlockBehaviour.Properties.of()
+    public static final DeferredBlock<Block> BLOODY_PLANK_STAIRS = registerBlock("bloody_plank_stairs", () ->new StairBlock(ModBlocks.BLOODY_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.of()
             .strength(2f).requiresCorrectToolForDrops().sound(SoundType.WOOD)));
     public static final DeferredBlock<Block> BLOODY_PLANK_SLAB = registerBlock("bloody_plank_slab", () ->new SlabBlock(BlockBehaviour.Properties.of()
             .strength(2f).requiresCorrectToolForDrops().sound(SoundType.WOOD)));

@@ -110,7 +110,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         fenceItem(ModBlocks.GHOSTLY_COBBLESTONE_FENCE, ModBlocks.GHOSTLY_COBBLESTONE);
         fenceItem(ModBlocks.GHOSTLY_STONEBRICK_FENCE, ModBlocks.GHOSTLY_STONE_BRICKS);
         fenceItem(ModBlocks.BONE_BRICK_FENCE, ModBlocks.BONE_BRICK);
-        fenceItem(ModBlocks.BLOODY_PLANK_FENCE, ModBlocks.PLANKS_BLOODY);
+        fenceItem(ModBlocks.BLOODY_PLANK_FENCE, ModBlocks.BLOODY_PLANKS);
         fenceItem(ModBlocks.GHOSTLY_PLANK_FENCE, ModBlocks.GHOSTLY_PLANKS);
 
         wallItem(ModBlocks.GHOSTLY_STONE_WALL, ModBlocks.GHOSTLY_STONE);
@@ -118,14 +118,14 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.GHOSTLY_STONEBRICK_WALL, ModBlocks.GHOSTLY_STONE_BRICKS);
         wallItem(ModBlocks.BONE_BRICK_WALL, ModBlocks.BONE_BRICK);
         wallItem(ModBlocks.GHOSTLY_PLANK_WALL, ModBlocks.GHOSTLY_PLANKS);
-        wallItem(ModBlocks.BLOODY_PLANK_WALL, ModBlocks.PLANKS_BLOODY);
+        wallItem(ModBlocks.BLOODY_PLANK_WALL, ModBlocks.BLOODY_PLANKS);
 
         buttonItem(ModBlocks.GHOSTLY_STONE_BUTTON, ModBlocks.GHOSTLY_STONE);
         buttonItem(ModBlocks.GHOSTLY_COBBLESTONE_BUTTON, ModBlocks.GHOSTLY_COBBLESTONE);
         buttonItem(ModBlocks.GHOSTLY_STONEBRICK_BUTTON, ModBlocks.GHOSTLY_STONE_BRICKS);
         buttonItem(ModBlocks.BONE_BRICK_BUTTON, ModBlocks.BONE_BRICK);
         buttonItem(ModBlocks.GHOSTLY_PLANK_BUTTON, ModBlocks.GHOSTLY_PLANKS);
-        buttonItem(ModBlocks.BLOODY_PLANK_BUTTON, ModBlocks.PLANKS_BLOODY);
+        buttonItem(ModBlocks.BLOODY_PLANK_BUTTON, ModBlocks.BLOODY_PLANKS);
     }
 
     public void flowerItem(DeferredBlock<Block> block) {
