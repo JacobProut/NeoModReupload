@@ -30,7 +30,7 @@ public class ModEnchantments {
         var enchantment = context.lookup(Registries.ENCHANTMENT);
         var items = context.lookup(Registries.ITEM);
 
-        register(context, MAGMA_MINE, Enchantment.enchantment(Enchantment.definition(items.getOrThrow(ItemTags.MINING_ENCHANTABLE),
+        register(context, MAGMA_MINE, Enchantment.enchantment(Enchantment.definition(items.getOrThrow(ItemTags.PICKAXES),
                 items.getOrThrow(ItemTags.PICKAXES), 5, 1,
                 Enchantment.dynamicCost(2, 4), Enchantment.dynamicCost(2, 8), 3, EquipmentSlotGroup.MAINHAND))
                 .exclusiveWith(enchantment.getOrThrow(EnchantmentTags.MINING_EXCLUSIVE))
@@ -45,7 +45,7 @@ public class ModEnchantments {
         );
 
 
-        register(context, TIMBER_FELLER, Enchantment.enchantment(Enchantment.definition(items.getOrThrow(ItemTags.MINING_ENCHANTABLE),
+        register(context, TIMBER_FELLER, Enchantment.enchantment(Enchantment.definition(items.getOrThrow(ItemTags.AXES),
                         items.getOrThrow(ItemTags.AXES), 5, 1,
                         Enchantment.dynamicCost(2, 4), Enchantment.dynamicCost(2, 8), 3, EquipmentSlotGroup.MAINHAND))
                         .exclusiveWith(enchantment.getOrThrow(EnchantmentTags.MINING_EXCLUSIVE))

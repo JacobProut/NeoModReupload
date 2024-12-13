@@ -1,9 +1,9 @@
-// 1.21.1	2024-12-13T03:23:04.3416558	Registries
+// 1.21.1	2024-12-13T16:53:04.3605271	Registries
 64a3ab6a705d170352b8dfeb286824ad5d312c62 data/neomod/dimension/ghostly.json
 d6265a6cfda1ff5e67e1c67af60c56cac1e1982e data/neomod/dimension_type/ghostly_type.json
 45cc21a0401cabe558b485aa212b0d94b39aaabb data/neomod/enchantment/ice_barrage_melee.json
-1ba62c7559aa19a2baa3c83cc9aef784bd46a50b data/neomod/enchantment/magma_mine.json
-de997158c2c2c31f88a31344298cbbc06d4cd9c8 data/neomod/enchantment/timber_feller.json
+a94e073f51999aec37949b8d293ef6e937d91fa9 data/neomod/enchantment/magma_mine.json
+dafc7659e372a0835ef1a452e27a95616a23ec33 data/neomod/enchantment/timber_feller.json
 b0f103f0e8d742272e9771658101428f4afcdec7 data/neomod/neoforge/biome_modifier/add_bloody_bush.json
 ac4a823f80ca6b8e065f3213168e74a9a539d232 data/neomod/neoforge/biome_modifier/add_ghostly_dimension_shattered_fragment_ore.json
 090374110a7d8d381bdf8c20f4c45b0af30d2e80 data/neomod/neoforge/biome_modifier/add_oozing_flower.json
