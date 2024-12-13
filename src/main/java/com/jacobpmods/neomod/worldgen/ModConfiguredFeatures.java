@@ -70,8 +70,10 @@ public class ModConfiguredFeatures {
                 PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.SKULL_N_BONES.get().defaultBlockState())))));
 
     RuleTest ghostlyStoneReplacable = new BlockMatchTest(ModBlocks.GHOSTLY_STONE.get());
-    List<OreConfiguration.TargetBlockState> ghostlyShatteredFragmentOre = List.of(
-            OreConfiguration.target(ghostlyStoneReplacable, ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get().defaultBlockState()));
+    //used for overworld
+   /* List<OreConfiguration.TargetBlockState> ghostlyShatteredFragmentOre = List.of(
+            OreConfiguration.target(ghostlyStoneReplacable, ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get().defaultBlockState()));*/
+
     register(context, GHOSTLY_SHATTERED_FRAGMENT_ORE_KEY, Feature.ORE, new OreConfiguration(ghostlyStoneReplacable, ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get().defaultBlockState(), 4));
 
     }
