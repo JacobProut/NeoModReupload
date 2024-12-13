@@ -1,4 +1,5 @@
-// 1.21.1	2024-12-12T19:12:32.4812152	Tags for minecraft:block mod id neomod
+// 1.21.1	2024-12-13T01:17:35.1599305	Tags for minecraft:block mod id neomod
+7cf39822ae9083f7be51c643db705d0df3633ef2 data/c/tags/block/ores.json
 30f421389cc533849eac372c7edad97938c38a42 data/minecraft/tags/block/climbable.json
 f5fbb319f25c4056dadc32c54493627182dc4ab6 data/minecraft/tags/block/dirt.json
 3967cc6dbeefd9fa657ef9aaa0e5b59f6d672fde data/minecraft/tags/block/doors.json
@@ -13,7 +14,7 @@ dd59028367a06f3223363dca901f59663e5b7206 data/minecraft/tags/block/incorrect_for
 2b722fc860f48a1ebb6da07709c2d8ffdffa5eb0 data/minecraft/tags/block/leaves.json
 b665e168633a6fabe55f071ec47c23f694837a0a data/minecraft/tags/block/logs_that_burn.json
 9834f93de3cbd25fc4dc72d19d394b6a1e9deb1b data/minecraft/tags/block/mineable/axe.json
-3dcb3423322a8da72f068b05fb6389d3f906325a data/minecraft/tags/block/mineable/pickaxe.json
+2b27e6793b9e1513955db318c764d487dab8c50b data/minecraft/tags/block/mineable/pickaxe.json
 0cf0c01099e2e8f641c4cb12d5e51c3e9c66090c data/minecraft/tags/block/planks.json
 ac3c884022f5a161f793d2a7f9d814466ec169b4 data/minecraft/tags/block/portals.json
 40c7f88c4ac255e6ed8eb06c7c90495e03b821de data/minecraft/tags/block/saplings.json

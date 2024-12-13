@@ -14,6 +14,7 @@ import java.util.concurrent.CompletableFuture;
 import static com.jacobpmods.neomod.util.ModTags.Blocks.*;
 import static net.minecraft.tags.BlockTags.*;
 import static net.neoforged.neoforge.common.Tags.Blocks.NEEDS_NETHERITE_TOOL;
+import static net.neoforged.neoforge.common.Tags.Blocks.ORES;
 
 public class ModBlockTagProvider extends BlockTagsProvider {
     public ModBlockTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
@@ -26,6 +27,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.NEXON_BLOCK.get())
                 .add(ModBlocks.NEXON_ORE_BLOCK.get())
                 .add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get())
+                .add(ModBlocks.SHATTERED_FRAGMENT_BLOCK.get())
                 .add(ModBlocks.GHOSTLY_STONE.get())
                 .add(ModBlocks.GHOSTLY_STONE_BRICKS.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE.get())
@@ -36,6 +38,10 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.BONE_BRICK.get())
                 .add(ModBlocks.BONE_BRICK_STAIRS.get())
                 .add(ModBlocks.BONE_BRICK_SLAB.get());
+
+        tag(ORES)
+                .add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get())
+                .add(ModBlocks.NEXON_ORE_BLOCK.get());
 
         tag(MINEABLE_WITH_AXE)
                 .add(ModBlocks.LOG_GHOSTLY.get())

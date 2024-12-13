@@ -36,6 +36,9 @@ public class ModBlockLootTableProvider  extends BlockLootSubProvider {
         dropSelf(ModBlocks.NEXON_ORE_BLOCK.get());
         this.add(ModBlocks.NEXON_ORE_BLOCK.get(),
                 block -> createMultipleOreDrops(ModBlocks.NEXON_ORE_BLOCK.get(), ModItems.nexon.get(), 1, 2));
+        dropSelf(ModBlocks.SHATTERED_FRAGMENT_BLOCK.get());
+        this.add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get(),
+                block -> createMultipleOreDrops(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get(), ModItems.SHATTERED_FRAGMENT.get(), 1, 2));
 
         //Grass & Dirt Blocks
         this.add(ModBlocks.GHOSTLY_GRASS_BLOCK.get(), block -> this.createSilkTouchDispatchTable(
@@ -170,10 +173,6 @@ public class ModBlockLootTableProvider  extends BlockLootSubProvider {
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 2.0F)))
                                 .apply(ApplyBonusCount.addUniformBonusCount(registryLookup.getOrThrow(Enchantments.FORTUNE)))
                 )));
-
-
-        this.add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get(),
-                block -> createMultipleOreDrops(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get(), ModItems.SHATTERED_FRAGMENT.get(), 1, 2));
 
 
         dropSelf(ModBlocks.BLOODY_VINE.get());

@@ -1,4 +1,4 @@
-// 1.21.1	2024-12-12T19:09:15.2421446	Recipes
+// 1.21.1	2024-12-13T01:17:35.1614302	Recipes
 b60218b08288aacf52f67fcb352aea51e429daa1 data/neomod/advancement/recipes/building_blocks/bloody_plank_slab.json
 4c2a26a2385a86cb238736ee09bd8771ae237a5c data/neomod/advancement/recipes/building_blocks/bloody_plank_stairs.json
 b9926c059bc306d1d778aec08be24bbd774a678e data/neomod/advancement/recipes/building_blocks/bloody_plank_wall.json
@@ -37,6 +37,8 @@ a2cb6810137deb127fbc5c6644d064b106bc6e4f data/neomod/advancement/recipes/misc/ne
 1a5bbf20bc3466487597d1aa88f6952bd7c84cbb data/neomod/advancement/recipes/misc/nexon_block.json
 def39c5467fa78549886cd463131efd25de3fb5c data/neomod/advancement/recipes/misc/planks_bloody.json
 b451da62cfc1aed5b5ac66ee3a15de709127cb8c data/neomod/advancement/recipes/misc/planks_ghostly.json
+a254e2d11c3cdcfbd763dbe6bd72c9f4fb321f05 data/neomod/advancement/recipes/misc/shattered_fragment.json
+59fef655699a9b8b8d3d159bd2daf98e550fcb80 data/neomod/advancement/recipes/misc/shattered_fragment_block.json
 d0ab2442cabfa90ce0dc16a7a303d6043644cf75 data/neomod/advancement/recipes/misc/speedapple.json
 4e41cc0e6359f5eb7d9806e425947f38a3522f03 data/neomod/advancement/recipes/redstone/bloody_door.json
 60e1c540870302721646b691328799b3d4a2998b data/neomod/advancement/recipes/redstone/bloody_plank_button.json
@@ -120,4 +122,6 @@ cc82c341ad5eae5ff79f3ece587ee690df2ff059 data/neomod/recipe/nexonheated_from_bla
 9ef110b7ffabbfd32647e5d51518c40c019ba5fc data/neomod/recipe/nexon_block.json
 d3f38abda506e18c7474c00b6a0b838d55b50a5e data/neomod/recipe/planks_bloody.json
 0197c4032c23b49edff9c44928683bcc3c9a8605 data/neomod/recipe/planks_ghostly.json
+5fed2e402f51ad5a9f039f2af1fb986755f157a5 data/neomod/recipe/shattered_fragment.json
+3fa267d2415de57edcd239745f1249b8713b2cdc data/neomod/recipe/shattered_fragment_block.json
 97bf00598e0b1bf3281b3bd9ba68d2b9ade21b72 data/neomod/recipe/speedapple.json

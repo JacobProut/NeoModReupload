@@ -41,6 +41,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.NEXON_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.NEXON_BLOCK.get()), has(ModBlocks.NEXON_BLOCK.get())).save(recipeOutput);
 
+        //Shattered Fragment Block Recipe
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SHATTERED_FRAGMENT_BLOCK.get(), 1)
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.SHATTERED_FRAGMENT.get())
+                .unlockedBy(getHasName(ModItems.SHATTERED_FRAGMENT.get()), has(ModItems.SHATTERED_FRAGMENT.get())).save(recipeOutput);
+
+        //9 shattered fragments from block Recipe
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.SHATTERED_FRAGMENT.get(), 9)
+                .requires(ModBlocks.SHATTERED_FRAGMENT_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.SHATTERED_FRAGMENT_BLOCK.get()), has(ModBlocks.SHATTERED_FRAGMENT_BLOCK.get())).save(recipeOutput);
 
         //Nexon ingot Craft Recipe
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.NEXON_INGOT.get(), 1)

@@ -28,6 +28,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.NEXON_BLOCK);
         blockWithItem(ModBlocks.NEXON_ORE_BLOCK);
         blockWithItem(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK);
+        blockWithItem(ModBlocks.SHATTERED_FRAGMENT_BLOCK);
 
         //Grass Blocks
         blockWithItem(ModBlocks.GHOSTLY_GRASS_BLOCK);

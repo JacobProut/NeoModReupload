@@ -260,6 +260,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.NEXON_BLOCK);
                         output.accept(ModBlocks.NEXON_ORE_BLOCK);
                         output.accept(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK);
+                        output.accept(ModBlocks.SHATTERED_FRAGMENT_BLOCK);
 
                     }).build());
 
