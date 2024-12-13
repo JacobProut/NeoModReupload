@@ -1,6 +1,6 @@
 {
   "type": "neoforge:add_features",
   "biomes": "neomod:blood_garden_biome",
-  "features": "neomod:bloody_bone_bush",
+  "features": "neomod:bloody_bone_bush_placed",
   "step": "vegetal_decoration"
 }

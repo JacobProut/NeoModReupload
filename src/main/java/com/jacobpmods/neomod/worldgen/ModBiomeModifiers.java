@@ -14,13 +14,16 @@ import net.neoforged.neoforge.common.world.BiomeModifiers;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
 
 public class ModBiomeModifiers {
+    //Ghostly biome
     public static final ResourceKey<BiomeModifier> ADD_TREE_GHOSTLY = registerKey("add_tree_ghostly");
     public static final ResourceKey<BiomeModifier> ADD_OOZING_FLOWER = registerKey("add_oozing_flower");
 
+    //Blood Biome
     public static final ResourceKey<BiomeModifier> ADD_TREE_BLOODY = registerKey("add_tree_bloody");
     public static final ResourceKey<BiomeModifier> ADD_BLOODY_BUSH = registerKey("add_bloody_bush");
-
     public static final ResourceKey<BiomeModifier> ADD_SKULL_N_BONES = registerKey("add_skull_n_bones");
+
+    public static final ResourceKey<BiomeModifier> ADD_GHOSTLY_SHATTERED_FRAGMENT_ORE = registerKey("add_ghostly_dimension_shattered_fragment_ore");
 
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
@@ -62,6 +65,10 @@ public class ModBiomeModifiers {
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.SKULL_N_BONES_BLOCK_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
+        context.register(ADD_GHOSTLY_SHATTERED_FRAGMENT_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(ModBiomes.GHOSTLY_BIOME), biomes.getOrThrow(ModBiomes.BLOOD_GARDEN_BIOME)),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.GHOSTLY_DIMENSION_SHATTERED_FRAGMENT_ORE_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
 
     }
     private static ResourceKey<BiomeModifier> registerKey(String name) {

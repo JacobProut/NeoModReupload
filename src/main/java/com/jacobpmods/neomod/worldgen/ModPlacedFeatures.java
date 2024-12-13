@@ -11,19 +11,24 @@ import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.placement.*;
 
 import java.util.List;
 
 public class ModPlacedFeatures {
+    //Ghostly Biome
     public static final ResourceKey<PlacedFeature> GHOSTLY_TREE_PLACED_KEY = registerKey("ghostly_tree_placed");
     public static final ResourceKey<PlacedFeature> OOZING_FLOWER_PLACED_KEY = registerKey("oozing_flower_placed");
 
-
+    //Blood biome
     public static final ResourceKey<PlacedFeature> BLOODY_TREE_PLACED_KEY = registerKey("bloody_tree_placed");
-    public static final ResourceKey<PlacedFeature> BLOODY_BONE_BUSH_KEY = registerKey("bloody_bone_bush");
-    public static final ResourceKey<PlacedFeature> SKULL_N_BONES_BLOCK_KEY = registerKey("skull_n_bones_block");
+    public static final ResourceKey<PlacedFeature> BLOODY_BONE_BUSH_KEY = registerKey("bloody_bone_bush_placed");
+    public static final ResourceKey<PlacedFeature> SKULL_N_BONES_BLOCK_KEY = registerKey("skull_n_bones_block_placed");
+
+    //Ore Gen
+    public static final ResourceKey<PlacedFeature> GHOSTLY_DIMENSION_SHATTERED_FRAGMENT_ORE_PLACED_KEY = registerKey("shattered_fragment_ore_placed");
 
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
@@ -50,6 +55,11 @@ public class ModPlacedFeatures {
                         PlacementUtils.HEIGHTMAP_TOP_SOLID, //TOP_SOLID NEEDED TO MAKE SURE IT DOESN'T SPAWN ON WATER AS MUCH
                         BiomeFilter.biome()
                 ));
+
+        register(context, GHOSTLY_DIMENSION_SHATTERED_FRAGMENT_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.GHOSTLY_SHATTERED_FRAGMENT_ORE_KEY),
+                ModOrePlacement.commonOrePlacement(15, //Value for amount wanted spawning in chunk
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(5), VerticalAnchor.absolute(80)))); //HeightRangePlacement has another option called .triangle instead of .uniform . Look into it if curious
+
     }
 
 

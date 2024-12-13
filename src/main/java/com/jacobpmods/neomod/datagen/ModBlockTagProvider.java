@@ -390,7 +390,6 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(DIRT)
                 .add(ModBlocks.GHOSTLY_DIRT.get());
 
-
         tag(PORTALS)
                 .add(ModBlocks.GHOSTLY_PORTAL_BLOCK.get());
         tag(PORTAL_FRAME)
@@ -399,5 +398,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(CLIMBABLE)
                 .add(ModBlocks.BLOODY_VINE.get());
+
+        //This will be for overworld ore replacables
+        /*     tag(STONE_ORE_REPLACEABLES)*/
     }
 }

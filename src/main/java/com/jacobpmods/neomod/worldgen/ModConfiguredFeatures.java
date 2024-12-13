@@ -10,17 +10,18 @@ import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.RandomPatchConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.*;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
+import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
+import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
+import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 
 import java.util.List;
 
@@ -34,9 +35,10 @@ public class ModConfiguredFeatures {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> SKULL_N_BONE_BLOCK = registerKey("skull_n_bone_block");
 
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GHOSTLY_SHATTERED_FRAGMENT_ORE_KEY = registerKey("ghostly_shattered_fragment");
+
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
-        LogUtils.getLogger().debug("BOOTSTRAP: Registering Configured Features for GHOSTLY_KEY");
         register(context, GHOSTLY_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.LOG_GHOSTLY.get()),
                 new StraightTrunkPlacer(3, 3, 3), //|Defines trunk of the tree| Base height of the trunk, Random additional height that can be added, Height of the trunk where branches might appear or additional foliage can grow.
@@ -66,6 +68,11 @@ public class ModConfiguredFeatures {
 
         register(context, SKULL_N_BONE_BLOCK, Feature.RANDOM_PATCH, new RandomPatchConfiguration(2, 7, 0,
                 PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.SKULL_N_BONES.get().defaultBlockState())))));
+
+    RuleTest ghostlyStoneReplacable = new BlockMatchTest(ModBlocks.GHOSTLY_STONE.get());
+    List<OreConfiguration.TargetBlockState> ghostlyShatteredFragmentOre = List.of(
+            OreConfiguration.target(ghostlyStoneReplacable, ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get().defaultBlockState()));
+    register(context, GHOSTLY_SHATTERED_FRAGMENT_ORE_KEY, Feature.ORE, new OreConfiguration(ghostlyStoneReplacable, ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get().defaultBlockState(), 4));
 
     }
     //Random Patch info
