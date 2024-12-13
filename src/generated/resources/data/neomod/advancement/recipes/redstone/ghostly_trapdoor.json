@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_ghostly_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "neomod:planks_ghostly"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "neomod:ghostly_trapdoor"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_ghostly_planks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "neomod:ghostly_trapdoor"
+    ]
+  }
+}

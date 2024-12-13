@@ -114,6 +114,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.GHOSTLY_PLANK_WALL);
                         output.accept(ModBlocks.GHOSTLY_PLANK_PRESSURE_PLATE);
                         output.accept(ModBlocks.GHOSTLY_PLANK_BUTTON);
+                        output.accept(ModBlocks.GHOSTLY_DOOR);
+                        output.accept(ModBlocks.GHOSTLY_TRAPDOOR);
                         output.accept(ModBlocks.LOG_BLOODY);
                         output.accept(ModBlocks.BLOODY_PLANKS);
                         output.accept(ModBlocks.BLOODY_PLANK_STAIRS);
@@ -123,6 +125,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BLOODY_PLANK_WALL);
                         output.accept(ModBlocks.BLOODY_PLANK_PRESSURE_PLATE);
                         output.accept(ModBlocks.BLOODY_PLANK_BUTTON);
+                        output.accept(ModBlocks.BLOODY_DOOR);
+                        output.accept(ModBlocks.BLOODY_TRAPDOOR);
 
                         //Leaves
                         output.accept(ModBlocks.GHOSTLY_LEAVES);
@@ -239,6 +243,14 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BONE_BRICK_BUTTON);
                         output.accept(ModBlocks.GHOSTLY_PLANK_BUTTON);
                         output.accept(ModBlocks.BLOODY_PLANK_BUTTON);
+
+                        //Doors
+                        output.accept(ModBlocks.BLOODY_DOOR);
+                        output.accept(ModBlocks.GHOSTLY_DOOR);
+
+                        //Trapdoors
+                        output.accept(ModBlocks.GHOSTLY_TRAPDOOR);
+                        output.accept(ModBlocks.BLOODY_TRAPDOOR);
 
                         //Leaves
                         output.accept(ModBlocks.GHOSTLY_LEAVES);

@@ -274,6 +274,40 @@ public class ModBlocks {
             return 5;
         }
     });
+    public static final DeferredBlock<Block> GHOSTLY_DOOR = registerBlock("ghostly_door", () -> new DoorBlock(BlockSetType.CHERRY, BlockBehaviour.Properties.of()
+            .strength(2f).noOcclusion()){
+        @Override
+        public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+            return true;
+        }
+
+        @Override
+        public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+            return 20;
+        }
+
+        @Override
+        public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+            return 5;
+        }
+    });
+    public static final DeferredBlock<Block> GHOSTLY_TRAPDOOR = registerBlock("ghostly_trapdoor", () -> new TrapDoorBlock(BlockSetType.CHERRY, BlockBehaviour.Properties.of()
+            .strength(2f).noOcclusion()){
+        @Override
+        public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+            return true;
+        }
+
+        @Override
+        public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+            return 20;
+        }
+
+        @Override
+        public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+            return 5;
+        }
+    });
     public static final DeferredBlock<Block> GHOSTLY_LEAVES = registerBlock("ghostly_leaves", () ->new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)
             .strength(0.2f).sound(SoundType.CHERRY_LEAVES)) {
         @Override
@@ -421,6 +455,40 @@ public class ModBlocks {
     });
     public static final DeferredBlock<Block> BLOODY_PLANK_BUTTON = registerBlock("bloody_plank_button", () -> new ButtonBlock(BlockSetType.OAK, 20, BlockBehaviour.Properties.of()
             .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE).noCollission()){
+        @Override
+        public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+            return true;
+        }
+
+        @Override
+        public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+            return 20;
+        }
+
+        @Override
+        public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+            return 5;
+        }
+    });
+    public static final DeferredBlock<Block> BLOODY_DOOR = registerBlock("bloody_door", () -> new DoorBlock(BlockSetType.CHERRY, BlockBehaviour.Properties.of()
+            .strength(2f).noOcclusion()){
+        @Override
+        public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+            return true;
+        }
+
+        @Override
+        public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+            return 20;
+        }
+
+        @Override
+        public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+            return 5;
+        }
+    });
+    public static final DeferredBlock<Block> BLOODY_TRAPDOOR = registerBlock("bloody_trapdoor", () -> new TrapDoorBlock(BlockSetType.CHERRY, BlockBehaviour.Properties.of()
+            .strength(2f).noOcclusion()){
         @Override
         public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
             return true;

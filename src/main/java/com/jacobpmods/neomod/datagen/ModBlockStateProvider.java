@@ -122,6 +122,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.GHOSTLY_PLANK_PRESSURE_PLATE);
         pressurePlateBlock(((PressurePlateBlock) ModBlocks.GHOSTLY_PLANK_PRESSURE_PLATE.get()), blockTexture(ModBlocks.GHOSTLY_PLANKS.get()));
         buttonBlock(((ButtonBlock) ModBlocks.GHOSTLY_PLANK_BUTTON.get()), blockTexture(ModBlocks.GHOSTLY_PLANKS.get()));
+        doorBlockWithRenderType(((DoorBlock) ModBlocks.GHOSTLY_DOOR.get()), modLoc("block/ghostly_door_bottom"), modLoc("block/ghostly_door_top"), "cutout");
+        trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.GHOSTLY_TRAPDOOR.get()), modLoc("block/ghostly_trapdoor"), true, "cutout");
+        blockItem(ModBlocks.GHOSTLY_TRAPDOOR, "_bottom");
         leavesBlock(ModBlocks.GHOSTLY_LEAVES);
         saplingBlock(ModBlocks.GHOSTLY_SAPLING);
 
@@ -141,6 +144,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.BLOODY_PLANK_PRESSURE_PLATE);
         pressurePlateBlock(((PressurePlateBlock) ModBlocks.BLOODY_PLANK_PRESSURE_PLATE.get()), blockTexture(ModBlocks.BLOODY_PLANKS.get()));
         buttonBlock(((ButtonBlock) ModBlocks.BLOODY_PLANK_BUTTON.get()), blockTexture(ModBlocks.BLOODY_PLANKS.get()));
+        doorBlockWithRenderType(((DoorBlock) ModBlocks.BLOODY_DOOR.get()), modLoc("block/bloody_door_bottom"), modLoc("block/bloody_door_top"), "cutout");
+        trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.BLOODY_TRAPDOOR.get()), modLoc("block/bloody_trapdoor"), true, "cutout");
+        blockItem(ModBlocks.BLOODY_TRAPDOOR, "_bottom");
         leavesBlock(ModBlocks.BLOODY_LEAVES);
         saplingBlock(ModBlocks.BLOODY_SAPLING);
 

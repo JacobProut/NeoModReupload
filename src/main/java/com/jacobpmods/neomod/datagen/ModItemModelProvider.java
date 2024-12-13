@@ -126,6 +126,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         buttonItem(ModBlocks.BONE_BRICK_BUTTON, ModBlocks.BONE_BRICK);
         buttonItem(ModBlocks.GHOSTLY_PLANK_BUTTON, ModBlocks.GHOSTLY_PLANKS);
         buttonItem(ModBlocks.BLOODY_PLANK_BUTTON, ModBlocks.BLOODY_PLANKS);
+
+        //doors
+        basicItem(ModBlocks.GHOSTLY_DOOR.asItem());
+        basicItem(ModBlocks.BLOODY_DOOR.asItem());
     }
 
     public void flowerItem(DeferredBlock<Block> block) {

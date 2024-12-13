@@ -116,6 +116,9 @@ public class ModBlockLootTableProvider  extends BlockLootSubProvider {
         dropSelf(ModBlocks.GHOSTLY_PLANK_WALL.get());
         dropSelf(ModBlocks.GHOSTLY_PLANK_PRESSURE_PLATE.get());
         dropSelf(ModBlocks.GHOSTLY_PLANK_BUTTON.get());
+        dropSelf(ModBlocks.GHOSTLY_TRAPDOOR.get());
+        this.add(ModBlocks.GHOSTLY_DOOR.get(),
+                block -> createDoorTable(ModBlocks.GHOSTLY_DOOR.get()));
         this.add(ModBlocks.GHOSTLY_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.GHOSTLY_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
         this.dropSelf(ModBlocks.GHOSTLY_SAPLING.get());
@@ -130,6 +133,9 @@ public class ModBlockLootTableProvider  extends BlockLootSubProvider {
         dropSelf(ModBlocks.BLOODY_PLANK_WALL.get());
         dropSelf(ModBlocks.BLOODY_PLANK_PRESSURE_PLATE.get());
         dropSelf(ModBlocks.BLOODY_PLANK_BUTTON.get());
+        dropSelf(ModBlocks.BLOODY_TRAPDOOR.get());
+        this.add(ModBlocks.BLOODY_DOOR.get(),
+                block -> createDoorTable(ModBlocks.BLOODY_DOOR.get()));
         this.add(ModBlocks.BLOODY_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.BLOODY_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
         this.dropSelf(ModBlocks.BLOODY_SAPLING.get());

@@ -217,6 +217,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         buttonBuilder(ModBlocks.BLOODY_PLANK_BUTTON.get(), Ingredient.of(ModBlocks.BLOODY_PLANKS.get())).group("bloody_planks")
                 .unlockedBy("has_bloody_planks", has(ModBlocks.BLOODY_PLANKS.get())).save(recipeOutput);
 
+        // Door
+        doorBuilder(ModBlocks.GHOSTLY_DOOR.get(), Ingredient.of(ModBlocks.GHOSTLY_PLANKS.get())).group("ghostly_planks")
+                .unlockedBy("has_ghostly_planks", has(ModBlocks.GHOSTLY_PLANKS.get())).save(recipeOutput);
+        doorBuilder(ModBlocks.BLOODY_DOOR.get(), Ingredient.of(ModBlocks.BLOODY_PLANKS.get())).group("bloody_planks")
+                .unlockedBy("has_bloody_planks", has(ModBlocks.BLOODY_PLANKS.get())).save(recipeOutput);
+
+        // Trap Door
+        trapdoorBuilder(ModBlocks.GHOSTLY_TRAPDOOR.get(), Ingredient.of(ModBlocks.GHOSTLY_PLANKS.get())).group("ghostly_planks")
+                .unlockedBy("has_ghostly_planks", has(ModBlocks.GHOSTLY_PLANKS.get())).save(recipeOutput);
+        trapdoorBuilder(ModBlocks.BLOODY_TRAPDOOR.get(), Ingredient.of(ModBlocks.BLOODY_PLANKS.get())).group("bloody_planks")
+                .unlockedBy("has_bloody_planks", has(ModBlocks.BLOODY_PLANKS.get())).save(recipeOutput);
     }
     protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
                                       float pExperience, int pCookingTIme, String pGroup) {

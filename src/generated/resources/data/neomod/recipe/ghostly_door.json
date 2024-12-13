@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "ghostly_planks",
+  "key": {
+    "#": {
+      "item": "neomod:planks_ghostly"
+    }
+  },
+  "pattern": [
+    "##",
+    "##",
+    "##"
+  ],
+  "result": {
+    "count": 3,
+    "id": "neomod:ghostly_door"
+  }
+}

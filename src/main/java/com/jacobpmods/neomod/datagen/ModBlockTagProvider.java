@@ -199,7 +199,12 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.BONE_BRICK_WALL.get())
                 .add(ModBlocks.GHOSTLY_PLANK_WALL.get())
                 .add(ModBlocks.BLOODY_PLANK_WALL.get());
-
+        tag(DOORS)
+                .add(ModBlocks.GHOSTLY_DOOR.get())
+                .add(ModBlocks.BLOODY_DOOR.get());
+        tag(TRAPDOORS)
+                .add(ModBlocks.GHOSTLY_TRAPDOOR.get())
+                .add(ModBlocks.BLOODY_TRAPDOOR.get());
 
         tag(PORTALS)
                 .add(ModBlocks.GHOSTLY_PORTAL_BLOCK.get());

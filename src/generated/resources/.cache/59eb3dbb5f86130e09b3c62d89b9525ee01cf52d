@@ -1,4 +1,5 @@
-// 1.21.1	2024-12-11T15:34:25.5176827	Loot Tables
+// 1.21.1	2024-12-12T19:03:10.4181517	Loot Tables
+66650bddefe5f799ff732c24979d0fc55aa9c3f8 data/neomod/loot_table/blocks/bloody_door.json
 8e375566f503c053d8ec82e401986fb37f6164be data/neomod/loot_table/blocks/bloody_grass_block.json
 f956fd080751781ca9357b001560809acf5f7b57 data/neomod/loot_table/blocks/bloody_leaves.json
 39733282234a81b71a1502158a6e8cc07e776c76 data/neomod/loot_table/blocks/bloody_plank_button.json
@@ -9,6 +10,7 @@ d55ac5710b758cba32ed05f1e498d8ca5d42fe1a data/neomod/loot_table/blocks/bloody_pl
 08aadb45cd7465f359d198fab3cfbbab04eb996f data/neomod/loot_table/blocks/bloody_plank_stairs.json
 b11cbfe63cfe6d4107ee4f9dee1e7ac95326d780 data/neomod/loot_table/blocks/bloody_plank_wall.json
 3c4eab000d13357be5ea4cbfc63c4d9e5d44212c data/neomod/loot_table/blocks/bloody_sapling.json
+34df4a20a9c9a386eaf9835794cb4d3bba2861de data/neomod/loot_table/blocks/bloody_trapdoor.json
 df3ca45ecc2b1ada3c9e78936d6ec7f28683c3a5 data/neomod/loot_table/blocks/bloody_vine.json
 061fe19eb3535e3531ba46a563546e996c57b7d2 data/neomod/loot_table/blocks/blood_bone_blossom_bush.json
 a726584b71cb1de562c73ac6e1964ecfb0795cc0 data/neomod/loot_table/blocks/bone_brick.json
@@ -29,6 +31,7 @@ dcff26721f7e010481a5eef0b6080f56b2436be8 data/neomod/loot_table/blocks/ghostly_c
 01a4fce887dc83668be25d8a36590114430067af data/neomod/loot_table/blocks/ghostly_cobblestone_stairs.json
 69b0d32540fadd51f198afe6acee196d27e9050b data/neomod/loot_table/blocks/ghostly_cobblestone_wall.json
 949c0cfe594371241204a73bc540e5cd2fa0e419 data/neomod/loot_table/blocks/ghostly_dirt.json
+cb48d86661f6c8a70802611cf81b4ba108c782b7 data/neomod/loot_table/blocks/ghostly_door.json
 37c116551b9afc3adfb64579baec821b0cf400d6 data/neomod/loot_table/blocks/ghostly_grass_block.json
 a79a7cba2b40045242ac56f40ee7ab7dea896f2d data/neomod/loot_table/blocks/ghostly_leaves.json
 11033b59f17ad405f5877d6fe8ee929c4e081cfe data/neomod/loot_table/blocks/ghostly_plank_button.json
@@ -55,6 +58,7 @@ f0a6c2b008ca5ffc8af780e2f07ffcf577d2220b data/neomod/loot_table/blocks/ghostly_s
 cae6402046c447229e66f6b473b6c82ce0bcca85 data/neomod/loot_table/blocks/ghostly_stone_slab.json
 44caa9b0943f6f08114335868bf798737fddb2bd data/neomod/loot_table/blocks/ghostly_stone_stairs.json
 62643efcbef80d7989e94ae52b39cfb5d5802bc6 data/neomod/loot_table/blocks/ghostly_stone_wall.json
+10c61eca1d4697a0e6c2cd59bd639a5543023a65 data/neomod/loot_table/blocks/ghostly_trapdoor.json
 719b312cf175f44a1f38b053eb1dc9ad8eab5379 data/neomod/loot_table/blocks/ghostly_web.json
 ee7ae39e38445e903cfd48d9cdec7757ca3ed605 data/neomod/loot_table/blocks/log_bloody.json
 c410aed39676adc0a942e20f4a6473841988ab83 data/neomod/loot_table/blocks/log_ghostly.json

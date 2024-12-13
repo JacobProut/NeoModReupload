@@ -76,6 +76,8 @@
   "block.neomod.ghostly_plank_wall": "Ghostly Plank Wall",
   "block.neomod.ghostly_plank_pressure_plate": "Ghostly Planks Pressure Plate",
   "block.neomod.ghostly_plank_button": "Ghostly Planks Button",
+  "block.neomod.ghostly_door": "Ghostly Door",
+  "block.neomod.ghostly_trapdoor": "Ghostly Trapdoor",
   "block.neomod.stripped_ghostly_log": "Stripped Ghostly Log",
   "block.neomod.stripped_ghostly_log_top": "Stripped Ghostly Log Top",
 
@@ -88,6 +90,8 @@
   "block.neomod.bloody_plank_wall": "Bloody Plank Wall",
   "block.neomod.bloody_plank_pressure_plate": "Bloody Planks Pressure Plate",
   "block.neomod.bloody_plank_button": "Bloody Planks Button",
+  "block.neomod.bloody_door": "Bloody Door",
+  "block.neomod.bloody_trapdoor": "Bloody Trapdoor",
 
   "block.neomod.ghostly_leaves": "Ghostly Leaves",
   "block.neomod.bloody_leaves": "Bloody Leaves",

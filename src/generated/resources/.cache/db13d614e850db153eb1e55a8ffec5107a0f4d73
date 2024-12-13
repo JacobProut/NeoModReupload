@@ -1,6 +1,7 @@
-// 1.21.1	2024-12-12T17:59:47.0697643	Tags for minecraft:block mod id neomod
+// 1.21.1	2024-12-12T19:12:32.4812152	Tags for minecraft:block mod id neomod
 30f421389cc533849eac372c7edad97938c38a42 data/minecraft/tags/block/climbable.json
 f5fbb319f25c4056dadc32c54493627182dc4ab6 data/minecraft/tags/block/dirt.json
+3967cc6dbeefd9fa657ef9aaa0e5b59f6d672fde data/minecraft/tags/block/doors.json
 bea418f50effe631066670fc1d1c04a861342f3e data/minecraft/tags/block/fences.json
 95b5f113f7883f5b4c6e45ae9dcaeb42fd8f0453 data/minecraft/tags/block/fence_gates.json
 acec1d17d5229dc15c4c3dc5f8095e5624c35dce data/minecraft/tags/block/flowers.json
@@ -10,7 +11,7 @@ dd59028367a06f3223363dca901f59663e5b7206 data/minecraft/tags/block/incorrect_for
 88a18702880bd540d5a6f00f75053ef501a03226 data/minecraft/tags/block/incorrect_for_stone_tool.json
 88a18702880bd540d5a6f00f75053ef501a03226 data/minecraft/tags/block/incorrect_for_wooden_tool.json
 2b722fc860f48a1ebb6da07709c2d8ffdffa5eb0 data/minecraft/tags/block/leaves.json
-45793ae42a2ae0a093b73f8c3fbd323847406922 data/minecraft/tags/block/logs_that_burn.json
+b665e168633a6fabe55f071ec47c23f694837a0a data/minecraft/tags/block/logs_that_burn.json
 9834f93de3cbd25fc4dc72d19d394b6a1e9deb1b data/minecraft/tags/block/mineable/axe.json
 3dcb3423322a8da72f068b05fb6389d3f906325a data/minecraft/tags/block/mineable/pickaxe.json
 0cf0c01099e2e8f641c4cb12d5e51c3e9c66090c data/minecraft/tags/block/planks.json
@@ -18,6 +19,7 @@ ac3c884022f5a161f793d2a7f9d814466ec169b4 data/minecraft/tags/block/portals.json
 40c7f88c4ac255e6ed8eb06c7c90495e03b821de data/minecraft/tags/block/saplings.json
 a2f440985c09e4e099356e9ec5e0a08123a2f29e data/minecraft/tags/block/slabs.json
 84fe0c7c1661b9e56f3f13c3115394ad882fd81f data/minecraft/tags/block/stairs.json
+7341b6bddafb3473907267959c908892c2ce42cf data/minecraft/tags/block/trapdoors.json
 f5c42deb91eb3cf7c677deb6ca8c27d9e60db7b5 data/minecraft/tags/block/walls.json
 89a29aabd132ca987e952aa64e2228f65f5a535c data/neoforge/tags/block/needs_netherite_tool.json
 4bbbda2f700f306ebb99f50d0395687954e890e0 data/neomod/tags/block/needs_nexon_tool.json
