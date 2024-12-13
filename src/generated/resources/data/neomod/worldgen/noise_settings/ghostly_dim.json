@@ -1,5 +1,5 @@
 {
-  "aquifers_enabled": false,
+  "aquifers_enabled": true,
   "default_block": {
     "Name": "neomod:ghostly_stone"
   },
@@ -10,7 +10,7 @@
     }
   },
   "disable_mob_generation": false,
-  "legacy_random_source": false,
+  "legacy_random_source": true,
   "noise": {
     "height": 384,
     "min_y": 0,
@@ -331,7 +331,7 @@
       }
     }
   },
-  "ore_veins_enabled": false,
+  "ore_veins_enabled": true,
   "sea_level": 63,
   "spawn_target": [
     {

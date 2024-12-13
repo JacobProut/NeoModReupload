@@ -32,9 +32,9 @@ public class ModNoiseGeneratorSettings {
                         settings.spawnTarget(),
                         settings.seaLevel(),
                         false,
-                        false,
-                        false,
-                        false
+                        true,
+                        true,
+                        true
                 )
         );
     }
