@@ -29,9 +29,9 @@ public class CombinedDataProvider extends DatapackBuiltinEntriesProvider {
                 .add(Registries.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap)
                 .add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap)
                 .add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap)
-                .add(Registries.ENCHANTMENT, ModEnchantments::bootstrap)
                 .add(Registries.BIOME, ModBiomes::bootstrap)
                 .add(Registries.LEVEL_STEM, ModDimensions::bootstrapStem)
+                .add(Registries.ENCHANTMENT, ModEnchantments::bootstrap)
 
                 .add(Registries.NOISE_SETTINGS, ModNoiseGeneratorSettings::bootstrap);
     }
