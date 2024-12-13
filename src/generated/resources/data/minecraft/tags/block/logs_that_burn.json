@@ -2,19 +2,6 @@
   "values": [
     "neomod:log_ghostly",
     "neomod:planks_ghostly",
-    "neomod:ghostly_plank_stairs",
-    "neomod:ghostly_plank_slab",
-    "neomod:ghostly_plank_wall",
-    "neomod:ghostly_plank_fence",
-    "neomod:ghostly_plank_pressure_plate",
-    "neomod:ghostly_plank_button",
-    "neomod:log_bloody",
-    "neomod:planks_bloody",
-    "neomod:bloody_plank_stairs",
-    "neomod:bloody_plank_slab",
-    "neomod:bloody_plank_wall",
-    "neomod:bloody_plank_fence",
-    "neomod:bloody_plank_pressure_plate",
-    "neomod:bloody_plank_button"
+    "neomod:log_bloody"
   ]
 }

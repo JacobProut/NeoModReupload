@@ -158,22 +158,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(LOGS_THAT_BURN)
                 .add(ModBlocks.LOG_GHOSTLY.get())
-                .add(ModBlocks.GHOSTLY_PLANKS.get())
-                .add(ModBlocks.GHOSTLY_PLANK_STAIRS.get())
-                .add(ModBlocks.GHOSTLY_PLANK_SLAB.get())
-                .add(ModBlocks.GHOSTLY_PLANK_WALL.get())
-                .add(ModBlocks.GHOSTLY_PLANK_FENCE.get())
-                .add(ModBlocks.GHOSTLY_PLANK_PRESSURE_PLATE.get())
-                .add(ModBlocks.GHOSTLY_PLANK_BUTTON.get())
-
-                .add(ModBlocks.LOG_BLOODY.get())
-                .add(ModBlocks.BLOODY_PLANKS.get())
-                .add(ModBlocks.BLOODY_PLANK_STAIRS.get())
-                .add(ModBlocks.BLOODY_PLANK_SLAB.get())
-                .add(ModBlocks.BLOODY_PLANK_WALL.get())
-                .add(ModBlocks.BLOODY_PLANK_FENCE.get())
-                .add(ModBlocks.BLOODY_PLANK_PRESSURE_PLATE.get())
-                .add(ModBlocks.BLOODY_PLANK_BUTTON.get());
+                .add(ModBlocks.LOG_BLOODY.get());
         tag(LEAVES)
                 .add(ModBlocks.GHOSTLY_LEAVES.get())
                 .add(ModBlocks.BLOODY_LEAVES.get());
@@ -182,7 +167,6 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.BLOODY_SAPLING.get());
         tag(FLOWERS)
                 .add(ModBlocks.OOZING_FLOWER.get());
-
 
 
         tag(PLANKS)
