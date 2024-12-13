@@ -2,15 +2,29 @@
   "values": [
     "neomod:nexon_ore_block",
     "neomod:nexon_block",
+    "neomod:shattered_fragment_ore_block",
+    "neomod:shattered_fragment_block",
     "neomod:ghostly_stone",
-    "neomod:ghostly_stone_bricks",
     "neomod:ghostly_stone_slab",
     "neomod:ghostly_stone_stairs",
     "neomod:ghostly_cobblestone",
     "neomod:ghostly_cobblestone_stairs",
     "neomod:ghostly_cobblestone_slab",
+    "neomod:ghostly_stone_bricks",
+    "neomod:ghostly_stone_brick_slab",
+    "neomod:ghostly_stone_brick_stairs",
+    "neomod:ghostly_stone_brick_wall",
+    "neomod:ghostly_stone_brick_fence",
+    "neomod:ghostly_stone_brick_fence_gate",
+    "neomod:ghostly_stone_brick_button",
+    "neomod:ghostly_stone_brick_pressure_plate",
     "neomod:bone_brick",
+    "neomod:bone_brick_slab",
     "neomod:bone_brick_stairs",
-    "neomod:bone_brick_slab"
+    "neomod:bone_brick_wall",
+    "neomod:bone_brick_fence",
+    "neomod:bone_brick_fence_gate",
+    "neomod:bone_brick_button",
+    "neomod:bone_brick_pressure_plate"
   ]
 }

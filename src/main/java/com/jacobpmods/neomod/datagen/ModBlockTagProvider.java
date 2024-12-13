@@ -4,7 +4,6 @@ import com.jacobpmods.neomod.FirstNeoMod;
 import com.jacobpmods.neomod.block.ModBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
-import net.minecraft.tags.BlockTags;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
@@ -23,59 +22,6 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        tag(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(ModBlocks.NEXON_BLOCK.get())
-                .add(ModBlocks.NEXON_ORE_BLOCK.get())
-                .add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get())
-                .add(ModBlocks.SHATTERED_FRAGMENT_BLOCK.get())
-                .add(ModBlocks.GHOSTLY_STONE.get())
-                .add(ModBlocks.GHOSTLY_STONE_SLAB.get())
-                .add(ModBlocks.GHOSTLY_STONE_STAIRS.get())
-                .add(ModBlocks.GHOSTLY_STONE_WALL.get())
-                .add(ModBlocks.GHOSTLY_STONE_FENCE.get())
-                .add(ModBlocks.GHOSTLY_STONE_FENCE_GATE.get())
-                .add(ModBlocks.GHOSTLY_STONE_BUTTON.get())
-                .add(ModBlocks.GHOSTLY_STONE_PRESSURE_PLATE.get())
-                .add(ModBlocks.GHOSTLY_COBBLESTONE.get())
-                .add(ModBlocks.GHOSTLY_COBBLESTONE_SLAB.get())
-                .add(ModBlocks.GHOSTLY_COBBLESTONE_STAIRS.get())
-                .add(ModBlocks.GHOSTLY_COBBLESTONE_WALL.get())
-                .add(ModBlocks.GHOSTLY_COBBLESTONE_FENCE.get())
-                .add(ModBlocks.GHOSTLY_COBBLESTONE_FENCE_GATE.get())
-                .add(ModBlocks.GHOSTLY_COBBLESTONE_BUTTON.get())
-                .add(ModBlocks.GHOSTLY_COBBLESTONE_PRESSURE_PLATE.get())
-
-                .add(ModBlocks.GHOSTLY_STONE_BRICKS.get())
-                .add(ModBlocks.GHOSTLY_STONEBRICK_SLAB.get())
-                .add(ModBlocks.GHOSTLY_STONEBRICK_STAIRS.get())
-                .add(ModBlocks.GHOSTLY_STONEBRICK_WALL.get())
-                .add(ModBlocks.GHOSTLY_STONEBRICK_FENCE.get())
-                .add(ModBlocks.GHOSTLY_STONEBRICK_FENCE_GATE.get())
-                .add(ModBlocks.GHOSTLY_STONEBRICK_BUTTON.get())
-                .add(ModBlocks.GHOSTLY_STONEBRICK_PRESSURE_PLATE.get())
-
-                .add(ModBlocks.BONE_BRICK.get())
-                .add(ModBlocks.BONE_BRICK_SLAB.get())
-                .add(ModBlocks.BONE_BRICK_STAIRS.get())
-                .add(ModBlocks.BONE_BRICK_WALL.get())
-                .add(ModBlocks.BONE_BRICK_FENCE.get())
-                .add(ModBlocks.BONE_BRICK_FENCE_GATE.get())
-                .add(ModBlocks.BONE_BRICK_BUTTON.get())
-                .add(ModBlocks.BONE_BRICK_PRESSURE_PLATE.get());
-
-        tag(ORES)
-                .add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get())
-                .add(ModBlocks.NEXON_ORE_BLOCK.get());
-
-        tag(MINEABLE_WITH_AXE)
-                .add(ModBlocks.LOG_GHOSTLY.get())
-                .add(ModBlocks.GHOSTLY_PLANKS.get())
-                .add(ModBlocks.GHOSTLY_PLANK_STAIRS.get())
-                .add(ModBlocks.GHOSTLY_PLANK_SLAB.get())
-                .add(ModBlocks.BLOODY_PLANK_STAIRS.get())
-                .add(ModBlocks.BLOODY_PLANK_SLAB.get())
-                .add(ModBlocks.LOG_BLOODY.get());
-
         tag(NEEDS_NEXON_TOOL)
                 .add(ModBlocks.NEXON_ORE_BLOCK.get())
                 .add(ModBlocks.NEXON_BLOCK.get())
@@ -87,7 +33,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.GHOSTLY_COBBLESTONE.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE_STAIRS.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE_SLAB.get())
-                .add(ModBlocks.GHOSTLY_STONE_BRICKS.get())
+                .add(ModBlocks.GHOSTLY_STONEBRICKS.get())
                 .add(ModBlocks.GHOSTLY_STONEBRICK_SLAB.get())
                 .add(ModBlocks.GHOSTLY_STONEBRICK_STAIRS.get())
                 .add(ModBlocks.GHOSTLY_STONEBRICK_WALL.get())
@@ -103,7 +49,6 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.BONE_BRICK_FENCE_GATE.get())
                 .add(ModBlocks.BONE_BRICK_BUTTON.get())
                 .add(ModBlocks.BONE_BRICK_PRESSURE_PLATE.get());
-                //.addTag(NEEDS_NEXON_TOOL);
 
 
         tag(NEEDS_NETHERITE_TOOL)
@@ -127,7 +72,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.GHOSTLY_COBBLESTONE_FENCE_GATE.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE_BUTTON.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE_PRESSURE_PLATE.get())
-                .add(ModBlocks.GHOSTLY_STONE_BRICKS.get())
+                .add(ModBlocks.GHOSTLY_STONEBRICKS.get())
                 .add(ModBlocks.GHOSTLY_STONEBRICK_SLAB.get())
                 .add(ModBlocks.GHOSTLY_STONEBRICK_STAIRS.get())
                 .add(ModBlocks.GHOSTLY_STONEBRICK_WALL.get())
@@ -158,7 +103,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.GHOSTLY_STONE_FENCE_GATE.get())
                 .add(ModBlocks.GHOSTLY_STONE_BUTTON.get())
                 .add(ModBlocks.GHOSTLY_STONE_PRESSURE_PLATE.get())
-                .add(ModBlocks.GHOSTLY_STONE_BRICKS.get())
+                .add(ModBlocks.GHOSTLY_STONEBRICKS.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE_SLAB.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE_STAIRS.get())
@@ -167,7 +112,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.GHOSTLY_COBBLESTONE_FENCE_GATE.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE_BUTTON.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE_PRESSURE_PLATE.get())
-                .add(ModBlocks.GHOSTLY_STONE_BRICKS.get())
+                .add(ModBlocks.GHOSTLY_STONEBRICKS.get())
                 .add(ModBlocks.GHOSTLY_STONEBRICK_SLAB.get())
                 .add(ModBlocks.GHOSTLY_STONEBRICK_STAIRS.get())
                 .add(ModBlocks.GHOSTLY_STONEBRICK_WALL.get())
@@ -197,7 +142,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.GHOSTLY_STONE_FENCE_GATE.get())
                 .add(ModBlocks.GHOSTLY_STONE_BUTTON.get())
                 .add(ModBlocks.GHOSTLY_STONE_PRESSURE_PLATE.get())
-                .add(ModBlocks.GHOSTLY_STONE_BRICKS.get())
+                .add(ModBlocks.GHOSTLY_STONEBRICKS.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE_SLAB.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE_STAIRS.get())
@@ -206,7 +151,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.GHOSTLY_COBBLESTONE_FENCE_GATE.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE_BUTTON.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE_PRESSURE_PLATE.get())
-                .add(ModBlocks.GHOSTLY_STONE_BRICKS.get())
+                .add(ModBlocks.GHOSTLY_STONEBRICKS.get())
                 .add(ModBlocks.GHOSTLY_STONEBRICK_SLAB.get())
                 .add(ModBlocks.GHOSTLY_STONEBRICK_STAIRS.get())
                 .add(ModBlocks.GHOSTLY_STONEBRICK_WALL.get())
@@ -236,7 +181,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.GHOSTLY_STONE_FENCE_GATE.get())
                 .add(ModBlocks.GHOSTLY_STONE_BUTTON.get())
                 .add(ModBlocks.GHOSTLY_STONE_PRESSURE_PLATE.get())
-                .add(ModBlocks.GHOSTLY_STONE_BRICKS.get())
+                .add(ModBlocks.GHOSTLY_STONEBRICKS.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE_SLAB.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE_STAIRS.get())
@@ -245,7 +190,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.GHOSTLY_COBBLESTONE_FENCE_GATE.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE_BUTTON.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE_PRESSURE_PLATE.get())
-                .add(ModBlocks.GHOSTLY_STONE_BRICKS.get())
+                .add(ModBlocks.GHOSTLY_STONEBRICKS.get())
                 .add(ModBlocks.GHOSTLY_STONEBRICK_SLAB.get())
                 .add(ModBlocks.GHOSTLY_STONEBRICK_STAIRS.get())
                 .add(ModBlocks.GHOSTLY_STONEBRICK_WALL.get())
@@ -275,7 +220,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.GHOSTLY_STONE_FENCE_GATE.get())
                 .add(ModBlocks.GHOSTLY_STONE_BUTTON.get())
                 .add(ModBlocks.GHOSTLY_STONE_PRESSURE_PLATE.get())
-                .add(ModBlocks.GHOSTLY_STONE_BRICKS.get())
+                .add(ModBlocks.GHOSTLY_STONEBRICKS.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE_SLAB.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE_STAIRS.get())
@@ -284,7 +229,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.GHOSTLY_COBBLESTONE_FENCE_GATE.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE_BUTTON.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE_PRESSURE_PLATE.get())
-                .add(ModBlocks.GHOSTLY_STONE_BRICKS.get())
+                .add(ModBlocks.GHOSTLY_STONEBRICKS.get())
                 .add(ModBlocks.GHOSTLY_STONEBRICK_SLAB.get())
                 .add(ModBlocks.GHOSTLY_STONEBRICK_STAIRS.get())
                 .add(ModBlocks.GHOSTLY_STONEBRICK_WALL.get())
@@ -314,7 +259,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.GHOSTLY_STONE_FENCE_GATE.get())
                 .add(ModBlocks.GHOSTLY_STONE_BUTTON.get())
                 .add(ModBlocks.GHOSTLY_STONE_PRESSURE_PLATE.get())
-                .add(ModBlocks.GHOSTLY_STONE_BRICKS.get())
+                .add(ModBlocks.GHOSTLY_STONEBRICKS.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE_SLAB.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE_STAIRS.get())
@@ -323,7 +268,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.GHOSTLY_COBBLESTONE_FENCE_GATE.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE_BUTTON.get())
                 .add(ModBlocks.GHOSTLY_COBBLESTONE_PRESSURE_PLATE.get())
-                .add(ModBlocks.GHOSTLY_STONE_BRICKS.get())
+                .add(ModBlocks.GHOSTLY_STONEBRICKS.get())
                 .add(ModBlocks.GHOSTLY_STONEBRICK_SLAB.get())
                 .add(ModBlocks.GHOSTLY_STONEBRICK_STAIRS.get())
                 .add(ModBlocks.GHOSTLY_STONEBRICK_WALL.get())
@@ -340,13 +285,63 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.BONE_BRICK_BUTTON.get())
                 .add(ModBlocks.BONE_BRICK_PRESSURE_PLATE.get());
 
-        tag(DIRT)
-                .add(ModBlocks.GHOSTLY_DIRT.get());
-                //.add(ModBlocks.BLOODY_DIRT.get())
+        tag(MINEABLE_WITH_PICKAXE)
+                .add(ModBlocks.NEXON_BLOCK.get())
+                .add(ModBlocks.NEXON_ORE_BLOCK.get())
+                .add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get())
+                .add(ModBlocks.SHATTERED_FRAGMENT_BLOCK.get())
+                .add(ModBlocks.GHOSTLY_STONE.get())
+                .add(ModBlocks.GHOSTLY_STONE_SLAB.get())
+                .add(ModBlocks.GHOSTLY_STONE_STAIRS.get())
+                .add(ModBlocks.GHOSTLY_STONE_WALL.get())
+                .add(ModBlocks.GHOSTLY_STONE_FENCE.get())
+                .add(ModBlocks.GHOSTLY_STONE_FENCE_GATE.get())
+                .add(ModBlocks.GHOSTLY_STONE_BUTTON.get())
+                .add(ModBlocks.GHOSTLY_STONE_PRESSURE_PLATE.get())
+                .add(ModBlocks.GHOSTLY_COBBLESTONE.get())
+                .add(ModBlocks.GHOSTLY_COBBLESTONE_SLAB.get())
+                .add(ModBlocks.GHOSTLY_COBBLESTONE_STAIRS.get())
+                .add(ModBlocks.GHOSTLY_COBBLESTONE_WALL.get())
+                .add(ModBlocks.GHOSTLY_COBBLESTONE_FENCE.get())
+                .add(ModBlocks.GHOSTLY_COBBLESTONE_FENCE_GATE.get())
+                .add(ModBlocks.GHOSTLY_COBBLESTONE_BUTTON.get())
+                .add(ModBlocks.GHOSTLY_COBBLESTONE_PRESSURE_PLATE.get())
+                .add(ModBlocks.GHOSTLY_STONEBRICKS.get())
+                .add(ModBlocks.GHOSTLY_STONEBRICK_SLAB.get())
+                .add(ModBlocks.GHOSTLY_STONEBRICK_STAIRS.get())
+                .add(ModBlocks.GHOSTLY_STONEBRICK_WALL.get())
+                .add(ModBlocks.GHOSTLY_STONEBRICK_FENCE.get())
+                .add(ModBlocks.GHOSTLY_STONEBRICK_FENCE_GATE.get())
+                .add(ModBlocks.GHOSTLY_STONEBRICK_BUTTON.get())
+                .add(ModBlocks.GHOSTLY_STONEBRICK_PRESSURE_PLATE.get())
+                .add(ModBlocks.BONE_BRICK.get())
+                .add(ModBlocks.BONE_BRICK_SLAB.get())
+                .add(ModBlocks.BONE_BRICK_STAIRS.get())
+                .add(ModBlocks.BONE_BRICK_WALL.get())
+                .add(ModBlocks.BONE_BRICK_FENCE.get())
+                .add(ModBlocks.BONE_BRICK_FENCE_GATE.get())
+                .add(ModBlocks.BONE_BRICK_BUTTON.get())
+                .add(ModBlocks.BONE_BRICK_PRESSURE_PLATE.get());
+        tag(ORES)
+                .add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get())
+                .add(ModBlocks.NEXON_ORE_BLOCK.get());
 
+
+        tag(MINEABLE_WITH_AXE)
+                .add(ModBlocks.LOG_GHOSTLY.get())
+                .add(ModBlocks.GHOSTLY_PLANKS.get())
+                .add(ModBlocks.GHOSTLY_PLANK_STAIRS.get())
+                .add(ModBlocks.GHOSTLY_PLANK_SLAB.get())
+                .add(ModBlocks.BLOODY_PLANK_STAIRS.get())
+                .add(ModBlocks.BLOODY_PLANK_SLAB.get())
+                .add(ModBlocks.LOG_BLOODY.get());
+        tag(PLANKS)
+                .add(ModBlocks.GHOSTLY_PLANKS.get())
+                .add(ModBlocks.BLOODY_PLANKS.get());
         tag(LOGS_THAT_BURN)
                 .add(ModBlocks.LOG_GHOSTLY.get())
                 .add(ModBlocks.LOG_BLOODY.get());
+
         tag(LEAVES)
                 .add(ModBlocks.GHOSTLY_LEAVES.get())
                 .add(ModBlocks.BLOODY_LEAVES.get());
@@ -357,9 +352,6 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.OOZING_FLOWER.get());
 
 
-        tag(PLANKS)
-                .add(ModBlocks.GHOSTLY_PLANKS.get())
-                .add(ModBlocks.BLOODY_PLANKS.get());
         tag(SLABS)
                 .add(ModBlocks.GHOSTLY_PLANK_SLAB.get())
                 .add(ModBlocks.BLOODY_PLANK_SLAB.get());
@@ -393,6 +385,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(TRAPDOORS)
                 .add(ModBlocks.GHOSTLY_TRAPDOOR.get())
                 .add(ModBlocks.BLOODY_TRAPDOOR.get());
+
+
+        tag(DIRT)
+                .add(ModBlocks.GHOSTLY_DIRT.get());
+
 
         tag(PORTALS)
                 .add(ModBlocks.GHOSTLY_PORTAL_BLOCK.get());

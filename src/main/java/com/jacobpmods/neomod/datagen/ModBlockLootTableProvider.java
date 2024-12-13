@@ -83,7 +83,7 @@ public class ModBlockLootTableProvider  extends BlockLootSubProvider {
         dropSelf(ModBlocks.GHOSTLY_COBBLESTONE_WALL.get());
         dropSelf(ModBlocks.GHOSTLY_COBBLESTONE_PRESSURE_PLATE.get());
         dropSelf(ModBlocks.GHOSTLY_COBBLESTONE_BUTTON.get());
-        dropSelf(ModBlocks.GHOSTLY_STONE_BRICKS.get());
+        dropSelf(ModBlocks.GHOSTLY_STONEBRICKS.get());
         dropSelf(ModBlocks.GHOSTLY_STONEBRICK_STAIRS.get());
         this.add(ModBlocks.GHOSTLY_STONEBRICK_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.GHOSTLY_STONEBRICK_SLAB.get()));

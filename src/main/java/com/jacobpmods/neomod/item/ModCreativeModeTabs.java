@@ -85,7 +85,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.GHOSTLY_COBBLESTONE_WALL);
                         output.accept(ModBlocks.GHOSTLY_COBBLESTONE_PRESSURE_PLATE);
                         output.accept(ModBlocks.GHOSTLY_COBBLESTONE_BUTTON);
-                        output.accept(ModBlocks.GHOSTLY_STONE_BRICKS);
+                        output.accept(ModBlocks.GHOSTLY_STONEBRICKS);
                         output.accept(ModBlocks.GHOSTLY_STONEBRICK_STAIRS);
                         output.accept(ModBlocks.GHOSTLY_STONEBRICK_SLAB);
                         output.accept(ModBlocks.GHOSTLY_STONEBRICK_FENCE);
@@ -171,13 +171,13 @@ public class ModCreativeModeTabs {
     public static final Supplier<CreativeModeTab> MODDED_BUILDING_BLOCKS =
             CREATIVE_MODE_TABS.register("2_building_blocks",
             () -> CreativeModeTab.builder()
-                    .icon(() -> new ItemStack(ModBlocks.GHOSTLY_STONE_BRICKS.get()))
+                    .icon(() -> new ItemStack(ModBlocks.GHOSTLY_STONEBRICKS.get()))
                     .title(Component.translatable("itemGroup.neomod.modded_building_blocks"))
                     .displayItems((itemDisplayParameters, output) -> {
                         //Full Blocks
                         output.accept(ModBlocks.GHOSTLY_STONE);
                         output.accept(ModBlocks.GHOSTLY_COBBLESTONE);
-                        output.accept(ModBlocks.GHOSTLY_STONE_BRICKS);
+                        output.accept(ModBlocks.GHOSTLY_STONEBRICKS);
                         output.accept(ModBlocks.BONE_BRICK);
                         output.accept(ModBlocks.LOG_GHOSTLY);
                         output.accept(ModBlocks.GHOSTLY_PLANKS);

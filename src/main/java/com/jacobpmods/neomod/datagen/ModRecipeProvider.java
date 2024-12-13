@@ -153,9 +153,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         stairBuilder(ModBlocks.GHOSTLY_COBBLESTONE_STAIRS.get(), Ingredient.of(ModBlocks.GHOSTLY_COBBLESTONE.get())).group("ghostly_cobblestone")
                 .unlockedBy("has_ghostly_cobblestone", has(ModBlocks.GHOSTLY_COBBLESTONE.get())).save(recipeOutput);
 
-        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GHOSTLY_STONEBRICK_SLAB.get(), ModBlocks.GHOSTLY_STONE_BRICKS.get());
-        stairBuilder(ModBlocks.GHOSTLY_STONEBRICK_STAIRS.get(), Ingredient.of(ModBlocks.GHOSTLY_STONE_BRICKS.get())).group("ghostly_stone_brick")
-                .unlockedBy("has_ghostly_stone_brick", has(ModBlocks.GHOSTLY_STONE_BRICKS.get())).save(recipeOutput);
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GHOSTLY_STONEBRICK_SLAB.get(), ModBlocks.GHOSTLY_STONEBRICKS.get());
+        stairBuilder(ModBlocks.GHOSTLY_STONEBRICK_STAIRS.get(), Ingredient.of(ModBlocks.GHOSTLY_STONEBRICKS.get())).group("ghostly_stone_brick")
+                .unlockedBy("has_ghostly_stone_brick", has(ModBlocks.GHOSTLY_STONEBRICKS.get())).save(recipeOutput);
 
         slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BONE_BRICK_SLAB.get(), ModBlocks.BONE_BRICK.get());
         stairBuilder(ModBlocks.BONE_BRICK_STAIRS.get(), Ingredient.of(ModBlocks.BONE_BRICK.get())).group("bone_brick")
@@ -173,7 +173,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         // Walls
         wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GHOSTLY_STONE_WALL.get(), ModBlocks.GHOSTLY_STONE.get());
         wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GHOSTLY_COBBLESTONE_WALL.get(), ModBlocks.GHOSTLY_COBBLESTONE.get());
-        wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GHOSTLY_STONEBRICK_WALL.get(), ModBlocks.GHOSTLY_STONE_BRICKS.get());
+        wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GHOSTLY_STONEBRICK_WALL.get(), ModBlocks.GHOSTLY_STONEBRICKS.get());
         wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BONE_BRICK_WALL.get(), ModBlocks.BONE_BRICK.get());
         wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GHOSTLY_PLANK_WALL.get(), ModBlocks.GHOSTLY_PLANKS.get());
         wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLOODY_PLANK_WALL.get(), ModBlocks.BLOODY_PLANKS.get());
@@ -183,8 +183,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_ghostly_stone", has(ModBlocks.GHOSTLY_STONE.get())).save(recipeOutput);
         fenceBuilder(ModBlocks.GHOSTLY_COBBLESTONE_FENCE.get(), Ingredient.of(ModBlocks.GHOSTLY_COBBLESTONE.get())).group("ghostly_cobblestone")
                 .unlockedBy("has_ghostly_cobblestone", has(ModBlocks.GHOSTLY_COBBLESTONE.get())).save(recipeOutput);
-        fenceBuilder(ModBlocks.GHOSTLY_STONEBRICK_FENCE.get(), Ingredient.of(ModBlocks.GHOSTLY_STONE_BRICKS.get())).group("ghostly_stone_bricks")
-                .unlockedBy("has_ghostly_stonebricks", has(ModBlocks.GHOSTLY_STONE_BRICKS.get())).save(recipeOutput);
+        fenceBuilder(ModBlocks.GHOSTLY_STONEBRICK_FENCE.get(), Ingredient.of(ModBlocks.GHOSTLY_STONEBRICKS.get())).group("ghostly_stone_bricks")
+                .unlockedBy("has_ghostly_stonebricks", has(ModBlocks.GHOSTLY_STONEBRICKS.get())).save(recipeOutput);
         fenceBuilder(ModBlocks.BONE_BRICK_FENCE.get(), Ingredient.of(ModBlocks.BONE_BRICK.get())).group("bone_bricks")
                 .unlockedBy("has_bone_brick", has(ModBlocks.BONE_BRICK.get())).save(recipeOutput);
         fenceBuilder(ModBlocks.GHOSTLY_PLANK_FENCE.get(), Ingredient.of(ModBlocks.GHOSTLY_PLANKS.get())).group("ghostly_planks")
@@ -197,8 +197,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_ghostly_stone", has(ModBlocks.GHOSTLY_STONE.get())).save(recipeOutput);
         fenceGateBuilder(ModBlocks.GHOSTLY_COBBLESTONE_FENCE_GATE.get(), Ingredient.of(ModBlocks.GHOSTLY_COBBLESTONE.get())).group("ghostly_cobblestone")
                 .unlockedBy("has_ghostly_cobblestone", has(ModBlocks.GHOSTLY_COBBLESTONE.get())).save(recipeOutput);
-        fenceGateBuilder(ModBlocks.GHOSTLY_STONEBRICK_FENCE_GATE.get(), Ingredient.of(ModBlocks.GHOSTLY_STONE_BRICKS.get())).group("ghostly_stone_bricks")
-                .unlockedBy("has_ghostly_stonebricks", has(ModBlocks.GHOSTLY_STONE_BRICKS.get())).save(recipeOutput);
+        fenceGateBuilder(ModBlocks.GHOSTLY_STONEBRICK_FENCE_GATE.get(), Ingredient.of(ModBlocks.GHOSTLY_STONEBRICKS.get())).group("ghostly_stone_bricks")
+                .unlockedBy("has_ghostly_stonebricks", has(ModBlocks.GHOSTLY_STONEBRICKS.get())).save(recipeOutput);
         fenceGateBuilder(ModBlocks.BONE_BRICK_FENCE_GATE.get(), Ingredient.of(ModBlocks.BONE_BRICK.get())).group("bone_bricks")
                 .unlockedBy("has_bone_brick", has(ModBlocks.BONE_BRICK.get())).save(recipeOutput);
         fenceGateBuilder(ModBlocks.GHOSTLY_PLANK_FENCE_GATE.get(), Ingredient.of(ModBlocks.GHOSTLY_PLANKS.get())).group("ghostly_planks")
@@ -209,7 +209,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         // Pressure Plates
         pressurePlate(recipeOutput, ModBlocks.GHOSTLY_STONE_PRESSURE_PLATE.get(), ModBlocks.GHOSTLY_STONE.get());
         pressurePlate(recipeOutput, ModBlocks.GHOSTLY_COBBLESTONE_PRESSURE_PLATE.get(), ModBlocks.GHOSTLY_COBBLESTONE.get());
-        pressurePlate(recipeOutput, ModBlocks.GHOSTLY_STONEBRICK_PRESSURE_PLATE.get(), ModBlocks.GHOSTLY_STONE_BRICKS.get());
+        pressurePlate(recipeOutput, ModBlocks.GHOSTLY_STONEBRICK_PRESSURE_PLATE.get(), ModBlocks.GHOSTLY_STONEBRICKS.get());
         pressurePlate(recipeOutput, ModBlocks.BONE_BRICK_PRESSURE_PLATE.get(), ModBlocks.BONE_BRICK.get());
         pressurePlate(recipeOutput, ModBlocks.GHOSTLY_PLANK_PRESSURE_PLATE.get(), ModBlocks.GHOSTLY_PLANKS.get());
         pressurePlate(recipeOutput, ModBlocks.BLOODY_PLANK_PRESSURE_PLATE.get(), ModBlocks.BLOODY_PLANKS.get());
@@ -220,8 +220,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_ghostly_stone", has(ModBlocks.GHOSTLY_STONE.get())).save(recipeOutput);
         buttonBuilder(ModBlocks.GHOSTLY_COBBLESTONE_BUTTON.get(), Ingredient.of(ModBlocks.GHOSTLY_COBBLESTONE.get())).group("ghostly_cobblestone")
                 .unlockedBy("has_ghostly_cobblestone", has(ModBlocks.GHOSTLY_COBBLESTONE.get())).save(recipeOutput);
-        buttonBuilder(ModBlocks.GHOSTLY_STONEBRICK_BUTTON.get(), Ingredient.of(ModBlocks.GHOSTLY_STONE_BRICKS.get())).group("ghostly_stone_bricks")
-                .unlockedBy("has_ghostly_stone_bricks", has(ModBlocks.GHOSTLY_STONE_BRICKS.get())).save(recipeOutput);
+        buttonBuilder(ModBlocks.GHOSTLY_STONEBRICK_BUTTON.get(), Ingredient.of(ModBlocks.GHOSTLY_STONEBRICKS.get())).group("ghostly_stone_bricks")
+                .unlockedBy("has_ghostly_stone_bricks", has(ModBlocks.GHOSTLY_STONEBRICKS.get())).save(recipeOutput);
         buttonBuilder(ModBlocks.BONE_BRICK_BUTTON.get(), Ingredient.of(ModBlocks.BONE_BRICK.get())).group("bone_bricks")
                 .unlockedBy("has_bone_bricks", has(ModBlocks.BONE_BRICK.get())).save(recipeOutput);
         buttonBuilder(ModBlocks.GHOSTLY_PLANK_BUTTON.get(), Ingredient.of(ModBlocks.GHOSTLY_PLANKS.get())).group("ghostly_planks")
