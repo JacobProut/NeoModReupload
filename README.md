@@ -1,2 +1,3 @@
-AfterLife Expansion Pack Creation by Jacob Prout
-This modpack is an expanison to the base game. Giving more things to do once completing the base game.
+AfterLife: The Minecraft Expansion Pack 
+Created by: Jacob Prout
+This mod-pack is an expansion to the base game. Giving more things to do once completing the base game.
