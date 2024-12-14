@@ -1,4 +1,4 @@
-// 1.21.1	2024-12-13T21:32:33.8533909	Registries
+// 1.21.1	2024-12-13T21:42:53.3607325	Registries
 64a3ab6a705d170352b8dfeb286824ad5d312c62 data/neomod/dimension/ghostly.json
 d6265a6cfda1ff5e67e1c67af60c56cac1e1982e data/neomod/dimension_type/ghostly_type.json
 45cc21a0401cabe558b485aa212b0d94b39aaabb data/neomod/enchantment/ice_barrage_melee.json
@@ -25,6 +25,6 @@ b3822555c5341955c6620d612dd353428e224967 data/neomod/worldgen/configured_feature
 22a71884308348483f8afb094c42c737e4c8d5c3 data/neomod/worldgen/placed_feature/bloody_tree_placed.json
 26f90aea2a7fe00f21304664438021eb87a92ee0 data/neomod/worldgen/placed_feature/ghostly_tree_placed.json
 6cdfcf1afa2fbea2b7622bbaf822365ac9f2e8f4 data/neomod/worldgen/placed_feature/oozing_flower_placed.json
-89cf6d08a1f7e21b9a77aadc0d3381626fc45832 data/neomod/worldgen/placed_feature/shattered_fragment_ore_placed.json
+e3dd9e7dbc79c361b0af31c19e8b291e230e7234 data/neomod/worldgen/placed_feature/shattered_fragment_ore_placed.json
 ff4ce22944a2351840f3b711455cc0989a8b92d6 data/neomod/worldgen/placed_feature/skull_n_bones_block_placed.json
-a14034f3dcee7e315151f4da3ff87d7d772eecbd data/neomod/worldgen/placed_feature/spirit_coal_ore_placed.json
+3f2ae83984332b806d3950db5c6a0de4628fcd91 data/neomod/worldgen/placed_feature/spirit_coal_ore_placed.json
