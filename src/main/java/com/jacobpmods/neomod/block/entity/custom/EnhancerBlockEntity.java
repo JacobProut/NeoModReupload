@@ -140,6 +140,7 @@ public class EnhancerBlockEntity extends BlockEntity implements MenuProvider {
         ItemStack output = recipe.get().value().output();
 
         itemStackHandler.extractItem(INPUT_SLOT, 1, false);
+        itemStackHandler.extractItem(ENHANCER_CHARGE_ITEM_SLOT, 1, false);
         itemStackHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(output.getItem(),
                 itemStackHandler.getStackInSlot(OUTPUT_SLOT).getCount() + output.getCount()));
         
