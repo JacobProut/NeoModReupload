@@ -1,9 +1,9 @@
 {
-  "feature": "neomod:ghostly_shattered_fragment",
+  "feature": "neomod:ghostly_spirit_coal_ore",
   "placement": [
     {
       "type": "minecraft:count",
-      "count": 15
+      "count": 20
     },
     {
       "type": "minecraft:in_square"
@@ -13,7 +13,7 @@
       "height": {
         "type": "minecraft:uniform",
         "max_inclusive": {
-          "absolute": 45
+          "absolute": 80
         },
         "min_inclusive": {
           "absolute": 5

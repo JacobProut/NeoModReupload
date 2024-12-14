@@ -36,6 +36,7 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> SKULL_N_BONE_BLOCK = registerKey("skull_n_bone_block");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> GHOSTLY_SHATTERED_FRAGMENT_ORE_KEY = registerKey("ghostly_shattered_fragment");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GHOSTLY_SPIRIT_COAL_ORE_KEY = registerKey("ghostly_spirit_coal_ore");
 
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
@@ -75,6 +76,7 @@ public class ModConfiguredFeatures {
             OreConfiguration.target(ghostlyStoneReplacable, ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get().defaultBlockState()));*/
 
     register(context, GHOSTLY_SHATTERED_FRAGMENT_ORE_KEY, Feature.ORE, new OreConfiguration(ghostlyStoneReplacable, ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get().defaultBlockState(), 4));
+    register(context, GHOSTLY_SPIRIT_COAL_ORE_KEY, Feature.ORE, new OreConfiguration(ghostlyStoneReplacable, ModBlocks.SPIRIT_COAL_ORE_BLOCK.get().defaultBlockState(), 12));
 
     }
     //Random Patch info

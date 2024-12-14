@@ -1,0 +1,9 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "neomod:ghostly_biome",
+    "neomod:blood_garden_biome"
+  ],
+  "features": "neomod:spirit_coal_ore_placed",
+  "step": "underground_ores"
+}
