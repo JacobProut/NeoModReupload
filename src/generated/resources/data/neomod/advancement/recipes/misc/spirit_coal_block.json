@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_spirit_coal": {
+      "conditions": {
+        "items": [
+          {
+            "items": "neomod:spirit_coal"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "neomod:spirit_coal_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_spirit_coal"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "neomod:spirit_coal_block"
+    ]
+  }
+}

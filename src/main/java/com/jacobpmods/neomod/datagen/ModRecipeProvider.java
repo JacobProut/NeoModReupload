@@ -35,12 +35,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .define('A', ModItems.NEXON_INGOT.get())
                 .unlockedBy(getHasName(ModItems.NEXON_INGOT.get()), has(ModItems.NEXON_INGOT.get())).save(recipeOutput);
-
         // 9 Nexon from Block Recipe
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.nexon.get(), 9)
                 .requires(ModBlocks.NEXON_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.NEXON_BLOCK.get()), has(ModBlocks.NEXON_BLOCK.get())).save(recipeOutput);
-
         //Shattered Fragment Block Recipe
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SHATTERED_FRAGMENT_BLOCK.get(), 1)
                 .pattern("AAA")
@@ -48,11 +46,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .define('A', ModItems.SHATTERED_FRAGMENT.get())
                 .unlockedBy(getHasName(ModItems.SHATTERED_FRAGMENT.get()), has(ModItems.SHATTERED_FRAGMENT.get())).save(recipeOutput);
-
         //9 shattered fragments from block Recipe
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.SHATTERED_FRAGMENT.get(), 9)
                 .requires(ModBlocks.SHATTERED_FRAGMENT_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.SHATTERED_FRAGMENT_BLOCK.get()), has(ModBlocks.SHATTERED_FRAGMENT_BLOCK.get())).save(recipeOutput);
+        //Spirit Coal Block Recipe
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SPIRIT_COAL_BLOCK.get(), 1)
+                .pattern("SSS")
+                .pattern("SSS")
+                .pattern("SSS")
+                .define('S', ModItems.SPIRIT_COAL.get())
+                .unlockedBy(getHasName(ModItems.SPIRIT_COAL.get()), has(ModItems.SPIRIT_COAL.get())).save(recipeOutput);
+        //9 Spirit Coal From Block Recipe
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.SPIRIT_COAL.get(), 9)
+                .requires(ModBlocks.SPIRIT_COAL_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.SPIRIT_COAL_BLOCK.get()), has(ModBlocks.SPIRIT_COAL_BLOCK.get())).save(recipeOutput);
 
         //Nexon ingot Craft Recipe
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.NEXON_INGOT.get(), 1)

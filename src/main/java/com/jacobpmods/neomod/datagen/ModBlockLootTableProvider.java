@@ -32,6 +32,7 @@ public class ModBlockLootTableProvider  extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
+        //Ores and ore blocks
         dropSelf(ModBlocks.NEXON_BLOCK.get());
         dropSelf(ModBlocks.NEXON_ORE_BLOCK.get());
         this.add(ModBlocks.NEXON_ORE_BLOCK.get(),
@@ -39,6 +40,7 @@ public class ModBlockLootTableProvider  extends BlockLootSubProvider {
         dropSelf(ModBlocks.SHATTERED_FRAGMENT_BLOCK.get());
         this.add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get(),
                 block -> createMultipleOreDrops(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get(), ModItems.SHATTERED_FRAGMENT.get(), 1, 2));
+       dropSelf(ModBlocks.SPIRIT_COAL_BLOCK.get());
         this.add(ModBlocks.SPIRIT_COAL_ORE_BLOCK.get(),
                 block -> createMultipleOreDrops(ModBlocks.SPIRIT_COAL_ORE_BLOCK.get(), ModItems.SPIRIT_COAL.get(), 1, 3));
 

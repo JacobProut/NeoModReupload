@@ -1,4 +1,4 @@
-// 1.21.1	2024-12-13T20:24:37.8283849	Block States: neomod
+// 1.21.1	2024-12-13T21:12:18.4833925	Block States: neomod
 8cfe0cb1d0351921f092950e6942916bfe2806aa assets/neomod/blockstates/bloody_door.json
 7cdda68cd3b983e7648bc220e1950f59e5edd79d assets/neomod/blockstates/bloody_grass_block.json
 38cd5a8f9f9dfea6a001af7bdd29bcdbff0bda8b assets/neomod/blockstates/bloody_leaves.json
@@ -69,6 +69,7 @@ f95ceec255f9672ca3ff59024e16075f454b5abe assets/neomod/blockstates/planks_ghostl
 c728f5978bc9c86325572418e5277a630531c906 assets/neomod/blockstates/shattered_fragment_block.json
 66efd4606208e613dd7e9b11240b9f5eb706f585 assets/neomod/blockstates/shattered_fragment_ore_block.json
 5f90b0e9218b759b4bd9d80812e32e9c49ec3d64 assets/neomod/blockstates/skull_n_bones.json
+6c7e2f6446ab6d125e87ae711216d7a5745a0696 assets/neomod/blockstates/spirit_coal_block.json
 da86051572f351442ef8263f4314afec871a5592 assets/neomod/blockstates/spirit_coal_ore_block.json
 d34a28ffc8f91fe8ac55d802eed4a80360966588 assets/neomod/blockstates/stripped_ghostly_log.json
 5e49d5955eba7c51b83841b24a39c22131b3b91d assets/neomod/blockstates/stripped_ghostly_wood.json
@@ -232,6 +233,7 @@ fbb05c9253b2f7b0bb5716f8da27133d503a3e6f assets/neomod/models/block/planks_ghost
 b0438dae30520e3648396e10692ca48683590536 assets/neomod/models/block/shattered_fragment_block.json
 6beed2bb796d1a104b393c607cdeb04dde430135 assets/neomod/models/block/shattered_fragment_ore_block.json
 34863c27baacc5777270f1624daff6ba4633c8ee assets/neomod/models/block/skull_n_bones.json
+b0f47d0ba2101e32e2939742c7d00d16dd2994d5 assets/neomod/models/block/spirit_coal_block.json
 434e6724e5bfd93ab9b10e84787d1b7d7bb9291b assets/neomod/models/block/spirit_coal_ore_block.json
 65b0f44713d96ebdeec4e4237f1e6a4858cc5869 assets/neomod/models/block/stripped_ghostly_log.json
 ce02d3c52ea9f2d8b3f9c29ad6d1f1a71c6be4a3 assets/neomod/models/block/stripped_ghostly_log_horizontal.json
@@ -285,6 +287,7 @@ de346f72c3a40f08bf60aa1fc62bc773700fd1ab assets/neomod/models/item/log_ghostly.j
 5e393ad7c95d882f749aad35c5551c4a406502d3 assets/neomod/models/item/shattered_fragment_block.json
 94a20ef9e696e8cc7363a5073d05c55b64182c39 assets/neomod/models/item/shattered_fragment_ore_block.json
 b6f7c3c84a9aad22430e517a90ccf3a3960439a9 assets/neomod/models/item/skull_n_bones.json
+c7a54a67c14a8dd1094bd29008e62e2c9e2e27f9 assets/neomod/models/item/spirit_coal_block.json
 3d12b1b2e7e9ba81bdbe584c463513ff729b5fa0 assets/neomod/models/item/spirit_coal_ore_block.json
 b7c667bdaa22b970a7acb06463b9ceb950226307 assets/neomod/models/item/stripped_ghostly_log.json
 6f7300db5278b510cb7362876a1d73e737d9e9f0 assets/neomod/models/item/stripped_ghostly_wood.json

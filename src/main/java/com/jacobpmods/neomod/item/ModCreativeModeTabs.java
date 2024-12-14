@@ -60,7 +60,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SHATTERED_FRAGMENT_BLOCK);
                         output.accept(ModItems.SHATTERED_FRAGMENT);
                         output.accept(ModBlocks.SPIRIT_COAL_ORE_BLOCK);
-                        //output.accept(ModBlocks.SPIRIT_COAL_BLOCK);
+                        output.accept(ModBlocks.SPIRIT_COAL_BLOCK);
                         output.accept(ModItems.SPIRIT_COAL);
 
                         output.accept(ModItems.SKELETAL_BLOOD_SHARD);

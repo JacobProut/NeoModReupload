@@ -48,6 +48,8 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> SPIRIT_COAL_ORE_BLOCK = registerBlock("spirit_coal_ore_block", () ->new Block(BlockBehaviour.Properties.of()
             .strength(4f).requiresCorrectToolForDrops().sound(SoundType.CALCITE)));
+    public static final DeferredBlock<Block> SPIRIT_COAL_BLOCK = registerBlock("spirit_coal_block", () ->new Block(BlockBehaviour.Properties.of()
+            .strength(4f).requiresCorrectToolForDrops().sound(SoundType.CALCITE)));
 
 
 

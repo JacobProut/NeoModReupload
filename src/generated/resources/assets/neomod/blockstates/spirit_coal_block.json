@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "neomod:block/spirit_coal_block"
+    }
+  }
+}
