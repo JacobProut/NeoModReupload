@@ -1,4 +1,4 @@
-// 1.21.1	2024-12-13T23:35:46.7890668	Tags for minecraft:block mod id neomod
+// 1.21.1	2024-12-13T23:52:11.6460445	Tags for minecraft:block mod id neomod
 ea8afe13f0b348eb2afb8ffa0bfd0deb675d03d0 data/c/tags/block/ores.json
 0a97454125fc991ddd02f7d92133371e0c3be723 data/c/tags/block/player_workstations/crafting_tables.json
 30f421389cc533849eac372c7edad97938c38a42 data/minecraft/tags/block/climbable.json
@@ -16,6 +16,7 @@ b6dab7c173a299efe9b0e924ce52248ab5756884 data/minecraft/tags/block/incorrect_for
 b665e168633a6fabe55f071ec47c23f694837a0a data/minecraft/tags/block/logs_that_burn.json
 9834f93de3cbd25fc4dc72d19d394b6a1e9deb1b data/minecraft/tags/block/mineable/axe.json
 4367b09bad64c2ccea6570bb1a54afa4ed25f6ea data/minecraft/tags/block/mineable/pickaxe.json
+9615fc8c860759c6f004abc406831642907be454 data/minecraft/tags/block/mineable/shovel.json
 0cf0c01099e2e8f641c4cb12d5e51c3e9c66090c data/minecraft/tags/block/planks.json
 ac3c884022f5a161f793d2a7f9d814466ec169b4 data/minecraft/tags/block/portals.json
 40c7f88c4ac255e6ed8eb06c7c90495e03b821de data/minecraft/tags/block/saplings.json

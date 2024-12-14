@@ -344,6 +344,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.NEXON_ORE_BLOCK.get())
                 .add(ModBlocks.SPIRIT_COAL_ORE_BLOCK.get());
 
+        tag(MINEABLE_WITH_SHOVEL)
+                .add(ModBlocks.GHOSTLY_GRASS_BLOCK.get())
+                .add(ModBlocks.BLOODY_GRASS_BLOCK.get())
+                .add(ModBlocks.GHOSTLY_DIRT.get());
+
 
         tag(MINEABLE_WITH_AXE)
                 .add(ModBlocks.LOG_GHOSTLY.get())
