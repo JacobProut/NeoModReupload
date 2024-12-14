@@ -2,8 +2,8 @@ package com.jacobpmods.neomod.item;
 
 import com.jacobpmods.neomod.FirstNeoMod;
 import com.jacobpmods.neomod.block.ModBlocks;
-import com.jacobpmods.neomod.block.custom.FuelItem;
 import com.jacobpmods.neomod.entity.ModEntities;
+import com.jacobpmods.neomod.item.custom.FuelItem;
 import com.jacobpmods.neomod.item.custom.ModArmorItem;
 import com.jacobpmods.neomod.item.custom.curiosItems.RingOfUndeadStrength;
 import com.jacobpmods.neomod.item.custom.curiosItems.SoulSplitNecklace;

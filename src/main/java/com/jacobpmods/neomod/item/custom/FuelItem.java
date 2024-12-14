@@ -1,4 +1,4 @@
-package com.jacobpmods.neomod.block.custom;
+package com.jacobpmods.neomod.item.custom;
 
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
