@@ -9,6 +9,7 @@ import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 
 import java.util.List;
@@ -22,11 +23,25 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(RecipeOutput recipeOutput) {
-
         //Nexon Ore Smelting/Blasting Methods
         List<ItemLike> NEXON_SMELTABLES= List.of(ModItems.nexon.get()); //Can add other nexon items here that can be smelted.
         oreSmelting(recipeOutput, NEXON_SMELTABLES, RecipeCategory.MISC, ModItems.HEATED_NEXON.get(), 0.30f, 200, "nexon");
         oreBlasting(recipeOutput, NEXON_SMELTABLES, RecipeCategory.MISC, ModItems.HEATED_NEXON.get(), 0.30f, 100, "nexon");
+
+        // Otherworldly Crafting Table recipes
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.OTHERWORLDLY_CRAFTING_TABLE.get(), 1)
+                .define('G', ModBlocks.GHOSTLY_PLANKS.get())  // Define the G for Ghostly Planks
+                .pattern("GG")
+                .pattern("GG")
+                .unlockedBy("has_ghostly_planks", has(ModBlocks.GHOSTLY_PLANKS.get()))  // Unlock when Ghostly Planks are acquired
+                .save(recipeOutput, "neomod:otherworldly_crafting_table_ghostly");  // Use a unique recipe name
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.OTHERWORLDLY_CRAFTING_TABLE.get(), 1)
+                .define('B', ModBlocks.BLOODY_PLANKS.get())  // Define the G for Bloody Planks
+                .pattern("BB")
+                .pattern("BB")
+                .unlockedBy("has_bloody_planks", has(ModBlocks.BLOODY_PLANKS.get()))  // Unlock when Bloody Planks are acquired
+                .save(recipeOutput, "neomod:otherworldly_crafting_table_bloody");  // Use a unique recipe name
+
 
         //Nexon Block Recipe
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.NEXON_BLOCK.get(), 1)

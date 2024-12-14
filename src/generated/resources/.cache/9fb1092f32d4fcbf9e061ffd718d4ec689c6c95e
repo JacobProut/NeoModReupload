@@ -1,4 +1,4 @@
-// 1.21.1	2024-12-13T21:12:18.4888924	Recipes
+// 1.21.1	2024-12-13T23:35:28.8591974	Recipes
 b60218b08288aacf52f67fcb352aea51e429daa1 data/neomod/advancement/recipes/building_blocks/bloody_plank_slab.json
 4c2a26a2385a86cb238736ee09bd8771ae237a5c data/neomod/advancement/recipes/building_blocks/bloody_plank_stairs.json
 b9926c059bc306d1d778aec08be24bbd774a678e data/neomod/advancement/recipes/building_blocks/bloody_plank_wall.json
@@ -35,6 +35,8 @@ d451773be98aed01fce7ff55c2bafebab7e6db90 data/neomod/advancement/recipes/misc/ne
 d6a70b411938568475b7b4b4b20c026a935e3e3b data/neomod/advancement/recipes/misc/nexonpickaxe.json
 a2cb6810137deb127fbc5c6644d064b106bc6e4f data/neomod/advancement/recipes/misc/nexonreinforcedingot.json
 1a5bbf20bc3466487597d1aa88f6952bd7c84cbb data/neomod/advancement/recipes/misc/nexon_block.json
+2d8dcb524c9e00fb77a1b15153a2628e6bbfcfe3 data/neomod/advancement/recipes/misc/otherworldly_crafting_table_bloody.json
+ce6ed635473c686dd2bf48e3f127ea1e58a0c989 data/neomod/advancement/recipes/misc/otherworldly_crafting_table_ghostly.json
 def39c5467fa78549886cd463131efd25de3fb5c data/neomod/advancement/recipes/misc/planks_bloody.json
 b451da62cfc1aed5b5ac66ee3a15de709127cb8c data/neomod/advancement/recipes/misc/planks_ghostly.json
 a254e2d11c3cdcfbd763dbe6bd72c9f4fb321f05 data/neomod/advancement/recipes/misc/shattered_fragment.json
@@ -122,6 +124,8 @@ cc82c341ad5eae5ff79f3ece587ee690df2ff059 data/neomod/recipe/nexonheated_from_bla
 8814493a03ae0db84eeee019a7d58cfc59d564c8 data/neomod/recipe/nexonpickaxe.json
 58d7b1b0e9668af817eb5b8074227b8def71c9b9 data/neomod/recipe/nexonreinforcedingot.json
 9ef110b7ffabbfd32647e5d51518c40c019ba5fc data/neomod/recipe/nexon_block.json
+2beea950467c94b2c6b72c31c29fefe3d6e474fb data/neomod/recipe/otherworldly_crafting_table_bloody.json
+1b4747b7fcbd468f8d4b0940e0b7fb2c80941bf8 data/neomod/recipe/otherworldly_crafting_table_ghostly.json
 d3f38abda506e18c7474c00b6a0b838d55b50a5e data/neomod/recipe/planks_bloody.json
 0197c4032c23b49edff9c44928683bcc3c9a8605 data/neomod/recipe/planks_ghostly.json
 5fed2e402f51ad5a9f039f2af1fb986755f157a5 data/neomod/recipe/shattered_fragment.json

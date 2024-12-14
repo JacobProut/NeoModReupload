@@ -132,7 +132,7 @@ public class ModBlocks {
 
 
     //Ghostly Wood and Terrain items
-    public static final DeferredBlock<Block> LOG_GHOSTLY = registerBlock("log_ghostly", () ->new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)
+    public static final DeferredBlock<Block> LOG_GHOSTLY = registerBlock("log_ghostly", () ->new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.of()
             .strength(2f).sound(SoundType.WOOD)));
     public static final DeferredBlock<Block> STRIPPED_GHOSTLY_LOG = registerBlock("stripped_ghostly_log", () ->new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_LOG)
             .strength(1f).sound(SoundType.WOOD)));
@@ -140,7 +140,7 @@ public class ModBlocks {
             .strength(2f).sound(SoundType.WOOD)));
     public static final DeferredBlock<Block> STRIPPED_GHOSTLY_WOOD = registerBlock("stripped_ghostly_wood", () ->new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_WOOD)
             .strength(1f).sound(SoundType.WOOD)));
-    public static final DeferredBlock<Block> GHOSTLY_PLANKS = registerBlock("planks_ghostly", () ->new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
+    public static final DeferredBlock<Block> GHOSTLY_PLANKS = registerBlock("planks_ghostly", () ->new Block(BlockBehaviour.Properties.of()
             .strength(1f).sound(SoundType.WOOD)) {
         @Override
         public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
@@ -158,7 +158,7 @@ public class ModBlocks {
         }
     });
     public static final DeferredBlock<Block> GHOSTLY_PLANK_STAIRS = registerBlock("ghostly_plank_stairs", () ->new StairBlock(ModBlocks.GHOSTLY_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.of()
-            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.WOOD))
+            .strength(2f).sound(SoundType.WOOD))
     {
         @Override
         public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
@@ -176,7 +176,7 @@ public class ModBlocks {
         }
     });
     public static final DeferredBlock<Block> GHOSTLY_PLANK_SLAB = registerBlock("ghostly_plank_slab", () ->new SlabBlock(BlockBehaviour.Properties.of()
-            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.WOOD)){
+            .strength(2f).sound(SoundType.WOOD)){
         @Override
         public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
             return true;
@@ -193,7 +193,7 @@ public class ModBlocks {
         }
     });
     public static final DeferredBlock<Block> GHOSTLY_PLANK_FENCE = registerBlock("ghostly_plank_fence", () -> new FenceBlock(BlockBehaviour.Properties.of()
-            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.WOOD)){
+            .strength(2f).sound(SoundType.WOOD)){
         @Override
         public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
             return true;
@@ -210,7 +210,7 @@ public class ModBlocks {
         }
     });
     public static final DeferredBlock<Block> GHOSTLY_PLANK_FENCE_GATE = registerBlock("ghostly_plank_fence_gate", () -> new FenceGateBlock(WoodType.ACACIA, BlockBehaviour.Properties.of()
-            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.WOOD))
+            .strength(2f).sound(SoundType.WOOD))
     {
         @Override
         public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
@@ -228,7 +228,7 @@ public class ModBlocks {
         }
     });
     public static final DeferredBlock<Block> GHOSTLY_PLANK_WALL = registerBlock("ghostly_plank_wall", () -> new WallBlock(BlockBehaviour.Properties.of()
-            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.WOOD))
+            .strength(2f).sound(SoundType.WOOD))
     {
         @Override
         public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
@@ -246,7 +246,7 @@ public class ModBlocks {
         }
     });
     public static final DeferredBlock<Block> GHOSTLY_PLANK_PRESSURE_PLATE = registerBlock("ghostly_plank_pressure_plate", () -> new PressurePlateBlock(BlockSetType.OAK, BlockBehaviour.Properties.of()
-            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.WOOD))
+            .strength(2f).sound(SoundType.WOOD))
     {
         @Override
         public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
@@ -264,7 +264,7 @@ public class ModBlocks {
         }
     });
     public static final DeferredBlock<Block> GHOSTLY_PLANK_BUTTON = registerBlock("ghostly_plank_button", () -> new ButtonBlock(BlockSetType.OAK, 20, BlockBehaviour.Properties.of()
-            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.WOOD).noCollission())
+            .strength(2f).sound(SoundType.WOOD).noCollission())
     {
         @Override
         public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
@@ -339,9 +339,9 @@ public class ModBlocks {
 
 
     //Bloody Wood and Terrain items
-    public static final DeferredBlock<Block> LOG_BLOODY = registerBlock("log_bloody", () ->new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)
+    public static final DeferredBlock<Block> LOG_BLOODY = registerBlock("log_bloody", () ->new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.of()
             .strength(2f).sound(SoundType.WOOD)));
-    public static final DeferredBlock<Block> BLOODY_PLANKS = registerBlock("planks_bloody", () ->new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)
+    public static final DeferredBlock<Block> BLOODY_PLANKS = registerBlock("planks_bloody", () ->new Block(BlockBehaviour.Properties.of()
             .strength(1f).sound(SoundType.WOOD)) {
         @Override
         public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
@@ -359,7 +359,7 @@ public class ModBlocks {
         }
     });
     public static final DeferredBlock<Block> BLOODY_PLANK_STAIRS = registerBlock("bloody_plank_stairs", () ->new StairBlock(ModBlocks.BLOODY_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.of()
-            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.WOOD)){
+            .strength(2f).sound(SoundType.WOOD)){
         @Override
         public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
             return true;
@@ -376,7 +376,7 @@ public class ModBlocks {
         }
     });
     public static final DeferredBlock<Block> BLOODY_PLANK_SLAB = registerBlock("bloody_plank_slab", () ->new SlabBlock(BlockBehaviour.Properties.of()
-            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.WOOD)){
+            .strength(2f).sound(SoundType.WOOD)){
         @Override
         public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
             return true;
@@ -393,7 +393,7 @@ public class ModBlocks {
         }
     });
     public static final DeferredBlock<Block> BLOODY_PLANK_FENCE = registerBlock("bloody_plank_fence", () -> new FenceBlock(BlockBehaviour.Properties.of()
-            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.WOOD)){
+            .strength(2f).sound(SoundType.WOOD)){
         @Override
         public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
             return true;
@@ -410,7 +410,7 @@ public class ModBlocks {
         }
     });
     public static final DeferredBlock<Block> BLOODY_PLANK_FENCE_GATE = registerBlock("bloody_plank_fence_gate", () -> new FenceGateBlock(WoodType.ACACIA, BlockBehaviour.Properties.of()
-            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.WOOD)){
+            .strength(2f).sound(SoundType.WOOD)){
         @Override
         public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
             return true;
@@ -427,7 +427,7 @@ public class ModBlocks {
         }
     });
     public static final DeferredBlock<Block> BLOODY_PLANK_WALL = registerBlock("bloody_plank_wall", () -> new WallBlock(BlockBehaviour.Properties.of()
-            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.WOOD)){
+            .strength(2f).sound(SoundType.WOOD)){
         @Override
         public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
             return true;
@@ -444,7 +444,7 @@ public class ModBlocks {
         }
     });
     public static final DeferredBlock<Block> BLOODY_PLANK_PRESSURE_PLATE = registerBlock("bloody_plank_pressure_plate", () -> new PressurePlateBlock(BlockSetType.OAK, BlockBehaviour.Properties.of()
-            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE)){
+            .strength(2f).sound(SoundType.STONE)){
         @Override
         public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
             return true;
@@ -461,7 +461,7 @@ public class ModBlocks {
         }
     });
     public static final DeferredBlock<Block> BLOODY_PLANK_BUTTON = registerBlock("bloody_plank_button", () -> new ButtonBlock(BlockSetType.OAK, 20, BlockBehaviour.Properties.of()
-            .strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE).noCollission()){
+            .strength(2f).sound(SoundType.STONE).noCollission()){
         @Override
         public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
             return true;
