@@ -26,7 +26,6 @@ import net.minecraft.world.level.border.WorldBorder;
 import net.minecraft.world.level.dimension.DimensionType;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraft.world.level.portal.DimensionTransition;
-import net.minecraft.world.level.portal.PortalShape;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
@@ -139,12 +138,12 @@ public class GhostlyPortalBlock extends Block implements Portal {
     @Nullable
     @Override
     public DimensionTransition getPortalDestination(ServerLevel level, Entity entity, BlockPos pos) {
-        ResourceKey<Level> resourcekey = level.dimension() == ModDimensions.GHOSTLY_LEVEL_KEY ? Level.OVERWORLD : ModDimensions.GHOSTLY_LEVEL_KEY;
+        ResourceKey<Level> resourcekey = level.dimension() == ModDimensions.AFTERLIFE_LEVEL_KEY ? Level.OVERWORLD : ModDimensions.AFTERLIFE_LEVEL_KEY;
         ServerLevel serverlevel = level.getServer().getLevel(resourcekey);
         if (serverlevel == null) {
             return null;
         } else {
-            boolean flag = serverlevel.dimension() == ModDimensions.GHOSTLY_LEVEL_KEY;
+            boolean flag = serverlevel.dimension() == ModDimensions.AFTERLIFE_LEVEL_KEY;
             WorldBorder worldborder = serverlevel.getWorldBorder();
             double d0 = DimensionType.getTeleportationScale(level.dimensionType(), serverlevel.dimensionType());
             BlockPos blockpos = worldborder.clampToBounds(entity.getX() * d0, entity.getY(), entity.getZ() * d0);

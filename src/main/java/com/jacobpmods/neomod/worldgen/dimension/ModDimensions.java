@@ -24,15 +24,15 @@ import java.util.OptionalLong;
 
 public class ModDimensions {
 
-    public static final ResourceKey<LevelStem> GHOSTLY_KEY = ResourceKey.create(Registries.LEVEL_STEM,
-            ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID, "ghostly"));
-    public static final ResourceKey<Level> GHOSTLY_LEVEL_KEY = ResourceKey.create(Registries.DIMENSION,
-            ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID, "ghostly"));
-    public static final ResourceKey<DimensionType> GHOSTLY_DIM_TYPE = ResourceKey.create(Registries.DIMENSION_TYPE,
-            ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID, "ghostly_type"));
+    public static final ResourceKey<LevelStem> AFTERLIFE_KEY = ResourceKey.create(Registries.LEVEL_STEM,
+            ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID, "afterlife"));
+    public static final ResourceKey<Level> AFTERLIFE_LEVEL_KEY = ResourceKey.create(Registries.DIMENSION,
+            ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID, "afterlife"));
+    public static final ResourceKey<DimensionType> AFTERLIFE_DIM_TYPE = ResourceKey.create(Registries.DIMENSION_TYPE,
+            ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID, "afterlife_type"));
 
     public static void bootstrapType(BootstrapContext<DimensionType> context) {
-        context.register(GHOSTLY_DIM_TYPE, new DimensionType(
+        context.register(AFTERLIFE_DIM_TYPE, new DimensionType(
                 OptionalLong.of(18000), // fixedTime
                 false, // hasSkylight
                 false, // hasCeiling
@@ -57,7 +57,7 @@ public class ModDimensions {
 
         NoiseBasedChunkGenerator wrappedChunkGenerator = new NoiseBasedChunkGenerator(
                 new FixedBiomeSource(biomeRegistry.getOrThrow(ModBiomes.GHOSTLY_BIOME)),
-                noiseGenSettings.getOrThrow(ModNoiseGeneratorSettings.GHOSTLY_DIMENSION_GENERATION)
+                noiseGenSettings.getOrThrow(ModNoiseGeneratorSettings.AFTERLIFE_DIMENSION_GENERATION)
         );
 
         //ORIGINAL
@@ -84,13 +84,13 @@ public class ModDimensions {
                                         Climate.parameters(0.4F, 0.3F, 0.2F, 0.1F, 0.0F, 0.0F, 0.0F), biomeRegistry.getOrThrow(Biomes.DARK_FOREST))*/
 
                         ))),
-                noiseGenSettings.getOrThrow(ModNoiseGeneratorSettings.GHOSTLY_DIMENSION_GENERATION));
+                noiseGenSettings.getOrThrow(ModNoiseGeneratorSettings.AFTERLIFE_DIMENSION_GENERATION));
 
         //Putting wrappedChunkGenerator for the last argument in this statement will make it so only the provided biome to be in the dimension
         //Using noiseBasedChunkGenerator will allow multiple biomes in the dimension
-        LevelStem stem = new LevelStem(dimTypes.getOrThrow(ModDimensions.GHOSTLY_DIM_TYPE), noiseBasedChunkGenerator);
+        LevelStem stem = new LevelStem(dimTypes.getOrThrow(ModDimensions.AFTERLIFE_DIM_TYPE), noiseBasedChunkGenerator);
 
-        context.register(GHOSTLY_KEY, stem);
+        context.register(AFTERLIFE_KEY, stem);
     }
 
 }

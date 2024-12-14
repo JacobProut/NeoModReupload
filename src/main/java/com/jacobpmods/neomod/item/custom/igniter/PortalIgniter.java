@@ -26,7 +26,7 @@ public class PortalIgniter extends Item {
 
     @Override
     public @NotNull InteractionResult useOn(UseOnContext context) {
-        if (context.getLevel().dimension() == Level.OVERWORLD || context.getLevel().dimension() == ModDimensions.GHOSTLY_LEVEL_KEY) {
+        if (context.getLevel().dimension() == Level.OVERWORLD || context.getLevel().dimension() == ModDimensions.AFTERLIFE_LEVEL_KEY) {
             BlockPos framePos = context.getClickedPos().relative(context.getClickedFace());
             Optional<GhostlyPortalShape> optional = findPortalShape(context.getLevel(), framePos, shape -> shape.isValid() && shape.getPortalBlocks() == 0, Direction.Axis.X);
             if (optional.isPresent()) {
@@ -35,7 +35,7 @@ public class PortalIgniter extends Item {
             }
         }
 
-        if (context.getLevel().dimension() == Level.END || context.getLevel().dimension() == ModDimensions.GHOSTLY_LEVEL_KEY) {
+        if (context.getLevel().dimension() == Level.END || context.getLevel().dimension() == ModDimensions.AFTERLIFE_LEVEL_KEY) {
             BlockPos framePos = context.getClickedPos().relative(context.getClickedFace());
             Optional<GhostlyPortalShape> optional = findPortalShape(context.getLevel(), framePos, shape -> shape.isValid() && shape.getPortalBlocks() == 0, Direction.Axis.X);
             if (optional.isPresent()) {

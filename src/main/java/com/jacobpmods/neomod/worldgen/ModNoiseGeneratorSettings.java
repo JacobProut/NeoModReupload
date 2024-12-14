@@ -12,8 +12,8 @@ import net.minecraft.world.level.levelgen.NoiseGeneratorSettings;
 import net.minecraft.world.level.levelgen.NoiseSettings;
 
 public class ModNoiseGeneratorSettings {
-    public static final ResourceKey<NoiseGeneratorSettings> GHOSTLY_DIMENSION_GENERATION = ResourceKey.create(
-            Registries.NOISE_SETTINGS, ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID,"ghostly_dim")
+    public static final ResourceKey<NoiseGeneratorSettings> AFTERLIFE_DIMENSION_GENERATION = ResourceKey.create(
+            Registries.NOISE_SETTINGS, ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID,"afterlife_dim")
     );
 
     public static void bootstrap(BootstrapContext<NoiseGeneratorSettings> context) {
@@ -22,7 +22,7 @@ public class ModNoiseGeneratorSettings {
         NoiseGeneratorSettings settings =  NoiseGeneratorSettings.overworld(context, false, true);
 
         //Ghostly Biome
-        context.register(GHOSTLY_DIMENSION_GENERATION,
+        context.register(AFTERLIFE_DIMENSION_GENERATION,
                 new NoiseGeneratorSettings(
                         new NoiseSettings(0, 384, 1, 2),
                         ModBlocks.GHOSTLY_STONE.get().defaultBlockState(),
