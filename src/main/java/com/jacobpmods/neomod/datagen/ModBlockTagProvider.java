@@ -12,8 +12,9 @@ import java.util.concurrent.CompletableFuture;
 
 import static com.jacobpmods.neomod.util.ModTags.Blocks.*;
 import static net.minecraft.tags.BlockTags.*;
-import static net.neoforged.neoforge.common.Tags.Blocks.NEEDS_NETHERITE_TOOL;
-import static net.neoforged.neoforge.common.Tags.Blocks.ORES;
+import static net.minecraft.tags.BlockTags.FENCES;
+import static net.minecraft.tags.BlockTags.FENCE_GATES;
+import static net.neoforged.neoforge.common.Tags.Blocks.*;
 
 public class ModBlockTagProvider extends BlockTagsProvider {
     public ModBlockTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
@@ -411,6 +412,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.GHOSTLY_PORTAL_BLOCK.get());
         tag(PORTAL_FRAME)
                 .add(ModBlocks.BONE_BRICK.get());
+
+        tag(PLAYER_WORKSTATIONS_CRAFTING_TABLES)
+                .add(ModBlocks.OTHERWORLDLY_CRAFTING_TABLE.get());
 
 
         tag(CLIMBABLE)

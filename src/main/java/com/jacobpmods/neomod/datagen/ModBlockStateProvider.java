@@ -24,6 +24,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         System.out.println("Registering block states and models");
+        craftingTable(ModBlocks.OTHERWORLDLY_CRAFTING_TABLE.get());
+
         //ORES
         blockWithItem(ModBlocks.NEXON_BLOCK);
         blockWithItem(ModBlocks.NEXON_ORE_BLOCK);
@@ -102,9 +104,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         buttonBlock(((ButtonBlock) ModBlocks.BONE_BRICK_BUTTON.get()), blockTexture(ModBlocks.BONE_BRICK.get()));
 
 
-        System.out.println("Block states and models:logBlock-axisBlock's");
-
-
         blockItem(ModBlocks.LOG_GHOSTLY);
         logBlock(((RotatedPillarBlock) ModBlocks.LOG_GHOSTLY.get()));
         blockItem(ModBlocks.WOOD_GHOSTLY);
@@ -167,6 +166,24 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         simpleBlock(ModBlocks.GHOSTLY_PORTAL_BLOCK.get());
    }
+
+    public void craftingTable(Block block) {
+        String name = BuiltInRegistries.BLOCK.getKey(block).getPath(); // Get block's registry name (e.g., "otherworldly_crafting_table")
+
+        // Define the custom model with specific textures for each face
+        ModelFile craftingTableModel = this.models().cube(
+                name,
+                modLoc("block/" + name + "_top"),      // Bottom texture
+                modLoc("block/" + name + "_top"),      // Top texture
+                modLoc("block/" + name),               // Front texture
+                modLoc("block/" + name + "_side"),     // Right side texture
+                modLoc("block/" + name + "_side"),     // Back texture
+                modLoc("block/" + name + "_side")      // Left side texture
+        ).texture("particle", modLoc("block/" + name)); // Use front texture for particles
+
+        // Add BlockState variants to bind this model to the block
+        this.simpleBlock(block, craftingTableModel);
+    }
 
     public void makeBush(SweetBerryBushBlock block, String modelName, String textureName) {
         Function<BlockState, ConfiguredModel[]> function = state -> states(state, modelName, textureName);

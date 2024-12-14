@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "neomod:block/otherworldly_crafting_table_top",
+    "east": "neomod:block/otherworldly_crafting_table_side",
+    "north": "neomod:block/otherworldly_crafting_table",
+    "particle": "neomod:block/otherworldly_crafting_table",
+    "south": "neomod:block/otherworldly_crafting_table_side",
+    "up": "neomod:block/otherworldly_crafting_table_top",
+    "west": "neomod:block/otherworldly_crafting_table_side"
+  }
+}

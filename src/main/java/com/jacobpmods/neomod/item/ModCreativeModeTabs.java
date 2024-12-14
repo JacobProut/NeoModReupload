@@ -20,6 +20,8 @@ public class ModCreativeModeTabs {
                     .icon(() -> new ItemStack(ModItems.nexon.get()))
                     .title(Component.translatable("itemGroup.neomod.modded_items_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModBlocks.OTHERWORLDLY_CRAFTING_TABLE);
+
                         output.accept(ModItems.SPEED_APPLE.get());
                         output.accept(ModItems.FIRE_BALL.get());
 

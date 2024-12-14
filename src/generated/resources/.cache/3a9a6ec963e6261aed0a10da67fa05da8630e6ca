@@ -1,4 +1,4 @@
-// 1.21.1	2024-12-13T21:12:18.4833925	Block States: neomod
+// 1.21.1	2024-12-13T23:13:26.6846909	Block States: neomod
 8cfe0cb1d0351921f092950e6942916bfe2806aa assets/neomod/blockstates/bloody_door.json
 7cdda68cd3b983e7648bc220e1950f59e5edd79d assets/neomod/blockstates/bloody_grass_block.json
 38cd5a8f9f9dfea6a001af7bdd29bcdbff0bda8b assets/neomod/blockstates/bloody_leaves.json
@@ -64,6 +64,7 @@ d84822744b0de810b197cd89759fae9a47cdb1b6 assets/neomod/blockstates/log_ghostly.j
 2f48aea5100ac63721989351687a92b91482877d assets/neomod/blockstates/nexon_block.json
 d34b5c989753a8bdac2e670369b909a0bb60eb02 assets/neomod/blockstates/nexon_ore_block.json
 ca9e6a7cfc1afc9828f752c54cdd389cd9291f2d assets/neomod/blockstates/oozing_flower.json
+c102dd1e1a1afb44d507051ba6a4a713406119bc assets/neomod/blockstates/otherworldly_crafting_table.json
 325d8ed5f9edc4aac59b6565b024cda1ab979dae assets/neomod/blockstates/planks_bloody.json
 f95ceec255f9672ca3ff59024e16075f454b5abe assets/neomod/blockstates/planks_ghostly.json
 c728f5978bc9c86325572418e5277a630531c906 assets/neomod/blockstates/shattered_fragment_block.json
@@ -228,6 +229,7 @@ c81bae0ff7e538514c778eea74ea5777fa05fc06 assets/neomod/models/block/log_ghostly.
 4d2a35e4ed5e10c2c7f058937492ebcbdbe8f05b assets/neomod/models/block/nexon_block.json
 16d87e0b2aaadd1a979075459257a99e23d58e3d assets/neomod/models/block/nexon_ore_block.json
 f6bb19a45f653522328e4e35b4fbedb2bb4875e9 assets/neomod/models/block/oozing_flower.json
+db88ee179552333c054b082d1a7a85a9819d53bc assets/neomod/models/block/otherworldly_crafting_table.json
 7331d45e1b8879e554e4bc0d7fd91cc4c5b147d9 assets/neomod/models/block/planks_bloody.json
 fbb05c9253b2f7b0bb5716f8da27133d503a3e6f assets/neomod/models/block/planks_ghostly.json
 b0438dae30520e3648396e10692ca48683590536 assets/neomod/models/block/shattered_fragment_block.json

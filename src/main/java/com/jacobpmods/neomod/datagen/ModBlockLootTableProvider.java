@@ -32,6 +32,7 @@ public class ModBlockLootTableProvider  extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
+        dropSelf(ModBlocks.OTHERWORLDLY_CRAFTING_TABLE.get());
         //Ores and ore blocks
         dropSelf(ModBlocks.NEXON_BLOCK.get());
         dropSelf(ModBlocks.NEXON_ORE_BLOCK.get());

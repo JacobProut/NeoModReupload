@@ -1,5 +1,6 @@
-// 1.21.1	2024-12-13T21:12:18.4873922	Tags for minecraft:block mod id neomod
+// 1.21.1	2024-12-13T22:36:34.6279241	Tags for minecraft:block mod id neomod
 ea8afe13f0b348eb2afb8ffa0bfd0deb675d03d0 data/c/tags/block/ores.json
+0a97454125fc991ddd02f7d92133371e0c3be723 data/c/tags/block/player_workstations/crafting_tables.json
 30f421389cc533849eac372c7edad97938c38a42 data/minecraft/tags/block/climbable.json
 f5fbb319f25c4056dadc32c54493627182dc4ab6 data/minecraft/tags/block/dirt.json
 3967cc6dbeefd9fa657ef9aaa0e5b59f6d672fde data/minecraft/tags/block/doors.json
