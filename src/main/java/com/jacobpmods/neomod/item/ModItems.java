@@ -2,6 +2,7 @@ package com.jacobpmods.neomod.item;
 
 import com.jacobpmods.neomod.FirstNeoMod;
 import com.jacobpmods.neomod.block.ModBlocks;
+import com.jacobpmods.neomod.block.custom.FuelItem;
 import com.jacobpmods.neomod.entity.ModEntities;
 import com.jacobpmods.neomod.item.custom.ModArmorItem;
 import com.jacobpmods.neomod.item.custom.curiosItems.RingOfUndeadStrength;
@@ -23,6 +24,9 @@ public class ModItems {
 
     public static final DeferredItem<Item> SPEED_APPLE = ITEMS.register("speedapple", () -> new speedapple(new Item.Properties().food(new FoodProperties.Builder().nutrition(4).saturationModifier(0.3F).build())));
     public static final DeferredItem<PortalIgniter> FIRE_BALL = ITEMS.register("throwablefireball", PortalIgniter::new);
+
+    //Fuel Items
+    public static final DeferredItem<Item> SPIRIT_COAL = ITEMS.registerItem("spirit_coal", properties -> new FuelItem(properties, 2400), new Item.Properties());
 
 
     public static final DeferredItem<Item> nexon = ITEMS.register("nexon", () -> new Item(new Item.Properties()));

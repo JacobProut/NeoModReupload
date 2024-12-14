@@ -1,5 +1,6 @@
-// 1.21.1	2024-12-12T16:03:53.566001	Tags for minecraft:item mod id neomod
+// 1.21.1	2024-12-13T20:24:37.834885	Tags for minecraft:item mod id neomod
 99e3ecf881372712ee4070fce2cde0b7d9b9ffd8 data/minecraft/tags/item/axes.json
+7e1ad7b5d5234846ed4e578f8fc31df032e787b0 data/minecraft/tags/item/coals.json
 36dcdedddc5bfb63bd5ae422ad572034886e9cb3 data/minecraft/tags/item/enchantable/armor.json
 cbfc5be5d17fa02940ad0def0a39af984d12377f data/minecraft/tags/item/enchantable/chest_armor.json
 3b36e43466f0f2476a08fd836fd0a6edc1f6c02e data/minecraft/tags/item/enchantable/durability.json

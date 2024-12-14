@@ -46,6 +46,9 @@ public class ModBlocks {
     public static final DeferredBlock<Block> SHATTERED_FRAGMENT_BLOCK = registerBlock("shattered_fragment_block", () ->new Block(BlockBehaviour.Properties.of()
             .strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST_CLUSTER)));
 
+    public static final DeferredBlock<Block> SPIRIT_COAL_ORE_BLOCK = registerBlock("spirit_coal_ore_block", () ->new Block(BlockBehaviour.Properties.of()
+            .strength(4f).requiresCorrectToolForDrops().sound(SoundType.CALCITE)));
+
 
 
     //Grass & Dirt Blocks

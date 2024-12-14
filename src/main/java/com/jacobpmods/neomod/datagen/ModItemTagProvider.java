@@ -98,5 +98,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.NEXON_LEGGINGS.get())
                 .add(ModItems.NEXON_BOOTS.get());
 
+        tag(COALS)
+                .add(ModItems.SPIRIT_COAL.get());
     }
 }

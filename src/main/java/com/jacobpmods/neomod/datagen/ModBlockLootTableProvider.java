@@ -39,6 +39,8 @@ public class ModBlockLootTableProvider  extends BlockLootSubProvider {
         dropSelf(ModBlocks.SHATTERED_FRAGMENT_BLOCK.get());
         this.add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get(),
                 block -> createMultipleOreDrops(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get(), ModItems.SHATTERED_FRAGMENT.get(), 1, 2));
+        this.add(ModBlocks.SPIRIT_COAL_ORE_BLOCK.get(),
+                block -> createMultipleOreDrops(ModBlocks.SPIRIT_COAL_ORE_BLOCK.get(), ModItems.SPIRIT_COAL.get(), 1, 3));
 
         //Grass & Dirt Blocks
         this.add(ModBlocks.GHOSTLY_GRASS_BLOCK.get(), block -> this.createSilkTouchDispatchTable(

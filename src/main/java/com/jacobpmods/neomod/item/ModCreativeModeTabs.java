@@ -53,13 +53,16 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.NEXON_LEGGINGS);
                         output.accept(ModItems.NEXON_BOOTS);
 
-                        //Nexon Blocks
-                        output.accept(ModBlocks.NEXON_BLOCK);
+                        //Ore
                         output.accept(ModBlocks.NEXON_ORE_BLOCK);
-
-
+                        output.accept(ModBlocks.NEXON_BLOCK);
                         output.accept(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK);
+                        output.accept(ModBlocks.SHATTERED_FRAGMENT_BLOCK);
                         output.accept(ModItems.SHATTERED_FRAGMENT);
+                        output.accept(ModBlocks.SPIRIT_COAL_ORE_BLOCK);
+                        //output.accept(ModBlocks.SPIRIT_COAL_BLOCK);
+                        output.accept(ModItems.SPIRIT_COAL);
+
                         output.accept(ModItems.SKELETAL_BLOOD_SHARD);
 
                         //Grass Blocks
@@ -261,6 +264,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.NEXON_ORE_BLOCK);
                         output.accept(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK);
                         output.accept(ModBlocks.SHATTERED_FRAGMENT_BLOCK);
+                        output.accept(ModBlocks.SPIRIT_COAL_ORE_BLOCK);
 
                     }).build());
 

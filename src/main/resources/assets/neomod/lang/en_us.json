@@ -46,6 +46,7 @@
   "item.neomod.blood_bone_sword": "Enhanced Blood Bone Sword",
 
   "item.neomod.shattered_fragment": "Shattered Fragment",
+  "item.neomod.spirit_coal": "Spirit Coal",
   "item.neomod.skeletal_blood_shard": "Skeletal Blood Shard",
   "item.neomod.undead_key": "Undead Key",
 
@@ -59,6 +60,7 @@
   "block.neomod.nexon_ore_block": "Nexon Ore Block",
   "block.neomod.shattered_fragment_ore_block": "Shattered Fragment Ore Block",
   "block.neomod.shattered_fragment_block": "Shattered Fragment Block",
+  "block.neomod.spirit_coal_ore_block": "Spirit Coal Ore Block",
 
   "block.neomod.ghostly_grass_block": "Ghostly Grass",
   "block.neomod.ghostly_grass_top": "Ghostly Grass top",

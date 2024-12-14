@@ -27,6 +27,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.NEXON_BLOCK.get())
                 .add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get())
                 .add(ModBlocks.SHATTERED_FRAGMENT_BLOCK.get())
+                .add(ModBlocks.SPIRIT_COAL_ORE_BLOCK.get())
                 .add(ModBlocks.GHOSTLY_STONE.get())
                 .add(ModBlocks.GHOSTLY_STONE_SLAB.get())
                 .add(ModBlocks.GHOSTLY_STONE_STAIRS.get())
@@ -56,6 +57,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.NEXON_BLOCK.get())
                 .add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get())
                 .add(ModBlocks.SHATTERED_FRAGMENT_BLOCK.get())
+                .add(ModBlocks.SPIRIT_COAL_ORE_BLOCK.get())
                 .add(ModBlocks.GHOSTLY_STONE.get())
                 .add(ModBlocks.GHOSTLY_STONE_SLAB.get())
                 .add(ModBlocks.GHOSTLY_STONE_STAIRS.get())
@@ -95,6 +97,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.NEXON_BLOCK.get())
                 .add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get())
                 .add(ModBlocks.SHATTERED_FRAGMENT_BLOCK.get())
+                .add(ModBlocks.SPIRIT_COAL_ORE_BLOCK.get())
                 .add(ModBlocks.GHOSTLY_STONE.get())
                 .add(ModBlocks.GHOSTLY_STONE_SLAB.get())
                 .add(ModBlocks.GHOSTLY_STONE_STAIRS.get())
@@ -134,6 +137,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.NEXON_BLOCK.get())
                 .add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get())
                 .add(ModBlocks.SHATTERED_FRAGMENT_BLOCK.get())
+                .add(ModBlocks.SPIRIT_COAL_ORE_BLOCK.get())
                 .add(ModBlocks.GHOSTLY_STONE.get())
                 .add(ModBlocks.GHOSTLY_STONE_SLAB.get())
                 .add(ModBlocks.GHOSTLY_STONE_STAIRS.get())
@@ -173,6 +177,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.NEXON_BLOCK.get())
                 .add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get())
                 .add(ModBlocks.SHATTERED_FRAGMENT_BLOCK.get())
+                .add(ModBlocks.SPIRIT_COAL_ORE_BLOCK.get())
                 .add(ModBlocks.GHOSTLY_STONE.get())
                 .add(ModBlocks.GHOSTLY_STONE_SLAB.get())
                 .add(ModBlocks.GHOSTLY_STONE_STAIRS.get())
@@ -212,6 +217,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.NEXON_BLOCK.get())
                 .add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get())
                 .add(ModBlocks.SHATTERED_FRAGMENT_BLOCK.get())
+                .add(ModBlocks.SPIRIT_COAL_ORE_BLOCK.get())
                 .add(ModBlocks.GHOSTLY_STONE.get())
                 .add(ModBlocks.GHOSTLY_STONE_SLAB.get())
                 .add(ModBlocks.GHOSTLY_STONE_STAIRS.get())
@@ -251,6 +257,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.NEXON_BLOCK.get())
                 .add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get())
                 .add(ModBlocks.SHATTERED_FRAGMENT_BLOCK.get())
+                .add(ModBlocks.SPIRIT_COAL_ORE_BLOCK.get())
                 .add(ModBlocks.GHOSTLY_STONE.get())
                 .add(ModBlocks.GHOSTLY_STONE_SLAB.get())
                 .add(ModBlocks.GHOSTLY_STONE_STAIRS.get())
@@ -290,6 +297,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.NEXON_ORE_BLOCK.get())
                 .add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get())
                 .add(ModBlocks.SHATTERED_FRAGMENT_BLOCK.get())
+                .add(ModBlocks.SPIRIT_COAL_ORE_BLOCK.get())
                 .add(ModBlocks.GHOSTLY_STONE.get())
                 .add(ModBlocks.GHOSTLY_STONE_SLAB.get())
                 .add(ModBlocks.GHOSTLY_STONE_STAIRS.get())
@@ -324,7 +332,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.BONE_BRICK_PRESSURE_PLATE.get());
         tag(ORES)
                 .add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get())
-                .add(ModBlocks.NEXON_ORE_BLOCK.get());
+                .add(ModBlocks.NEXON_ORE_BLOCK.get())
+                .add(ModBlocks.SPIRIT_COAL_ORE_BLOCK.get());
 
 
         tag(MINEABLE_WITH_AXE)
