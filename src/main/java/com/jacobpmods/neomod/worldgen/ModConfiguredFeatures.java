@@ -34,6 +34,7 @@ public class ModConfiguredFeatures {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> AFTERLIFE_SHATTERED_FRAGMENT_ORE_KEY = registerKey("afterlife_shattered_fragment");
     public static final ResourceKey<ConfiguredFeature<?, ?>> AFTERLIFE_SPIRIT_COAL_ORE_KEY = registerKey("afterlife_spirit_coal_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> AFTERLIFE_IRON_ORE_KEY = registerKey("afterlife_iron_ore");
 
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
@@ -71,9 +72,10 @@ public class ModConfiguredFeatures {
     //used for overworld
    /* List<OreConfiguration.TargetBlockState> ghostlyShatteredFragmentOre = List.of(
             OreConfiguration.target(ghostlyStoneReplacable, ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get().defaultBlockState()));*/
-
+                                                                                                                                                                                        //Number of blocks that can spawn in a vein
     register(context, AFTERLIFE_SHATTERED_FRAGMENT_ORE_KEY, Feature.ORE, new OreConfiguration(ghostlyStoneReplacable, ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get().defaultBlockState(), 4));
     register(context, AFTERLIFE_SPIRIT_COAL_ORE_KEY, Feature.ORE, new OreConfiguration(ghostlyStoneReplacable, ModBlocks.SPIRIT_COAL_ORE_BLOCK.get().defaultBlockState(), 12));
+    register(context, AFTERLIFE_IRON_ORE_KEY, Feature.ORE, new OreConfiguration(ghostlyStoneReplacable, ModBlocks.AFTERLIFE_IRON_ORE_BLOCK.get().defaultBlockState(), 10));
 
     }
     //Random Patch info

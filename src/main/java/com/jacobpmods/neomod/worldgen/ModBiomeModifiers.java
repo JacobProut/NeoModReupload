@@ -25,6 +25,7 @@ public class ModBiomeModifiers {
 
     public static final ResourceKey<BiomeModifier> ADD_AFTERLIFE_SHATTERED_FRAGMENT_ORE = registerKey("add_afterlife_dimension_shattered_fragment_ore");
     public static final ResourceKey<BiomeModifier> ADD_AFTERLIFE_SPIRIT_COAL_ORE = registerKey("add_afterlife_dimension_spirit_coal_ore");
+    public static final ResourceKey<BiomeModifier> ADD_AFTERLIFE_IRON_ORE = registerKey("add_afterlife_dimension_iron_ore");
 
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
@@ -66,16 +67,19 @@ public class ModBiomeModifiers {
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.SKULL_N_BONES_BLOCK_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
+        //Ores
         context.register(ADD_AFTERLIFE_SHATTERED_FRAGMENT_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 HolderSet.direct(biomes.getOrThrow(ModBiomes.GHOSTLY_BIOME), biomes.getOrThrow(ModBiomes.BLOOD_GARDEN_BIOME)),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.AFTERLIFE_DIMENSION_SHATTERED_FRAGMENT_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
-
         context.register(ADD_AFTERLIFE_SPIRIT_COAL_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 HolderSet.direct(biomes.getOrThrow(ModBiomes.GHOSTLY_BIOME), biomes.getOrThrow(ModBiomes.BLOOD_GARDEN_BIOME)),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.AFTERLIFE_DIMENSION_SPIRIT_COAL_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
-
+        context.register(ADD_AFTERLIFE_IRON_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(ModBiomes.GHOSTLY_BIOME), biomes.getOrThrow(ModBiomes.BLOOD_GARDEN_BIOME)),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.AFTERLIFE_DIMENSION_IRON_ORE_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
     }
     private static ResourceKey<BiomeModifier> registerKey(String name) {
         return ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID, name));
