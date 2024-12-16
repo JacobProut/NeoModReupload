@@ -26,7 +26,7 @@
                   }
                 }
               ],
-              "name": "neomod:afterlife_iron_ore_block"
+              "name": "neomod:afterlife_gold_ore_block"
             },
             {
               "type": "minecraft:item",
@@ -57,5 +57,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "neomod:blocks/afterlife_iron_ore_block"
+  "random_sequence": "neomod:blocks/afterlife_gold_ore_block"
 }

@@ -57,6 +57,9 @@ public class ModCreativeModeTabs {
 
                         //Ore
                         output.accept(ModBlocks.AFTERLIFE_IRON_ORE_BLOCK);
+                        output.accept(ModBlocks.AFTERLIFE_GOLD_ORE_BLOCK);
+                        output.accept(ModBlocks.AFTERLIFE_DIAMOND_ORE_BLOCK);
+                        output.accept(ModBlocks.AFTERLIFE_REDSTONE_ORE_BLOCK);
                         output.accept(ModBlocks.NEXON_ORE_BLOCK);
                         output.accept(ModBlocks.NEXON_BLOCK);
                         output.accept(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK);
@@ -264,6 +267,9 @@ public class ModCreativeModeTabs {
 
                         //Ore and Ore Blocks
                         output.accept(ModBlocks.AFTERLIFE_IRON_ORE_BLOCK);
+                        output.accept(ModBlocks.AFTERLIFE_GOLD_ORE_BLOCK);
+                        output.accept(ModBlocks.AFTERLIFE_DIAMOND_ORE_BLOCK);
+                        output.accept(ModBlocks.AFTERLIFE_REDSTONE_ORE_BLOCK);
                         output.accept(ModBlocks.NEXON_BLOCK);
                         output.accept(ModBlocks.NEXON_ORE_BLOCK);
                         output.accept(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK);

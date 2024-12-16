@@ -39,6 +39,12 @@ public class ModBlocks {
     //Ores and Ore Blocks
     public static final DeferredBlock<Block> AFTERLIFE_IRON_ORE_BLOCK = registerBlock("afterlife_iron_ore_block", () ->new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_ORE)
             .strength(4f).requiresCorrectToolForDrops().sound(SoundType.TUFF)));
+    public static final DeferredBlock<Block> AFTERLIFE_GOLD_ORE_BLOCK = registerBlock("afterlife_gold_ore_block", () ->new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GOLD_ORE)
+            .strength(4f).requiresCorrectToolForDrops().sound(SoundType.NETHER_GOLD_ORE)));
+    public static final DeferredBlock<Block> AFTERLIFE_DIAMOND_ORE_BLOCK = registerBlock("afterlife_diamond_ore_block", () ->new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIAMOND_ORE)
+            .strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
+    public static final DeferredBlock<Block> AFTERLIFE_REDSTONE_ORE_BLOCK = registerBlock("afterlife_redstone_ore_block", () ->new Block(BlockBehaviour.Properties.of()
+            .strength(4f).requiresCorrectToolForDrops().sound(SoundType.NETHER_GOLD_ORE)));
     public static final DeferredBlock<Block> NEXON_BLOCK = registerBlock("nexon_block", () ->new Block(BlockBehaviour.Properties.of()
             .strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST_CLUSTER)));
     public static final DeferredBlock<Block> NEXON_ORE_BLOCK = registerBlock("nexon_ore_block", () ->new Block(BlockBehaviour.Properties.of()

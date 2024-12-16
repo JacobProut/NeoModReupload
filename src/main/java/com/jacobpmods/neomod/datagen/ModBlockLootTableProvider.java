@@ -37,7 +37,16 @@ public class ModBlockLootTableProvider  extends BlockLootSubProvider {
         //Ores and ore blocks
         dropSelf(ModBlocks.AFTERLIFE_IRON_ORE_BLOCK.get());
         this.add(ModBlocks.AFTERLIFE_IRON_ORE_BLOCK.get(),
-                block -> createMultipleOreDrops(ModBlocks.AFTERLIFE_IRON_ORE_BLOCK.get(), Items.IRON_ORE, 1, 2));
+                block -> createMultipleOreDrops(ModBlocks.AFTERLIFE_IRON_ORE_BLOCK.get(), Items.RAW_GOLD, 1, 2));
+        dropSelf(ModBlocks.AFTERLIFE_GOLD_ORE_BLOCK.get());
+        this.add(ModBlocks.AFTERLIFE_GOLD_ORE_BLOCK.get(),
+                block -> createMultipleOreDrops(ModBlocks.AFTERLIFE_GOLD_ORE_BLOCK.get(), Items.RAW_GOLD, 1, 2));
+        dropSelf(ModBlocks.AFTERLIFE_DIAMOND_ORE_BLOCK.get());
+        this.add(ModBlocks.AFTERLIFE_DIAMOND_ORE_BLOCK.get(),
+                block -> createMultipleOreDrops(ModBlocks.AFTERLIFE_DIAMOND_ORE_BLOCK.get(), Items.DIAMOND, 1, 2));
+        dropSelf(ModBlocks.AFTERLIFE_REDSTONE_ORE_BLOCK.get());
+        this.add(ModBlocks.AFTERLIFE_REDSTONE_ORE_BLOCK.get(),
+                block -> createMultipleOreDrops(ModBlocks.AFTERLIFE_REDSTONE_ORE_BLOCK.get(), Items.REDSTONE, 2, 5));
         dropSelf(ModBlocks.NEXON_BLOCK.get());
         dropSelf(ModBlocks.NEXON_ORE_BLOCK.get());
         this.add(ModBlocks.NEXON_ORE_BLOCK.get(),

@@ -26,7 +26,7 @@
                   }
                 }
               ],
-              "name": "neomod:afterlife_iron_ore_block"
+              "name": "neomod:afterlife_redstone_ore_block"
             },
             {
               "type": "minecraft:item",
@@ -35,8 +35,8 @@
                   "add": false,
                   "count": {
                     "type": "minecraft:uniform",
-                    "max": 2.0,
-                    "min": 1.0
+                    "max": 5.0,
+                    "min": 2.0
                   },
                   "function": "minecraft:set_count"
                 },
@@ -49,7 +49,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "minecraft:raw_gold"
+              "name": "minecraft:redstone"
             }
           ]
         }
@@ -57,5 +57,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "neomod:blocks/afterlife_iron_ore_block"
+  "random_sequence": "neomod:blocks/afterlife_redstone_ore_block"
 }

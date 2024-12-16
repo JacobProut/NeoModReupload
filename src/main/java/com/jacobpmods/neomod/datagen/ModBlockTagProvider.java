@@ -25,6 +25,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
     protected void addTags(HolderLookup.Provider provider) {
         tag(NEEDS_NEXON_TOOL)
                 .add(ModBlocks.AFTERLIFE_IRON_ORE_BLOCK.get())
+                .add(ModBlocks.AFTERLIFE_GOLD_ORE_BLOCK.get())
+                .add(ModBlocks.AFTERLIFE_DIAMOND_ORE_BLOCK.get())
+                .add(ModBlocks.AFTERLIFE_REDSTONE_ORE_BLOCK.get())
                 .add(ModBlocks.NEXON_ORE_BLOCK.get())
                 .add(ModBlocks.NEXON_BLOCK.get())
                 .add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get())
@@ -57,6 +60,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(NEEDS_NETHERITE_TOOL)
                 .add(ModBlocks.AFTERLIFE_IRON_ORE_BLOCK.get())
+                .add(ModBlocks.AFTERLIFE_GOLD_ORE_BLOCK.get())
+                .add(ModBlocks.AFTERLIFE_DIAMOND_ORE_BLOCK.get())
+                .add(ModBlocks.AFTERLIFE_REDSTONE_ORE_BLOCK.get())
                 .add(ModBlocks.NEXON_ORE_BLOCK.get())
                 .add(ModBlocks.NEXON_BLOCK.get())
                 .add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get())
@@ -99,6 +105,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(INCORRECT_FOR_DIAMOND_TOOL)
                 .add(ModBlocks.AFTERLIFE_IRON_ORE_BLOCK.get())
+                .add(ModBlocks.AFTERLIFE_GOLD_ORE_BLOCK.get())
+                .add(ModBlocks.AFTERLIFE_DIAMOND_ORE_BLOCK.get())
+                .add(ModBlocks.AFTERLIFE_REDSTONE_ORE_BLOCK.get())
                 .add(ModBlocks.NEXON_ORE_BLOCK.get())
                 .add(ModBlocks.NEXON_BLOCK.get())
                 .add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get())
@@ -141,6 +150,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(INCORRECT_FOR_IRON_TOOL)
                 .add(ModBlocks.AFTERLIFE_IRON_ORE_BLOCK.get())
+                .add(ModBlocks.AFTERLIFE_GOLD_ORE_BLOCK.get())
+                .add(ModBlocks.AFTERLIFE_DIAMOND_ORE_BLOCK.get())
+                .add(ModBlocks.AFTERLIFE_REDSTONE_ORE_BLOCK.get())
                 .add(ModBlocks.NEXON_ORE_BLOCK.get())
                 .add(ModBlocks.NEXON_BLOCK.get())
                 .add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get())
@@ -183,6 +195,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(INCORRECT_FOR_GOLD_TOOL)
                 .add(ModBlocks.AFTERLIFE_IRON_ORE_BLOCK.get())
+                .add(ModBlocks.AFTERLIFE_GOLD_ORE_BLOCK.get())
+                .add(ModBlocks.AFTERLIFE_DIAMOND_ORE_BLOCK.get())
+                .add(ModBlocks.AFTERLIFE_REDSTONE_ORE_BLOCK.get())
                 .add(ModBlocks.NEXON_ORE_BLOCK.get())
                 .add(ModBlocks.NEXON_BLOCK.get())
                 .add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get())
@@ -225,6 +240,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(INCORRECT_FOR_STONE_TOOL)
                 .add(ModBlocks.AFTERLIFE_IRON_ORE_BLOCK.get())
+                .add(ModBlocks.AFTERLIFE_GOLD_ORE_BLOCK.get())
+                .add(ModBlocks.AFTERLIFE_DIAMOND_ORE_BLOCK.get())
+                .add(ModBlocks.AFTERLIFE_REDSTONE_ORE_BLOCK.get())
                 .add(ModBlocks.NEXON_ORE_BLOCK.get())
                 .add(ModBlocks.NEXON_BLOCK.get())
                 .add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get())
@@ -267,6 +285,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(INCORRECT_FOR_WOODEN_TOOL)
                 .add(ModBlocks.AFTERLIFE_IRON_ORE_BLOCK.get())
+                .add(ModBlocks.AFTERLIFE_GOLD_ORE_BLOCK.get())
+                .add(ModBlocks.AFTERLIFE_DIAMOND_ORE_BLOCK.get())
+                .add(ModBlocks.AFTERLIFE_REDSTONE_ORE_BLOCK.get())
                 .add(ModBlocks.NEXON_ORE_BLOCK.get())
                 .add(ModBlocks.NEXON_BLOCK.get())
                 .add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get())
@@ -309,6 +330,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.AFTERLIFE_IRON_ORE_BLOCK.get())
+                .add(ModBlocks.AFTERLIFE_GOLD_ORE_BLOCK.get())
+                .add(ModBlocks.AFTERLIFE_DIAMOND_ORE_BLOCK.get())
+                .add(ModBlocks.AFTERLIFE_REDSTONE_ORE_BLOCK.get())
                 .add(ModBlocks.NEXON_BLOCK.get())
                 .add(ModBlocks.NEXON_ORE_BLOCK.get())
                 .add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get())
@@ -349,6 +373,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.BONE_BRICK_PRESSURE_PLATE.get());
         tag(ORES)
                 .add(ModBlocks.AFTERLIFE_IRON_ORE_BLOCK.get())
+                .add(ModBlocks.AFTERLIFE_GOLD_ORE_BLOCK.get())
+                .add(ModBlocks.AFTERLIFE_DIAMOND_ORE_BLOCK.get())
+                .add(ModBlocks.AFTERLIFE_REDSTONE_ORE_BLOCK.get())
                 .add(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get())
                 .add(ModBlocks.NEXON_ORE_BLOCK.get())
                 .add(ModBlocks.SPIRIT_COAL_ORE_BLOCK.get());

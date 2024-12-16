@@ -58,6 +58,10 @@
   "block.neomod.otherworldly_crafting_table": "Otherworldly Crafting Table",
 
   "block.neomod.afterlife_iron_ore_block": "Afterlife Iron Ore Block",
+  "block.neomod.afterlife_diamond_ore_block": "Afterlife Diamond Ore Block",
+  "block.neomod.afterlife_gold_ore_block": "Afterlife Gold Ore Block",
+  "block.neomod.afterlife_redstone_ore_block": "Afterlife Redstone Ore Block",
+
   "block.neomod.nexon_block": "Nexon Block",
   "block.neomod.nexon_ore_block": "Nexon Ore Block",
   "block.neomod.shattered_fragment_ore_block": "Shattered Fragment Ore Block",

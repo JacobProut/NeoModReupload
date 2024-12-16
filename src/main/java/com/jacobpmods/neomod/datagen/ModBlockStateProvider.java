@@ -28,6 +28,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         //ORES
         blockWithItem(ModBlocks.AFTERLIFE_IRON_ORE_BLOCK);
+        blockWithItem(ModBlocks.AFTERLIFE_GOLD_ORE_BLOCK);
+        blockWithItem(ModBlocks.AFTERLIFE_DIAMOND_ORE_BLOCK);
+        blockWithItem(ModBlocks.AFTERLIFE_REDSTONE_ORE_BLOCK);
         blockWithItem(ModBlocks.NEXON_BLOCK);
         blockWithItem(ModBlocks.NEXON_ORE_BLOCK);
         blockWithItem(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK);
