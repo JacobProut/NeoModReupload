@@ -1,4 +1,4 @@
-package com.jacobpmods.neomod.block.custom.blockentities;
+package com.jacobpmods.neomod.block.entity.blockentities;
 
 import com.jacobpmods.neomod.block.entity.custom.PedestalBlockEntity;
 import com.jacobpmods.neomod.item.ModItems;

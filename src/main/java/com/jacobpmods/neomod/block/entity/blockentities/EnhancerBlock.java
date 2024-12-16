@@ -1,4 +1,4 @@
-package com.jacobpmods.neomod.block.custom.blockentities;
+package com.jacobpmods.neomod.block.entity.blockentities;
 
 import com.jacobpmods.neomod.block.entity.ModBlockEntities;
 import com.jacobpmods.neomod.block.entity.custom.EnhancerBlockEntity;

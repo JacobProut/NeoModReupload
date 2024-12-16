@@ -1,6 +1,6 @@
 package com.jacobpmods.neomod.block.entity.custom;
 
-import com.jacobpmods.neomod.block.custom.blockentities.EnhancerBlock;
+import com.jacobpmods.neomod.block.entity.blockentities.EnhancerBlock;
 import com.jacobpmods.neomod.block.entity.ModBlockEntities;
 import com.jacobpmods.neomod.recipe.EnhancerRecipe;
 import com.jacobpmods.neomod.recipe.EnhancerRecipeInput;
