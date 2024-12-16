@@ -28,8 +28,8 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> SKULL_N_BONES_BLOCK_KEY = registerKey("skull_n_bones_block_placed");
 
     //Ore Gen
-    public static final ResourceKey<PlacedFeature> GHOSTLY_DIMENSION_SHATTERED_FRAGMENT_ORE_PLACED_KEY = registerKey("shattered_fragment_ore_placed");
-    public static final ResourceKey<PlacedFeature> GHOSTLY_DIMENSION_SPIRIT_COAL_ORE_PLACED_KEY = registerKey("spirit_coal_ore_placed");
+    public static final ResourceKey<PlacedFeature> AFTERLIFE_DIMENSION_SHATTERED_FRAGMENT_ORE_PLACED_KEY = registerKey("shattered_fragment_ore_placed");
+    public static final ResourceKey<PlacedFeature> AFTERLIFE_DIMENSION_SPIRIT_COAL_ORE_PLACED_KEY = registerKey("spirit_coal_ore_placed");
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -56,11 +56,11 @@ public class ModPlacedFeatures {
                         BiomeFilter.biome()
                 ));
 
-        register(context, GHOSTLY_DIMENSION_SHATTERED_FRAGMENT_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.GHOSTLY_SHATTERED_FRAGMENT_ORE_KEY),
+        register(context, AFTERLIFE_DIMENSION_SHATTERED_FRAGMENT_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.AFTERLIFE_SHATTERED_FRAGMENT_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(10, //Value for amount wanted spawning in chunk
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(5), VerticalAnchor.absolute(45)))); //HeightRangePlacement has another option called .triangle instead of .uniform . Look into it if curious
 
-        register(context, GHOSTLY_DIMENSION_SPIRIT_COAL_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.GHOSTLY_SPIRIT_COAL_ORE_KEY),
+        register(context, AFTERLIFE_DIMENSION_SPIRIT_COAL_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.AFTERLIFE_SPIRIT_COAL_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(15, //Value for amount wanted spawning in chunk
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(5), VerticalAnchor.absolute(100)))); //HeightRangePlacement has another option called .triangle instead of .uniform . Look into it if curious
 

@@ -4,13 +4,11 @@ import com.jacobpmods.neomod.FirstNeoMod;
 import com.jacobpmods.neomod.block.ModBlocks;
 import com.jacobpmods.neomod.block.custom.blocks.BloodBoneBlossomBushBlock;
 import com.jacobpmods.neomod.worldgen.tree.treeDecorators.BloodVineDecorator;
-import com.mojang.logging.LogUtils;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
@@ -21,7 +19,6 @@ import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvi
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
-import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 
 import java.util.List;
 
@@ -35,8 +32,8 @@ public class ModConfiguredFeatures {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> SKULL_N_BONE_BLOCK = registerKey("skull_n_bone_block");
 
-    public static final ResourceKey<ConfiguredFeature<?, ?>> GHOSTLY_SHATTERED_FRAGMENT_ORE_KEY = registerKey("ghostly_shattered_fragment");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> GHOSTLY_SPIRIT_COAL_ORE_KEY = registerKey("ghostly_spirit_coal_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> AFTERLIFE_SHATTERED_FRAGMENT_ORE_KEY = registerKey("afterlife_shattered_fragment");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> AFTERLIFE_SPIRIT_COAL_ORE_KEY = registerKey("afterlife_spirit_coal_ore");
 
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
@@ -75,8 +72,8 @@ public class ModConfiguredFeatures {
    /* List<OreConfiguration.TargetBlockState> ghostlyShatteredFragmentOre = List.of(
             OreConfiguration.target(ghostlyStoneReplacable, ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get().defaultBlockState()));*/
 
-    register(context, GHOSTLY_SHATTERED_FRAGMENT_ORE_KEY, Feature.ORE, new OreConfiguration(ghostlyStoneReplacable, ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get().defaultBlockState(), 4));
-    register(context, GHOSTLY_SPIRIT_COAL_ORE_KEY, Feature.ORE, new OreConfiguration(ghostlyStoneReplacable, ModBlocks.SPIRIT_COAL_ORE_BLOCK.get().defaultBlockState(), 12));
+    register(context, AFTERLIFE_SHATTERED_FRAGMENT_ORE_KEY, Feature.ORE, new OreConfiguration(ghostlyStoneReplacable, ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get().defaultBlockState(), 4));
+    register(context, AFTERLIFE_SPIRIT_COAL_ORE_KEY, Feature.ORE, new OreConfiguration(ghostlyStoneReplacable, ModBlocks.SPIRIT_COAL_ORE_BLOCK.get().defaultBlockState(), 12));
 
     }
     //Random Patch info
