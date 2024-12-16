@@ -27,6 +27,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         craftingTable(ModBlocks.OTHERWORLDLY_CRAFTING_TABLE.get());
 
         //ORES
+        blockWithItem(ModBlocks.AFTERLIFE_IRON_ORE_BLOCK);
         blockWithItem(ModBlocks.NEXON_BLOCK);
         blockWithItem(ModBlocks.NEXON_ORE_BLOCK);
         blockWithItem(ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK);

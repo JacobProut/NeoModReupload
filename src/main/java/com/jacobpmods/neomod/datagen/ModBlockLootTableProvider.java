@@ -10,6 +10,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
@@ -34,6 +35,9 @@ public class ModBlockLootTableProvider  extends BlockLootSubProvider {
     protected void generate() {
         dropSelf(ModBlocks.OTHERWORLDLY_CRAFTING_TABLE.get());
         //Ores and ore blocks
+        dropSelf(ModBlocks.AFTERLIFE_IRON_ORE_BLOCK.get());
+        this.add(ModBlocks.AFTERLIFE_IRON_ORE_BLOCK.get(),
+                block -> createMultipleOreDrops(ModBlocks.AFTERLIFE_IRON_ORE_BLOCK.get(), Items.IRON_ORE, 1, 2));
         dropSelf(ModBlocks.NEXON_BLOCK.get());
         dropSelf(ModBlocks.NEXON_ORE_BLOCK.get());
         this.add(ModBlocks.NEXON_ORE_BLOCK.get(),
