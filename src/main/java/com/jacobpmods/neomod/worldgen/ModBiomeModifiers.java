@@ -26,6 +26,9 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_AFTERLIFE_SHATTERED_FRAGMENT_ORE = registerKey("add_afterlife_dimension_shattered_fragment_ore");
     public static final ResourceKey<BiomeModifier> ADD_AFTERLIFE_SPIRIT_COAL_ORE = registerKey("add_afterlife_dimension_spirit_coal_ore");
     public static final ResourceKey<BiomeModifier> ADD_AFTERLIFE_IRON_ORE = registerKey("add_afterlife_dimension_iron_ore");
+    public static final ResourceKey<BiomeModifier> ADD_AFTERLIFE_GOLD_ORE = registerKey("add_afterlife_dimension_gold_ore");
+    public static final ResourceKey<BiomeModifier> ADD_AFTERLIFE_DIAMOND_ORE = registerKey("add_afterlife_dimension_diamond_ore");
+    public static final ResourceKey<BiomeModifier> ADD_AFTERLIFE_REDSTONE_ORE = registerKey("add_afterlife_dimension_redstone_ore");
 
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
@@ -79,6 +82,18 @@ public class ModBiomeModifiers {
         context.register(ADD_AFTERLIFE_IRON_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 HolderSet.direct(biomes.getOrThrow(ModBiomes.GHOSTLY_BIOME), biomes.getOrThrow(ModBiomes.BLOOD_GARDEN_BIOME)),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.AFTERLIFE_DIMENSION_IRON_ORE_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
+        context.register(ADD_AFTERLIFE_GOLD_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(ModBiomes.GHOSTLY_BIOME), biomes.getOrThrow(ModBiomes.BLOOD_GARDEN_BIOME)),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.AFTERLIFE_DIMENSION_GOLD_ORE_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
+        context.register(ADD_AFTERLIFE_DIAMOND_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(ModBiomes.GHOSTLY_BIOME), biomes.getOrThrow(ModBiomes.BLOOD_GARDEN_BIOME)),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.AFTERLIFE_DIMENSION_DIAMOND_ORE_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
+        context.register(ADD_AFTERLIFE_REDSTONE_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(ModBiomes.GHOSTLY_BIOME), biomes.getOrThrow(ModBiomes.BLOOD_GARDEN_BIOME)),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.AFTERLIFE_DIMENSION_REDSTONE_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
     }
     private static ResourceKey<BiomeModifier> registerKey(String name) {

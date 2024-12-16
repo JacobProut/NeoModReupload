@@ -31,6 +31,9 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> AFTERLIFE_DIMENSION_SHATTERED_FRAGMENT_ORE_PLACED_KEY = registerKey("shattered_fragment_ore_placed");
     public static final ResourceKey<PlacedFeature> AFTERLIFE_DIMENSION_SPIRIT_COAL_ORE_PLACED_KEY = registerKey("spirit_coal_ore_placed");
     public static final ResourceKey<PlacedFeature> AFTERLIFE_DIMENSION_IRON_ORE_PLACED_KEY = registerKey("iron_ore_placed");
+    public static final ResourceKey<PlacedFeature> AFTERLIFE_DIMENSION_GOLD_ORE_PLACED_KEY = registerKey("gold_ore_placed");
+    public static final ResourceKey<PlacedFeature> AFTERLIFE_DIMENSION_DIAMOND_ORE_PLACED_KEY = registerKey("diamond_ore_placed");
+    public static final ResourceKey<PlacedFeature> AFTERLIFE_DIMENSION_REDSTONE_ORE_PLACED_KEY = registerKey("redstone_ore_placed");
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -57,18 +60,25 @@ public class ModPlacedFeatures {
                         BiomeFilter.biome()
                 ));
 
+        //ORES
         register(context, AFTERLIFE_DIMENSION_SHATTERED_FRAGMENT_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.AFTERLIFE_SHATTERED_FRAGMENT_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(10, //Value for amount wanted spawning in chunk
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(5), VerticalAnchor.absolute(45)))); //HeightRangePlacement has another option called .triangle instead of .uniform . Look into it if curious
-
         register(context, AFTERLIFE_DIMENSION_SPIRIT_COAL_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.AFTERLIFE_SPIRIT_COAL_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(15, //Value for amount wanted spawning in chunk
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(5), VerticalAnchor.absolute(100)))); //HeightRangePlacement has another option called .triangle instead of .uniform . Look into it if curious
-
         register(context, AFTERLIFE_DIMENSION_IRON_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.AFTERLIFE_IRON_ORE_KEY),
-                ModOrePlacement.commonOrePlacement(12, //Value for amount wanted spawning in chunk
-                        HeightRangePlacement.uniform(VerticalAnchor.absolute(5), VerticalAnchor.absolute(100)))); //HeightRangePlacement has another option called .triangle instead of .uniform . Look into it if curious
-
+                ModOrePlacement.commonOrePlacement(25, //Value for amount wanted spawning in chunk
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(5), VerticalAnchor.absolute(160)))); //HeightRangePlacement has another option called .triangle instead of .uniform . Look into it if curious
+        register(context, AFTERLIFE_DIMENSION_GOLD_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.AFTERLIFE_GOLD_ORE_KEY),
+                ModOrePlacement.commonOrePlacement(35, //Value for amount wanted spawning in chunk
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(8), VerticalAnchor.absolute(256)))); //HeightRangePlacement has another option called .triangle instead of .uniform . Look into it if curious
+        register(context, AFTERLIFE_DIMENSION_DIAMOND_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.AFTERLIFE_DIAMOND_ORE_KEY),
+                ModOrePlacement.commonOrePlacement(7, //Value for amount wanted spawning in chunk
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(5), VerticalAnchor.absolute(80)))); //HeightRangePlacement has another option called .triangle instead of .uniform . Look into it if curious
+        register(context, AFTERLIFE_DIMENSION_REDSTONE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.AFTERLIFE_REDSTONE_ORE_KEY),
+                ModOrePlacement.commonOrePlacement(8, //Value for amount wanted spawning in chunk
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(5), VerticalAnchor.absolute(32)))); //HeightRangePlacement has another option called .triangle instead of .uniform . Look into it if curious
     }
 
 

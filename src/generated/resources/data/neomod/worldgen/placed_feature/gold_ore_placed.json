@@ -1,9 +1,9 @@
 {
-  "feature": "neomod:afterlife_iron_ore",
+  "feature": "neomod:afterlife_gold_ore",
   "placement": [
     {
       "type": "minecraft:count",
-      "count": 25
+      "count": 35
     },
     {
       "type": "minecraft:in_square"
@@ -13,10 +13,10 @@
       "height": {
         "type": "minecraft:uniform",
         "max_inclusive": {
-          "absolute": 160
+          "absolute": 256
         },
         "min_inclusive": {
-          "absolute": 5
+          "absolute": 8
         }
       }
     },
