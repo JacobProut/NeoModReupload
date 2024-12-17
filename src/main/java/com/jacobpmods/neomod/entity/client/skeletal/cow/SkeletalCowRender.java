@@ -3,7 +3,6 @@ package com.jacobpmods.neomod.entity.client.skeletal.cow;
 import com.jacobpmods.neomod.FirstNeoMod;
 import com.jacobpmods.neomod.entity.client.ModModelLayers;
 import com.jacobpmods.neomod.entity.custom.SkeletalCowEntity;
-import com.jacobpmods.neomod.entity.custom.SkeletalZombieEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
