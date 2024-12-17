@@ -1,4 +1,4 @@
-// 1.21.1	2024-12-13T23:12:49.3118226	Item Models: neomod
+// 1.21.1	2024-12-16T17:03:21.426099	Item Models: neomod
 44e12cf0726120f26700d8926b65be0432928d13 assets/neomod/models/item/bloody_door.json
 8fcc148714388bf2313f4f088807ff0e3830d26e assets/neomod/models/item/bloody_plank_button.json
 71af09202ca06b925c9ad8c0e146c22c3cd1dc4f assets/neomod/models/item/bloody_plank_fence.json
@@ -82,6 +82,7 @@ b0b585b09e3ccc2666abbf50c269d9c2cb8133f9 assets/neomod/models/item/oozing_flower
 4b720419000f31900ed4ceb597bbbba2263b2647 assets/neomod/models/item/scythe.json
 01a95c54944bda29ce236e40a26292fc4f14a81c assets/neomod/models/item/shattered_fragment.json
 62736b34b7eb14f7210eb7716af4a357aeb8451c assets/neomod/models/item/skeletal_blood_shard.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/neomod/models/item/skeletal_cow_egg.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/neomod/models/item/skeletal_enderman_egg.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/neomod/models/item/skeletal_guardian_egg.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/neomod/models/item/skeletal_zombie_egg.json

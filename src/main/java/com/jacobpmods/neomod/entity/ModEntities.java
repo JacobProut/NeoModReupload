@@ -1,6 +1,7 @@
 package com.jacobpmods.neomod.entity;
 
 import com.jacobpmods.neomod.FirstNeoMod;
+import com.jacobpmods.neomod.entity.custom.SkeletalCowEntity;
 import com.jacobpmods.neomod.entity.custom.SkeletalEndermanEntity;
 import com.jacobpmods.neomod.entity.custom.SkeletalGuardianEntity;
 import com.jacobpmods.neomod.entity.custom.SkeletalZombieEntity;
@@ -28,6 +29,10 @@ public class ModEntities {
     public static final Supplier<EntityType<SkeletalGuardianEntity>> SKELETAL_GUARDIAN =
             ENTITY_TYPES.register("skeletal_guardian", () -> EntityType.Builder.of(SkeletalGuardianEntity::new, MobCategory.MONSTER)
                     .sized(2f, 4.4f).build("skeletal_guardian"));
+
+    public static final Supplier<EntityType<SkeletalCowEntity>> SKELETAL_COW =
+            ENTITY_TYPES.register("skeletal_cow", () -> EntityType.Builder.of(SkeletalCowEntity::new, MobCategory.MISC)
+                    .sized(2f, 1f).build("skeletal_cow"));
 
 
     public static void register(IEventBus eventBus) {

@@ -91,6 +91,9 @@ public class ModItems {
     public static final DeferredItem<Item> SKELETAL_GUARDIAN_SPAWN_EGG = ITEMS.register("skeletal_guardian_egg",
             () -> new DeferredSpawnEggItem(ModEntities.SKELETAL_GUARDIAN, 0xFFFFFF, 0xD3D3D3, new Item.Properties()));
 
+    public static final DeferredItem<Item> SKELETAL_COW_EGG = ITEMS.register("skeletal_cow_egg",
+            () -> new DeferredSpawnEggItem(ModEntities.SKELETAL_COW, 0xFFFFFF, 0xD3D3D3, new Item.Properties()));
+
 
 
     //Berries

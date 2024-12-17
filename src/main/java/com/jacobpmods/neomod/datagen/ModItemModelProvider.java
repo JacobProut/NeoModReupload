@@ -85,6 +85,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent(ModItems.SKELETAL_ZOMBIE_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         withExistingParent(ModItems.SKELETAL_ENDERMAN_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         withExistingParent(ModItems.SKELETAL_GUARDIAN_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItems.SKELETAL_COW_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 
         //Flowers
         flowerItem(ModBlocks.OOZING_FLOWER);

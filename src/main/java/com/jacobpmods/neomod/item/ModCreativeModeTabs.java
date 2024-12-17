@@ -29,6 +29,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.SKELETAL_ZOMBIE_SPAWN_EGG);
                         output.accept(ModItems.SKELETAL_ENDERMAN_SPAWN_EGG);
                         output.accept(ModItems.SKELETAL_GUARDIAN_SPAWN_EGG);
+                        output.accept(ModItems.SKELETAL_COW_EGG);
 
                         //Tools
                         output.accept(ModItems.SCYTHE);
