@@ -57,7 +57,7 @@ public class SkeletalCowModel extends HierarchicalModel<SkeletalCowEntity> {
         this.root().getAllParts().forEach(ModelPart::resetPose);
         this.applyHeadRotation(netHeadYaw, headPitch);
 
-       // this.animateWalk(SkeletalZombieAnimations.SKELETAL_ZOMBIE_WALK, limbSwing, limbSwingAmount, 1f, 1f); //changes animation speed
+        this.animateWalk(SkeletalCowAnimations.SKELETAL_COW_WALK, limbSwing, limbSwingAmount, 1f, 1f); //changes animation speed
 
       //  this.animate(entity.idleAnimationState, SkeletalZombieAnimations.SKELETAL_ZOMBIE_IDLE, ageInTicks, 1f);
        /// this.animate(entity.attackAnimationState, SkeletalZombieAnimations.SKELETAL_ZOMBIE_ATTACK, ageInTicks, 1f);
