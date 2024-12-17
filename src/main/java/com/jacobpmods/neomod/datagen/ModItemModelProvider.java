@@ -45,6 +45,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+        basicItem(ModItems.UNDEAD_BEEF.get());
         basicItem(ModItems.FIRE_BALL.get());
         basicItem(ModItems.SPEED_APPLE.get());
         basicItem(ModItems.SPIRIT_COAL.get());

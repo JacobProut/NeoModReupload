@@ -22,6 +22,9 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(FirstNeoMod.MOD_ID);
 
+    public static final DeferredItem<Item> UNDEAD_BEEF = ITEMS.register("undead_beef",
+            () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
+                    .nutrition(8).saturationModifier(12.8F).build())));
     public static final DeferredItem<Item> SPEED_APPLE = ITEMS.register("speedapple", () -> new speedapple(new Item.Properties().food(new FoodProperties.Builder().nutrition(4).saturationModifier(0.3F).build())));
     public static final DeferredItem<PortalIgniter> FIRE_BALL = ITEMS.register("throwablefireball", PortalIgniter::new);
 

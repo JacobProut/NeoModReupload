@@ -22,8 +22,9 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.OTHERWORLDLY_CRAFTING_TABLE);
 
-                        output.accept(ModItems.SPEED_APPLE.get());
-                        output.accept(ModItems.FIRE_BALL.get());
+                        output.accept(ModItems.UNDEAD_BEEF);
+                        output.accept(ModItems.SPEED_APPLE);
+                        output.accept(ModItems.FIRE_BALL);
 
                         //Spawn Eggs
                         output.accept(ModItems.SKELETAL_ZOMBIE_SPAWN_EGG);
