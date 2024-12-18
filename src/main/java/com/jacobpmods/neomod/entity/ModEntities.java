@@ -30,8 +30,9 @@ public class ModEntities {
             ENTITY_TYPES.register("skeletal_guardian", () -> EntityType.Builder.of(SkeletalGuardianEntity::new, MobCategory.MONSTER)
                     .sized(2f, 4.4f).build("skeletal_guardian"));
 
+    //Changed MobCategory to Monster to have them spawn
     public static final Supplier<EntityType<SkeletalCowEntity>> SKELETAL_COW =
-            ENTITY_TYPES.register("skeletal_cow", () -> EntityType.Builder.of(SkeletalCowEntity::new, MobCategory.MISC)
+            ENTITY_TYPES.register("skeletal_cow", () -> EntityType.Builder.of(SkeletalCowEntity::new, MobCategory.MONSTER)
                     .sized(2f, 1f).build("skeletal_cow"));
 
 
