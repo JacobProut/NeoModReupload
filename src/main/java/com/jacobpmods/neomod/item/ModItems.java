@@ -2,12 +2,12 @@ package com.jacobpmods.neomod.item;
 
 import com.jacobpmods.neomod.FirstNeoMod;
 import com.jacobpmods.neomod.block.ModBlocks;
+import com.jacobpmods.neomod.blockItems.BloodBoneBerry;
 import com.jacobpmods.neomod.entity.ModEntities;
 import com.jacobpmods.neomod.item.custom.FuelItem;
 import com.jacobpmods.neomod.item.custom.ModArmorItem;
 import com.jacobpmods.neomod.item.custom.curiosItems.RingOfUndeadStrength;
 import com.jacobpmods.neomod.item.custom.curiosItems.SoulSplitNecklace;
-import com.jacobpmods.neomod.blockItems.BloodBoneBerry;
 import com.jacobpmods.neomod.item.custom.food.speedapple;
 import com.jacobpmods.neomod.item.custom.igniter.PortalIgniter;
 import com.jacobpmods.neomod.item.custom.tools.NexonAxe;
@@ -72,10 +72,6 @@ public class ModItems {
             () -> new ModArmorItem(ModArmorMaterials.NEXON, ArmorItem.Type.LEGGINGS, new Item.Properties().fireResistant().durability(ArmorItem.Type.LEGGINGS.getDurability(42))));
     public static final DeferredItem<Item> NEXON_BOOTS = ITEMS.register("nexonboots",
             () -> new ModArmorItem(ModArmorMaterials.NEXON, ArmorItem.Type.BOOTS, new Item.Properties().fireResistant().durability(ArmorItem.Type.BOOTS.getDurability(42))));
-
-    //REPLACE MODARMORMATERIAL WITH CUSTOM BONE ONE
-//    public static final DeferredItem<Item> SKELETAL_HELMET = ITEMS.register("skeletal_helmet",
-//            () -> new ModArmorItem(ModArmorMaterials.SKELETAL, ArmorItem.Type.HELMET, new Item.Properties().fireResistant().durability(ArmorItem.Type.HELMET.getDurability(42))));
 
     public static final DeferredItem<Item> UNDEAD_BONE = ITEMS.register("undead_bone", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> UNDEAD_KEY = ITEMS.register("undead_key", () -> new Item(new Item.Properties()));
