@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "neomod:block/afterlife_wall_torch"
+    },
+    "facing=north": {
+      "model": "neomod:block/afterlife_wall_torch",
+      "y": 270
+    },
+    "facing=south": {
+      "model": "neomod:block/afterlife_wall_torch",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "neomod:block/afterlife_wall_torch",
+      "y": 180
+    }
+  }
+}

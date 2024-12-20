@@ -16,5 +16,8 @@ public class ModParticleData extends ParticleDescriptionProvider {
         this.sprite(ModParticlesTypes.FALLING_BLOOD.get(), ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID, "falling_blood"));
         this.spriteSet(ModParticlesTypes.SPLASH.get(), ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID, "splash"), 4, false);
 
+        this.spriteSet(ModParticlesTypes.AFTERLIFE_TORCH.get(), ResourceLocation.withDefaultNamespace("generic_0"), ResourceLocation.withDefaultNamespace("generic_1"), ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID, "generic_1_mirrored"));
+        this.sprite(ModParticlesTypes.AFTERLIFE_FIRE_FLAME.get(), ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID, "afterlife_fire_flame"));
+
     }
 }

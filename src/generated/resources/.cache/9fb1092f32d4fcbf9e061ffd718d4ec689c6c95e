@@ -1,4 +1,4 @@
-// 1.21.1	2024-12-13T23:35:28.8591974	Recipes
+// 1.21.1	2024-12-20T02:13:36.6644425	Recipes
 b60218b08288aacf52f67fcb352aea51e429daa1 data/neomod/advancement/recipes/building_blocks/bloody_plank_slab.json
 4c2a26a2385a86cb238736ee09bd8771ae237a5c data/neomod/advancement/recipes/building_blocks/bloody_plank_stairs.json
 b9926c059bc306d1d778aec08be24bbd774a678e data/neomod/advancement/recipes/building_blocks/bloody_plank_wall.json
@@ -24,6 +24,7 @@ cca84ab24f45e21e08567d4cb191cc6cd6ad3131 data/neomod/advancement/recipes/decorat
 f8e9cde308f9bce1ce69d4ef450f9f670ba43610 data/neomod/advancement/recipes/decorations/ghostly_plank_fence.json
 bc47dbf36fd9c2dd79265b8aacc767c14ba3e88e data/neomod/advancement/recipes/decorations/ghostly_stone_brick_fence.json
 7afd4155b56a05f2ee98c52327cf0409698006fd data/neomod/advancement/recipes/decorations/ghostly_stone_fence.json
+3aec36c84bfb3e358f4a97bc625b6793c408ea5d data/neomod/advancement/recipes/misc/afterlife_torch.json
 6518f0e64c1c3f2cd06daa2a142160c9ae546ce0 data/neomod/advancement/recipes/misc/nexon.json
 d0a6a65c6e485618a44dfcbb361df24f97701e58 data/neomod/advancement/recipes/misc/nexonboots.json
 63367fe2846e31ce3ecfff5337550ca200ce33ff data/neomod/advancement/recipes/misc/nexonchestplate.json
@@ -66,6 +67,7 @@ f1cadf76cf2937150656fee4d412c9753b241d3b data/neomod/advancement/recipes/redston
 396c26b103a064f5a23ef8536baae9b65ebb2895 data/neomod/advancement/recipes/redstone/ghostly_stone_fence_gate.json
 7e8677f3abc48c79b85619e004d3d57bbb9354b5 data/neomod/advancement/recipes/redstone/ghostly_stone_pressure_plate.json
 d713a6b3892713b5af1e241400eb603b47d3d753 data/neomod/advancement/recipes/redstone/ghostly_trapdoor.json
+21a37611afdb1263fbe5a4fa8157adcd1761bc45 data/neomod/recipe/afterlife_torch.json
 e83bf153f404d7db62d417eb90adc5d3591d1bf2 data/neomod/recipe/bloody_door.json
 67cb0e12ee5bcf226ebeb4197979e7f8d1fcc469 data/neomod/recipe/bloody_plank_button.json
 9a56b7d385407911fbd0fe67d51e04242dab426f data/neomod/recipe/bloody_plank_fence.json

@@ -18,6 +18,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.StandingAndWallBlockItem;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -29,12 +30,17 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+import java.util.Objects;
+import java.util.function.Function;
 import java.util.function.Supplier;
 
 public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(FirstNeoMod.MOD_ID);
 
     public static final DeferredBlock<Block> OTHERWORLDLY_CRAFTING_TABLE = registerBlock("otherworldly_crafting_table", () -> new OtherwordlyCraftingTable(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
+    public static final DeferredBlock<Block> AFTERLIFE_TORCH = register("afterlife_torch", () -> new AfterlifeTorchBlock(Block.Properties.ofFullCopy(Blocks.TORCH)));
+    public static final DeferredBlock<Block> AFTERLIFE_WALL_TORCH = BLOCKS.register("afterlife_wall_torch", () -> new AfterlifeWallTorchBlock(Block.Properties.ofFullCopy(Blocks.WALL_TORCH)));
+
 
     //Ores and Ore Blocks
     public static final DeferredBlock<Block> AFTERLIFE_IRON_ORE_BLOCK = registerBlock("afterlife_iron_ore_block", () ->new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_ORE)
@@ -578,9 +584,6 @@ public class ModBlocks {
             .strength(7f).destroyTime(100000).sound(SoundType.GLASS)));
 
 
-
-
-
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
@@ -591,8 +594,27 @@ public class ModBlocks {
         ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
-
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
+    }
+
+    //used for torch
+    private static <T extends Block> DeferredBlock<T> baseRegister(String name, Supplier<? extends T> block, Function<DeferredBlock<T>, Supplier<? extends Item>> item) {
+        DeferredBlock<T> register = BLOCKS.register(name, block);
+        ModItems.ITEMS.register(name, item.apply(register));
+        return register;
+    }
+    private static <B extends Block> DeferredBlock<B> register(String name, Supplier<B> block) {
+        return baseRegister(name, block, ModBlocks::registerBlockItem);
+    }
+    private static <T extends Block> Supplier<BlockItem> registerBlockItem(final DeferredBlock<T> deferredBlock) {
+        return () -> {
+            DeferredBlock<T> block = Objects.requireNonNull(deferredBlock);
+            if (block == AFTERLIFE_TORCH) {
+                return new StandingAndWallBlockItem(AFTERLIFE_TORCH.get(), AFTERLIFE_WALL_TORCH.get(), new Item.Properties(), Direction.DOWN);
+            } else {
+                return new BlockItem(block.get(), new Item.Properties());
+            }
+        };
     }
 }

@@ -1,0 +1,7 @@
+{
+  "parent": "neomod:block/template_tall_torch",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "torch": "neomod:block/utility/afterlife_torch"
+  }
+}

@@ -8,12 +8,14 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
 
+import java.util.Objects;
 import java.util.function.Function;
 
 public class ModBlockStateProvider extends BlockStateProvider {
@@ -169,8 +171,33 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.SKULL_N_BONES);
 
         simpleBlock(ModBlocks.GHOSTLY_PORTAL_BLOCK.get());
+
+        torchBlock(ModBlocks.AFTERLIFE_TORCH.get(), ModBlocks.AFTERLIFE_WALL_TORCH.get());
    }
 
+    private String blockName(Block block) {
+        return Objects.requireNonNull(BuiltInRegistries.BLOCK.getKey(block)).getPath();
+    }
+    public void torchBlock(Block block, Block wall) {
+        ModelFile torch = this.models()
+                .withExistingParent(blockName(block), this.modLoc("block/template_tall_torch"))
+                .texture("torch", this.modLoc("block/utility/" + blockName(block)))
+                .renderType(ResourceLocation.withDefaultNamespace("cutout"));
+
+        ModelFile wallTorch = this.models()
+                .withExistingParent(blockName(wall), this.modLoc("block/template_tall_wall_torch"))
+                .texture("torch", this.modLoc("block/utility/" + blockName(block)))
+                .renderType(ResourceLocation.withDefaultNamespace("cutout"));
+
+        this.simpleBlock(block, torch);
+
+        getVariantBuilder(wall).forAllStates(state ->
+                ConfiguredModel.builder()
+                        .modelFile(wallTorch)
+                        .rotationY(((int) state.getValue(BlockStateProperties.HORIZONTAL_FACING).toYRot() + 90) % 360)
+                        .build()
+        );
+    }
     public void craftingTable(Block block) {
         String name = BuiltInRegistries.BLOCK.getKey(block).getPath(); // Get block's registry name (e.g., "otherworldly_crafting_table")
 

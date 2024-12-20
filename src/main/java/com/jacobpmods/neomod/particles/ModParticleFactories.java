@@ -1,5 +1,6 @@
 package com.jacobpmods.neomod.particles;
 
+import net.minecraft.client.particle.FlameParticle;
 import net.minecraft.client.particle.ParticleRenderType;
 import net.minecraft.client.particle.SplashParticle;
 import net.minecraft.world.level.material.Fluids;
@@ -28,5 +29,9 @@ public class ModParticleFactories {
             splashParticle.pickSprite(spriteSet);
             return splashParticle;
         });
+
+        event.registerSpriteSet(ModParticlesTypes.AFTERLIFE_TORCH.get(), AfterLifeTorchParticle.Provider::new);
+        event.registerSpriteSet(ModParticlesTypes.AFTERLIFE_FIRE_FLAME.get(), FlameParticle.Provider::new);
+
         }
 }

@@ -42,6 +42,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_bloody_planks", has(ModBlocks.BLOODY_PLANKS.get()))  // Unlock when Bloody Planks are acquired
                 .save(recipeOutput, "neomod:otherworldly_crafting_table_bloody");  // Use a unique recipe name
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.AFTERLIFE_TORCH.get(), 4)
+                .define('S', Items.STICK)  // Define the S for Sticks
+                .define('C', ModItems.SPIRIT_COAL) // C for Spirit Coal
+                .pattern("C")
+                .pattern("S")
+                .unlockedBy("has_spirit_coal", has(ModItems.SPIRIT_COAL.get())).save(recipeOutput); // Use a unique recipe name
 
         //Nexon Block Recipe
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.NEXON_BLOCK.get(), 1)

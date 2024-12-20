@@ -133,6 +133,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         //doors
         basicItem(ModBlocks.GHOSTLY_DOOR.asItem());
         basicItem(ModBlocks.BLOODY_DOOR.asItem());
+
+        this.handheldItem(ModBlocks.AFTERLIFE_TORCH.get().asItem());
+
     }
 
     public void flowerItem(DeferredBlock<Block> block) {

@@ -1,8 +1,10 @@
-// 1.21.1	2024-12-16T00:07:57.7427302	Block States: neomod
+// 1.21.1	2024-12-20T01:35:18.1118353	Block States: neomod
 0ed8a5bf7f8e23879e30338a03c042fb1dd23887 assets/neomod/blockstates/afterlife_diamond_ore_block.json
 e2971aadb92f60502e89a2c4eb19b6f2beed0972 assets/neomod/blockstates/afterlife_gold_ore_block.json
 3fe2e6f7aeddc45b177c50203141986f873862e7 assets/neomod/blockstates/afterlife_iron_ore_block.json
 f21550818d580ca1050f2cb6eb0a9885cdbb4736 assets/neomod/blockstates/afterlife_redstone_ore_block.json
+f5fdd3f9f473ef77ede5611edb9679bfe95838d5 assets/neomod/blockstates/afterlife_torch.json
+0e20ffdd05448b7c2c2caa6af8eba3484d2c803f assets/neomod/blockstates/afterlife_wall_torch.json
 8cfe0cb1d0351921f092950e6942916bfe2806aa assets/neomod/blockstates/bloody_door.json
 7cdda68cd3b983e7648bc220e1950f59e5edd79d assets/neomod/blockstates/bloody_grass_block.json
 38cd5a8f9f9dfea6a001af7bdd29bcdbff0bda8b assets/neomod/blockstates/bloody_leaves.json
@@ -83,6 +85,8 @@ d34a28ffc8f91fe8ac55d802eed4a80360966588 assets/neomod/blockstates/stripped_ghos
 bbc00aaba5501ab615ff2d468d122b384bf9a220 assets/neomod/models/block/afterlife_gold_ore_block.json
 02bf5fbe9e9b219b07a8db8ae3d33b7c214419b0 assets/neomod/models/block/afterlife_iron_ore_block.json
 c9ee383d6bd67b35477ae3c50f3ce3a81779e06b assets/neomod/models/block/afterlife_redstone_ore_block.json
+07043f9822227c9cbfa8b3a81a9190a000fa4bdf assets/neomod/models/block/afterlife_torch.json
+524fc8b3b47a4d6fa4a8a206396fd03012171a48 assets/neomod/models/block/afterlife_wall_torch.json
 baff6bfce11b3fd677c3ca51713b4a757550e079 assets/neomod/models/block/bloody_door_bottom_left.json
 5ec8f1234ccfdf7179f5a54ab72a673b976b6479 assets/neomod/models/block/bloody_door_bottom_left_open.json
 db47776198efbdf1431248038d73191ee97a5916 assets/neomod/models/block/bloody_door_bottom_right.json
