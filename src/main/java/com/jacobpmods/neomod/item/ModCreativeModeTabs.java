@@ -21,6 +21,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("itemGroup.neomod.modded_items_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.OTHERWORLDLY_CRAFTING_TABLE);
+                        output.accept(ModBlocks.TAXIDERMY_TABLE);
                         output.accept(ModBlocks.AFTERLIFE_TORCH.get());
 
                         output.accept(ModItems.UNDEAD_BEEF);

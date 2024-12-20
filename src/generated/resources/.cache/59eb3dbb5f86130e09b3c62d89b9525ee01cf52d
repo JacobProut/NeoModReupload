@@ -1,4 +1,4 @@
-// 1.21.1	2024-12-20T01:35:18.1168352	Loot Tables
+// 1.21.1	2024-12-20T17:41:47.0616543	Loot Tables
 dc93d930236958cfc1f6f61034d895b9d94a33ba data/neomod/loot_table/blocks/afterlife_diamond_ore_block.json
 3f4431a2a3d297fed30c019a7cf11e9e251bf0d9 data/neomod/loot_table/blocks/afterlife_gold_ore_block.json
 8167d569df76ec9151af2219b7f2d8884ea1d4f5 data/neomod/loot_table/blocks/afterlife_iron_ore_block.json
@@ -82,4 +82,5 @@ b63d00230b73657a96df2e3940017f6fa7f12f55 data/neomod/loot_table/blocks/skull_n_b
 5f2f6036581570b7a20880184e642e122e73aeb1 data/neomod/loot_table/blocks/spirit_coal_ore_block.json
 1cc0f80c4717f0499554ce1e6ca0d64b5d0385ed data/neomod/loot_table/blocks/stripped_ghostly_log.json
 bca6b85db088aaa3b9fced8df5365c576a0b93d2 data/neomod/loot_table/blocks/stripped_ghostly_wood.json
+e05a09bdcb387f929a9ad413427c109431482acb data/neomod/loot_table/blocks/taxidermy_table.json
 d4824bd0c5d551876e92da58a18f3d76c86dd0e4 data/neomod/loot_table/blocks/wood_ghostly.json

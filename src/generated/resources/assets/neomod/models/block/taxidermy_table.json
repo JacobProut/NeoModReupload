@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "neomod:block/taxidermy_table_bottom",
+    "east": "neomod:block/taxidermy_table_side",
+    "north": "neomod:block/taxidermy_table",
+    "particle": "neomod:block/taxidermy_table",
+    "south": "neomod:block/taxidermy_table",
+    "up": "neomod:block/taxidermy_table_top",
+    "west": "neomod:block/taxidermy_table_side"
+  }
+}

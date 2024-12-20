@@ -27,6 +27,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         System.out.println("Registering block states and models");
         craftingTable(ModBlocks.OTHERWORLDLY_CRAFTING_TABLE.get());
+        taxidermyTable(ModBlocks.TAXIDERMY_TABLE.get());
 
         //ORES
         blockWithItem(ModBlocks.AFTERLIFE_IRON_ORE_BLOCK);
@@ -197,6 +198,24 @@ public class ModBlockStateProvider extends BlockStateProvider {
                         .rotationY(((int) state.getValue(BlockStateProperties.HORIZONTAL_FACING).toYRot() + 90) % 360)
                         .build()
         );
+    }
+
+    public void taxidermyTable(Block block) {
+        String name = BuiltInRegistries.BLOCK.getKey(block).getPath();
+
+        // Define the custom model with specific textures for each face
+        ModelFile taxidermyTableModel = this.models().cube(
+                name,
+                modLoc("block/" + name + "_bottom"),      // Bottom texture
+                modLoc("block/" + name + "_top"),      // Top texture
+                modLoc("block/" + name),    // Front texture
+                modLoc("block/" + name),     // Right side texture
+                modLoc("block/" + name + "_side"),     // Back texture
+                modLoc("block/" + name + "_side")      // Left side texture
+        ).texture("particle", modLoc("block/" + name)); // Use front texture for particles
+
+        // Add BlockState variants to bind this model to the block
+        this.simpleBlock(block, taxidermyTableModel);
     }
     public void craftingTable(Block block) {
         String name = BuiltInRegistries.BLOCK.getKey(block).getPath(); // Get block's registry name (e.g., "otherworldly_crafting_table")

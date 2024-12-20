@@ -38,6 +38,7 @@ public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(FirstNeoMod.MOD_ID);
 
     public static final DeferredBlock<Block> OTHERWORLDLY_CRAFTING_TABLE = registerBlock("otherworldly_crafting_table", () -> new OtherwordlyCraftingTable(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
+    public static final DeferredBlock<Block> TAXIDERMY_TABLE = registerBlock("taxidermy_table", () ->new Block(BlockBehaviour.Properties.of().strength(1f).sound(SoundType.WOOD)));
     public static final DeferredBlock<Block> AFTERLIFE_TORCH = register("afterlife_torch", () -> new AfterlifeTorchBlock(Block.Properties.ofFullCopy(Blocks.TORCH)));
     public static final DeferredBlock<Block> AFTERLIFE_WALL_TORCH = BLOCKS.register("afterlife_wall_torch", () -> new AfterlifeWallTorchBlock(Block.Properties.ofFullCopy(Blocks.WALL_TORCH)));
 

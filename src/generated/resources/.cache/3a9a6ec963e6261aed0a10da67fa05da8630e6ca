@@ -1,4 +1,4 @@
-// 1.21.1	2024-12-20T01:35:18.1118353	Block States: neomod
+// 1.21.1	2024-12-20T17:44:59.5313882	Block States: neomod
 0ed8a5bf7f8e23879e30338a03c042fb1dd23887 assets/neomod/blockstates/afterlife_diamond_ore_block.json
 e2971aadb92f60502e89a2c4eb19b6f2beed0972 assets/neomod/blockstates/afterlife_gold_ore_block.json
 3fe2e6f7aeddc45b177c50203141986f873862e7 assets/neomod/blockstates/afterlife_iron_ore_block.json
@@ -80,6 +80,7 @@ c728f5978bc9c86325572418e5277a630531c906 assets/neomod/blockstates/shattered_fra
 da86051572f351442ef8263f4314afec871a5592 assets/neomod/blockstates/spirit_coal_ore_block.json
 d34a28ffc8f91fe8ac55d802eed4a80360966588 assets/neomod/blockstates/stripped_ghostly_log.json
 5e49d5955eba7c51b83841b24a39c22131b3b91d assets/neomod/blockstates/stripped_ghostly_wood.json
+b8c73fc14ee550cc0af55e559bd44d08a5963813 assets/neomod/blockstates/taxidermy_table.json
 2057a7bed595263036f6bd5fadae8deb254c6a69 assets/neomod/blockstates/wood_ghostly.json
 9ba18662a49de3beb55bf96bd504a723cf8cb053 assets/neomod/models/block/afterlife_diamond_ore_block.json
 bbc00aaba5501ab615ff2d468d122b384bf9a220 assets/neomod/models/block/afterlife_gold_ore_block.json
@@ -253,6 +254,7 @@ b0f47d0ba2101e32e2939742c7d00d16dd2994d5 assets/neomod/models/block/spirit_coal_
 ce02d3c52ea9f2d8b3f9c29ad6d1f1a71c6be4a3 assets/neomod/models/block/stripped_ghostly_log_horizontal.json
 700fb727636636355f15894c2b5e6a4c4a9b2477 assets/neomod/models/block/stripped_ghostly_wood.json
 008e3f3719a7cd48f3a5204b1c219e41749024b8 assets/neomod/models/block/stripped_ghostly_wood_horizontal.json
+c5c3993aaa95efb9683adb3a04f7737283e5e38b assets/neomod/models/block/taxidermy_table.json
 616a6cc36e0776e5e46395a9bfdcffd6c515b287 assets/neomod/models/block/wood_ghostly.json
 effa0e08f5f0450af69579c3e4c38f70d496cdba assets/neomod/models/block/wood_ghostly_horizontal.json
 a4625523bc8d6c34bc6bdd3f0db4f2abd4ffb9c6 assets/neomod/models/item/afterlife_diamond_ore_block.json
