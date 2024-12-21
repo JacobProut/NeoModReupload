@@ -18,7 +18,8 @@ public class ModToolTiers {
     public static final Tier BONE = new SimpleTier(ModTags.Blocks.INCORRECT_FOR_BONE_TOOL,1200, 11, 5f, 15,
             () -> Ingredient.of(ModItems.UNDEAD_BONE));
 
-
+    public static final Tier GOD = new SimpleTier(ModTags.Blocks.INCORRECT_FOR_GOD_TOOL,4000, 11, 5f, 15,
+            () -> Ingredient.of(ModItems.COIN)); //Need to change
 
 
     }

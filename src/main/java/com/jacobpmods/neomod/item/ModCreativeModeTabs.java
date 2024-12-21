@@ -41,6 +41,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.SCYTHE);
                         output.accept(ModItems.BONE_SWORD);
                         output.accept(ModItems.BLOOD_BONE_SWORD);
+                        output.accept(ModItems.GOD_SWORD);
 
                         //Skeletal Armor
                         //output.accept(ModItems.SKELETAL_HELMET);
@@ -295,6 +296,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.SCYTHE);
                         output.accept(ModItems.BONE_SWORD);
                         output.accept(ModItems.BLOOD_BONE_SWORD);
+                        output.accept(ModItems.GOD_SWORD);
 
                         output.accept(ModItems.NEXON_SWORD);
                         output.accept(ModItems.NEXON_PICKAXE);

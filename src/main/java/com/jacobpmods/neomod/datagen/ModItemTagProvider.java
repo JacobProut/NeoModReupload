@@ -38,13 +38,14 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModBlocks.BLOODY_PLANKS.get().asItem());
 
         tag(SWORDS)
-                //Add enhanced Bone Sword here?
-                //No Bone Sword here because i do not want it to have enchantments
-                .add(ModItems.NEXON_SWORD.get());
-        tag(SWORD_ENCHANTABLE)
-                //Add enhanced Bone Sword here
                 .add(ModItems.NEXON_SWORD.get())
-                .add(ModItems.SCYTHE.get());
+                .add(ModItems.BLOOD_BONE_SWORD.get()) //No Normal Bone Sword here because I do not want it to have enchantments
+                .add(ModItems.GOD_SWORD.get());
+        tag(SWORD_ENCHANTABLE)
+                .add(ModItems.NEXON_SWORD.get())
+                .add(ModItems.SCYTHE.get())
+                .add(ModItems.BLOOD_BONE_SWORD.get())
+                .add(ModItems.GOD_SWORD.get());
 
         tag(PICKAXES)
                 .add(ModItems.NEXON_PICKAXE.get());
@@ -75,7 +76,10 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.NEXON_SWORD.get())
                 .add(ModItems.NEXON_AXE.get())
                 .add(ModItems.NEXON_HOE.get())
-                .add(ModItems.NEXON_SHOVEL.get());
+                .add(ModItems.NEXON_SHOVEL.get())
+                .add(ModItems.BLOOD_BONE_SWORD.get())
+                .add(ModItems.GOD_SWORD.get());
+                //Don't add scythe here. It needs to be repaired with a special item.
                 //.add(ModItems.SKELETAL_HELMET.get());
 
 

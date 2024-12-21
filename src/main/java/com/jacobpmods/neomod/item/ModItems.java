@@ -64,6 +64,11 @@ public class ModItems {
             () -> new SwordItem(ModToolTiers.BONE, new Item.Properties()
                     .attributes(SwordItem.createAttributes(ModToolTiers.BONE, 4, -2.3F))));
 
+    public static final DeferredItem<Item> GOD_SWORD = ITEMS.register("god_sword",
+            () -> new SwordItem(ModToolTiers.GOD, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(ModToolTiers.GOD, 6, -2.2F))));
+
+
     //Armor
     public static final DeferredItem<Item> NEXON_HELMET = ITEMS.register("nexonhelmet",
             () -> new ModArmorItem(ModArmorMaterials.NEXON, ArmorItem.Type.HELMET, new Item.Properties().fireResistant().durability(ArmorItem.Type.HELMET.getDurability(42))));
