@@ -7,6 +7,8 @@
   "blockentity.neomod.pedestal": "Pedestal",
   "blockentity.neomod.enhancer": "Enhancer",
 
+  "entity.minecraft.villager.neomod.taxidermist" : "Taxidermist",
+
   "item.neomod.undead_beef": "Undead Beef",
   "item.neomod.speedapple": "Speed Apple",
   "item.neomod.throwablefireball": "Fire Ball",
