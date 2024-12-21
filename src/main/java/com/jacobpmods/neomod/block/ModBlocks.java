@@ -39,11 +39,14 @@ public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(FirstNeoMod.MOD_ID);
 
     public static final DeferredBlock<Block> OTHERWORLDLY_CRAFTING_TABLE = registerBlock("otherworldly_crafting_table", () -> new OtherwordlyCraftingTable(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE)));
+
+    //Villager Job Blocks
     public static final DeferredBlock<Block> TAXIDERMY_TABLE = registerBlock("taxidermy_table", () ->new Block(BlockBehaviour.Properties.of().strength(1f).sound(SoundType.WOOD)));
+    public static final DeferredBlock<Block> BANK_CHEST = registerBlock("bank_chest", () -> new BankChestBlock(BlockBehaviour.Properties.of().strength(1f).sound(SoundType.WOOD).noOcclusion()));
+
+    //Light Blocks
     public static final DeferredBlock<Block> AFTERLIFE_TORCH = register("afterlife_torch", () -> new AfterlifeTorchBlock(Block.Properties.ofFullCopy(Blocks.TORCH)));
     public static final DeferredBlock<Block> AFTERLIFE_WALL_TORCH = BLOCKS.register("afterlife_wall_torch", () -> new AfterlifeWallTorchBlock(Block.Properties.ofFullCopy(Blocks.WALL_TORCH)));
-
-    public static final DeferredBlock<Block> BANK_CHEST = registerBlock("bank_chest", () -> new BankChestBlock(BlockBehaviour.Properties.of().strength(1f).sound(SoundType.WOOD).noOcclusion()));
 
     //Ores and Ore Blocks
     public static final DeferredBlock<Block> AFTERLIFE_IRON_ORE_BLOCK = registerBlock("afterlife_iron_ore_block", () ->new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_ORE)
@@ -61,7 +64,6 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> SHATTERED_FRAGMENT_ORE_BLOCK = registerBlock("shattered_fragment_ore_block", () ->new Block(BlockBehaviour.Properties.of()
             .strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST_CLUSTER)));
-
     public static final DeferredBlock<Block> SHATTERED_FRAGMENT_BLOCK = registerBlock("shattered_fragment_block", () ->new Block(BlockBehaviour.Properties.of()
             .strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST_CLUSTER)));
 

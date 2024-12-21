@@ -8,6 +8,8 @@
   "blockentity.neomod.enhancer": "Enhancer",
 
   "entity.minecraft.villager.neomod.taxidermist" : "Taxidermist",
+  "entity.minecraft.villager.neomod.banker" : "Banker",
+
 
   "item.neomod.undead_beef": "Undead Beef",
   "item.neomod.speedapple": "Speed Apple",

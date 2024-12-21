@@ -30,6 +30,16 @@ public class ModEvents {
                     new ItemStack(Items.LEATHER, 3), 10, 4, 0.05f
             ));
         }
+        if(event.getType() == ModVillagers.BANKER.value()) {
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+            //trades.get(1) = the first level of villager trades.
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    //Change to custom currency
+                    new ItemCost(Items.EMERALD, 1),
+                    //Count,     //MaxUses,     //Xp       //PriceMultiplier
+                    new ItemStack(Items.DIAMOND, 3), 10, 4, 0.05f
+            ));
+        }
     }
 
     //Commented out. Will use once i have items that the wandering villager can sell.

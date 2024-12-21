@@ -15,7 +15,7 @@ public class ModVillagers {
     public static final DeferredRegister<PoiType> POI_TYPE = DeferredRegister.create(BuiltInRegistries.POINT_OF_INTEREST_TYPE, FirstNeoMod.MOD_ID);
     public static final DeferredRegister<VillagerProfession> VILLAGER_PROFESSIONS = DeferredRegister.create(BuiltInRegistries.VILLAGER_PROFESSION, FirstNeoMod.MOD_ID);
 
-
+    //Taxidermist
     public static final Holder<PoiType> TAXIDERMY_POI = POI_TYPE.register("taxidermy_poi",
             () -> new PoiType(ImmutableSet.copyOf(ModBlocks.TAXIDERMY_TABLE.get().getStateDefinition().getPossibleStates()),
                     1, 1));
@@ -23,6 +23,17 @@ public class ModVillagers {
             () -> new VillagerProfession("taxidermist", holder -> holder.value() == TAXIDERMY_POI.value(),
                     holder -> holder.value() == TAXIDERMY_POI.value(), ImmutableSet.of(), ImmutableSet.of(),
                     SoundEvents.VILLAGER_WORK_LIBRARIAN));
+
+    //Banker
+    public static final Holder<PoiType> BANKER_POI = POI_TYPE.register("banker_poi",
+            () -> new PoiType(ImmutableSet.copyOf(ModBlocks.BANK_CHEST.get().getStateDefinition().getPossibleStates()),
+                    1, 1));
+    public static final Holder<VillagerProfession> BANKER = VILLAGER_PROFESSIONS.register("banker",
+            () -> new VillagerProfession("banker", holder -> holder.value() == BANKER_POI.value(),
+                    holder -> holder.value() == BANKER_POI.value(), ImmutableSet.of(), ImmutableSet.of(),
+                    SoundEvents.VILLAGER_WORK_LIBRARIAN));
+
+
 
 
 
