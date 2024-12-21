@@ -30,10 +30,24 @@ public class ModEvents {
             ));
         }
     }
+
+    //Commented out. Will use once i have items that the wandering villager can sell.
     @SubscribeEvent
     public static void addWanderingTrades(WandererTradesEvent event) {
+      /*  List<VillagerTrades.ItemListing> genericTrades = event.getGenericTrades();
+        List<VillagerTrades.ItemListing> rareTrades = event.getRareTrades();
 
+        genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                new ItemCost(Items.EMERALD, 3),
+                                                            //Count,   //MaxUses,    //Xp         //PriceMultiplier
+                new ItemStack(ModItems.SPEED_APPLE.get(), 2), 10, 4, 0.05f
+        ));
+
+        rareTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                new ItemCost(Items.EMERALD, 3),
+                                                             //Count,   //MaxUses,    //Xp         //PriceMultiplier
+                new ItemStack(ModItems.SPEED_APPLE.get(), 2), 10, 4, 0.05f
+        ));*/
     }
-
 
 }
