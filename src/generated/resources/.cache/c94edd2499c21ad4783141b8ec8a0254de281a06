@@ -1,4 +1,4 @@
-// 1.21.1	2024-12-20T01:43:34.7556743	Item Models: neomod
+// 1.21.1	2024-12-21T01:30:49.240683	Item Models: neomod
 fbf874db12b15ebd1b3414fff8d220b14c6beb9a assets/neomod/models/item/afterlife_torch.json
 44e12cf0726120f26700d8926b65be0432928d13 assets/neomod/models/item/bloody_door.json
 8fcc148714388bf2313f4f088807ff0e3830d26e assets/neomod/models/item/bloody_plank_button.json
@@ -11,6 +11,7 @@ cbd57698a1698700f87943fff09389d5d15b6106 assets/neomod/models/item/bloody_saplin
 265f4d5a866ea24f16b4c812070e68f8f818d86f assets/neomod/models/item/bone_brick_fence.json
 2f7ab555e1b0b38f6a7864aa9e09f832a2644000 assets/neomod/models/item/bone_brick_wall.json
 6b0d2ac40f72b0638561b5e7552379f85339ffc9 assets/neomod/models/item/bone_sword.json
+49211a356bb2adb7d2e1a275b19835c9f4676487 assets/neomod/models/item/coin.json
 31328fefd2901e854713abc99f68a1bacf2a4be3 assets/neomod/models/item/ghostly_cobblestone_button.json
 8194aabde2ce6c62bcb8daa7f56319d649d5d8ae assets/neomod/models/item/ghostly_cobblestone_fence.json
 6860946e82f5c0cf663c20029e095d3047ddaa85 assets/neomod/models/item/ghostly_cobblestone_wall.json

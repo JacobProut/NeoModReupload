@@ -24,6 +24,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.TAXIDERMY_TABLE);
                         output.accept(ModBlocks.AFTERLIFE_TORCH.get());
                         output.accept(ModBlocks.BANK_CHEST);
+                        output.accept(ModItems.COIN);
 
                         output.accept(ModItems.UNDEAD_BEEF);
                         output.accept(ModItems.SPEED_APPLE);
