@@ -35,6 +35,7 @@ public class ModBlockLootTableProvider  extends BlockLootSubProvider {
     protected void generate() {
         dropSelf(ModBlocks.OTHERWORLDLY_CRAFTING_TABLE.get());
         dropSelf(ModBlocks.TAXIDERMY_TABLE.get());
+        dropSelf(ModBlocks.BANK_CHEST.get());
         dropSelf(ModBlocks.AFTERLIFE_TORCH.get());
         dropSelf(ModBlocks.AFTERLIFE_WALL_TORCH.get());
         //Ores and ore blocks

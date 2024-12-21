@@ -24,9 +24,10 @@ public class ModEvents {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             //trades.get(1) = the first level of villager trades.
             trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
-                    new ItemCost(Items.EMERALD, 3),
-                                                                //Count,   //MaxUses,    //Xp         //PriceMultiplier
-                    new ItemStack(ModItems.SPEED_APPLE.get(), 2), 10, 4, 0.05f
+                    //Change to custom currency
+                    new ItemCost(Items.EMERALD, 1),
+                                                  //Count,     //MaxUses,     //Xp       //PriceMultiplier
+                    new ItemStack(Items.LEATHER, 3), 10, 4, 0.05f
             ));
         }
     }

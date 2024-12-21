@@ -1,4 +1,4 @@
-// 1.21.1	2024-12-20T17:44:59.5313882	Block States: neomod
+// 1.21.1	2024-12-20T23:59:39.0432769	Block States: neomod
 0ed8a5bf7f8e23879e30338a03c042fb1dd23887 assets/neomod/blockstates/afterlife_diamond_ore_block.json
 e2971aadb92f60502e89a2c4eb19b6f2beed0972 assets/neomod/blockstates/afterlife_gold_ore_block.json
 3fe2e6f7aeddc45b177c50203141986f873862e7 assets/neomod/blockstates/afterlife_iron_ore_block.json
@@ -261,6 +261,7 @@ a4625523bc8d6c34bc6bdd3f0db4f2abd4ffb9c6 assets/neomod/models/item/afterlife_dia
 85b7fc08b89c44f9142e4ad2a1ce534056aa59c1 assets/neomod/models/item/afterlife_gold_ore_block.json
 54929d268b2b3af5f84f91166cbc3f36ffc83e20 assets/neomod/models/item/afterlife_iron_ore_block.json
 ec9a95e6b958e20865907927fa5483ac27605284 assets/neomod/models/item/afterlife_redstone_ore_block.json
+20a305886fb100b01538fa3c34b34171ca50c022 assets/neomod/models/item/bank_chest.json
 2626dda2dcd65286a49807761dbb5b88953d5a98 assets/neomod/models/item/bloody_grass_block.json
 6d716863f21a549df449490f22efc0527d794438 assets/neomod/models/item/bloody_leaves.json
 feb22de03232d7308a08dc0697b07aebe9f5e8cb assets/neomod/models/item/bloody_plank_fence_gate.json

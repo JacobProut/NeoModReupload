@@ -4,6 +4,7 @@ import com.jacobpmods.neomod.FirstNeoMod;
 import com.jacobpmods.neomod.block.custom.ModFlammableRotatedPillarBlock;
 import com.jacobpmods.neomod.block.custom.ModFlowerBlock;
 import com.jacobpmods.neomod.block.custom.ModSaplingBlock;
+import com.jacobpmods.neomod.block.custom.blocks.villagerJobBlocks.BankChestBlock;
 import com.jacobpmods.neomod.block.entity.blockentities.EnhancerBlock;
 import com.jacobpmods.neomod.block.entity.blockentities.PedestalBlock;
 import com.jacobpmods.neomod.block.custom.blocks.*;
@@ -42,6 +43,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> AFTERLIFE_TORCH = register("afterlife_torch", () -> new AfterlifeTorchBlock(Block.Properties.ofFullCopy(Blocks.TORCH)));
     public static final DeferredBlock<Block> AFTERLIFE_WALL_TORCH = BLOCKS.register("afterlife_wall_torch", () -> new AfterlifeWallTorchBlock(Block.Properties.ofFullCopy(Blocks.WALL_TORCH)));
 
+    public static final DeferredBlock<Block> BANK_CHEST = registerBlock("bank_chest", () -> new BankChestBlock(BlockBehaviour.Properties.of().strength(1f).sound(SoundType.WOOD).noOcclusion()));
 
     //Ores and Ore Blocks
     public static final DeferredBlock<Block> AFTERLIFE_IRON_ORE_BLOCK = registerBlock("afterlife_iron_ore_block", () ->new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_ORE)
