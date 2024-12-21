@@ -50,6 +50,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.SPEED_APPLE.get());
         basicItem(ModItems.SPIRIT_COAL.get());
         basicItem(ModItems.COIN.get());
+        basicItem(ModItems.SHREDDED_LEATHER.get());
+
 
         //Fluids
         basicItem(ModFluids.POISONED_WATER_BUCKET.get());

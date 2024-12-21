@@ -1,4 +1,4 @@
-// 1.21.1	2024-12-21T01:30:49.240683	Item Models: neomod
+// 1.21.1	2024-12-21T01:52:18.4567396	Item Models: neomod
 fbf874db12b15ebd1b3414fff8d220b14c6beb9a assets/neomod/models/item/afterlife_torch.json
 44e12cf0726120f26700d8926b65be0432928d13 assets/neomod/models/item/bloody_door.json
 8fcc148714388bf2313f4f088807ff0e3830d26e assets/neomod/models/item/bloody_plank_button.json
@@ -83,6 +83,7 @@ b0b585b09e3ccc2666abbf50c269d9c2cb8133f9 assets/neomod/models/item/oozing_flower
 1959b294b841ca63537cbf06722b63bfa5c0e8d7 assets/neomod/models/item/poisoned_water_bucket.json
 4b720419000f31900ed4ceb597bbbba2263b2647 assets/neomod/models/item/scythe.json
 01a95c54944bda29ce236e40a26292fc4f14a81c assets/neomod/models/item/shattered_fragment.json
+c98877ce81d73c8aad6a75fe4ba8a6e293e16bf0 assets/neomod/models/item/shredded_leather.json
 62736b34b7eb14f7210eb7716af4a357aeb8451c assets/neomod/models/item/skeletal_blood_shard.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/neomod/models/item/skeletal_cow_egg.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/neomod/models/item/skeletal_enderman_egg.json

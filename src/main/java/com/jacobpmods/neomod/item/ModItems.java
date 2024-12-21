@@ -28,6 +28,7 @@ public class ModItems {
     public static final DeferredItem<PortalIgniter> FIRE_BALL = ITEMS.register("throwablefireball", PortalIgniter::new);
 
     public static final DeferredItem<Item> COIN = ITEMS.register("coin", () -> new Item(new Item.Properties().stacksTo(99)));
+    public static final DeferredItem<Item> SHREDDED_LEATHER = ITEMS.register("shredded_leather", () -> new Item(new Item.Properties().stacksTo(99)));
     //Fuel Items
     public static final DeferredItem<Item> SPIRIT_COAL = ITEMS.registerItem("spirit_coal", properties -> new FuelItem(properties, 2400), new Item.Properties());
 
