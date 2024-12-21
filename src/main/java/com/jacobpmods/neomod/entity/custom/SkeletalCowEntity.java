@@ -16,6 +16,7 @@ import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.animal.Animal;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ItemUtils;
@@ -51,10 +52,16 @@ public class SkeletalCowEntity extends Animal {
     protected void dropCustomDeathLoot(ServerLevel serverLevel, DamageSource damageSource, boolean recentlyHit) {
         super.dropCustomDeathLoot(serverLevel, damageSource, recentlyHit);
 
-        // Add custom drops
-        this.spawnAtLocation(ModItems.UNDEAD_BEEF, this.random.nextInt(3) + 1);
-        //Add Custom leather that works like normal leather? or make it so the leather shards can be exchanged with a villager
+        int beefCount = 1 + this.random.nextInt(2);  // 1-2
+        int shreddedCount = 2 + this.random.nextInt(2);  // 2-3
 
+        // Drop beef
+        ItemStack beefStack = new ItemStack(ModItems.UNDEAD_BEEF.get(), beefCount);
+        serverLevel.addFreshEntity(new ItemEntity(serverLevel, this.getX(), this.getY(), this.getZ(), beefStack));
+
+        // Drop shredded leather
+        ItemStack leatherStack = new ItemStack(ModItems.SHREDDED_LEATHER.get(), shreddedCount);
+        serverLevel.addFreshEntity(new ItemEntity(serverLevel, this.getX() + 0.1, this.getY(), this.getZ(), leatherStack));
     }
 
     @Override
