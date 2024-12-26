@@ -75,9 +75,11 @@ public class ModDimensions {
                                         //5: Weirdness(Used to add variation to biome placement by introducing "weird" or unexpected biome combinations. It is often used for biomes like mushroom fields or other rare/unique terrain.)
                                         //6: Offset( Acts as a multiplier or bias to make certain biomes more likely. This value typically serves as a tiebreaker or an adjustment to ensure a desired biome is selected.)
                                         //7: Noise Point Weight(Affects how this particular set of parameters influences biome placement when blended with others. Higher values increase the "weight" or significance of this parameter set in the overall biome map.)
-                                        Climate.parameters(0.0F, 0.0F, 0.2F, 0.0F, 0.0F, 0.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.GHOSTLY_BIOME)),
+                                        Climate.parameters(0.0F, 0.0F, 0.2F, 0.0F, 0.3F, 0.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.GHOSTLY_BIOME)),
                                 Pair.of(
-                                        Climate.parameters(0.1F, 0.2F, 0.5F, 0.2F, 0.0F, 0.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.BLOOD_GARDEN_BIOME))
+                                        Climate.parameters(0.1F, 0.2F, 0.5F, 0.2F, 0.2F, 0.0F, 0.0F), biomeRegistry.getOrThrow(ModBiomes.BLOOD_GARDEN_BIOME)),
+                                Pair.of(
+                                        Climate.parameters(1.0F, 0.8F, 0.2F, 0.1F, 0.2F, 0.4F, 0.1F), biomeRegistry.getOrThrow(ModBiomes.HEAVENLY_PLAINS_BIOME))
                                 /*Pair.of(
                                         Climate.parameters(0.3F, 0.6F, 0.1F, 0.1F, 0.0F, 0.0F, 0.0F), biomeRegistry.getOrThrow(Biomes.OCEAN)),
                                 Pair.of(

@@ -25,9 +25,12 @@ import java.util.List;
 public class ModConfiguredFeatures {
     // Configured Features -> Placed Features -> Placed inside of world Via BiomeModifiers
     public static final ResourceKey<ConfiguredFeature<?, ?>> GHOSTLY_KEY = registerKey("ghostly");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> OOZING_FLOWER = registerKey("oozing_flower");
-
     public static final ResourceKey<ConfiguredFeature<?, ?>> BLOODY_KEY = registerKey("bloody");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> HEAVENLY_KEY = registerKey("heavenly");
+
+
+    //Bushes and flowers
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OOZING_FLOWER = registerKey("oozing_flower");
     public static final ResourceKey<ConfiguredFeature<?, ?>> BLOOD_BONE_BUSH = registerKey("blood_bone_bush");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> SKULL_N_BONE_BLOCK = registerKey("skull_n_bone_block");

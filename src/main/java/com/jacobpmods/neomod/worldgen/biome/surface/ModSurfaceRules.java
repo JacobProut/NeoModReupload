@@ -20,6 +20,9 @@ public class ModSurfaceRules {
     private static final SurfaceRules.RuleSource BLOOD_BONE_BUSH = makeStateRule(ModBlocks.BLOOD_BONE_FRUIT_BUSH.get());
     private static final SurfaceRules.RuleSource SKULL_N_BONES_BLOCK = makeStateRule(ModBlocks.SKULL_N_BONES.get());
 
+    private static final SurfaceRules.RuleSource MOD_HEAVENLY_GRASS_BLOCK = makeStateRule(ModBlocks.AFTERLIFE_GRASS_BLOCK.get());
+    private static final SurfaceRules.RuleSource MOD_HEAVENLY_DIRT = makeStateRule(ModBlocks.AFTERLIFE_DIRT.get());
+
 
     public static SurfaceRules.RuleSource makeRules() {
         SurfaceRules.ConditionSource isAtOrAboveWaterlevel = SurfaceRules.waterBlockCheck(-1, 0);
@@ -84,6 +87,26 @@ public class ModSurfaceRules {
                 )
         );
 
+        //Heavenly biome
+        SurfaceRules.RuleSource heavenlyRules = SurfaceRules.ifTrue(
+                SurfaceRules.isBiome(ModBiomes.HEAVENLY_PLAINS_BIOME), SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, MOD_HEAVENLY_GRASS_BLOCK)
+
+        );
+        SurfaceRules.RuleSource heavenlyGrassSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(isAtOrAboveWaterlevel, SurfaceRules.sequence(
+                heavenlyRules,
+                MOD_HEAVENLY_GRASS_BLOCK
+        )),MOD_HEAVENLY_DIRT);
+
+        SurfaceRules.RuleSource modHeavenlyBiomeRules = SurfaceRules.sequence(
+                SurfaceRules.ifTrue(SurfaceRules.isBiome(ModBiomes.HEAVENLY_PLAINS_BIOME),
+                        SurfaceRules.sequence(
+                                SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, heavenlyGrassSurface),
+                                SurfaceRules.ifTrue(SurfaceRules.UNDER_FLOOR, MOD_HEAVENLY_DIRT),
+                                MOD_STONE_BLOCK
+                        )
+                )
+        );
+
 
 
 
@@ -92,6 +115,7 @@ public class ModSurfaceRules {
         builder.add(SurfaceRules.ifTrue(SurfaceRules.verticalGradient("bedrock_floor", VerticalAnchor.bottom(), VerticalAnchor.aboveBottom(5)), BEDROCK));
         builder.add(modGhostlyBiomeRules);
         builder.add(modBloodyBiomeRules);
+        builder.add(modHeavenlyBiomeRules);
 
         return SurfaceRules.sequence(builder.build().toArray(SurfaceRules.RuleSource[]::new));
     }

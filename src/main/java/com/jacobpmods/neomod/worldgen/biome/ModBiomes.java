@@ -14,13 +14,13 @@ import net.minecraft.world.level.levelgen.GenerationStep;
 
 public class ModBiomes {
     public static final ResourceKey<Biome> GHOSTLY_BIOME = ResourceKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID, "ghostly_biome"));
-
-    //2nd biome
     public static final ResourceKey<Biome> BLOOD_GARDEN_BIOME = ResourceKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID, "blood_garden_biome"));
+    public static final ResourceKey<Biome> HEAVENLY_PLAINS_BIOME = ResourceKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID, "heavenly_plains_biome"));
 
     public static void bootstrap(BootstrapContext<Biome> context) {
         context.register(GHOSTLY_BIOME, ghostlyBiome(context));
         context.register(BLOOD_GARDEN_BIOME, bloodGarden(context));
+        context.register(HEAVENLY_PLAINS_BIOME, heavenlyPlains(context));
     }
 
     public static void globalOverworldGeneration(BiomeGenerationSettings.Builder builder) {
@@ -58,7 +58,7 @@ public class ModBiomes {
         return new Biome.BiomeBuilder()
                 .hasPrecipitation(false)
                 .downfall(0.8f)
-                .temperature(0.7f)
+                .temperature(0.5f)
                 .generationSettings(biomeBuilder.build())
                 .mobSpawnSettings(spawnBuilder.build())
                 .specialEffects((new BiomeSpecialEffects.Builder())
@@ -94,7 +94,35 @@ public class ModBiomes {
         return new Biome.BiomeBuilder()
                 .hasPrecipitation(false)
                 .downfall(0.8f)
-                .temperature(0.7f)
+                .temperature(0.9f)
+                .generationSettings(biomeBuilder.build())
+                .mobSpawnSettings(spawnBuilder.build())
+                .specialEffects((new BiomeSpecialEffects.Builder())
+                        .waterColor(0xFF0000)
+                        .waterFogColor(0xFF6666)
+                        .skyColor(0xD3D3D3)
+                        .grassColorOverride(0xADD8E6) // Grass color
+                        //.foliageColorOverride(0xd203fc) //Leaves/Ferms n stuff like that
+                        .fogColor(0xD3D3D3)
+                        .ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS)
+                        //.backgroundMusic(Musics.createGameMusic(ModSounds.BAR_BRAWL.getHolder().get())).build())
+                        .build()).build();
+    }
+
+    public static Biome heavenlyPlains(BootstrapContext<Biome> context) {
+        MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
+
+        BiomeDefaultFeatures.farmAnimals(spawnBuilder);
+        BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+
+        BiomeGenerationSettings.Builder biomeBuilder =
+                new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
+        globalOverworldGeneration(biomeBuilder);
+
+        return new Biome.BiomeBuilder()
+                .hasPrecipitation(false)
+                .downfall(0.0f)
+                .temperature(0.2f)
                 .generationSettings(biomeBuilder.build())
                 .mobSpawnSettings(spawnBuilder.build())
                 .specialEffects((new BiomeSpecialEffects.Builder())
