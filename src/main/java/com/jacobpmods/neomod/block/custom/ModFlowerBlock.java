@@ -16,6 +16,7 @@ public class ModFlowerBlock extends FlowerBlock {
     }
     protected boolean mayPlaceOn(BlockState state, BlockGetter level, BlockPos pos) {
         return state.is(ModBlocks.GHOSTLY_GRASS_BLOCK)  || state.is(ModBlocks.GHOSTLY_DIRT)||
-                state.is(ModBlocks.BLOODY_GRASS_BLOCK) ||state.getBlock() instanceof FarmBlock;
+                state.is(ModBlocks.BLOODY_GRASS_BLOCK) || state.is(ModBlocks.AFTERLIFE_GRASS_BLOCK)||
+                state.is(ModBlocks.AFTERLIFE_DIRT)||state.getBlock() instanceof FarmBlock;
     }
 }
