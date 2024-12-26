@@ -383,7 +383,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(MINEABLE_WITH_SHOVEL)
                 .add(ModBlocks.GHOSTLY_GRASS_BLOCK.get())
                 .add(ModBlocks.BLOODY_GRASS_BLOCK.get())
-                .add(ModBlocks.GHOSTLY_DIRT.get());
+                .add(ModBlocks.GHOSTLY_DIRT.get())
+                .add(ModBlocks.AFTERLIFE_GRASS_BLOCK.get())
+                .add(ModBlocks.AFTERLIFE_DIRT.get());
 
 
         tag(MINEABLE_WITH_AXE)
@@ -447,7 +449,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
 
         tag(DIRT)
-                .add(ModBlocks.GHOSTLY_DIRT.get());
+                .add(ModBlocks.GHOSTLY_DIRT.get())
+                .add(ModBlocks.AFTERLIFE_DIRT.get());
 
         tag(PORTALS)
                 .add(ModBlocks.GHOSTLY_PORTAL_BLOCK.get());

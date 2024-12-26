@@ -77,7 +77,16 @@ public class ModBlockLootTableProvider  extends BlockLootSubProvider {
                         LootItem.lootTableItem(ModBlocks.GHOSTLY_DIRT.get())
                 )
         ));
+        this.add(ModBlocks.AFTERLIFE_GRASS_BLOCK.get(), block -> this.createSilkTouchDispatchTable(
+                ModBlocks.AFTERLIFE_GRASS_BLOCK.get(),
+                this.applyExplosionDecay(
+                        block,
+                                                    //REPLACE WITH AFTERLIFE DIRT
+                        LootItem.lootTableItem(ModBlocks.AFTERLIFE_DIRT.get())
+                )
+        ));
         dropSelf(ModBlocks.GHOSTLY_DIRT.get());
+        dropSelf(ModBlocks.AFTERLIFE_DIRT.get());
 
 
         //Stone Blocks

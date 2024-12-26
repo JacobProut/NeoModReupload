@@ -9,6 +9,7 @@ import com.jacobpmods.neomod.block.entity.blockentities.EnhancerBlock;
 import com.jacobpmods.neomod.block.entity.blockentities.PedestalBlock;
 import com.jacobpmods.neomod.block.custom.blocks.*;
 import com.jacobpmods.neomod.block.custom.portal.GhostlyPortalBlock;
+import com.jacobpmods.neomod.block.terrainblocks.AfterlifeGrassBlock;
 import com.jacobpmods.neomod.block.terrainblocks.BloodyGrassBlock;
 import com.jacobpmods.neomod.block.terrainblocks.GhostlyBlock;
 import com.jacobpmods.neomod.block.terrainblocks.GhostlyDirtBlock;
@@ -77,7 +78,9 @@ public class ModBlocks {
     //Grass & Dirt Blocks
     public static final DeferredBlock<Block> GHOSTLY_GRASS_BLOCK = registerBlock("ghostly_grass_block", GhostlyBlock::new);
     public static final DeferredBlock<Block> BLOODY_GRASS_BLOCK = registerBlock("bloody_grass_block", BloodyGrassBlock::new);
+    public static final DeferredBlock<Block> AFTERLIFE_GRASS_BLOCK = registerBlock("afterlife_grass_block", AfterlifeGrassBlock::new);
     public static final DeferredBlock<Block> GHOSTLY_DIRT = registerBlock("ghostly_dirt", GhostlyDirtBlock::new);
+    public static final DeferredBlock<Block> AFTERLIFE_DIRT = registerBlock("afterlife_dirt", GhostlyDirtBlock::new);
 
 
    //Stone Related

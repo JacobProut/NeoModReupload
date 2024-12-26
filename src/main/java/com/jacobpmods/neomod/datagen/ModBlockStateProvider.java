@@ -44,8 +44,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         //Grass Blocks
         blockWithItem(ModBlocks.GHOSTLY_GRASS_BLOCK);
-        blockWithItem(ModBlocks.GHOSTLY_DIRT);
         blockWithItem(ModBlocks.BLOODY_GRASS_BLOCK);
+        blockWithItem(ModBlocks.AFTERLIFE_GRASS_BLOCK);
+        blockWithItem(ModBlocks.GHOSTLY_DIRT);
+        blockWithItem(ModBlocks.AFTERLIFE_DIRT);
        // blockWithItem(ModBlocks.BLOODY_DIRT);
 
         /*horizontalBlock(ModBlocks.ENHANCER.get(), models().orientable("neomod:enhancer",

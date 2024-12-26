@@ -1,6 +1,8 @@
-// 1.21.1	2024-12-20T23:59:39.0552768	Loot Tables
+// 1.21.1	2024-12-25T22:02:15.4415596	Loot Tables
 dc93d930236958cfc1f6f61034d895b9d94a33ba data/neomod/loot_table/blocks/afterlife_diamond_ore_block.json
+7474368bc8207f8d44dd0611de39ba6d6a5f4f5e data/neomod/loot_table/blocks/afterlife_dirt.json
 3f4431a2a3d297fed30c019a7cf11e9e251bf0d9 data/neomod/loot_table/blocks/afterlife_gold_ore_block.json
+10ad2920b023222653bb28fa9e552be95267206e data/neomod/loot_table/blocks/afterlife_grass_block.json
 8167d569df76ec9151af2219b7f2d8884ea1d4f5 data/neomod/loot_table/blocks/afterlife_iron_ore_block.json
 2b203e01444a26eba8ec59ac94c4069babdd81bc data/neomod/loot_table/blocks/afterlife_redstone_ore_block.json
 4a445a86ab0fa077a1a1472ab127cdb6c6bc83f6 data/neomod/loot_table/blocks/afterlife_torch.json

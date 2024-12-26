@@ -2,6 +2,8 @@
   "values": [
     "neomod:ghostly_grass_block",
     "neomod:bloody_grass_block",
-    "neomod:ghostly_dirt"
+    "neomod:ghostly_dirt",
+    "neomod:afterlife_grass_block",
+    "neomod:afterlife_dirt"
   ]
 }

@@ -82,7 +82,9 @@ public class ModCreativeModeTabs {
                         //Grass Blocks
                         output.accept(ModBlocks.GHOSTLY_GRASS_BLOCK);
                         output.accept(ModBlocks.BLOODY_GRASS_BLOCK);
+                        output.accept(ModBlocks.AFTERLIFE_GRASS_BLOCK);
                         output.accept(ModBlocks.GHOSTLY_DIRT);
+                        output.accept(ModBlocks.AFTERLIFE_DIRT);
                         //output.accept(ModBlocks.BLOODY_DIRT.get());
 
                         //Stone-CobbleStone Blocks
@@ -202,7 +204,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BLOODY_PLANKS);
                         output.accept(ModBlocks.GHOSTLY_GRASS_BLOCK);
                         output.accept(ModBlocks.BLOODY_GRASS_BLOCK);
+                        output.accept(ModBlocks.AFTERLIFE_GRASS_BLOCK);
                         output.accept(ModBlocks.GHOSTLY_DIRT);
+                        output.accept(ModBlocks.AFTERLIFE_DIRT);
 
                         //Stairs
                         output.accept(ModBlocks.GHOSTLY_STONE_STAIRS);

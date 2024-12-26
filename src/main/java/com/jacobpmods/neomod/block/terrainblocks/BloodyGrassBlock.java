@@ -42,7 +42,7 @@ public class BloodyGrassBlock extends GrassBlock {
         }
     }
 
-    private static boolean canBeGrass(BlockState state, LevelReader level, BlockPos pos) {
+    public static boolean canBeGrass(BlockState state, LevelReader level, BlockPos pos) {
         BlockPos abovePos = pos.above();
         BlockState blockState = level.getBlockState(abovePos);
         if (blockState.getFluidState().getAmount() == 8) {
@@ -53,7 +53,7 @@ public class BloodyGrassBlock extends GrassBlock {
         }
     }
 
-    private static boolean canPropagate(BlockState state, LevelReader level, BlockPos pos) {
+    public static boolean canPropagate(BlockState state, LevelReader level, BlockPos pos) {
         BlockPos abovePos = pos.above();
         return canBeGrass(state, level, pos) && !level.getFluidState(abovePos).is(FluidTags.WATER);
     }
