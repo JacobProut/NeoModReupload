@@ -19,18 +19,18 @@ public class ModNoiseGeneratorSettings {
     public static void bootstrap(BootstrapContext<NoiseGeneratorSettings> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
         var biomes = context.lookup(Registries.BIOME);
-        NoiseGeneratorSettings settings =  NoiseGeneratorSettings.overworld(context, false, true);
+        NoiseGeneratorSettings settings =  NoiseGeneratorSettings.overworld(context, false, false);
 
         //Ghostly Biome
         context.register(AFTERLIFE_DIMENSION_GENERATION,
                 new NoiseGeneratorSettings(
-                        new NoiseSettings(0, 384, 1, 2),
+                        new NoiseSettings(0, 256, 1, 2),
                         ModBlocks.GHOSTLY_STONE.get().defaultBlockState(),
                         ModFluids.SOURCE_POISONED_WATER.get().defaultFluidState().createLegacyBlock(),  // Use poisoned water as the default fluid
                         settings.noiseRouter(),
                         ModSurfaceRules.makeRules(),
                         settings.spawnTarget(),
-                        settings.seaLevel(),
+                        54, //original is settings.seaLevel()
                         false,
                         true,
                         true,

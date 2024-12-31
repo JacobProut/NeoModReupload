@@ -6,7 +6,7 @@
       "minecraft:canyon"
     ]
   },
-  "downfall": 0.8,
+  "downfall": 0.0,
   "effects": {
     "fog_color": 13882323,
     "grass_color": 11393254,
@@ -53,9 +53,6 @@
     ],
     [
       "minecraft:glow_lichen"
-    ],
-    [
-      "minecraft:freeze_top_layer"
     ]
   ],
   "has_precipitation": false,
@@ -96,9 +93,9 @@
         "weight": 10
       },
       {
-        "type": "neomod:skeletal_cow",
+        "type": "minecraft:cow",
         "maxCount": 4,
-        "minCount": 1,
+        "minCount": 4,
         "weight": 8
       }
     ],
@@ -111,9 +108,9 @@
         "weight": 100
       },
       {
-        "type": "neomod:skeletalzombie",
+        "type": "minecraft:zombie",
         "maxCount": 4,
-        "minCount": 1,
+        "minCount": 4,
         "weight": 95
       },
       {
@@ -141,10 +138,10 @@
         "weight": 100
       },
       {
-        "type": "neomod:skeletalenderman",
+        "type": "minecraft:enderman",
         "maxCount": 4,
         "minCount": 1,
-        "weight": 95
+        "weight": 10
       },
       {
         "type": "minecraft:witch",
@@ -164,5 +161,5 @@
     "water_ambient": [],
     "water_creature": []
   },
-  "temperature": 0.5
+  "temperature": 0.0
 }

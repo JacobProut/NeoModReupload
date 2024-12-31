@@ -1,7 +1,6 @@
 package com.jacobpmods.neomod.worldgen.biome;
 
 import com.jacobpmods.neomod.FirstNeoMod;
-import com.jacobpmods.neomod.worldgen.ModPlacedFeatures;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BiomeDefaultFeatures;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -10,7 +9,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.biome.*;
-import net.minecraft.world.level.levelgen.GenerationStep;
 
 public class ModBiomes {
     public static final ResourceKey<Biome> GHOSTLY_BIOME = ResourceKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID, "ghostly_biome"));
@@ -25,11 +23,11 @@ public class ModBiomes {
 
     public static void globalOverworldGeneration(BiomeGenerationSettings.Builder builder) {
         BiomeDefaultFeatures.addDefaultCarversAndLakes(builder);
-        BiomeDefaultFeatures.addDefaultCrystalFormations(builder);
-        BiomeDefaultFeatures.addDefaultMonsterRoom(builder);
+        BiomeDefaultFeatures.addDefaultCrystalFormations(builder);    // Amethyst spawn
+        BiomeDefaultFeatures.addDefaultMonsterRoom(builder);          // Mob Spawners
         BiomeDefaultFeatures.addDefaultUndergroundVariety(builder);
         BiomeDefaultFeatures.addDefaultSprings(builder);
-        BiomeDefaultFeatures.addSurfaceFreezing(builder);
+       // BiomeDefaultFeatures.addSurfaceFreezing(builder);           // Snow spawning on top
     }
 
     public static Biome ghostlyBiome(BootstrapContext<Biome> context) {
@@ -57,8 +55,8 @@ public class ModBiomes {
 
         return new Biome.BiomeBuilder()
                 .hasPrecipitation(false)
-                .downfall(0.8f)
-                .temperature(0.5f)
+                .downfall(0.0f)
+                .temperature(0.0f)
                 .generationSettings(biomeBuilder.build())
                 .mobSpawnSettings(spawnBuilder.build())
                 .specialEffects((new BiomeSpecialEffects.Builder())
@@ -93,8 +91,8 @@ public class ModBiomes {
 
         return new Biome.BiomeBuilder()
                 .hasPrecipitation(false)
-                .downfall(0.8f)
-                .temperature(0.9f)
+                .downfall(0.0f)
+                .temperature(0.0f)
                 .generationSettings(biomeBuilder.build())
                 .mobSpawnSettings(spawnBuilder.build())
                 .specialEffects((new BiomeSpecialEffects.Builder())
@@ -122,7 +120,7 @@ public class ModBiomes {
         return new Biome.BiomeBuilder()
                 .hasPrecipitation(false)
                 .downfall(0.0f)
-                .temperature(0.2f)
+                .temperature(0.0f)
                 .generationSettings(biomeBuilder.build())
                 .mobSpawnSettings(spawnBuilder.build())
                 .specialEffects((new BiomeSpecialEffects.Builder())
