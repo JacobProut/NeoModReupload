@@ -1,6 +1,6 @@
-// 1.21.1	2024-12-30T22:22:04.7076403	Registries
+// 1.21.1	2025-01-03T17:06:52.318338	Registries
 32f4e0731993b952c920cb78529b7d1acbed2f95 data/neomod/dimension/afterlife.json
-d6265a6cfda1ff5e67e1c67af60c56cac1e1982e data/neomod/dimension_type/afterlife_type.json
+f3068bd7db0f4de17ba7178c2195c996a33b7955 data/neomod/dimension_type/afterlife_type.json
 45cc21a0401cabe558b485aa212b0d94b39aaabb data/neomod/enchantment/ice_barrage_melee.json
 a94e073f51999aec37949b8d293ef6e937d91fa9 data/neomod/enchantment/magma_mine.json
 dafc7659e372a0835ef1a452e27a95616a23ec33 data/neomod/enchantment/timber_feller.json
@@ -29,7 +29,7 @@ a98f95d2ba973df63ec6277bdd598465d8b37bd6 data/neomod/worldgen/configured_feature
 46080b3bcafeacba0aa26445354314e12c675641 data/neomod/worldgen/configured_feature/ghostly.json
 007be0371a4a90aa5293793661c72c00179912b7 data/neomod/worldgen/configured_feature/oozing_flower.json
 9da713b5fc22939516e7bb52c5d5531a26e43a8b data/neomod/worldgen/configured_feature/skull_n_bone_block.json
-bd6891e1650f01a43de53f96b181fa0af55657f3 data/neomod/worldgen/noise_settings/afterlife_dim.json
+440ee8fd445b066fda32a1f790cb24d13e30a5ec data/neomod/worldgen/noise_settings/afterlife_dim.json
 0dd2206b0046486231790295ab1c595789df8d2c data/neomod/worldgen/placed_feature/bloody_bone_bush_placed.json
 22a71884308348483f8afb094c42c737e4c8d5c3 data/neomod/worldgen/placed_feature/bloody_tree_placed.json
 f8331f387a76a1a8abeff9cac8eb583f5327cc97 data/neomod/worldgen/placed_feature/diamond_ore_placed.json

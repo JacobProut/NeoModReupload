@@ -112,7 +112,7 @@ public class ModSurfaceRules {
 
         ImmutableList.Builder<SurfaceRules.RuleSource> builder = ImmutableList.builder();
 
-        builder.add(SurfaceRules.ifTrue(SurfaceRules.verticalGradient("bedrock_floor", VerticalAnchor.bottom(), VerticalAnchor.aboveBottom(5)), BEDROCK));
+        builder.add(SurfaceRules.ifTrue(SurfaceRules.verticalGradient("bedrock_floor", VerticalAnchor.bottom(), VerticalAnchor.aboveBottom(-64)), BEDROCK));
         builder.add(modGhostlyBiomeRules);
         builder.add(modBloodyBiomeRules);
         builder.add(modHeavenlyBiomeRules);

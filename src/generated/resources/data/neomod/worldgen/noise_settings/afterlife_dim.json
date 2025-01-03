@@ -13,7 +13,7 @@
   "legacy_random_source": true,
   "noise": {
     "height": 256,
-    "min_y": 0,
+    "min_y": -64,
     "size_horizontal": 1,
     "size_vertical": 2
   },
@@ -391,7 +391,7 @@
         "if_true": {
           "type": "minecraft:vertical_gradient",
           "false_at_and_above": {
-            "above_bottom": 5
+            "above_bottom": -64
           },
           "random_name": "minecraft:bedrock_floor",
           "true_at_and_below": {

@@ -24,7 +24,7 @@ public class ModNoiseGeneratorSettings {
         //Ghostly Biome
         context.register(AFTERLIFE_DIMENSION_GENERATION,
                 new NoiseGeneratorSettings(
-                        new NoiseSettings(0, 256, 1, 2),
+                        new NoiseSettings(-64, 256, 1, 2),
                         ModBlocks.GHOSTLY_STONE.get().defaultBlockState(),
                         ModFluids.SOURCE_POISONED_WATER.get().defaultFluidState().createLegacyBlock(),  // Use poisoned water as the default fluid
                         settings.noiseRouter(),
