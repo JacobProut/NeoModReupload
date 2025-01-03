@@ -43,6 +43,14 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> AFTERLIFE_DIAMOND_ORE_KEY = registerKey("afterlife_diamond_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> AFTERLIFE_REDSTONE_ORE_KEY = registerKey("afterlife_redstone_ore");
 
+    //SUB LVL 5 ORES
+    public static final ResourceKey<ConfiguredFeature<?, ?>> AFTERLIFE_SUBLVL5_SHATTERED_FRAGMENT_ORE_KEY = registerKey("afterlife_sublvl5_shattered_fragment");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> AFTERLIFE_SUBLVL5_SPIRIT_COAL_ORE_KEY = registerKey("afterlife_sublvl5_spirit_coal_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> AFTERLIFE_SUBLVL5_IRON_ORE_KEY = registerKey("afterlife_sublvl5_iron_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> AFTERLIFE_SUBLVL5_GOLD_ORE_KEY = registerKey("afterlife_sublvl5_gold_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> AFTERLIFE_SUBLVL5_DIAMOND_ORE_KEY = registerKey("afterlife_sublvl5_diamond_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> AFTERLIFE_SUBLVL5_REDSTONE_ORE_KEY = registerKey("afterlife_sublvl5_redstone_ore");
+
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
         register(context, GHOSTLY_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.LOG_GHOSTLY.get()),
@@ -85,6 +93,14 @@ public class ModConfiguredFeatures {
     register(context, AFTERLIFE_GOLD_ORE_KEY, Feature.ORE, new OreConfiguration(ghostlyStoneReplacable, ModBlocks.AFTERLIFE_GOLD_ORE_BLOCK.get().defaultBlockState(), 10));
     register(context, AFTERLIFE_DIAMOND_ORE_KEY, Feature.ORE, new OreConfiguration(ghostlyStoneReplacable, ModBlocks.AFTERLIFE_DIAMOND_ORE_BLOCK.get().defaultBlockState(), 8));
     register(context, AFTERLIFE_REDSTONE_ORE_KEY, Feature.ORE, new OreConfiguration(ghostlyStoneReplacable, ModBlocks.AFTERLIFE_REDSTONE_ORE_BLOCK.get().defaultBlockState(), 12));
+    //SUBLVL5 ORES
+    register(context, AFTERLIFE_SUBLVL5_SHATTERED_FRAGMENT_ORE_KEY, Feature.ORE, new OreConfiguration(ghostlyStoneReplacable, ModBlocks.SHATTERED_FRAGMENT_ORE_BLOCK.get().defaultBlockState(), 4));
+    register(context, AFTERLIFE_SUBLVL5_SPIRIT_COAL_ORE_KEY, Feature.ORE, new OreConfiguration(ghostlyStoneReplacable, ModBlocks.SPIRIT_COAL_ORE_BLOCK.get().defaultBlockState(), 10));
+    register(context, AFTERLIFE_SUBLVL5_IRON_ORE_KEY, Feature.ORE, new OreConfiguration(ghostlyStoneReplacable, ModBlocks.AFTERLIFE_IRON_ORE_BLOCK.get().defaultBlockState(), 12));
+    register(context, AFTERLIFE_SUBLVL5_GOLD_ORE_KEY, Feature.ORE, new OreConfiguration(ghostlyStoneReplacable, ModBlocks.AFTERLIFE_GOLD_ORE_BLOCK.get().defaultBlockState(), 12));
+    register(context, AFTERLIFE_SUBLVL5_DIAMOND_ORE_KEY, Feature.ORE, new OreConfiguration(ghostlyStoneReplacable, ModBlocks.AFTERLIFE_DIAMOND_ORE_BLOCK.get().defaultBlockState(), 12));
+    register(context, AFTERLIFE_SUBLVL5_REDSTONE_ORE_KEY, Feature.ORE, new OreConfiguration(ghostlyStoneReplacable, ModBlocks.AFTERLIFE_REDSTONE_ORE_BLOCK.get().defaultBlockState(), 10));
+
     }
     //Random Patch info
     //The first number (Tries) is the maximum number of patches that can be generated in a chunk. It defines how many patches of the feature can appear.

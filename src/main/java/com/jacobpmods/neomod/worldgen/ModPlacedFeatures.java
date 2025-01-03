@@ -35,6 +35,14 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> AFTERLIFE_DIMENSION_DIAMOND_ORE_PLACED_KEY = registerKey("diamond_ore_placed");
     public static final ResourceKey<PlacedFeature> AFTERLIFE_DIMENSION_REDSTONE_ORE_PLACED_KEY = registerKey("redstone_ore_placed");
 
+    //Sub Y level 5 Ores
+    public static final ResourceKey<PlacedFeature> AFTERLIFE_DIMENSION_SUBLVL5_SHATTERED_FRAGMENT_ORE_PLACED_KEY = registerKey("sublvl5_shattered_fragment_ore_placed");
+    public static final ResourceKey<PlacedFeature> AFTERLIFE_DIMENSION_SUBLVL5_SPIRIT_COAL_ORE_PLACED_KEY = registerKey("sublvl5_spirit_coal_ore_placed");
+    public static final ResourceKey<PlacedFeature> AFTERLIFE_DIMENSION_SUBLVL5_IRON_ORE_PLACED_KEY = registerKey("sublvl5_iron_ore_placed");
+    public static final ResourceKey<PlacedFeature> AFTERLIFE_DIMENSION_SUBLVL5_GOLD_ORE_PLACED_KEY = registerKey("sublvl5_gold_ore_placed");
+    public static final ResourceKey<PlacedFeature> AFTERLIFE_DIMENSION_SUBLVL5_DIAMOND_ORE_PLACED_KEY = registerKey("sublvl5_diamond_ore_placed");
+    public static final ResourceKey<PlacedFeature> AFTERLIFE_DIMENSION_SUBLVL5_REDSTONE_ORE_PLACED_KEY = registerKey("sublvl5_redstone_ore_placed");
+
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
@@ -79,6 +87,25 @@ public class ModPlacedFeatures {
         register(context, AFTERLIFE_DIMENSION_REDSTONE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.AFTERLIFE_REDSTONE_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(8, //Value for amount wanted spawning in chunk
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(5), VerticalAnchor.absolute(32)))); //HeightRangePlacement has another option called .triangle instead of .uniform . Look into it if curious
+        //SUB Y LEVEL 5 ORES
+        register(context, AFTERLIFE_DIMENSION_SUBLVL5_SHATTERED_FRAGMENT_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.AFTERLIFE_SUBLVL5_SHATTERED_FRAGMENT_ORE_KEY),
+                ModOrePlacement.commonOrePlacement(4, //Value for amount wanted spawning in chunk
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-60), VerticalAnchor.absolute(4)))); //HeightRangePlacement has another option called .triangle instead of .uniform . Look into it if curious
+        register(context, AFTERLIFE_DIMENSION_SUBLVL5_SPIRIT_COAL_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.AFTERLIFE_SUBLVL5_SPIRIT_COAL_ORE_KEY),
+                ModOrePlacement.commonOrePlacement(6, //Value for amount wanted spawning in chunk
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-60), VerticalAnchor.absolute(4)))); //HeightRangePlacement has another option called .triangle instead of .uniform . Look into it if curious
+        register(context, AFTERLIFE_DIMENSION_SUBLVL5_IRON_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.AFTERLIFE_SUBLVL5_IRON_ORE_KEY),
+                ModOrePlacement.commonOrePlacement(10, //Value for amount wanted spawning in chunk
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-60), VerticalAnchor.absolute(4)))); //HeightRangePlacement has another option called .triangle instead of .uniform . Look into it if curious
+        register(context, AFTERLIFE_DIMENSION_SUBLVL5_GOLD_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.AFTERLIFE_SUBLVL5_GOLD_ORE_KEY),
+                ModOrePlacement.commonOrePlacement(10, //Value for amount wanted spawning in chunk
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-60), VerticalAnchor.absolute(4)))); //HeightRangePlacement has another option called .triangle instead of .uniform . Look into it if curious
+        register(context, AFTERLIFE_DIMENSION_SUBLVL5_DIAMOND_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.AFTERLIFE_SUBLVL5_DIAMOND_ORE_KEY),
+                ModOrePlacement.rareOrePlacement(6, //Value for amount wanted spawning in chunk
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-60), VerticalAnchor.absolute(4)))); //HeightRangePlacement has another option called .triangle instead of .uniform . Look into it if curious
+        register(context, AFTERLIFE_DIMENSION_SUBLVL5_REDSTONE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.AFTERLIFE_SUBLVL5_REDSTONE_ORE_KEY),
+                ModOrePlacement.commonOrePlacement(8, //Value for amount wanted spawning in chunk
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-60), VerticalAnchor.absolute(4)))); //HeightRangePlacement has another option called .triangle instead of .uniform . Look into it if curious
     }
 
 

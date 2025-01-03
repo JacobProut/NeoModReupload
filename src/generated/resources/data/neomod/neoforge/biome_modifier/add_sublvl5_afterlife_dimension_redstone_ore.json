@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "neomod:ghostly_biome",
+    "neomod:blood_garden_biome",
+    "neomod:heavenly_plains_biome"
+  ],
+  "features": "neomod:sublvl5_redstone_ore_placed",
+  "step": "underground_ores"
+}
