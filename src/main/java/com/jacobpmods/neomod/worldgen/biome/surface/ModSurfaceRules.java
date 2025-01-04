@@ -23,6 +23,9 @@ public class ModSurfaceRules {
     private static final SurfaceRules.RuleSource MOD_HEAVENLY_GRASS_BLOCK = makeStateRule(ModBlocks.AFTERLIFE_GRASS_BLOCK.get());
     private static final SurfaceRules.RuleSource MOD_HEAVENLY_DIRT = makeStateRule(ModBlocks.AFTERLIFE_DIRT.get());
 
+    private static final SurfaceRules.RuleSource MOD_GILDED_GRASS_BLOCK = makeStateRule(ModBlocks.GILDED_GRASS_BLOCK.get());
+    private static final SurfaceRules.RuleSource MOD_GILDED_DIRT = makeStateRule(ModBlocks.GILDED_DIRT.get());
+
 
     public static SurfaceRules.RuleSource makeRules() {
         SurfaceRules.ConditionSource isAtOrAboveWaterlevel = SurfaceRules.waterBlockCheck(-1, 0);
@@ -107,6 +110,26 @@ public class ModSurfaceRules {
                 )
         );
 
+        //Gilded Forest biome
+        SurfaceRules.RuleSource gildedForestRules = SurfaceRules.ifTrue(
+                SurfaceRules.isBiome(ModBiomes.GILDED_FOREST_BIOME), SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, MOD_GILDED_GRASS_BLOCK)
+
+        );
+        SurfaceRules.RuleSource gildedForestGrassSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(isAtOrAboveWaterlevel, SurfaceRules.sequence(
+                gildedForestRules,
+                MOD_GILDED_GRASS_BLOCK
+        )),MOD_GILDED_DIRT);
+
+        SurfaceRules.RuleSource modGildedForestBiomeRules = SurfaceRules.sequence(
+                SurfaceRules.ifTrue(SurfaceRules.isBiome(ModBiomes.GILDED_FOREST_BIOME),
+                        SurfaceRules.sequence(
+                                SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, gildedForestGrassSurface),
+                                SurfaceRules.ifTrue(SurfaceRules.UNDER_FLOOR, MOD_GILDED_DIRT),
+                                MOD_STONE_BLOCK
+                        )
+                )
+        );
+
 
 
 
@@ -116,6 +139,7 @@ public class ModSurfaceRules {
         builder.add(modGhostlyBiomeRules);
         builder.add(modBloodyBiomeRules);
         builder.add(modHeavenlyBiomeRules);
+        builder.add(modGildedForestBiomeRules);
 
         return SurfaceRules.sequence(builder.build().toArray(SurfaceRules.RuleSource[]::new));
     }

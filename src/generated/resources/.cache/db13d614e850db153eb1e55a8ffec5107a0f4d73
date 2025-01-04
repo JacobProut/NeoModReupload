@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-03T20:34:07.1957747	Tags for minecraft:block mod id neomod
+// 1.21.1	2025-01-03T20:55:26.8381316	Tags for minecraft:block mod id neomod
 42f7b27b6ae2d609549eb5ca5f61890bf0ed0bf3 data/c/tags/block/ores.json
 0a97454125fc991ddd02f7d92133371e0c3be723 data/c/tags/block/player_workstations/crafting_tables.json
 30f421389cc533849eac372c7edad97938c38a42 data/minecraft/tags/block/climbable.json
@@ -14,7 +14,7 @@ b55420951c40209d1bcec2b45f6bd4469048d125 data/minecraft/tags/block/incorrect_for
 b55420951c40209d1bcec2b45f6bd4469048d125 data/minecraft/tags/block/incorrect_for_wooden_tool.json
 da9318e129abeb7d113905e2a9641b801907fa8b data/minecraft/tags/block/leaves.json
 d3bb3073f2ca2554bb45857f10599cfc0939e3d4 data/minecraft/tags/block/logs_that_burn.json
-9834f93de3cbd25fc4dc72d19d394b6a1e9deb1b data/minecraft/tags/block/mineable/axe.json
+c334d3efda7d203199aedd2be8b6b109fc13739f data/minecraft/tags/block/mineable/axe.json
 ba1c94a4bb63d71ce5cc406614e8b51dfe0ab520 data/minecraft/tags/block/mineable/pickaxe.json
 b170846c6bfe095ee593a84eb191fe68c628b823 data/minecraft/tags/block/mineable/shovel.json
 0cf0c01099e2e8f641c4cb12d5e51c3e9c66090c data/minecraft/tags/block/planks.json

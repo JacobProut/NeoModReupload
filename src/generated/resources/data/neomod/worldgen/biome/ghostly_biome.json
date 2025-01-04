@@ -6,7 +6,7 @@
       "minecraft:canyon"
     ]
   },
-  "downfall": 0.0,
+  "downfall": 1.0,
   "effects": {
     "fog_color": 13882323,
     "grass_color": 11393254,
@@ -17,7 +17,7 @@
       "tick_delay": 6000
     },
     "sky_color": 13882323,
-    "water_color": 16711680,
+    "water_color": -13447886,
     "water_fog_color": 16737894
   },
   "features": [
@@ -55,7 +55,7 @@
       "minecraft:glow_lichen"
     ]
   ],
-  "has_precipitation": false,
+  "has_precipitation": true,
   "spawn_costs": {},
   "spawners": {
     "ambient": [
