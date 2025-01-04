@@ -183,8 +183,10 @@ public class ModBlockLootTableProvider  extends BlockLootSubProvider {
 
         this.dropSelf(ModBlocks.LOG_GILDED.get());
         this.dropSelf(ModBlocks.GILDED_LEAVES.get());
-       /* this.add(ModBlocks.GILDED_LEAVES.get(), block ->
-                createLeavesDrops(block, ModBlocks.HEAVEN_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));*/
+        this.add(ModBlocks.GILDED_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.GILDED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.dropSelf(ModBlocks.GILDED_SAPLING.get());
+
 
         //Flowers
         this.dropSelf(ModBlocks.OOZING_FLOWER.get());

@@ -27,6 +27,7 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> GHOSTLY_KEY = registerKey("ghostly");
     public static final ResourceKey<ConfiguredFeature<?, ?>> BLOODY_KEY = registerKey("bloody");
     public static final ResourceKey<ConfiguredFeature<?, ?>> HEAVENLY_KEY = registerKey("heavenly");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GILDED_KEY = registerKey("gilded");
 
 
     //Bushes and flowers
@@ -73,6 +74,16 @@ public class ModConfiguredFeatures {
                 new TwoLayersFeatureSize(1, 0, 1))
                 .dirt(BlockStateProvider.simple(ModBlocks.GHOSTLY_DIRT.get())) //Custom Soil Block
                 .decorators(List.of(new BloodVineDecorator(0.25F)))
+                .build() //|Controls the number of layers at the top of the tree where branches can spawn| The size of the truck that can be uninterrupted at the base, the additional radius added to first layer, additional height for second layer
+        );
+
+        register(context, GILDED_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.LOG_GILDED.get()),
+                new StraightTrunkPlacer(3, 3, 3), //|Defines trunk of the tree| Base height of the trunk, Random additional height that can be added, Height of the trunk where branches might appear or additional foliage can grow.
+                BlockStateProvider.simple(ModBlocks.GILDED_LEAVES.get()), //Specifies what blocks for leaves
+                new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(1), 3), //|Determines how leaves are placed around the trunk| Radius of foliage blob at top most part of tree, Controls the foliage radius as you go downwards from the top[For each level, the radius decrease 'Said' blocks, The number of layers of leaves that will be placed starting from the top of the trunk downwards.
+                new TwoLayersFeatureSize(1, 0, 2))
+                .dirt(BlockStateProvider.simple(ModBlocks.GILDED_DIRT.get())) // Custom soil block
                 .build() //|Controls the number of layers at the top of the tree where branches can spawn| The size of the truck that can be uninterrupted at the base, the additional radius added to first layer, additional height for second layer
         );
 

@@ -78,9 +78,10 @@ public class FirstNeoMod {
         //CuriosRendererRegistry.register(SOUL_SPLIT_NECKLACE.get().asItem(), () -> new CuriosRenderer());
     }
 
-    // Add the example block item to the building blocks tab
+
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            //FILL THIS IN WITH ITEMS
             event.accept(ModItems.nexon);
             event.accept(ModItems.HEATED_NEXON);
             event.accept(ModItems.NEXON_INGOT);
@@ -95,6 +96,7 @@ public class FirstNeoMod {
         }
 
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            //FILL THIS IN WITH BLOCKS
             event.accept(ModBlocks.NEXON_BLOCK);
             event.accept(ModBlocks.NEXON_ORE_BLOCK);
             event.accept(ModBlocks.GHOSTLY_GRASS_BLOCK);
@@ -105,6 +107,7 @@ public class FirstNeoMod {
             event.accept(ModBlocks.GHOSTLY_SAPLING);
             event.accept(ModBlocks.GHOSTLY_STONE);
             event.accept(ModBlocks.BLOODY_SAPLING);
+            event.accept(ModBlocks.GILDED_SAPLING);
             event.accept(ModBlocks.SKULL_N_BONES);
 
 

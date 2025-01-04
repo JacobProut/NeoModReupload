@@ -1,4 +1,4 @@
-// 1.21.1	2024-12-21T02:28:00.1285865	Item Models: neomod
+// 1.21.1	2025-01-03T21:35:13.490021	Item Models: neomod
 fbf874db12b15ebd1b3414fff8d220b14c6beb9a assets/neomod/models/item/afterlife_torch.json
 44e12cf0726120f26700d8926b65be0432928d13 assets/neomod/models/item/bloody_door.json
 8fcc148714388bf2313f4f088807ff0e3830d26e assets/neomod/models/item/bloody_plank_button.json
@@ -26,6 +26,7 @@ e52fea6b4028a83e79676dc94b9cfae92b97b72f assets/neomod/models/item/ghostly_stone
 f75ec004b4aaabbe87c713d25f9d4d30c869054e assets/neomod/models/item/ghostly_stone_button.json
 2a3a0ba3f2a79dc3c942aad967c51d708150e112 assets/neomod/models/item/ghostly_stone_fence.json
 81ea002e4f685a70a9f74b4343866c376d0b8861 assets/neomod/models/item/ghostly_stone_wall.json
+09273cb119acd7a557493c1666bbc45aeecf29c4 assets/neomod/models/item/gilded_sapling.json
 8791d98c5c980172743a47ecc5962e71fe6bdb3a assets/neomod/models/item/god_sword.json
 bb1db9b27e848db13a425e9df60ae7e1765aabe7 assets/neomod/models/item/nexon.json
 706cabc0cb7a7ce7084070578ecf92ebdc0313f9 assets/neomod/models/item/nexonaxe.json

@@ -355,7 +355,7 @@ public class ModBlocks {
     });
     public static final DeferredBlock<Block> GHOSTLY_SAPLING = registerBlock("ghostly_sapling",
             () -> new ModSaplingBlock(ModTreeGrowers.GHOSTLY, BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_SAPLING)
-            .strength(0.2f).sound(SoundType.CHERRY_SAPLING),  ModBlocks.GHOSTLY_GRASS_BLOCK.get(), ModBlocks.GHOSTLY_DIRT.get(), Blocks.GRASS_BLOCK, Blocks.DIRT));
+            .strength(0.2f).sound(SoundType.CHERRY_SAPLING),  ModBlocks.GHOSTLY_GRASS_BLOCK.get(), ModBlocks.GHOSTLY_DIRT.get(),ModBlocks.BLOODY_GRASS_BLOCK.get(), Blocks.GRASS_BLOCK, Blocks.DIRT, ModBlocks.GILDED_GRASS_BLOCK.get(), ModBlocks.GILDED_DIRT.get()));
 
 
 
@@ -551,7 +551,7 @@ public class ModBlocks {
     });
     public static final DeferredBlock<Block> BLOODY_SAPLING = registerBlock("bloody_sapling",
             () -> new ModSaplingBlock(ModTreeGrowers.BLOODY, BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_SAPLING)
-                    .strength(0.2f).sound(SoundType.CHERRY_SAPLING), ModBlocks.BLOODY_GRASS_BLOCK.get(), ModBlocks.GHOSTLY_GRASS_BLOCK.get(), ModBlocks.GHOSTLY_DIRT.get(), Blocks.GRASS_BLOCK, Blocks.DIRT));
+                    .strength(0.2f).sound(SoundType.CHERRY_SAPLING), ModBlocks.BLOODY_GRASS_BLOCK.get(), ModBlocks.GHOSTLY_GRASS_BLOCK.get(), ModBlocks.GHOSTLY_DIRT.get(), Blocks.GRASS_BLOCK, Blocks.DIRT, ModBlocks.GILDED_GRASS_BLOCK.get(), ModBlocks.GILDED_DIRT.get()));
     public static final DeferredBlock<Block> BLOODY_VINE = registerBlock("bloody_vine", () -> new BloodyVine(
             BlockBehaviour.Properties.ofFullCopy(Blocks.VINE).noOcclusion().replaceable().noCollission()
                     .randomTicks().strength(0.2F).sound(SoundType.VINE).ignitedByLava().pushReaction(PushReaction.DESTROY)));
@@ -579,6 +579,9 @@ public class ModBlocks {
             return 30;
         }
     });
+    public static final DeferredBlock<Block> GILDED_SAPLING = registerBlock("gilded_sapling",
+            () -> new ModSaplingBlock(ModTreeGrowers.GILDED, BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_SAPLING)
+                    .strength(0.2f).sound(SoundType.CHERRY_SAPLING), ModBlocks.BLOODY_GRASS_BLOCK.get(), ModBlocks.GHOSTLY_GRASS_BLOCK.get(), ModBlocks.GHOSTLY_DIRT.get(), Blocks.GRASS_BLOCK, Blocks.DIRT, ModBlocks.GILDED_GRASS_BLOCK.get(), ModBlocks.GILDED_DIRT.get()));
 
 
     public static final DeferredBlock<SkullNBones> SKULL_N_BONES = registerBlock("skull_n_bones", () ->new SkullNBones(BlockBehaviour.Properties.of()

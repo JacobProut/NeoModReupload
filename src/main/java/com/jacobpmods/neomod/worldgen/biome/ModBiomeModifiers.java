@@ -22,6 +22,8 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_BLOODY_BUSH = registerKey("add_bloody_bush");
     public static final ResourceKey<BiomeModifier> ADD_SKULL_N_BONES = registerKey("add_skull_n_bones");
 
+    public static final ResourceKey<BiomeModifier> ADD_TREE_GILDED = registerKey("add_tree_gilded");
+
     //Ores
     public static final ResourceKey<BiomeModifier> ADD_AFTERLIFE_SHATTERED_FRAGMENT_ORE = registerKey("add_afterlife_dimension_shattered_fragment_ore");
     public static final ResourceKey<BiomeModifier> ADD_AFTERLIFE_SPIRIT_COAL_ORE = registerKey("add_afterlife_dimension_spirit_coal_ore");
@@ -76,6 +78,13 @@ public class ModBiomeModifiers {
         context.register(ADD_SKULL_N_BONES, new BiomeModifiers.AddFeaturesBiomeModifier(
                 bloodgardenBiome,
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.SKULL_N_BONES_BLOCK_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+
+        HolderSet<Biome> gildedForestBiome = HolderSet.direct(biomes.getOrThrow(ModBiomes.GILDED_FOREST_BIOME));
+        context.register(ADD_TREE_GILDED, new BiomeModifiers.AddFeaturesBiomeModifier(
+                gildedForestBiome,
+                // For multiple biomes use: HolderSet.direct(biomes.getOrThrow(Biomes.PLAINS), biomes.getOrThrow(Biomes.BIRCH_FOREST))
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.GILDED_TREE_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
         //Ores

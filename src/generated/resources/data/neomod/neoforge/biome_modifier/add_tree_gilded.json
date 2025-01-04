@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "neomod:gilded_forest_biome",
+  "features": "neomod:gilded_tree_placed",
+  "step": "vegetal_decoration"
+}

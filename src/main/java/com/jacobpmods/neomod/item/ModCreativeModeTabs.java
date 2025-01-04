@@ -158,6 +158,7 @@ public class ModCreativeModeTabs {
                         //Saplings
                         output.accept(ModBlocks.GHOSTLY_SAPLING);
                         output.accept(ModBlocks.BLOODY_SAPLING);
+                        output.accept(ModBlocks.GILDED_SAPLING);
 
                         //Flowers
                         output.accept(ModBlocks.OOZING_FLOWER);

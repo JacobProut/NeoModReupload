@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-03T21:12:13.1002173	Registries
+// 1.21.1	2025-01-03T21:47:01.8601254	Registries
 161d59d2318bf0bec60d0c04a7445970fe87974f data/neomod/dimension/afterlife.json
 a42611c518a80e9eabcdb823253956bdd46b8dae data/neomod/dimension_type/afterlife_type.json
 45cc21a0401cabe558b485aa212b0d94b39aaabb data/neomod/enchantment/ice_barrage_melee.json
@@ -21,6 +21,7 @@ a28e756acb559e09fe0380ad9306c9e0d3392912 data/neomod/neoforge/biome_modifier/add
 d01e67e9fb3f71905f96be09fba805ecf52b26f0 data/neomod/neoforge/biome_modifier/add_sublvl5_afterlife_dimension_spirit_coal_ore.json
 552023e93cdd51b26ff6aef55510b88411c6791b data/neomod/neoforge/biome_modifier/add_tree_bloody.json
 d45ddce2c52a87e8d20599069175367359a3af7f data/neomod/neoforge/biome_modifier/add_tree_ghostly.json
+ee93cddba873e1d55737a7afee963516337f93a4 data/neomod/neoforge/biome_modifier/add_tree_gilded.json
 d0b31e9752228611ba92fdfb9ef8d6e3ee5601fb data/neomod/worldgen/biome/blood_garden_biome.json
 3b04fba0a8b47d16bfd2feff86146de9b15da1aa data/neomod/worldgen/biome/ghostly_biome.json
 bd0fc6987b8a838497971e997abeba396d7f4531 data/neomod/worldgen/biome/gilded_forest_biome.json
@@ -40,6 +41,7 @@ ba5a10e1aeadd90969e15966f3eff8fdb8a9e3c4 data/neomod/worldgen/configured_feature
 044ecdf183e6792ec0304b039b2edf31a01c137a data/neomod/worldgen/configured_feature/bloody.json
 a98f95d2ba973df63ec6277bdd598465d8b37bd6 data/neomod/worldgen/configured_feature/blood_bone_bush.json
 46080b3bcafeacba0aa26445354314e12c675641 data/neomod/worldgen/configured_feature/ghostly.json
+3b3243ff4e2174d06a7fd229053ee667db505011 data/neomod/worldgen/configured_feature/gilded.json
 007be0371a4a90aa5293793661c72c00179912b7 data/neomod/worldgen/configured_feature/oozing_flower.json
 9da713b5fc22939516e7bb52c5d5531a26e43a8b data/neomod/worldgen/configured_feature/skull_n_bone_block.json
 ea0af0b09f70938480a8108e309e2c8009a703b9 data/neomod/worldgen/noise_settings/afterlife_dim.json
@@ -47,6 +49,7 @@ ea0af0b09f70938480a8108e309e2c8009a703b9 data/neomod/worldgen/noise_settings/aft
 22a71884308348483f8afb094c42c737e4c8d5c3 data/neomod/worldgen/placed_feature/bloody_tree_placed.json
 f8331f387a76a1a8abeff9cac8eb583f5327cc97 data/neomod/worldgen/placed_feature/diamond_ore_placed.json
 26f90aea2a7fe00f21304664438021eb87a92ee0 data/neomod/worldgen/placed_feature/ghostly_tree_placed.json
+da241403994430a8a1a4dc667ade387d061a2592 data/neomod/worldgen/placed_feature/gilded_tree_placed.json
 dbfdb4e6849b5df735ff4028d58b19a5a34ec393 data/neomod/worldgen/placed_feature/gold_ore_placed.json
 bd746616d0f0a50a4d4d6c4af64f3757096a09c9 data/neomod/worldgen/placed_feature/iron_ore_placed.json
 6cdfcf1afa2fbea2b7622bbaf822365ac9f2e8f4 data/neomod/worldgen/placed_feature/oozing_flower_placed.json

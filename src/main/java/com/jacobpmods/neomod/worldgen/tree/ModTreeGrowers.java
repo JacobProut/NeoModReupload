@@ -12,4 +12,7 @@ public class ModTreeGrowers {
 
     public static final TreeGrower BLOODY = new TreeGrower(FirstNeoMod.MOD_ID + ":bloody",
             Optional.empty(), Optional.of(ModConfiguredFeatures.BLOODY_KEY), Optional.empty());
+
+    public static final TreeGrower GILDED = new TreeGrower(FirstNeoMod.MOD_ID + ":gilded",
+            Optional.empty(), Optional.of(ModConfiguredFeatures.GILDED_KEY), Optional.empty());
 }

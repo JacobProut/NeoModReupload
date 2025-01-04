@@ -29,6 +29,8 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> BLOODY_BONE_BUSH_KEY = registerKey("bloody_bone_bush_placed");
     public static final ResourceKey<PlacedFeature> SKULL_N_BONES_BLOCK_KEY = registerKey("skull_n_bones_block_placed");
 
+    public static final ResourceKey<PlacedFeature> GILDED_TREE_PLACED_KEY = registerKey("gilded_tree_placed");
+
     //Ore Gen
     public static final ResourceKey<PlacedFeature> AFTERLIFE_DIMENSION_SHATTERED_FRAGMENT_ORE_PLACED_KEY = registerKey("shattered_fragment_ore_placed");
     public static final ResourceKey<PlacedFeature> AFTERLIFE_DIMENSION_SPIRIT_COAL_ORE_PLACED_KEY = registerKey("spirit_coal_ore_placed");
@@ -55,9 +57,13 @@ public class ModPlacedFeatures {
 
         register(context, BLOODY_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BLOODY_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2), ModBlocks.BLOODY_SAPLING.get()));
-
         register(context, BLOODY_BONE_BUSH_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BLOOD_BONE_BUSH),
                 List.of(RarityFilter.onAverageOnceEvery(15), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+
+
+        register(context, GILDED_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.GILDED_KEY),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2), ModBlocks.GILDED_SAPLING.get()));
+
 
        /* register(context, SKULL_N_BONES_BLOCK_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SKULL_N_BONE_BLOCK),
                 List.of(RarityFilter.onAverageOnceEvery(15), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));*/

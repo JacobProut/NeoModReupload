@@ -413,7 +413,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.GILDED_LEAVES.get());
         tag(SAPLINGS)
                 .add(ModBlocks.GHOSTLY_SAPLING.get())
-                .add(ModBlocks.BLOODY_SAPLING.get());
+                .add(ModBlocks.BLOODY_SAPLING.get())
+                .add(ModBlocks.GILDED_SAPLING.get());
         tag(FLOWERS)
                 .add(ModBlocks.OOZING_FLOWER.get());
 
