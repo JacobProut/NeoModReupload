@@ -397,7 +397,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.GHOSTLY_PLANK_SLAB.get())
                 .add(ModBlocks.BLOODY_PLANK_STAIRS.get())
                 .add(ModBlocks.BLOODY_PLANK_SLAB.get())
-                .add(ModBlocks.LOG_BLOODY.get());
+                .add(ModBlocks.LOG_BLOODY.get())
+                .add(ModBlocks.LOG_GILDED.get());
         tag(PLANKS)
                 .add(ModBlocks.GHOSTLY_PLANKS.get())
                 .add(ModBlocks.BLOODY_PLANKS.get());
