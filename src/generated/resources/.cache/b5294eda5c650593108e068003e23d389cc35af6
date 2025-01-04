@@ -1,6 +1,7 @@
-// 1.21.1	2024-12-20T01:55:05.7703864	Particle Descriptions
+// 1.21.1	2025-01-03T22:42:11.3984224	Particle Descriptions
 752957fcd95e4ab43c31927baf4b9977640caaa0 assets/neomod/particles/afterlife_fire_flame.json
 04f65a85411bd678d61ca6d78b4474e68ad58036 assets/neomod/particles/afterlife_torch.json
 579df0511d4ed6a805b9100894fde98071bc7e76 assets/neomod/particles/blood_particle.json
 80d793e75653362ba6881ab935c35ebeecded6e2 assets/neomod/particles/falling_blood.json
+4fa23164828ba3e34e0d2f3b35e3a199238c3da6 assets/neomod/particles/spark.json
 28685d728c0c3f48cba0ff1f8b833d90bd995ccc assets/neomod/particles/splash.json

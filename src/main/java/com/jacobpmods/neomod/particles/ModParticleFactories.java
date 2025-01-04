@@ -33,5 +33,6 @@ public class ModParticleFactories {
         event.registerSpriteSet(ModParticlesTypes.AFTERLIFE_TORCH.get(), AfterLifeTorchParticle.Provider::new);
         event.registerSpriteSet(ModParticlesTypes.AFTERLIFE_FIRE_FLAME.get(), FlameParticle.Provider::new);
 
+        event.registerSpriteSet(ModParticlesTypes.SPARK.get(), SparkParticle.Provider::new);
         }
 }
