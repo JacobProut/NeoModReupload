@@ -1,7 +1,7 @@
 package com.jacobpmods.neomod.worldgen.tree;
 
 import com.jacobpmods.neomod.FirstNeoMod;
-import com.jacobpmods.neomod.worldgen.ModConfiguredFeatures;
+import com.jacobpmods.neomod.worldgen.biome.ModConfiguredFeatures;
 import net.minecraft.world.level.block.grower.TreeGrower;
 
 import java.util.Optional;

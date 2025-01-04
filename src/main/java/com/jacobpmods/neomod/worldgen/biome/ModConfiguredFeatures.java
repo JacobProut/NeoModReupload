@@ -1,4 +1,4 @@
-package com.jacobpmods.neomod.worldgen;
+package com.jacobpmods.neomod.worldgen.biome;
 
 import com.jacobpmods.neomod.FirstNeoMod;
 import com.jacobpmods.neomod.block.ModBlocks;

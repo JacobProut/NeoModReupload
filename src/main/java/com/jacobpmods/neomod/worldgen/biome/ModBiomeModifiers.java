@@ -1,7 +1,6 @@
-package com.jacobpmods.neomod.worldgen;
+package com.jacobpmods.neomod.worldgen.biome;
 
 import com.jacobpmods.neomod.FirstNeoMod;
-import com.jacobpmods.neomod.worldgen.biome.ModBiomes;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;

@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-03T17:43:44.7025787	Registries
+// 1.21.1	2025-01-03T17:53:27.0074402	Registries
 32f4e0731993b952c920cb78529b7d1acbed2f95 data/neomod/dimension/afterlife.json
 f3068bd7db0f4de17ba7178c2195c996a33b7955 data/neomod/dimension_type/afterlife_type.json
 45cc21a0401cabe558b485aa212b0d94b39aaabb data/neomod/enchantment/ice_barrage_melee.json
@@ -53,7 +53,7 @@ bd746616d0f0a50a4d4d6c4af64f3757096a09c9 data/neomod/worldgen/placed_feature/iro
 52a340e683ae77f6819f858c7e3c3f5b4e543409 data/neomod/worldgen/placed_feature/shattered_fragment_ore_placed.json
 ff4ce22944a2351840f3b711455cc0989a8b92d6 data/neomod/worldgen/placed_feature/skull_n_bones_block_placed.json
 5ff14fc055294d521f6d37327ea55544847b1a45 data/neomod/worldgen/placed_feature/spirit_coal_ore_placed.json
-c821694f5597f79eb7e3075b1f9bcc298e50de9d data/neomod/worldgen/placed_feature/sublvl5_diamond_ore_placed.json
+91ebf2fb500e6d44e241e3d3342a18a25e3e2bb0 data/neomod/worldgen/placed_feature/sublvl5_diamond_ore_placed.json
 ebc58f654cc7a84ccf961e853a5ae48952e7ae80 data/neomod/worldgen/placed_feature/sublvl5_gold_ore_placed.json
 5922cd66062515d5060819a2b3d4bf1082271738 data/neomod/worldgen/placed_feature/sublvl5_iron_ore_placed.json
 4d906d95c848455c49c6fa8092d4a7cbd0171373 data/neomod/worldgen/placed_feature/sublvl5_redstone_ore_placed.json

@@ -1,7 +1,9 @@
-package com.jacobpmods.neomod.worldgen;
+package com.jacobpmods.neomod.worldgen.biome;
 
 import com.jacobpmods.neomod.FirstNeoMod;
 import com.jacobpmods.neomod.block.ModBlocks;
+import com.jacobpmods.neomod.worldgen.ModOrePlacement;
+import com.jacobpmods.neomod.worldgen.biome.ModConfiguredFeatures;
 import com.mojang.logging.LogUtils;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;

@@ -2,10 +2,10 @@ package com.jacobpmods.neomod.datagen;
 
 import com.jacobpmods.neomod.FirstNeoMod;
 import com.jacobpmods.neomod.item.custom.enchantment.ModEnchantments;
-import com.jacobpmods.neomod.worldgen.ModBiomeModifiers;
-import com.jacobpmods.neomod.worldgen.ModConfiguredFeatures;
-import com.jacobpmods.neomod.worldgen.ModNoiseGeneratorSettings;
-import com.jacobpmods.neomod.worldgen.ModPlacedFeatures;
+import com.jacobpmods.neomod.worldgen.biome.ModBiomeModifiers;
+import com.jacobpmods.neomod.worldgen.biome.ModConfiguredFeatures;
+import com.jacobpmods.neomod.worldgen.dimension.ModNoiseGeneratorSettings;
+import com.jacobpmods.neomod.worldgen.biome.ModPlacedFeatures;
 import com.jacobpmods.neomod.worldgen.biome.ModBiomes;
 import com.jacobpmods.neomod.worldgen.dimension.ModDimensions;
 import net.minecraft.core.HolderLookup;

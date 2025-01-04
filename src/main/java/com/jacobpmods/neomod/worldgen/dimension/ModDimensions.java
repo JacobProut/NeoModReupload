@@ -1,7 +1,6 @@
 package com.jacobpmods.neomod.worldgen.dimension;
 
 import com.jacobpmods.neomod.FirstNeoMod;
-import com.jacobpmods.neomod.worldgen.ModNoiseGeneratorSettings;
 import com.jacobpmods.neomod.worldgen.biome.ModBiomes;
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.core.HolderGetter;
