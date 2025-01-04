@@ -385,7 +385,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.BLOODY_GRASS_BLOCK.get())
                 .add(ModBlocks.GHOSTLY_DIRT.get())
                 .add(ModBlocks.AFTERLIFE_GRASS_BLOCK.get())
-                .add(ModBlocks.AFTERLIFE_DIRT.get());
+                .add(ModBlocks.AFTERLIFE_DIRT.get())
+                .add(ModBlocks.GILDED_GRASS_BLOCK.get())
+                .add(ModBlocks.GILDED_DIRT.get());
 
 
         tag(MINEABLE_WITH_AXE)
@@ -401,11 +403,13 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.BLOODY_PLANKS.get());
         tag(LOGS_THAT_BURN)
                 .add(ModBlocks.LOG_GHOSTLY.get())
-                .add(ModBlocks.LOG_BLOODY.get());
+                .add(ModBlocks.LOG_BLOODY.get())
+                .add(ModBlocks.LOG_GILDED.get());
 
         tag(LEAVES)
                 .add(ModBlocks.GHOSTLY_LEAVES.get())
-                .add(ModBlocks.BLOODY_LEAVES.get());
+                .add(ModBlocks.BLOODY_LEAVES.get())
+                .add(ModBlocks.GILDED_LEAVES.get());
         tag(SAPLINGS)
                 .add(ModBlocks.GHOSTLY_SAPLING.get())
                 .add(ModBlocks.BLOODY_SAPLING.get());
@@ -450,7 +454,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(DIRT)
                 .add(ModBlocks.GHOSTLY_DIRT.get())
-                .add(ModBlocks.AFTERLIFE_DIRT.get());
+                .add(ModBlocks.AFTERLIFE_DIRT.get())
+                .add(ModBlocks.GILDED_DIRT.get());
 
         tag(PORTALS)
                 .add(ModBlocks.GHOSTLY_PORTAL_BLOCK.get());

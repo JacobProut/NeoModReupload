@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "neomod:block/gilded_dirt",
+    "up": "neomod:block/gilded_grass_block_top",
+    "north": "neomod:block/gilded_grass_block",
+    "south": "neomod:block/gilded_grass_block",
+    "west": "neomod:block/gilded_grass_block",
+    "east": "neomod:block/gilded_grass_block"
+  }
+}

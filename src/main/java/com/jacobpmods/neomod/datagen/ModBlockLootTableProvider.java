@@ -81,12 +81,19 @@ public class ModBlockLootTableProvider  extends BlockLootSubProvider {
                 ModBlocks.AFTERLIFE_GRASS_BLOCK.get(),
                 this.applyExplosionDecay(
                         block,
-                                                    //REPLACE WITH AFTERLIFE DIRT
                         LootItem.lootTableItem(ModBlocks.AFTERLIFE_DIRT.get())
+                )
+        ));
+        this.add(ModBlocks.GILDED_GRASS_BLOCK.get(), block -> this.createSilkTouchDispatchTable(
+                ModBlocks.GILDED_GRASS_BLOCK.get(),
+                this.applyExplosionDecay(
+                        block,
+                        LootItem.lootTableItem(ModBlocks.GILDED_DIRT.get())
                 )
         ));
         dropSelf(ModBlocks.GHOSTLY_DIRT.get());
         dropSelf(ModBlocks.AFTERLIFE_DIRT.get());
+        dropSelf(ModBlocks.GILDED_DIRT.get());
 
 
         //Stone Blocks
@@ -174,6 +181,10 @@ public class ModBlockLootTableProvider  extends BlockLootSubProvider {
                 createLeavesDrops(block, ModBlocks.BLOODY_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
         this.dropSelf(ModBlocks.BLOODY_SAPLING.get());
 
+        this.dropSelf(ModBlocks.LOG_GILDED.get());
+        this.dropSelf(ModBlocks.GILDED_LEAVES.get());
+       /* this.add(ModBlocks.GILDED_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.HEAVEN_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));*/
 
         //Flowers
         this.dropSelf(ModBlocks.OOZING_FLOWER.get());

@@ -83,8 +83,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.GHOSTLY_GRASS_BLOCK);
                         output.accept(ModBlocks.BLOODY_GRASS_BLOCK);
                         output.accept(ModBlocks.AFTERLIFE_GRASS_BLOCK);
+                        output.accept(ModBlocks.GILDED_GRASS_BLOCK);
                         output.accept(ModBlocks.GHOSTLY_DIRT);
                         output.accept(ModBlocks.AFTERLIFE_DIRT);
+                        output.accept(ModBlocks.GILDED_DIRT);
                         //output.accept(ModBlocks.BLOODY_DIRT.get());
 
                         //Stone-CobbleStone Blocks
@@ -146,10 +148,12 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BLOODY_PLANK_BUTTON);
                         output.accept(ModBlocks.BLOODY_DOOR);
                         output.accept(ModBlocks.BLOODY_TRAPDOOR);
+                        output.accept(ModBlocks.LOG_GILDED);
 
                         //Leaves
                         output.accept(ModBlocks.GHOSTLY_LEAVES);
                         output.accept(ModBlocks.BLOODY_LEAVES);
+                        output.accept(ModBlocks.GILDED_LEAVES);
 
                         //Saplings
                         output.accept(ModBlocks.GHOSTLY_SAPLING);
@@ -205,8 +209,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.GHOSTLY_GRASS_BLOCK);
                         output.accept(ModBlocks.BLOODY_GRASS_BLOCK);
                         output.accept(ModBlocks.AFTERLIFE_GRASS_BLOCK);
+                        output.accept(ModBlocks.GILDED_GRASS_BLOCK);
                         output.accept(ModBlocks.GHOSTLY_DIRT);
                         output.accept(ModBlocks.AFTERLIFE_DIRT);
+                        output.accept(ModBlocks.GILDED_DIRT);
 
                         //Stairs
                         output.accept(ModBlocks.GHOSTLY_STONE_STAIRS);

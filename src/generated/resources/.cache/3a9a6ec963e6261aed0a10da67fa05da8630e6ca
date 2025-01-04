@@ -1,4 +1,4 @@
-// 1.21.1	2024-12-25T22:02:15.4370595	Block States: neomod
+// 1.21.1	2025-01-03T20:34:07.192275	Block States: neomod
 0ed8a5bf7f8e23879e30338a03c042fb1dd23887 assets/neomod/blockstates/afterlife_diamond_ore_block.json
 d11086509b7c897b12edc148b0075fb0c95ae0cb assets/neomod/blockstates/afterlife_dirt.json
 e2971aadb92f60502e89a2c4eb19b6f2beed0972 assets/neomod/blockstates/afterlife_gold_ore_block.json
@@ -67,8 +67,12 @@ d895d1451b2793e7e5c0c5b7d15c2923800c77ea assets/neomod/blockstates/ghostly_stone
 2a65069e99eef56f1ef00f42eff19be69f2c05b6 assets/neomod/blockstates/ghostly_stone_wall.json
 7643998cb094e38739db83ecf47fd99ff5f0d83f assets/neomod/blockstates/ghostly_trapdoor.json
 76e1d87314c9937bb2fed45644f3f7cf1b83d939 assets/neomod/blockstates/ghostly_web.json
+0f4f58c4de1dbda976f1f98e59b490762ee6f286 assets/neomod/blockstates/gilded_dirt.json
+14e5e789e38261e148620e74f69154f227e5ce23 assets/neomod/blockstates/gilded_grass_block.json
+02830e97b2179d22d59b0c5dd5f7b45cf93016b5 assets/neomod/blockstates/gilded_leaves.json
 232be6f3af4a60e91ed5834109575931d61a94f9 assets/neomod/blockstates/log_bloody.json
 d84822744b0de810b197cd89759fae9a47cdb1b6 assets/neomod/blockstates/log_ghostly.json
+fc8cc7d9fca3abcde5a2dfacc39ea69a77bcb4f6 assets/neomod/blockstates/log_gilded.json
 2f48aea5100ac63721989351687a92b91482877d assets/neomod/blockstates/nexon_block.json
 d34b5c989753a8bdac2e670369b909a0bb60eb02 assets/neomod/blockstates/nexon_ore_block.json
 ca9e6a7cfc1afc9828f752c54cdd389cd9291f2d assets/neomod/blockstates/oozing_flower.json
@@ -239,10 +243,15 @@ e4f54e18c5a4b3047378b7b41a442affea0b3c2e assets/neomod/models/block/ghostly_trap
 687bbe8ae33e9c1afe72d4fc0893afba12a20e5b assets/neomod/models/block/ghostly_trapdoor_open.json
 b222120821ec8d2195b4e85b33e7389013415578 assets/neomod/models/block/ghostly_trapdoor_top.json
 c4b664d86223b1161f5d3b24d41efe09413decf0 assets/neomod/models/block/ghostly_web.json
+0446173812b52a2275997c534894f8a94b84a980 assets/neomod/models/block/gilded_dirt.json
+9d8737ff0d6362c1e899e4f67a6f865234b685cc assets/neomod/models/block/gilded_grass_block.json
+d67ed6e6ed9579a3db6d90cabeac7cc117954322 assets/neomod/models/block/gilded_leaves.json
 4c5f7473bbfe02bdc8a68966c67df5f0f00fab31 assets/neomod/models/block/log_bloody.json
 ebc493e422a93835ef53bae56d8eac2513eb7d6c assets/neomod/models/block/log_bloody_horizontal.json
 c81bae0ff7e538514c778eea74ea5777fa05fc06 assets/neomod/models/block/log_ghostly.json
 1fa7bf1ded3f8f98e6519a3946bc54fc1c5b31aa assets/neomod/models/block/log_ghostly_horizontal.json
+74aa8c564d8c22600feb16ff1f424b2173fdc958 assets/neomod/models/block/log_gilded.json
+a70a1d1f2445cb2f740e1476a31159450a656a19 assets/neomod/models/block/log_gilded_horizontal.json
 4d2a35e4ed5e10c2c7f058937492ebcbdbe8f05b assets/neomod/models/block/nexon_block.json
 16d87e0b2aaadd1a979075459257a99e23d58e3d assets/neomod/models/block/nexon_ore_block.json
 f6bb19a45f653522328e4e35b4fbedb2bb4875e9 assets/neomod/models/block/oozing_flower.json
@@ -305,8 +314,12 @@ b5df409612a88b1c8e80a64115f0cf830b83424f assets/neomod/models/item/ghostly_stone
 56e410a923e276bc1a8d750538a7356ef4ec594a assets/neomod/models/item/ghostly_stone_stairs.json
 6028818f28ed82deb20d4fa1155a853ab4082a31 assets/neomod/models/item/ghostly_trapdoor.json
 c46638fcdabb085c6d352be1fe9719b98287c8f5 assets/neomod/models/item/ghostly_web.json
+e2b8c77f6dbadcc39d866cbcf33262bb689f37fc assets/neomod/models/item/gilded_dirt.json
+8dd87a27115db77c362ff3182f6004958cb2249f assets/neomod/models/item/gilded_grass_block.json
+5a07356f4cd88ce8ed67ec404bcc7798bc3027ad assets/neomod/models/item/gilded_leaves.json
 061309164c60a742db7b54ec118d5f8170fa9854 assets/neomod/models/item/log_bloody.json
 de346f72c3a40f08bf60aa1fc62bc773700fd1ab assets/neomod/models/item/log_ghostly.json
+d8018edab9ea382ed27aba5088b2687af2ca8b4d assets/neomod/models/item/log_gilded.json
 5a620e3140ab1965f348d9a6703f07f68d776919 assets/neomod/models/item/nexon_block.json
 3cb77f56b248e0d19b417c3cf9d8dec5239c5612 assets/neomod/models/item/nexon_ore_block.json
 3bc3e2e64237e871fe7c89426844455ebc45d9a9 assets/neomod/models/item/planks_bloody.json

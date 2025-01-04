@@ -46,8 +46,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.GHOSTLY_GRASS_BLOCK);
         blockWithItem(ModBlocks.BLOODY_GRASS_BLOCK);
         blockWithItem(ModBlocks.AFTERLIFE_GRASS_BLOCK);
+        blockWithItem(ModBlocks.GILDED_GRASS_BLOCK);
         blockWithItem(ModBlocks.GHOSTLY_DIRT);
         blockWithItem(ModBlocks.AFTERLIFE_DIRT);
+        blockWithItem(ModBlocks.GILDED_DIRT);
        // blockWithItem(ModBlocks.BLOODY_DIRT);
 
         /*horizontalBlock(ModBlocks.ENHANCER.get(), models().orientable("neomod:enhancer",
@@ -141,7 +143,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         leavesBlock(ModBlocks.GHOSTLY_LEAVES);
         saplingBlock(ModBlocks.GHOSTLY_SAPLING);
 
-        //ADD ROTATION PLACEMENT FOR BLOODY LOGS
+
         blockItem(ModBlocks.LOG_BLOODY);
         logBlock(((RotatedPillarBlock) ModBlocks.LOG_BLOODY.get()));
 
@@ -162,6 +164,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.BLOODY_TRAPDOOR, "_bottom");
         leavesBlock(ModBlocks.BLOODY_LEAVES);
         saplingBlock(ModBlocks.BLOODY_SAPLING);
+
+        blockItem(ModBlocks.LOG_GILDED);
+        logBlock(((RotatedPillarBlock) ModBlocks.LOG_GILDED.get()));
+
+        leavesBlock(ModBlocks.GILDED_LEAVES);
 
 
         simpleBlock(ModBlocks.OOZING_FLOWER.get(),

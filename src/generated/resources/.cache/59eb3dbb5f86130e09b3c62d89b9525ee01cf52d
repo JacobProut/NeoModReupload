@@ -1,4 +1,4 @@
-// 1.21.1	2024-12-25T22:02:15.4415596	Loot Tables
+// 1.21.1	2025-01-03T20:34:07.1967751	Loot Tables
 dc93d930236958cfc1f6f61034d895b9d94a33ba data/neomod/loot_table/blocks/afterlife_diamond_ore_block.json
 7474368bc8207f8d44dd0611de39ba6d6a5f4f5e data/neomod/loot_table/blocks/afterlife_dirt.json
 3f4431a2a3d297fed30c019a7cf11e9e251bf0d9 data/neomod/loot_table/blocks/afterlife_gold_ore_block.json
@@ -69,8 +69,12 @@ cae6402046c447229e66f6b473b6c82ce0bcca85 data/neomod/loot_table/blocks/ghostly_s
 62643efcbef80d7989e94ae52b39cfb5d5802bc6 data/neomod/loot_table/blocks/ghostly_stone_wall.json
 10c61eca1d4697a0e6c2cd59bd639a5543023a65 data/neomod/loot_table/blocks/ghostly_trapdoor.json
 719b312cf175f44a1f38b053eb1dc9ad8eab5379 data/neomod/loot_table/blocks/ghostly_web.json
+fc09cc344707bbcbfb3514b0bdc236f797a2fa80 data/neomod/loot_table/blocks/gilded_dirt.json
+f5fdf43868c668f630abb330aad9ed1216464a07 data/neomod/loot_table/blocks/gilded_grass_block.json
+2736d9695cde8b4fed926bee7397c5fd2d363c65 data/neomod/loot_table/blocks/gilded_leaves.json
 ee7ae39e38445e903cfd48d9cdec7757ca3ed605 data/neomod/loot_table/blocks/log_bloody.json
 c410aed39676adc0a942e20f4a6473841988ab83 data/neomod/loot_table/blocks/log_ghostly.json
+73a7c4170a2256f9bfc6b2796504ed5df20bfa24 data/neomod/loot_table/blocks/log_gilded.json
 e32c99559e2962408d160832213fd41284395d49 data/neomod/loot_table/blocks/nexon_block.json
 b4a3d717228d4fc00615db74a7129f6dfb41ddea data/neomod/loot_table/blocks/nexon_ore_block.json
 3bf8a8db40d580949e6695da92ac99522caf9d33 data/neomod/loot_table/blocks/oozing_flower.json

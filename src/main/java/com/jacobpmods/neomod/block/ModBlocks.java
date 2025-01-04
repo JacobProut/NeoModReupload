@@ -9,10 +9,7 @@ import com.jacobpmods.neomod.block.entity.blockentities.EnhancerBlock;
 import com.jacobpmods.neomod.block.entity.blockentities.PedestalBlock;
 import com.jacobpmods.neomod.block.custom.blocks.*;
 import com.jacobpmods.neomod.block.custom.portal.GhostlyPortalBlock;
-import com.jacobpmods.neomod.block.terrainblocks.AfterlifeGrassBlock;
-import com.jacobpmods.neomod.block.terrainblocks.BloodyGrassBlock;
-import com.jacobpmods.neomod.block.terrainblocks.GhostlyBlock;
-import com.jacobpmods.neomod.block.terrainblocks.GhostlyDirtBlock;
+import com.jacobpmods.neomod.block.terrainblocks.*;
 import com.jacobpmods.neomod.item.ModItems;
 import com.jacobpmods.neomod.worldgen.tree.ModTreeGrowers;
 import net.minecraft.core.BlockPos;
@@ -79,8 +76,10 @@ public class ModBlocks {
     public static final DeferredBlock<Block> GHOSTLY_GRASS_BLOCK = registerBlock("ghostly_grass_block", GhostlyBlock::new);
     public static final DeferredBlock<Block> BLOODY_GRASS_BLOCK = registerBlock("bloody_grass_block", BloodyGrassBlock::new);
     public static final DeferredBlock<Block> AFTERLIFE_GRASS_BLOCK = registerBlock("afterlife_grass_block", AfterlifeGrassBlock::new);
+    public static final DeferredBlock<Block> GILDED_GRASS_BLOCK = registerBlock("gilded_grass_block", GildedGrassBlock::new);
     public static final DeferredBlock<Block> GHOSTLY_DIRT = registerBlock("ghostly_dirt", GhostlyDirtBlock::new);
     public static final DeferredBlock<Block> AFTERLIFE_DIRT = registerBlock("afterlife_dirt", GhostlyDirtBlock::new);
+    public static final DeferredBlock<Block> GILDED_DIRT = registerBlock("gilded_dirt", GhostlyDirtBlock::new);
 
 
    //Stone Related
@@ -556,6 +555,30 @@ public class ModBlocks {
     public static final DeferredBlock<Block> BLOODY_VINE = registerBlock("bloody_vine", () -> new BloodyVine(
             BlockBehaviour.Properties.ofFullCopy(Blocks.VINE).noOcclusion().replaceable().noCollission()
                     .randomTicks().strength(0.2F).sound(SoundType.VINE).ignitedByLava().pushReaction(PushReaction.DESTROY)));
+
+
+    //Heavenly Biome Wood
+    public static final DeferredBlock<Block> LOG_GILDED = registerBlock("log_gilded", () ->new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.of()
+            .strength(2f).sound(SoundType.WOOD)));
+
+                                                                                                            //CHANGE LEAVESBLOCK TO CUSTOM BLOCK WITH PARTICLES
+    public static final DeferredBlock<Block> GILDED_LEAVES = registerBlock("gilded_leaves", () ->new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)
+            .strength(0.2f).sound(SoundType.CHERRY_LEAVES)) {
+        @Override
+        public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+            return true;
+        }
+
+        @Override
+        public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+            return 60;
+        }
+
+        @Override
+        public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+            return 30;
+        }
+    });
 
 
     public static final DeferredBlock<SkullNBones> SKULL_N_BONES = registerBlock("skull_n_bones", () ->new SkullNBones(BlockBehaviour.Properties.of()

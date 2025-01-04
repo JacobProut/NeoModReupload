@@ -4,6 +4,8 @@
     "neomod:bloody_grass_block",
     "neomod:ghostly_dirt",
     "neomod:afterlife_grass_block",
-    "neomod:afterlife_dirt"
+    "neomod:afterlife_dirt",
+    "neomod:gilded_grass_block",
+    "neomod:gilded_dirt"
   ]
 }
