@@ -10,6 +10,8 @@
   "entity.minecraft.villager.neomod.taxidermist" : "Taxidermist",
   "entity.minecraft.villager.neomod.banker" : "Banker",
 
+  "entity.neomod.throwable_scythe_entity": "Throwable Scythe",
+
 
   "item.neomod.undead_beef": "Undead Beef",
   "item.neomod.speedapple": "Speed Apple",
@@ -57,6 +59,7 @@
   "item.neomod.skeletal_blood_shard": "Skeletal Blood Shard",
   "item.neomod.undead_key": "Undead Key",
 
+  "item.neomod.throwable_scythe": "Throwable Scythe",
 
 
 

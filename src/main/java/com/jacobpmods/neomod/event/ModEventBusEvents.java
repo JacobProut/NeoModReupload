@@ -7,6 +7,7 @@ import com.jacobpmods.neomod.entity.client.skeletal.cow.SkeletalCowModel;
 import com.jacobpmods.neomod.entity.client.skeletal.enderman.SkeletalEndermanModel;
 import com.jacobpmods.neomod.entity.client.skeletal.guardian.SkeletalGuardianModel;
 import com.jacobpmods.neomod.entity.client.skeletal.zombie.SkeletalZombieModel;
+import com.jacobpmods.neomod.entity.client.throwables.ScytheProjectileModel;
 import com.jacobpmods.neomod.entity.custom.SkeletalCowEntity;
 import com.jacobpmods.neomod.entity.custom.SkeletalEndermanEntity;
 import com.jacobpmods.neomod.entity.custom.SkeletalGuardianEntity;
@@ -25,6 +26,7 @@ public class ModEventBusEvents {
         event.registerLayerDefinition(ModModelLayers.SKELETAL_ENDERMAN, SkeletalEndermanModel::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.SKELETAL_GUARDIAN, SkeletalGuardianModel::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.SKELETAL_COW, SkeletalCowModel::createBodyLayer);
+        event.registerLayerDefinition(ScytheProjectileModel.LAYER_LOCATION, ScytheProjectileModel::createBodyLayer);
 
     }
 

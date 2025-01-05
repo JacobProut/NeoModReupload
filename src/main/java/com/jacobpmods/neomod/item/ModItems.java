@@ -10,6 +10,7 @@ import com.jacobpmods.neomod.item.custom.curiosItems.RingOfUndeadStrength;
 import com.jacobpmods.neomod.item.custom.curiosItems.SoulSplitNecklace;
 import com.jacobpmods.neomod.item.custom.food.speedapple;
 import com.jacobpmods.neomod.item.custom.igniter.PortalIgniter;
+import com.jacobpmods.neomod.item.custom.throwables.ThrowableScythe;
 import com.jacobpmods.neomod.item.custom.tools.NexonAxe;
 import com.jacobpmods.neomod.item.custom.tools.NexonPickaxe;
 import net.minecraft.world.food.FoodProperties;
@@ -67,6 +68,10 @@ public class ModItems {
     public static final DeferredItem<Item> GOD_SWORD = ITEMS.register("god_sword",
             () -> new SwordItem(ModToolTiers.GOD, new Item.Properties()
                     .attributes(SwordItem.createAttributes(ModToolTiers.GOD, 6, -2.2F))));
+
+    //Need to find a way to combine with normal Scythe
+    public static final DeferredItem<Item> THROWABLE_SCYTHE = ITEMS.register("throwable_scythe",
+            () -> new ThrowableScythe(new Item.Properties().stacksTo(64)));
 
 
     //Armor

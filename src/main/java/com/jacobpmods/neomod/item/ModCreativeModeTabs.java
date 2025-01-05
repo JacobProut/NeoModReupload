@@ -43,6 +43,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.BLOOD_BONE_SWORD);
                         output.accept(ModItems.GOD_SWORD);
 
+                        //Throwables
+                        output.accept(ModItems.THROWABLE_SCYTHE);
+
                         //Skeletal Armor
                         //output.accept(ModItems.SKELETAL_HELMET);
 
