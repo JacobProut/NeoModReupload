@@ -169,6 +169,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         logBlock(((RotatedPillarBlock) ModBlocks.LOG_GILDED.get()));
 
         leavesBlock(ModBlocks.GILDED_LEAVES);
+        saplingBlock(ModBlocks.GILDED_SAPLING);
 
 
         simpleBlock(ModBlocks.OOZING_FLOWER.get(),

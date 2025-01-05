@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-03T20:34:07.192275	Block States: neomod
+// 1.21.1	2025-01-04T13:20:43.0169831	Block States: neomod
 0ed8a5bf7f8e23879e30338a03c042fb1dd23887 assets/neomod/blockstates/afterlife_diamond_ore_block.json
 d11086509b7c897b12edc148b0075fb0c95ae0cb assets/neomod/blockstates/afterlife_dirt.json
 e2971aadb92f60502e89a2c4eb19b6f2beed0972 assets/neomod/blockstates/afterlife_gold_ore_block.json
@@ -70,6 +70,7 @@ d895d1451b2793e7e5c0c5b7d15c2923800c77ea assets/neomod/blockstates/ghostly_stone
 0f4f58c4de1dbda976f1f98e59b490762ee6f286 assets/neomod/blockstates/gilded_dirt.json
 14e5e789e38261e148620e74f69154f227e5ce23 assets/neomod/blockstates/gilded_grass_block.json
 02830e97b2179d22d59b0c5dd5f7b45cf93016b5 assets/neomod/blockstates/gilded_leaves.json
+2a65cd04a8b166305e8d8d41a2e0f1e24623a001 assets/neomod/blockstates/gilded_sapling.json
 232be6f3af4a60e91ed5834109575931d61a94f9 assets/neomod/blockstates/log_bloody.json
 d84822744b0de810b197cd89759fae9a47cdb1b6 assets/neomod/blockstates/log_ghostly.json
 fc8cc7d9fca3abcde5a2dfacc39ea69a77bcb4f6 assets/neomod/blockstates/log_gilded.json
@@ -246,6 +247,7 @@ c4b664d86223b1161f5d3b24d41efe09413decf0 assets/neomod/models/block/ghostly_web.
 0446173812b52a2275997c534894f8a94b84a980 assets/neomod/models/block/gilded_dirt.json
 9d8737ff0d6362c1e899e4f67a6f865234b685cc assets/neomod/models/block/gilded_grass_block.json
 d67ed6e6ed9579a3db6d90cabeac7cc117954322 assets/neomod/models/block/gilded_leaves.json
+70d00a5c2788277e2303fd3ac8852671268dfb06 assets/neomod/models/block/gilded_sapling.json
 4c5f7473bbfe02bdc8a68966c67df5f0f00fab31 assets/neomod/models/block/log_bloody.json
 ebc493e422a93835ef53bae56d8eac2513eb7d6c assets/neomod/models/block/log_bloody_horizontal.json
 c81bae0ff7e538514c778eea74ea5777fa05fc06 assets/neomod/models/block/log_ghostly.json
