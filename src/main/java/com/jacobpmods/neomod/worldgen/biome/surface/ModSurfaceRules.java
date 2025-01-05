@@ -33,12 +33,11 @@ public class ModSurfaceRules {
         SurfaceRules.ConditionSource customYCheck = SurfaceRules.abovePreliminarySurface();
 
         // Grass Block Placement (Above Y 54)
-        SurfaceRules.RuleSource grassSurface = SurfaceRules.sequence(
-                SurfaceRules.ifTrue(
-                        isAtOrAboveWaterlevel,
-                        SurfaceRules.sequence(
+        SurfaceRules.RuleSource grassSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(isAtOrAboveWaterlevel,
+                SurfaceRules.sequence(
                                 SurfaceRules.ifTrue(customYCheck, MOD_GRASS_BLOCK) // Apply grass block if above Y 54
-                        )));
+                )
+        ));
 
         // Dirt Below Grass (3 blocks below grass level, but only above Y 45)
         SurfaceRules.RuleSource dirtSurface = SurfaceRules.ifTrue(
@@ -69,11 +68,6 @@ public class ModSurfaceRules {
 
 
         //Bloody Biome
-        SurfaceRules.RuleSource bloodyRules = SurfaceRules.ifTrue(
-                SurfaceRules.isBiome(ModBiomes.BLOOD_GARDEN_BIOME), SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, MOD_BLOODY_GRASS_BLOCK)
-
-        );
-
         SurfaceRules.RuleSource bushRule = SurfaceRules.ifTrue(
                 SurfaceRules.isBiome(ModBiomes.BLOOD_GARDEN_BIOME), SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, BLOOD_BONE_BUSH)
         );
@@ -84,58 +78,75 @@ public class ModSurfaceRules {
                 SurfaceRules.ifTrue(isAtOrAboveWaterlevel, SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SKULL_N_BONES_BLOCK))
         );
 
-        SurfaceRules.RuleSource bloodyGrassSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(isAtOrAboveWaterlevel, SurfaceRules.sequence(
-                bloodyRules,
-                MOD_BLOODY_GRASS_BLOCK,
-                bushRule,
-                skullNBonesRule
-        )),MOD_DIRT);
-
+        SurfaceRules.RuleSource bloodyGrassSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(isAtOrAboveWaterlevel,
+                SurfaceRules.sequence(
+                        SurfaceRules.ifTrue(customYCheck,MOD_BLOODY_GRASS_BLOCK)
+                )
+        ));
+        SurfaceRules.RuleSource bloodyDirtSurface = SurfaceRules.ifTrue(
+                SurfaceRules.isBiome(ModBiomes.BLOOD_GARDEN_BIOME),
+                SurfaceRules.ifTrue(
+                        SurfaceRules.stoneDepthCheck(0, true, 3, CaveSurface.FLOOR), // Check if we are 3 blocks below the grass block
+                        SurfaceRules.ifTrue(
+                                SurfaceRules.yBlockCheck(VerticalAnchor.aboveBottom(45), 20), // Only above Y 45
+                                MOD_DIRT
+                        )));
         SurfaceRules.RuleSource modBloodyBiomeRules = SurfaceRules.sequence(
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(ModBiomes.BLOOD_GARDEN_BIOME),
                         SurfaceRules.sequence(
                                 SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, bloodyGrassSurface),
-                                SurfaceRules.ifTrue(SurfaceRules.UNDER_FLOOR, MOD_DIRT),
-                                MOD_STONE_BLOCK
+                                bloodyDirtSurface,
+                                MOD_STONE_BLOCK,
+                                bushRule,
+                                skullNBonesRule
                         )
                 )
         );
 
         //Heavenly biome
-        SurfaceRules.RuleSource heavenlyRules = SurfaceRules.ifTrue(
-                SurfaceRules.isBiome(ModBiomes.HEAVENLY_PLAINS_BIOME), SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, MOD_HEAVENLY_GRASS_BLOCK)
-
-        );
-        SurfaceRules.RuleSource heavenlyGrassSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(isAtOrAboveWaterlevel, SurfaceRules.sequence(
-                heavenlyRules,
-                MOD_HEAVENLY_GRASS_BLOCK
-        )),MOD_HEAVENLY_DIRT);
-
+        SurfaceRules.RuleSource heavenlyGrassSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(isAtOrAboveWaterlevel,
+                SurfaceRules.sequence(
+                        SurfaceRules.ifTrue(customYCheck,MOD_HEAVENLY_GRASS_BLOCK)
+                )
+        ));
+        SurfaceRules.RuleSource heavenlyDirtSurface = SurfaceRules.ifTrue(
+                SurfaceRules.isBiome(ModBiomes.HEAVENLY_PLAINS_BIOME),
+                SurfaceRules.ifTrue(
+                        SurfaceRules.stoneDepthCheck(0, true, 3, CaveSurface.FLOOR), // Check if we are 3 blocks below the grass block
+                        SurfaceRules.ifTrue(
+                                SurfaceRules.yBlockCheck(VerticalAnchor.aboveBottom(45), 20), // Only above Y 45
+                                MOD_HEAVENLY_DIRT
+                        )));
         SurfaceRules.RuleSource modHeavenlyBiomeRules = SurfaceRules.sequence(
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(ModBiomes.HEAVENLY_PLAINS_BIOME),
                         SurfaceRules.sequence(
                                 SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, heavenlyGrassSurface),
-                                SurfaceRules.ifTrue(SurfaceRules.UNDER_FLOOR, MOD_HEAVENLY_DIRT),
+                                heavenlyDirtSurface,
                                 MOD_STONE_BLOCK
                         )
                 )
         );
 
+
         //Gilded Forest biome
-        SurfaceRules.RuleSource gildedForestRules = SurfaceRules.ifTrue(
-                SurfaceRules.isBiome(ModBiomes.GILDED_FOREST_BIOME), SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, MOD_GILDED_GRASS_BLOCK)
-
-        );
-        SurfaceRules.RuleSource gildedForestGrassSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(isAtOrAboveWaterlevel, SurfaceRules.sequence(
-                gildedForestRules,
-                MOD_GILDED_GRASS_BLOCK
-        )),MOD_GILDED_DIRT);
-
+        SurfaceRules.RuleSource gildedForestGrassSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(isAtOrAboveWaterlevel,
+                SurfaceRules.sequence(
+                    SurfaceRules.ifTrue(customYCheck,MOD_GILDED_GRASS_BLOCK)
+                )
+        ));
+        SurfaceRules.RuleSource gildedDirtSurface = SurfaceRules.ifTrue(
+                SurfaceRules.isBiome(ModBiomes.GILDED_FOREST_BIOME),
+                SurfaceRules.ifTrue(
+                        SurfaceRules.stoneDepthCheck(0, true, 3, CaveSurface.FLOOR), // Check if we are 3 blocks below the grass block
+                        SurfaceRules.ifTrue(
+                                SurfaceRules.yBlockCheck(VerticalAnchor.aboveBottom(45), 20), // Only above Y 45
+                                MOD_GILDED_DIRT
+                        )));
         SurfaceRules.RuleSource modGildedForestBiomeRules = SurfaceRules.sequence(
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(ModBiomes.GILDED_FOREST_BIOME),
                         SurfaceRules.sequence(
                                 SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, gildedForestGrassSurface),
-                                SurfaceRules.ifTrue(SurfaceRules.UNDER_FLOOR, MOD_GILDED_DIRT),
+                                gildedDirtSurface,
                                 MOD_STONE_BLOCK
                         )
                 )
