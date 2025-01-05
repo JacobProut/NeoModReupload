@@ -61,16 +61,16 @@ public class ScytheProjectileEntity extends AbstractArrow {
         this.inGround = true;
 
         if(result.getDirection() == Direction.SOUTH) {
-            groundOffset = new Vec2(215f,180f);
+            groundOffset = new Vec2(215f,0f);
         }
         if(result.getDirection() == Direction.NORTH) {
-            groundOffset = new Vec2(215f, 0f);
+            groundOffset = new Vec2(215f, 180f);
         }
         if(result.getDirection() == Direction.EAST) {
-            groundOffset = new Vec2(215f,-90f);
+            groundOffset = new Vec2(215f,90f);
         }
         if(result.getDirection() == Direction.WEST) {
-            groundOffset = new Vec2(215f,90f);
+            groundOffset = new Vec2(215f,-90f);
         }
 
         if(result.getDirection() == Direction.DOWN) {
