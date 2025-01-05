@@ -95,7 +95,7 @@ public class ModBiomes {
         return new Biome.BiomeBuilder()
                 .hasPrecipitation(false)
                 .downfall(0.0f)
-                .temperature(0.0f)
+                .temperature(1.0f)
                 .generationSettings(biomeBuilder.build())
                 .mobSpawnSettings(spawnBuilder.build())
                 .specialEffects((new BiomeSpecialEffects.Builder())

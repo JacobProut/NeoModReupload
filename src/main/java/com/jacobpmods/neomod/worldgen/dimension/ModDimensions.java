@@ -71,7 +71,7 @@ public class ModDimensions {
                 MultiNoiseBiomeSource.createFromList(
                         new Climate.ParameterList<>(List.of(
                                 Pair.of(Climate.parameters(0.5F, 0.8F, 0.6F, 0.0F, 0.5F, 0.3F, 0.3F), biomeRegistry.getOrThrow(ModBiomes.GHOSTLY_BIOME)),
-                                Pair.of(Climate.parameters(0.8F, 0.5F, 0.5F, 0.2F, 0.3F, 0.1F, 0.1F), biomeRegistry.getOrThrow(ModBiomes.BLOOD_GARDEN_BIOME)),
+                                Pair.of(Climate.parameters(1.0F, -1.0F, 0.5F, 0.2F, 0.3F, 0.1F, 0.1F), biomeRegistry.getOrThrow(ModBiomes.BLOOD_GARDEN_BIOME)),
                                 Pair.of(Climate.parameters(0.2F, 0.0F, 1.0F, 0.5F, 0.0F, 0.2F, 0.2F), biomeRegistry.getOrThrow(ModBiomes.HEAVENLY_PLAINS_BIOME)),
                                 Pair.of(Climate.parameters(0.2F, 0.2F, 1.0F, 0.3F, 0.2F, 0.1F, 0.1F), biomeRegistry.getOrThrow(ModBiomes.GILDED_FOREST_BIOME))
 

@@ -1,5 +1,5 @@
-// 1.21.1	2025-01-03T21:47:01.8601254	Registries
-161d59d2318bf0bec60d0c04a7445970fe87974f data/neomod/dimension/afterlife.json
+// 1.21.1	2025-01-04T22:18:47.9141963	Registries
+38ec268e3f49a851de8633d8ecbfdb0abdbb2518 data/neomod/dimension/afterlife.json
 a42611c518a80e9eabcdb823253956bdd46b8dae data/neomod/dimension_type/afterlife_type.json
 45cc21a0401cabe558b485aa212b0d94b39aaabb data/neomod/enchantment/ice_barrage_melee.json
 a94e073f51999aec37949b8d293ef6e937d91fa9 data/neomod/enchantment/magma_mine.json
@@ -22,7 +22,7 @@ d01e67e9fb3f71905f96be09fba805ecf52b26f0 data/neomod/neoforge/biome_modifier/add
 552023e93cdd51b26ff6aef55510b88411c6791b data/neomod/neoforge/biome_modifier/add_tree_bloody.json
 d45ddce2c52a87e8d20599069175367359a3af7f data/neomod/neoforge/biome_modifier/add_tree_ghostly.json
 ee93cddba873e1d55737a7afee963516337f93a4 data/neomod/neoforge/biome_modifier/add_tree_gilded.json
-d0b31e9752228611ba92fdfb9ef8d6e3ee5601fb data/neomod/worldgen/biome/blood_garden_biome.json
+fec6d80784a58c157986cc31798a114cfb55760b data/neomod/worldgen/biome/blood_garden_biome.json
 3b04fba0a8b47d16bfd2feff86146de9b15da1aa data/neomod/worldgen/biome/ghostly_biome.json
 bd0fc6987b8a838497971e997abeba396d7f4531 data/neomod/worldgen/biome/gilded_forest_biome.json
 df3456f3e1dd9ba885d4bc380f12f3224817a817 data/neomod/worldgen/biome/heavenly_plains_biome.json
@@ -44,7 +44,7 @@ a98f95d2ba973df63ec6277bdd598465d8b37bd6 data/neomod/worldgen/configured_feature
 3b3243ff4e2174d06a7fd229053ee667db505011 data/neomod/worldgen/configured_feature/gilded.json
 007be0371a4a90aa5293793661c72c00179912b7 data/neomod/worldgen/configured_feature/oozing_flower.json
 9da713b5fc22939516e7bb52c5d5531a26e43a8b data/neomod/worldgen/configured_feature/skull_n_bone_block.json
-ea0af0b09f70938480a8108e309e2c8009a703b9 data/neomod/worldgen/noise_settings/afterlife_dim.json
+5447e92b54f23cdce9110881a2ea3772a3db4f60 data/neomod/worldgen/noise_settings/afterlife_dim.json
 0dd2206b0046486231790295ab1c595789df8d2c data/neomod/worldgen/placed_feature/bloody_bone_bush_placed.json
 22a71884308348483f8afb094c42c737e4c8d5c3 data/neomod/worldgen/placed_feature/bloody_tree_placed.json
 f8331f387a76a1a8abeff9cac8eb583f5327cc97 data/neomod/worldgen/placed_feature/diamond_ore_placed.json
