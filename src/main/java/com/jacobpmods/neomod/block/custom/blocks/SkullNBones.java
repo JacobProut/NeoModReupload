@@ -1,5 +1,6 @@
 package com.jacobpmods.neomod.block.custom.blocks;
 
+import com.jacobpmods.neomod.block.ModBlocks;
 import com.jacobpmods.neomod.item.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
@@ -13,6 +14,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
@@ -89,4 +91,11 @@ public class SkullNBones extends Block {
             level.sendParticles(ParticleTypes.SMOKE, pos.getX() + 0.5, pos.getY() + yOffset, pos.getZ() + 0.5, 1, xOffset, 0.1, zOffset, 0.1);
         }
     }
+
+    @Override
+    public boolean canSurvive(BlockState state, LevelReader world, BlockPos pos) {
+        BlockState belowState = world.getBlockState(pos.below());
+        return belowState.is(ModBlocks.BLOODY_GRASS_BLOCK.get()); // Ensure it only survives on Bloody Grass Block
+    }
+
 }
