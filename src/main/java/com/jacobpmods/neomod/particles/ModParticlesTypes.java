@@ -20,6 +20,9 @@ public class ModParticlesTypes {
 
     public static final DeferredHolder<ParticleType<?>, SimpleParticleType> SPARK = PARTICLES.register("spark", () -> new SimpleParticleType(false));
 
+    public static final DeferredHolder<ParticleType<?>, SimpleParticleType> GILDED_OOZE = PARTICLES.register("gilded_ooze", () -> new SimpleParticleType(false));
+    public static final DeferredHolder<ParticleType<?>, SimpleParticleType> GILDED_SPLASH = PARTICLES.register("gilded_splash", () -> new SimpleParticleType(false));
+
 
     public static void register(IEventBus eventBus) {
         PARTICLES.register(eventBus);

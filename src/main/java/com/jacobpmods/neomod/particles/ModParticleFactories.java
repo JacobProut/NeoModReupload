@@ -34,5 +34,22 @@ public class ModParticleFactories {
         event.registerSpriteSet(ModParticlesTypes.AFTERLIFE_FIRE_FLAME.get(), FlameParticle.Provider::new);
 
         event.registerSpriteSet(ModParticlesTypes.SPARK.get(), SparkParticle.Provider::new);
-        }
+
+        event.registerSprite(ModParticlesTypes.GILDED_OOZE.get(), (particleType, level, x, y, z, xSpeed, ySpeed, zSpeed) -> new ModDripParticle.FallAndLandParticle(level, x, y, z, Fluids.WATER, ModParticlesTypes.GILDED_SPLASH.get()) {
+            @Override
+            public ParticleRenderType getRenderType() {
+                return ParticleRenderType.PARTICLE_SHEET_TRANSLUCENT;
+            }
+        });
+        event.registerSpriteSet(ModParticlesTypes.GILDED_SPLASH.get(), spriteSet -> (particle, level, x, y, z, xSpeed, ySpeed, zSpeed) -> {
+            SplashParticle splashParticle = new SplashParticle(level, x, y, z, xSpeed, ySpeed, zSpeed) {
+                @Override
+                public ParticleRenderType getRenderType() {
+                    return ParticleRenderType.PARTICLE_SHEET_TRANSLUCENT;
+                }
+            };
+            splashParticle.pickSprite(spriteSet);
+            return splashParticle;
+        });
+    }
 }

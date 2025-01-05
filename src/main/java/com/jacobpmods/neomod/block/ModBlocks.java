@@ -562,7 +562,7 @@ public class ModBlocks {
             .strength(2f).sound(SoundType.WOOD)));
 
                                                                                                             //CHANGE LEAVESBLOCK TO CUSTOM BLOCK WITH PARTICLES
-    public static final DeferredBlock<Block> GILDED_LEAVES = registerBlock("gilded_leaves", () ->new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)
+    public static final DeferredBlock<Block> GILDED_LEAVES = registerBlock("gilded_leaves", () ->new GildedLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)
             .strength(0.2f).sound(SoundType.CHERRY_LEAVES)) {
         @Override
         public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
