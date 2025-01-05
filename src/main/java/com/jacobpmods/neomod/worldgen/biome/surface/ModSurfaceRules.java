@@ -6,6 +6,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.SurfaceRules;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
+import net.minecraft.world.level.levelgen.placement.CaveSurface;
 import org.spongepowered.include.com.google.common.collect.ImmutableList;
 
 
@@ -29,31 +30,41 @@ public class ModSurfaceRules {
 
     public static SurfaceRules.RuleSource makeRules() {
         SurfaceRules.ConditionSource isAtOrAboveWaterlevel = SurfaceRules.waterBlockCheck(-1, 0);
+        SurfaceRules.ConditionSource customYCheck = SurfaceRules.abovePreliminarySurface();
 
-        //Ghostly Biome
-        SurfaceRules.RuleSource myRules = SurfaceRules.ifTrue(
-                SurfaceRules.isBiome(ModBiomes.GHOSTLY_BIOME), SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, MOD_GRASS_BLOCK)
+        // Grass Block Placement (Above Y 54)
+        SurfaceRules.RuleSource grassSurface = SurfaceRules.sequence(
+                SurfaceRules.ifTrue(
+                        isAtOrAboveWaterlevel,
+                        SurfaceRules.sequence(
+                                SurfaceRules.ifTrue(customYCheck, MOD_GRASS_BLOCK) // Apply grass block if above Y 54
+                        )));
 
-        );
-        SurfaceRules.RuleSource flowerRule = SurfaceRules.ifTrue(
+        // Dirt Below Grass (3 blocks below grass level, but only above Y 45)
+        SurfaceRules.RuleSource dirtSurface = SurfaceRules.ifTrue(
+                SurfaceRules.isBiome(ModBiomes.GHOSTLY_BIOME),
+                SurfaceRules.ifTrue(
+                        SurfaceRules.stoneDepthCheck(0, true, 3, CaveSurface.FLOOR), // Check if we are 3 blocks below the grass block
+                        SurfaceRules.ifTrue(
+                                SurfaceRules.yBlockCheck(VerticalAnchor.aboveBottom(45), 20), // Only above Y 45
+                                MOD_DIRT
+                        )));
+
+        SurfaceRules.RuleSource flowerSurface = SurfaceRules.ifTrue(
                 SurfaceRules.isBiome(ModBiomes.GHOSTLY_BIOME),
                 SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, OOZING_FLOWER)
         );
-        SurfaceRules.RuleSource grassSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(isAtOrAboveWaterlevel, SurfaceRules.sequence(
-                myRules,
-                MOD_GRASS_BLOCK,
-                flowerRule
-        )),MOD_DIRT);
+
 
         SurfaceRules.RuleSource modGhostlyBiomeRules = SurfaceRules.sequence(
-                SurfaceRules.ifTrue(SurfaceRules.isBiome(ModBiomes.GHOSTLY_BIOME),
+                SurfaceRules.ifTrue(
+                        SurfaceRules.isBiome(ModBiomes.GHOSTLY_BIOME),
                         SurfaceRules.sequence(
                                 SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, grassSurface),
-                                SurfaceRules.ifTrue(SurfaceRules.UNDER_FLOOR, MOD_DIRT),
-                                MOD_STONE_BLOCK
-                        )
-                )
-        );
+                                dirtSurface,
+                                MOD_STONE_BLOCK, // Stone for the cave
+                                flowerSurface // Flower needed to be here or it spawned in cave
+                        )));
 
 
 
