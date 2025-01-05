@@ -6,6 +6,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -45,18 +46,19 @@ public class ScytheProjectileEntity extends AbstractArrow {
     @Override
     protected void onHitEntity(EntityHitResult result) {
         super.onHitEntity(result);
-        Entity entity = result.getEntity();                                         // Damage amount
-        entity.hurt(this.damageSources().thrown(this, this.getOwner()), 4);
+        Entity entity = result.getEntity();
 
-        if (!this.level().isClientSide) {
-            this.level().broadcastEntityEvent(this, (byte)3);
-            this.discard();
+        if (this.getOwner() instanceof Player player) {
+            ItemStack scytheStack = new ItemStack(ModItems.THROWABLE_SCYTHE.get());
+            player.getInventory().add(scytheStack);
         }
+        entity.hurt(this.damageSources().thrown(this, this.getOwner()), 4); //dmg amount
     }
 
     @Override
     protected void onHitBlock(BlockHitResult result) {
         super.onHitBlock(result);
+        this.inGround = true;
 
         if(result.getDirection() == Direction.SOUTH) {
             groundOffset = new Vec2(215f,180f);

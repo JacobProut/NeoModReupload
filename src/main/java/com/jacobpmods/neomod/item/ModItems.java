@@ -70,8 +70,9 @@ public class ModItems {
                     .attributes(SwordItem.createAttributes(ModToolTiers.GOD, 6, -2.2F))));
 
     //Need to find a way to combine with normal Scythe
+    //Set stack to 1
     public static final DeferredItem<Item> THROWABLE_SCYTHE = ITEMS.register("throwable_scythe",
-            () -> new ThrowableScythe(new Item.Properties().stacksTo(64)));
+            () -> new ThrowableScythe(new Item.Properties()));
 
 
     //Armor
