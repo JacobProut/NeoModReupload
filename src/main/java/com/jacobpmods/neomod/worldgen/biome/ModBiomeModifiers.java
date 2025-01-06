@@ -63,10 +63,10 @@ public class ModBiomeModifiers {
         //                                    * ENTITIES *
         context.register(SPAWN_SKELETAL_ZOMBIE, new BiomeModifiers.AddSpawnsBiomeModifier(
                 HolderSet.direct(biomes.getOrThrow(ModBiomes.GHOSTLY_BIOME)),
-                List.of(new MobSpawnSettings.SpawnerData(ModEntities.SKELETAL_COW.get(), 22, 2, 5)))); //Weight, minCount, maxCount
+                List.of(new MobSpawnSettings.SpawnerData(ModEntities.SKELETAL_ZOMBIE.get(), 22, 2, 5)))); //Weight, minCount, maxCount
         context.register(SPAWN_SKELETAL_ENDERMAN, new BiomeModifiers.AddSpawnsBiomeModifier(
                 HolderSet.direct(biomes.getOrThrow(ModBiomes.GHOSTLY_BIOME)),
-                List.of(new MobSpawnSettings.SpawnerData(ModEntities.SKELETAL_COW.get(), 20, 1, 4)))); //Weight, minCount, maxCount
+                List.of(new MobSpawnSettings.SpawnerData(ModEntities.SKELETAL_ENDERMAN.get(), 20, 1, 4)))); //Weight, minCount, maxCount
         context.register(SPAWN_SKELETAL_COW, new BiomeModifiers.AddSpawnsBiomeModifier(
                 HolderSet.direct(biomes.getOrThrow(ModBiomes.GHOSTLY_BIOME)),
                 List.of(new MobSpawnSettings.SpawnerData(ModEntities.SKELETAL_COW.get(), 20, 2, 4)))); //Weight, minCount, maxCount
