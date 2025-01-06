@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "neomod:ghostly_biome",
+  "spawners": {
+    "type": "neomod:skeletal_cow",
+    "maxCount": 4,
+    "minCount": 2,
+    "weight": 20
+  }
+}

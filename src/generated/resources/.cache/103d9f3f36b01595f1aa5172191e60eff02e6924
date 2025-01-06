@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-05T20:25:39.3282661	Registries
+// 1.21.1	2025-01-05T21:33:17.3508323	Registries
 38ec268e3f49a851de8633d8ecbfdb0abdbb2518 data/neomod/dimension/afterlife.json
 a42611c518a80e9eabcdb823253956bdd46b8dae data/neomod/dimension_type/afterlife_type.json
 45cc21a0401cabe558b485aa212b0d94b39aaabb data/neomod/enchantment/ice_barrage_melee.json
@@ -22,6 +22,9 @@ d01e67e9fb3f71905f96be09fba805ecf52b26f0 data/neomod/neoforge/biome_modifier/add
 552023e93cdd51b26ff6aef55510b88411c6791b data/neomod/neoforge/biome_modifier/add_tree_bloody.json
 d45ddce2c52a87e8d20599069175367359a3af7f data/neomod/neoforge/biome_modifier/add_tree_ghostly.json
 ee93cddba873e1d55737a7afee963516337f93a4 data/neomod/neoforge/biome_modifier/add_tree_gilded.json
+264ce6f6340e68b7102b6acae3d883caf3f16150 data/neomod/neoforge/biome_modifier/spawn_skeletal_cow.json
+421ae8edac70d805bdad79981d9dd850c69e9087 data/neomod/neoforge/biome_modifier/spawn_skeletal_enderman.json
+0b6aa057dc0aeca25deba6bc553a9c6cf40da36b data/neomod/neoforge/biome_modifier/spawn_skeletal_zombie.json
 fec6d80784a58c157986cc31798a114cfb55760b data/neomod/worldgen/biome/blood_garden_biome.json
 3b04fba0a8b47d16bfd2feff86146de9b15da1aa data/neomod/worldgen/biome/ghostly_biome.json
 bd0fc6987b8a838497971e997abeba396d7f4531 data/neomod/worldgen/biome/gilded_forest_biome.json
