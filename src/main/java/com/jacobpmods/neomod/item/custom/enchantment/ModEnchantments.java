@@ -4,6 +4,7 @@ import com.jacobpmods.neomod.FirstNeoMod;
 import com.jacobpmods.neomod.item.custom.enchantment.effects.IceBarrageMeleeEnchantmentEffect;
 import com.jacobpmods.neomod.item.custom.enchantment.effects.MagmaMineEnchantmentEffect;
 import com.jacobpmods.neomod.item.custom.enchantment.effects.TimberFellerEnchantmentEffect;
+import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
@@ -14,6 +15,7 @@ import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentEffectComponents;
 import net.minecraft.world.item.enchantment.EnchantmentTarget;
+import net.minecraft.world.item.enchantment.Enchantments;
 
 public class ModEnchantments {
     public static final ResourceKey<Enchantment> MAGMA_MINE = ResourceKey.create(Registries.ENCHANTMENT,
@@ -33,7 +35,7 @@ public class ModEnchantments {
         register(context, MAGMA_MINE, Enchantment.enchantment(Enchantment.definition(items.getOrThrow(ItemTags.PICKAXES),
                 items.getOrThrow(ItemTags.PICKAXES), 5, 1,
                 Enchantment.dynamicCost(2, 4), Enchantment.dynamicCost(2, 8), 3, EquipmentSlotGroup.MAINHAND))
-                .exclusiveWith(enchantment.getOrThrow(EnchantmentTags.MINING_EXCLUSIVE))
+                .exclusiveWith(HolderSet.direct(enchantment.getOrThrow(Enchantments.SILK_TOUCH)))
                 .withEffect(EnchantmentEffectComponents.HIT_BLOCK, new MagmaMineEnchantmentEffect())
         );
 

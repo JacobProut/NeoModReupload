@@ -1,8 +1,8 @@
-// 1.21.1	2025-01-05T18:12:34.0432506	Registries
+// 1.21.1	2025-01-05T20:25:39.3282661	Registries
 38ec268e3f49a851de8633d8ecbfdb0abdbb2518 data/neomod/dimension/afterlife.json
 a42611c518a80e9eabcdb823253956bdd46b8dae data/neomod/dimension_type/afterlife_type.json
 45cc21a0401cabe558b485aa212b0d94b39aaabb data/neomod/enchantment/ice_barrage_melee.json
-a94e073f51999aec37949b8d293ef6e937d91fa9 data/neomod/enchantment/magma_mine.json
+5dac96e94bb5bafa709ac0d83698dbf496e5cba4 data/neomod/enchantment/magma_mine.json
 dafc7659e372a0835ef1a452e27a95616a23ec33 data/neomod/enchantment/timber_feller.json
 4c07a3d70c1851d190bb78a51c5e1b309246ff33 data/neomod/neoforge/biome_modifier/add_afterlife_dimension_diamond_ore.json
 4b0a6b02ea161f8f68af0a9ef0c7383d10270dca data/neomod/neoforge/biome_modifier/add_afterlife_dimension_gold_ore.json
