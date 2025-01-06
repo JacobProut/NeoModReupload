@@ -50,31 +50,24 @@ public class ModPlacedFeatures {
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
+        //Ghostly Biome
         register(context, GHOSTLY_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.GHOSTLY_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2), ModBlocks.GHOSTLY_SAPLING.get()));
         register(context,OOZING_FLOWER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OOZING_FLOWER),
                 List.of(RarityFilter.onAverageOnceEvery(16), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
 
+        //Blood Garden Biome
         register(context, BLOODY_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BLOODY_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2), ModBlocks.BLOODY_SAPLING.get()));
         register(context, BLOODY_BONE_BUSH_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BLOOD_BONE_BUSH),
                 List.of(RarityFilter.onAverageOnceEvery(15), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+        register(context, SKULL_N_BONES_BLOCK_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SKULL_N_BONE_BLOCK),
+                List.of(RarityFilter.onAverageOnceEvery(2), PlacementUtils.HEIGHTMAP_TOP_SOLID, BiomeFilter.biome()));
 
-
+        //Gilded Forest Biome
         register(context, GILDED_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.GILDED_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2), ModBlocks.GILDED_SAPLING.get()));
 
-
-       /* register(context, SKULL_N_BONES_BLOCK_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SKULL_N_BONE_BLOCK),
-                List.of(RarityFilter.onAverageOnceEvery(15), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));*/
-
-        register(context, SKULL_N_BONES_BLOCK_KEY,
-                configuredFeatures.getOrThrow(ModConfiguredFeatures.SKULL_N_BONE_BLOCK),
-                List.of(
-                        RarityFilter.onAverageOnceEvery(2),
-                        PlacementUtils.HEIGHTMAP_TOP_SOLID, //TOP_SOLID NEEDED TO MAKE SURE IT DOESN'T SPAWN ON WATER AS MUCH
-                        BiomeFilter.biome()
-                ));
 
         //ORES
         register(context, AFTERLIFE_DIMENSION_SHATTERED_FRAGMENT_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.AFTERLIFE_SHATTERED_FRAGMENT_ORE_KEY),
@@ -118,11 +111,9 @@ public class ModPlacedFeatures {
 
 
     private static ResourceKey<PlacedFeature> registerKey(String name) {
-        LogUtils.getLogger().debug("REGISTER_KEY: Creating ResourceKey for " + name);
         return ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID, name));
     }
     private static void register(BootstrapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key, Holder<ConfiguredFeature<?, ?>> configuration, List<PlacementModifier> modifiers) {
-        LogUtils.getLogger().debug("REGISTER: Registering PlacedFeature with key " + key.location());
         context.register(key, new PlacedFeature(configuration, List.copyOf(modifiers)));
     }
 }

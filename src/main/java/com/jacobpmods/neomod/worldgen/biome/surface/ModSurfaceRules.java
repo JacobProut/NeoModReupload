@@ -38,7 +38,6 @@ public class ModSurfaceRules {
                                 SurfaceRules.ifTrue(customYCheck, MOD_GRASS_BLOCK) // Apply grass block if above Y 54
                 )
         ));
-
         // Dirt Below Grass (3 blocks below grass level, but only above Y 45)
         SurfaceRules.RuleSource dirtSurface = SurfaceRules.ifTrue(
                 SurfaceRules.isBiome(ModBiomes.GHOSTLY_BIOME),
@@ -48,13 +47,10 @@ public class ModSurfaceRules {
                                 SurfaceRules.yBlockCheck(VerticalAnchor.aboveBottom(45), 20), // Only above Y 45
                                 MOD_DIRT
                         )));
-
         SurfaceRules.RuleSource flowerSurface = SurfaceRules.ifTrue(
                 SurfaceRules.isBiome(ModBiomes.GHOSTLY_BIOME),
                 SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, OOZING_FLOWER)
         );
-
-
         SurfaceRules.RuleSource modGhostlyBiomeRules = SurfaceRules.sequence(
                 SurfaceRules.ifTrue(
                         SurfaceRules.isBiome(ModBiomes.GHOSTLY_BIOME),
@@ -71,13 +67,10 @@ public class ModSurfaceRules {
         SurfaceRules.RuleSource bushRule = SurfaceRules.ifTrue(
                 SurfaceRules.isBiome(ModBiomes.BLOOD_GARDEN_BIOME), SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, BLOOD_BONE_BUSH)
         );
-
-        //WHY IS IT SPAWNING ON WATER/POISONED WATER & AIR
         SurfaceRules.RuleSource skullNBonesRule = SurfaceRules.ifTrue(
                 SurfaceRules.isBiome(ModBiomes.BLOOD_GARDEN_BIOME),
                 SurfaceRules.ifTrue(isAtOrAboveWaterlevel, SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, SKULL_N_BONES_BLOCK))
         );
-
         SurfaceRules.RuleSource bloodyGrassSurface = SurfaceRules.sequence(SurfaceRules.ifTrue(isAtOrAboveWaterlevel,
                 SurfaceRules.sequence(
                         SurfaceRules.ifTrue(customYCheck,MOD_BLOODY_GRASS_BLOCK)
