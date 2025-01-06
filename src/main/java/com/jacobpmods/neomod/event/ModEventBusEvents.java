@@ -57,7 +57,7 @@ public class ModEventBusEvents {
         //                                 * Friendly Mobs *
         //Look at Animal:checkAnimalSpawnRules for animals that'll spawn in a light dimension(can create different versions for checkSpawnRules in the respected entity classes
         event.register(ModEntities.SKELETAL_COW.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-                Mob::checkMobSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
+                SkeletalCowEntity::checkAnimalSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
 
     }
 

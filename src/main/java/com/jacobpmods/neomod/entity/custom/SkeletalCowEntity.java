@@ -1,5 +1,6 @@
 package com.jacobpmods.neomod.entity.custom;
 
+import com.jacobpmods.neomod.block.ModBlocks;
 import com.jacobpmods.neomod.entity.ModEntities;
 import com.jacobpmods.neomod.item.ModItems;
 import net.minecraft.core.BlockPos;
@@ -7,11 +8,13 @@ import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
@@ -22,6 +25,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ItemUtils;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
 
@@ -47,6 +51,14 @@ public class SkeletalCowEntity extends Animal {
         this.goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, 6.0F));
         this.goalSelector.addGoal(7, new RandomLookAroundGoal(this));
     }
+
+    public static boolean checkAnimalSpawnRules(
+            EntityType<? extends Animal> entityType, LevelAccessor levelAccessor, MobSpawnType mobSpawnType, BlockPos p_218108_, RandomSource source
+    ) {
+        // Check if the block below the spawn position is Ghostly_Grass_Block
+        return levelAccessor.getBlockState(p_218108_.below()).is(ModBlocks.GHOSTLY_GRASS_BLOCK.get());
+    }
+
 
     @Override
     protected void dropCustomDeathLoot(ServerLevel serverLevel, DamageSource damageSource, boolean recentlyHit) {
