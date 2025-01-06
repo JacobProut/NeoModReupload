@@ -119,23 +119,39 @@ public class EnhancerBlock extends BaseEntityBlock {
         if (!state.getValue(LIT)) {
             return;
         }
-        double xPos = (double)pos.getX() + 0.5;
-        double yPos = pos.getY();
-        double zPos = (double)pos.getZ() + 0.5;
+
+        double xPos = pos.getX() + 0.5; // Centered on the block
+        double yPos = pos.getY() + 1.0; // Just above the block
+        double zPos = pos.getZ() + 0.5; // Centered on the block
+
+        // Play a sound randomly
         if (random.nextDouble() < 0.15) {
-                                                                                                        // Volume     ,   Pitch
-            level.playLocalSound(xPos, yPos, zPos, SoundEvents.AMETHYST_BLOCK_CHIME, SoundSource.BLOCKS, 0.5f, 0.5f, false);
+            level.playLocalSound(
+                    xPos, yPos, zPos,
+                    SoundEvents.AMETHYST_BLOCK_CHIME,
+                    SoundSource.BLOCKS,
+                    0.5f, 0.5f,
+                    false
+            );
         }
-        Direction direction = state.getValue(FACING);
-        Direction.Axis axis = direction.getAxis();
-        double defaultOffset = random.nextDouble() * 0.6 - 0.3;
-        double xOffsets = axis == Direction.Axis.X ? (double)direction.getStepX() * 0.52 : defaultOffset;
-        double yOffset = random.nextDouble() * 6.0 / 8.0;
-        double zOffset = axis == Direction.Axis.Z ? (double)direction.getStepZ() * 0.52 : defaultOffset;
-        level.addParticle(ParticleTypes.SMOKE, xPos + xOffsets, yPos + yOffset, zPos + zOffset, 0.0, 0.0, 0.0);
-        if(level.getBlockEntity(pos) instanceof EnhancerBlockEntity enhancerBlockEntity && !enhancerBlockEntity.itemStackHandler.getStackInSlot(1).isEmpty()) {
-            level.addParticle(new ItemParticleOption(ParticleTypes.ITEM, enhancerBlockEntity.itemStackHandler.getStackInSlot(0)),
-                    xPos + xOffsets, yPos + yOffset, zPos + zOffset, 0.0, 0.0, 0.0);
+
+        // Spawn smoke particles directly above the block
+        double xOffset = random.nextDouble() * 0.4 - 0.2; // Small horizontal randomization
+        double zOffset = random.nextDouble() * 0.4 - 0.2; // Small horizontal randomization
+        level.addParticle(
+                ParticleTypes.SMOKE,
+                xPos + xOffset, yPos, zPos + zOffset,
+                0.0, 0.0, 0.0
+        );
+
+        // Check for custom particle conditions
+        if (level.getBlockEntity(pos) instanceof EnhancerBlockEntity enhancerBlockEntity
+                && !enhancerBlockEntity.itemStackHandler.getStackInSlot(1).isEmpty()) {
+            level.addParticle(
+                    new ItemParticleOption(ParticleTypes.ITEM, enhancerBlockEntity.itemStackHandler.getStackInSlot(0)),
+                    xPos + xOffset, yPos, zPos + zOffset,
+                    0.0, 0.0, 0.0
+            );
         }
     }
 

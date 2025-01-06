@@ -1,34 +1,20 @@
 {
   "variants": {
-    "facing=east,lit=false": {
+    "facing=north": {
       "model": "neomod:block/enhancer",
-      "y": 90
+      "y": 0
     },
-    "facing=east,lit=true": {
-      "model": "neomod:block/enhancer_on",
-      "y": 90
-    },
-    "facing=north,lit=false": {
-      "model": "neomod:block/enhancer"
-    },
-    "facing=north,lit=true": {
-      "model": "neomod:block/enhancer_on"
-    },
-    "facing=south,lit=false": {
+    "facing=south": {
       "model": "neomod:block/enhancer",
       "y": 180
     },
-    "facing=south,lit=true": {
-      "model": "neomod:block/enhancer_on",
-      "y": 180
-    },
-    "facing=west,lit=false": {
+    "facing=west": {
       "model": "neomod:block/enhancer",
       "y": 270
     },
-    "facing=west,lit=true": {
-      "model": "neomod:block/enhancer_on",
-      "y": 270
+    "facing=east": {
+      "model": "neomod:block/enhancer",
+      "y": 90
     }
   }
 }

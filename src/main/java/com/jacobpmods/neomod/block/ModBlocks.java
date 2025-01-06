@@ -610,7 +610,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> PEDESTAL = registerBlock("pedestal", () ->new PedestalBlock(BlockBehaviour.Properties.of()
             .strength(-1.0F, Float.MAX_VALUE).destroyTime(100000).noOcclusion().sound(SoundType.ANVIL)));
     public static final DeferredBlock<Block> ENHANCER = registerBlock("enhancer",
-            () -> new EnhancerBlock(BlockBehaviour.Properties.of().strength(-1.0f, Float.MAX_VALUE).destroyTime(100000).sound(SoundType.AMETHYST)));
+            () -> new EnhancerBlock(BlockBehaviour.Properties.of().strength(-1.0f, Float.MAX_VALUE).destroyTime(100000).sound(SoundType.AMETHYST).noOcclusion()));
 
 
     //Portal Blocks
