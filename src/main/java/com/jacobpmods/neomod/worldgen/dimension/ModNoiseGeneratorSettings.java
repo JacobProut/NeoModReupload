@@ -17,11 +17,9 @@ public class ModNoiseGeneratorSettings {
     );
 
     public static void bootstrap(BootstrapContext<NoiseGeneratorSettings> context) {
-        var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
-        var biomes = context.lookup(Registries.BIOME);
         NoiseGeneratorSettings settings =  NoiseGeneratorSettings.overworld(context, false, false);
 
-        //Ghostly Biome
+        //  AfterLife Dimension Generation
         context.register(AFTERLIFE_DIMENSION_GENERATION,
                 new NoiseGeneratorSettings(
                         new NoiseSettings(-64, 256, 1, 2),
