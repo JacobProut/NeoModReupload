@@ -64,7 +64,11 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.NEXON_HELMET.get())
                 .add(ModItems.NEXON_CHESTPLATE.get())
                 .add(ModItems.NEXON_LEGGINGS.get())
-                .add(ModItems.NEXON_BOOTS.get());
+                .add(ModItems.NEXON_BOOTS.get())
+                .add(ModItems.BONE_HELMET.get())
+                .add(ModItems.BONE_CHESTPLATE.get())
+                .add(ModItems.BONE_LEGGINGS.get())
+                .add(ModItems.BONE_BOOTS.get());
                 //.add(ModItems.SKELETAL_HELMET.get());
 
         //Unbreaking 3 Enchantment
@@ -73,6 +77,10 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.NEXON_CHESTPLATE.get())
                 .add(ModItems.NEXON_LEGGINGS.get())
                 .add(ModItems.NEXON_BOOTS.get())
+                .add(ModItems.BONE_HELMET.get())
+                .add(ModItems.BONE_CHESTPLATE.get())
+                .add(ModItems.BONE_LEGGINGS.get())
+                .add(ModItems.BONE_BOOTS.get())
                 .add(ModItems.NEXON_SWORD.get())
                 .add(ModItems.NEXON_AXE.get())
                 .add(ModItems.NEXON_HOE.get())
@@ -84,17 +92,21 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
 
         tag(HEAD_ARMOR_ENCHANTABLE)
-                .add(ModItems.NEXON_HELMET.get());
+                .add(ModItems.NEXON_HELMET.get())
+                .add(ModItems.BONE_HELMET.get());
                 //.add(ModItems.SKELETAL_HELMET.get());
 
         tag(CHEST_ARMOR_ENCHANTABLE)
-                .add(ModItems.NEXON_CHESTPLATE.get());
+                .add(ModItems.NEXON_CHESTPLATE.get())
+                .add(ModItems.BONE_CHESTPLATE.get());
 
         tag(LEG_ARMOR_ENCHANTABLE)
-                .add(ModItems.NEXON_LEGGINGS.get());
+                .add(ModItems.NEXON_LEGGINGS.get())
+                .add(ModItems.BONE_LEGGINGS.get());
 
         tag(FOOT_ARMOR_ENCHANTABLE)
-                .add(ModItems.NEXON_BOOTS.get());
+                .add(ModItems.NEXON_BOOTS.get())
+                .add(ModItems.BONE_BOOTS.get());
 
         this.tag(TRIMMABLE_ARMOR)
                 .add(ModItems.NEXON_HELMET.get())

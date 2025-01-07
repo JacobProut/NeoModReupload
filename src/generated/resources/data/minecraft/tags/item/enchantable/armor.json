@@ -3,6 +3,10 @@
     "neomod:nexonhelmet",
     "neomod:nexonchestplate",
     "neomod:nexonleggings",
-    "neomod:nexonboots"
+    "neomod:nexonboots",
+    "neomod:bone_helmet",
+    "neomod:bone_chestplate",
+    "neomod:bone_leggings",
+    "neomod:bone_boots"
   ]
 }

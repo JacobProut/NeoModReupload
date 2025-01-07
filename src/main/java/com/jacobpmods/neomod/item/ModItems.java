@@ -85,6 +85,14 @@ public class ModItems {
     public static final DeferredItem<Item> NEXON_BOOTS = ITEMS.register("nexonboots",
             () -> new ModArmorItem(ModArmorMaterials.NEXON, ArmorItem.Type.BOOTS, new Item.Properties().fireResistant().durability(ArmorItem.Type.BOOTS.getDurability(42))));
 
+    public static final DeferredItem<Item> BONE_HELMET = ITEMS.register("bone_helmet",
+            () -> new ModArmorItem(ModArmorMaterials.SKELETAL, ArmorItem.Type.HELMET, new Item.Properties().fireResistant().durability(ArmorItem.Type.HELMET.getDurability(42))));
+    public static final DeferredItem<Item> BONE_CHESTPLATE = ITEMS.register("bone_chestplate",
+            () -> new ModArmorItem(ModArmorMaterials.SKELETAL, ArmorItem.Type.CHESTPLATE, new Item.Properties().fireResistant().durability(ArmorItem.Type.CHESTPLATE.getDurability(42))));
+    public static final DeferredItem<Item> BONE_LEGGINGS = ITEMS.register("bone_leggings",
+            () -> new ModArmorItem(ModArmorMaterials.SKELETAL, ArmorItem.Type.LEGGINGS, new Item.Properties().fireResistant().durability(ArmorItem.Type.LEGGINGS.getDurability(42))));
+    public static final DeferredItem<Item> BONE_BOOTS = ITEMS.register("bone_boots",
+            () -> new ModArmorItem(ModArmorMaterials.SKELETAL, ArmorItem.Type.BOOTS, new Item.Properties().fireResistant().durability(ArmorItem.Type.BOOTS.getDurability(42))));
     public static final DeferredItem<Item> UNDEAD_BONE = ITEMS.register("undead_bone", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> UNDEAD_KEY = ITEMS.register("undead_key", () -> new Item(new Item.Properties()));
 

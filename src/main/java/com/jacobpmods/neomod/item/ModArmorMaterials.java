@@ -31,6 +31,18 @@ public class ModArmorMaterials {
                     List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID, "nexon"))),
                     4.0F, 0.2F));
 
+    public static final Holder<ArmorMaterial> SKELETAL =
+            ARMOR_MATERIALS.register("skeletal", () -> new ArmorMaterial(
+                    Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
+                        map.put(ArmorItem.Type.BOOTS, 4);
+                        map.put(ArmorItem.Type.LEGGINGS, 7);
+                        map.put(ArmorItem.Type.CHESTPLATE, 9);
+                        map.put(ArmorItem.Type.HELMET, 4);
+                        map.put(ArmorItem.Type.BODY,13);
+                    }), 20, SoundEvents.ARMOR_EQUIP_NETHERITE, () -> Ingredient.of(ModItems.UNDEAD_BONE.get()), //CHANGE INGREAD
+                    List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID, "bone"))),
+                    4.0F, 0.2F));
+
     public static void register(IEventBus eventBus) {
         ARMOR_MATERIALS.register(eventBus);
     }

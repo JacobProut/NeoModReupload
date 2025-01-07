@@ -75,6 +75,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.NEXON_LEGGINGS);
         trimmedArmorItem(ModItems.NEXON_BOOTS);
 
+        basicItem(ModItems.BONE_HELMET.get());
+        basicItem(ModItems.BONE_CHESTPLATE.get());
+        basicItem(ModItems.BONE_LEGGINGS.get());
+        basicItem(ModItems.BONE_BOOTS.get());
+
+
         //Skeletal Armor
         //basicItem(ModItems.SKELETAL_HELMET.get());
        /* getBuilder("skeletal_helmet")
@@ -149,6 +155,7 @@ public class ModItemModelProvider extends ItemModelProvider {
                         "block/" + block.getId().getPath()));
     }
 
+
     // Shoutout to El_Redstoniano for making this
     private void trimmedArmorItem(DeferredItem<Item> itemDeferredItem) {
         final String MOD_ID = FirstNeoMod.MOD_ID; // Change this to your mod id
@@ -182,9 +189,7 @@ public class ModItemModelProvider extends ItemModelProvider {
                         .override()
                         .model(new ModelFile.UncheckedModelFile(trimNameResLoc.getNamespace()  + ":item/" + trimNameResLoc.getPath()))
                         .predicate(mcLoc("trim_type"), trimValue).end()
-                        .texture("layer0",
-                                ResourceLocation.fromNamespaceAndPath(MOD_ID,
-                                        "item/" + itemDeferredItem.getId().getPath()));
+                        .texture("layer0", ResourceLocation.fromNamespaceAndPath(MOD_ID, "item/" + itemDeferredItem.getId().getPath()));
             });
         }
     }

@@ -65,6 +65,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.NEXON_CHESTPLATE);
                         output.accept(ModItems.NEXON_LEGGINGS);
                         output.accept(ModItems.NEXON_BOOTS);
+                        output.accept(ModItems.BONE_HELMET);
+                        output.accept(ModItems.BONE_CHESTPLATE);
+                        output.accept(ModItems.BONE_LEGGINGS);
+                        output.accept(ModItems.BONE_BOOTS);
 
                         //Ore
                         output.accept(ModBlocks.AFTERLIFE_IRON_ORE_BLOCK);

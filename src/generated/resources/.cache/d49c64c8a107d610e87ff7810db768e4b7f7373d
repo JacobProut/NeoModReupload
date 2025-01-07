@@ -1,12 +1,12 @@
-// 1.21.1	2024-12-21T02:28:00.1270866	Tags for minecraft:item mod id neomod
+// 1.21.1	2025-01-07T01:49:19.9776506	Tags for minecraft:item mod id neomod
 99e3ecf881372712ee4070fce2cde0b7d9b9ffd8 data/minecraft/tags/item/axes.json
 7e1ad7b5d5234846ed4e578f8fc31df032e787b0 data/minecraft/tags/item/coals.json
-36dcdedddc5bfb63bd5ae422ad572034886e9cb3 data/minecraft/tags/item/enchantable/armor.json
-cbfc5be5d17fa02940ad0def0a39af984d12377f data/minecraft/tags/item/enchantable/chest_armor.json
-05fdd35dee35f6584658f11c1afef11cf807d4fd data/minecraft/tags/item/enchantable/durability.json
-50016ddb04fdd3f34ffec994ba10aa8e93378ec7 data/minecraft/tags/item/enchantable/foot_armor.json
-8c02f5a83feac86c3b03877dfa21c23e79679988 data/minecraft/tags/item/enchantable/head_armor.json
-30adf0d4e0d1944ac5c28456cd9c4b4d6af82c7e data/minecraft/tags/item/enchantable/leg_armor.json
+0b82f7664d217db0eb981b2894fae6f5e7f5ec8c data/minecraft/tags/item/enchantable/armor.json
+4fb69d397dc234ca62a9095bb30940bfb9307f44 data/minecraft/tags/item/enchantable/chest_armor.json
+c9c56e7c779a045f2ff903ea17992ea27e77aa1e data/minecraft/tags/item/enchantable/durability.json
+136a8e342a0dfb99b0014a850536efc863cf4a11 data/minecraft/tags/item/enchantable/foot_armor.json
+dafb8d48cb1d1fa3ab6326226b24820f222263c2 data/minecraft/tags/item/enchantable/head_armor.json
+8a1b2d00daac42244a7c50e74300c4424ed89d31 data/minecraft/tags/item/enchantable/leg_armor.json
 c3c15b75b3cfdb2ccc44d2653b0deacd820bd901 data/minecraft/tags/item/enchantable/mining.json
 ce948f5a369513b3f3fe76eb5af675ff7cb9fdf4 data/minecraft/tags/item/enchantable/sword.json
 f7b43f571b42f9acaa58fef5e247c6499369e3fa data/minecraft/tags/item/hoes.json
