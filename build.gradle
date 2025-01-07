@@ -21,29 +21,32 @@ group = mod_group_id
 
 repositories {
     mavenLocal()
-    maven {
-        // location of the maven that hosts JEI files since January 2023
+    maven { // location of the maven that hosts JEI files since January 2023
         name = "Jared's maven"
         url = "https://maven.blamejared.com/"
     }
-    maven {
-        // location of a maven mirror for JEI files, as a fallback
+    maven { // location of a maven mirror for JEI files, as a fallback
         name = "ModMaven"
         url = "https://modmaven.dev"
     }
-    maven {
-        //This is for curios
+    maven { //This is for curios
         name = "OctoStudios"
         url = uri("https://maven.octo-studios.com/releases")
     }
-    maven {
+    maven { //Gecklib
         name = 'GeckoLib'
         url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
         content {
             includeGroup("software.bernie.geckolib")
         }
     }
-    maven { url = 'https://repo.spongepowered.org/repository/maven-public/' }
+    maven { //Terrablender
+        url = 'https://repo.spongepowered.org/repository/maven-public/'
+    }
+   /* maven { //Biolith
+        name = 'TerraformersMC'
+        url = 'https://maven.terraformersmc.com/'
+    }*/
 }
 
 base {
@@ -133,6 +136,8 @@ dependencies {
     implementation "software.bernie.geckolib:geckolib-neoforge-${minecraft_version}:${geckolib_version}"
 
     implementation "com.github.glitchfiend:TerraBlender-neoforge:${minecraft_version}-${terrablender_version}"
+    //implementation "com.terraformersmc:biolith-neoforge:${project.biolith_version}"
+
 
 
     // Example optional mod dependency with JEI
@@ -176,6 +181,7 @@ tasks.withType(ProcessResources).configureEach {
             mod_authors            : mod_authors,
             mod_description        : mod_description,
             terrablender_version_range : terrablender_version
+           // biolith : biolith_version
     ]
     inputs.properties replaceProperties
 
