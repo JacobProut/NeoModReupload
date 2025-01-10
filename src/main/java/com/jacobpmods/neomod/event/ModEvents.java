@@ -4,6 +4,7 @@ import com.jacobpmods.neomod.FirstNeoMod;
 import com.jacobpmods.neomod.effect.ModMobEffects;
 import com.jacobpmods.neomod.event.gui.HeartOverrides;
 import com.jacobpmods.neomod.item.ModItems;
+import com.jacobpmods.neomod.potion.ModPotions;
 import com.jacobpmods.neomod.villager.ModVillagers;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.client.Minecraft;
@@ -15,11 +16,14 @@ import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.PotionBrewing;
+import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.item.trading.ItemCost;
 import net.minecraft.world.item.trading.MerchantOffer;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.RenderGuiLayerEvent;
+import net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent;
 import net.neoforged.neoforge.event.village.VillagerTradesEvent;
 import net.neoforged.neoforge.event.village.WandererTradesEvent;
 
@@ -102,6 +106,16 @@ public class ModEvents {
 
             HeartOverrides.renderCustomHearts(guiGraphics, gui, player, healthBarX, healthBarY, health, maxHealth, absorb, isHardcore, heartType);
         }
+    }
+
+
+    @SubscribeEvent
+    public static void onBrewingRecipeRegister(RegisterBrewingRecipesEvent event) {
+        PotionBrewing.Builder builder = event.getBuilder();
+        //Poison Resistance Potion Recipe
+        //                                CHANGE THIS INGRED
+        builder.addMix(Potions.AWKWARD, ModItems.SPEED_APPLE.get(), ModPotions.POISON_RESISTANCE_POTION);
+        builder.addMix(ModPotions.POISON_RESISTANCE_POTION, Items.REDSTONE, ModPotions.EXTENDED_POISON_RESISTANCE_POTION);
     }
 
 }
