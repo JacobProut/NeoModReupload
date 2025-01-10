@@ -78,7 +78,7 @@ public class ModEvents {
         ));*/
     }
 
-
+    // Used to change hearts from green to red if the player is in poison with a poison resistance potion on
     @SubscribeEvent
     public static void onRenderHealthOverlay(RenderGuiLayerEvent.Post event) {
         // Access the player and the GUI rendering context
