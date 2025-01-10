@@ -3,7 +3,7 @@ package com.jacobpmods.neomod;
 import com.jacobpmods.neomod.block.ModBlocks;
 import com.jacobpmods.neomod.block.entity.ModBlockEntities;
 import com.jacobpmods.neomod.block.entity.renderer.PedestalBlockEntityRenderer;
-import com.jacobpmods.neomod.effect.ModEffects;
+import com.jacobpmods.neomod.effect.ModMobEffects;
 import com.jacobpmods.neomod.entity.ModEntities;
 import com.jacobpmods.neomod.entity.client.skeletal.cow.SkeletalCowRender;
 import com.jacobpmods.neomod.entity.client.skeletal.enderman.SkeletalEndermanRender;
@@ -71,7 +71,7 @@ public class FirstNeoMod {
         ModRecipes.registers(modEventBus);
         ModTreeDecorators.TREE_DECORATORS.register(modEventBus);
         ModVillagers.register(modEventBus);
-        ModEffects.register(modEventBus);
+        ModMobEffects.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);

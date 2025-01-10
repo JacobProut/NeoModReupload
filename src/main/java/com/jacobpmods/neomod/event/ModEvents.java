@@ -1,11 +1,10 @@
 package com.jacobpmods.neomod.event;
 
 import com.jacobpmods.neomod.FirstNeoMod;
-import com.jacobpmods.neomod.effect.ModEffects;
+import com.jacobpmods.neomod.effect.ModMobEffects;
 import com.jacobpmods.neomod.event.gui.HeartOverrides;
 import com.jacobpmods.neomod.item.ModItems;
 import com.jacobpmods.neomod.villager.ModVillagers;
-import com.mojang.blaze3d.systems.RenderSystem;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
@@ -85,7 +84,7 @@ public class ModEvents {
         Minecraft minecraft = Minecraft.getInstance();
         Player player = minecraft.player;
 
-        if (player != null && player.hasEffect(MobEffects.POISON) && player.hasEffect(ModEffects.POISON_RESISTANCE)) {
+        if (player != null && player.hasEffect(MobEffects.POISON) && player.hasEffect(ModMobEffects.POISON_RESISTANCE)) {
             GuiGraphics guiGraphics = event.getGuiGraphics();
             int screenWidth = minecraft.getWindow().getGuiScaledWidth();
             int screenHeight = minecraft.getWindow().getGuiScaledHeight();
