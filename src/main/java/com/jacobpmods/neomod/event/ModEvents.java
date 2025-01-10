@@ -88,7 +88,7 @@ public class ModEvents {
         Minecraft minecraft = Minecraft.getInstance();
         Player player = minecraft.player;
 
-        if (player != null && player.hasEffect(MobEffects.POISON) && player.hasEffect(ModMobEffects.POISON_RESISTANCE)) {
+        if (player != null && !player.isCreative() && player.hasEffect(MobEffects.POISON) && player.hasEffect(ModMobEffects.POISON_RESISTANCE)) {
             GuiGraphics guiGraphics = event.getGuiGraphics();
             int screenWidth = minecraft.getWindow().getGuiScaledWidth();
             int screenHeight = minecraft.getWindow().getGuiScaledHeight();
