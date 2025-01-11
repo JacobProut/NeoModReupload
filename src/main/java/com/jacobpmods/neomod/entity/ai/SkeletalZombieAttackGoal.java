@@ -30,6 +30,7 @@ public class SkeletalZombieAttackGoal extends MeleeAttackGoal {
         ticksUntilNextAttack = 10;
     }
 
+    @Override
     protected void checkAndPerformAttack(LivingEntity pEnemy) {
         double distToEnemySqr = this.mob.distanceToSqr(pEnemy); // Calculate the squared distance to the enemy
 
