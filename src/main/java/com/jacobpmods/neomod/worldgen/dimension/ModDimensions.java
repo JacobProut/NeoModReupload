@@ -32,7 +32,7 @@ public class ModDimensions {
 
     public static void bootstrapType(BootstrapContext<DimensionType> context) {
         context.register(AFTERLIFE_DIM_TYPE, new DimensionType(
-                OptionalLong.of(18000), // fixedTime
+                OptionalLong.empty(),   //  For fixed time: OptionalLong.of(18000)
                 true, // hasSkylight
                 false, // hasCeiling
                 false, // ultraWarm
