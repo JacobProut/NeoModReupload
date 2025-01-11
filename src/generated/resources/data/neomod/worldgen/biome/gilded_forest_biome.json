@@ -8,7 +8,7 @@
   },
   "downfall": 0.2,
   "effects": {
-    "fog_color": -2237040,
+    "fog_color": 10526880,
     "grass_color": -335455,
     "mood_sound": {
       "block_search_extent": 8,
@@ -55,7 +55,7 @@
       "minecraft:glow_lichen"
     ]
   ],
-  "has_precipitation": false,
+  "has_precipitation": true,
   "spawn_costs": {},
   "spawners": {
     "ambient": [

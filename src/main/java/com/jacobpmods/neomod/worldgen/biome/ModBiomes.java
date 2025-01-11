@@ -149,8 +149,8 @@ public class ModBiomes {
         globalOverworldGeneration(biomeBuilder);
 
         return new Biome.BiomeBuilder()
-                .hasPrecipitation(false)
-                .downfall(0.2f)
+                .hasPrecipitation(true)
+                .downfall(0.6f)
                 .temperature(0.2f)
                 .generationSettings(biomeBuilder.build())
                 .mobSpawnSettings(spawnBuilder.build())
@@ -159,10 +159,9 @@ public class ModBiomes {
                         .waterFogColor(0xFFFFE8A0)
                         .skyColor(0xFFFFFFE0)
                         .grassColorOverride(0xFFFAE1A1) // Grass color
+                        .fogColor(0xA0A0A0)
                         //.foliageColorOverride(0xd203fc) //Leaves/Ferms n stuff like that
-                        .fogColor(0xFFDDDD90)
                         .ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS)
-                        //.backgroundMusic(Musics.createGameMusic(ModSounds.BAR_BRAWL.getHolder().get())).build())
                         .build()).build();
     }
 
