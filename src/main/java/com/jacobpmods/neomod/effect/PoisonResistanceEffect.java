@@ -13,10 +13,8 @@ public class PoisonResistanceEffect extends MobEffect {
 
     @Override
     public boolean applyEffectTick(LivingEntity entity, int amplifier) {
-        if (entity instanceof LivingEntity livingEntity) {
-            if (livingEntity.hasEffect(POISON)) {
-                livingEntity.removeEffect(POISON);
-            }
+        if (entity.hasEffect(POISON)) {
+            entity.removeEffect(POISON);
         }
         return true;
     }
