@@ -3,8 +3,6 @@ package com.jacobpmods.neomod.worldgen.biome;
 import com.jacobpmods.neomod.FirstNeoMod;
 import com.jacobpmods.neomod.block.ModBlocks;
 import com.jacobpmods.neomod.worldgen.ModOrePlacement;
-import com.jacobpmods.neomod.worldgen.biome.ModConfiguredFeatures;
-import com.mojang.logging.LogUtils;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
@@ -52,7 +50,7 @@ public class ModPlacedFeatures {
 
         //Ghostly Biome
         register(context, GHOSTLY_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.GHOSTLY_KEY),
-                VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2), ModBlocks.GHOSTLY_SAPLING.get()));
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(2, 0.1f, 1), ModBlocks.GHOSTLY_SAPLING.get())); //BaseValue, Chance, added_amount
         register(context,OOZING_FLOWER_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OOZING_FLOWER),
                 List.of(RarityFilter.onAverageOnceEvery(16), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
 
@@ -66,7 +64,7 @@ public class ModPlacedFeatures {
 
         //Gilded Forest Biome
         register(context, GILDED_TREE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.GILDED_KEY),
-                VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2), ModBlocks.GILDED_SAPLING.get()));
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(16, 0.1f, 0), ModBlocks.GILDED_SAPLING.get()));
 
 
         //ORES
