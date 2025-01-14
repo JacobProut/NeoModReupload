@@ -7,14 +7,16 @@ import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.Tier;
 import net.minecraft.world.level.Level;
 
-public class ThrowableScythe extends Item {
+public class ThrowableScythe extends SwordItem {
     private static final int COOLDOWN_TICKS = 100; // 100 = 5 seconds;
-    public ThrowableScythe(Properties properties) {
-        super(properties);
+
+    public ThrowableScythe(Tier tier, Properties properties) {
+        super(tier, properties);
     }
 
     @Override
@@ -45,4 +47,5 @@ public class ThrowableScythe extends Item {
 
         return InteractionResultHolder.sidedSuccess(itemstack, pLevel.isClientSide());
     }
+
 }

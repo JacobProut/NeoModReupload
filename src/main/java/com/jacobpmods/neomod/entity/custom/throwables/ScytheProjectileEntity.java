@@ -23,12 +23,12 @@ public class ScytheProjectileEntity extends AbstractArrow {
     }
 
     public ScytheProjectileEntity(LivingEntity shooter, Level level) {
-        super(ModEntities.THROWABLE_SCYTHE.get(), shooter, level, new ItemStack(ModItems.THROWABLE_SCYTHE.get()), null);
+        super(ModEntities.THROWABLE_SCYTHE.get(), shooter, level, new ItemStack(ModItems.SCYTHE.get()), null);
     }
 
     @Override
     protected ItemStack getDefaultPickupItem() {
-        return new ItemStack(ModItems.THROWABLE_SCYTHE.get());
+        return new ItemStack(ModItems.SCYTHE.get());
     }
 
     public float getRenderingRotation() {
@@ -49,7 +49,7 @@ public class ScytheProjectileEntity extends AbstractArrow {
         Entity entity = result.getEntity();
 
         if (this.getOwner() instanceof Player player) {
-            ItemStack scytheStack = new ItemStack(ModItems.THROWABLE_SCYTHE.get());
+            ItemStack scytheStack = new ItemStack(ModItems.SCYTHE.get());
             player.getInventory().add(scytheStack);
         }
         entity.hurt(this.damageSources().thrown(this, this.getOwner()), 4); //dmg amount

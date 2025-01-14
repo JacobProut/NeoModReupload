@@ -56,7 +56,7 @@ public class ModItems {
             () -> new NexonAxe(ModToolTiers.NEXON, new Item.Properties().fireResistant()
                     .attributes(NexonAxe.createAttributes(ModToolTiers.NEXON,6, -3.2F))));
     public static final DeferredItem<Item> SCYTHE = ITEMS.register("scythe",
-            () -> new SwordItem(ModToolTiers.SCYTHE, new Item.Properties()
+            () -> new ThrowableScythe(ModToolTiers.SCYTHE, new Item.Properties()
                     .attributes(SwordItem.createAttributes(ModToolTiers.SCYTHE,5, -2.3F))));
     public static final DeferredItem<Item> BONE_SWORD = ITEMS.register("bone_sword",
             () -> new SwordItem(ModToolTiers.BONE, new Item.Properties()
@@ -68,11 +68,6 @@ public class ModItems {
     public static final DeferredItem<Item> GOD_SWORD = ITEMS.register("god_sword",
             () -> new SwordItem(ModToolTiers.GOD, new Item.Properties()
                     .attributes(SwordItem.createAttributes(ModToolTiers.GOD, 6, -2.2F))));
-
-    //Need to find a way to combine with normal Scythe
-    //Set stack to 1
-    public static final DeferredItem<Item> THROWABLE_SCYTHE = ITEMS.register("throwable_scythe",
-            () -> new ThrowableScythe(new Item.Properties()));
 
 
     //Armor
