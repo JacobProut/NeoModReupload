@@ -17,7 +17,8 @@ import net.minecraft.world.phys.Vec2;
 public class ScytheProjectileEntity extends AbstractArrow {
     private float rotation;
     public Vec2 groundOffset;
-    private ItemStack scytheStack;
+    private ItemStack scytheStack; // Store the ItemStack with enchantments
+    private int originalSlot = -1; // Store the original inventory slot
 
 
 
@@ -25,9 +26,10 @@ public class ScytheProjectileEntity extends AbstractArrow {
         super(entityType, level);
     }
 
-    public ScytheProjectileEntity(LivingEntity shooter, Level level, ItemStack scytheStack) {
+    public ScytheProjectileEntity(LivingEntity shooter, Level level, ItemStack scytheStack, int originalSlot) {
         super(ModEntities.THROWABLE_SCYTHE.get(), shooter, level, scytheStack, null);
         this.scytheStack = scytheStack.copy();  // Copy to ensure enchantments are maintained
+        this.originalSlot = originalSlot;  // Store the original slot
     }
 
     @Override
@@ -52,13 +54,39 @@ public class ScytheProjectileEntity extends AbstractArrow {
         super.onHitEntity(result);
         Entity entity = result.getEntity();
 
+        // If the owner is a player, we return the scythe with enchantments to the original slot
         if (this.getOwner() instanceof Player player) {
-            if (scytheStack != null) {
-                ItemStack returnedScythe = scytheStack.copy();  // Preserve enchantments and other properties
-                player.getInventory().add(returnedScythe);
+            if (scytheStack != null && originalSlot != -1) {
+                // Check if the original slot is already occupied
+                ItemStack itemInSlot = player.getInventory().getItem(originalSlot);
+                if (!itemInSlot.isEmpty()) {
+                    // If the slot is occupied, find the next available slot
+                    int nextAvailableSlot = findNextAvailableSlot(player);
+                    if (nextAvailableSlot != -1) {
+                        // Move the item from the original slot to the next available slot
+                        player.getInventory().setItem(nextAvailableSlot, itemInSlot);
+                    } else {
+                        // If no slot is available, drop the item
+                        player.drop(itemInSlot, false);
+                    }
+                }
+
+                // Place the scythe back into the original slot
+                player.getInventory().setItem(originalSlot, scytheStack.copy());  // Put the item back in the original slot
             }
         }
-        entity.hurt(this.damageSources().thrown(this, this.getOwner()), 4); //dmg amount
+
+        // Damage the entity
+        entity.hurt(this.damageSources().thrown(this, this.getOwner()), 4); // Damage amount
+    }
+    // Method to find the next available slot in the player's inventory
+    private int findNextAvailableSlot(Player player) {
+        for (int i = 0; i < 36; i++) {
+            if (player.getInventory().getItem(i).isEmpty()) {
+                return i;  // Return the first available slot
+            }
+        }
+        return -1;  // No available slot
     }
 
     @Override
