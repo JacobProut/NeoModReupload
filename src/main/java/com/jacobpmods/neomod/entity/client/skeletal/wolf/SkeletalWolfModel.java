@@ -62,7 +62,7 @@ public class SkeletalWolfModel extends HierarchicalModel<SkeletalWolfEntity> {
         this.applyHeadRotation(netHeadYaw, headPitch);
 
         this.animateWalk(SkeletalWolfAnimations.SKELETAL_WOLF_WALK, limbSwing, limbSwingAmount, 1f, 1f); //changes animation speed
-        //this.animate(skeletalWolfEntity.idleAnimationState, SkeletalWolfAnimations.SKELETAL_WOLF_IDLE, ageInTicks, 1f);
+       // this.animate(skeletalWolfEntity.sitAnimation, SkeletalWolfAnimations.SKELETAL_WOLF_SIT, ageInTicks, 1f);
     }
 
     private void applyHeadRotation(float headYaw, float headPitch) {
