@@ -17,13 +17,17 @@ import net.minecraft.world.phys.Vec2;
 public class ScytheProjectileEntity extends AbstractArrow {
     private float rotation;
     public Vec2 groundOffset;
+    private ItemStack scytheStack;
+
+
 
     public ScytheProjectileEntity(EntityType<? extends AbstractArrow> entityType, Level level) {
         super(entityType, level);
     }
 
-    public ScytheProjectileEntity(LivingEntity shooter, Level level) {
-        super(ModEntities.THROWABLE_SCYTHE.get(), shooter, level, new ItemStack(ModItems.SCYTHE.get()), null);
+    public ScytheProjectileEntity(LivingEntity shooter, Level level, ItemStack scytheStack) {
+        super(ModEntities.THROWABLE_SCYTHE.get(), shooter, level, scytheStack, null);
+        this.scytheStack = scytheStack.copy();  // Copy to ensure enchantments are maintained
     }
 
     @Override
@@ -49,8 +53,10 @@ public class ScytheProjectileEntity extends AbstractArrow {
         Entity entity = result.getEntity();
 
         if (this.getOwner() instanceof Player player) {
-            ItemStack scytheStack = new ItemStack(ModItems.SCYTHE.get());
-            player.getInventory().add(scytheStack);
+            if (scytheStack != null) {
+                ItemStack returnedScythe = scytheStack.copy();  // Preserve enchantments and other properties
+                player.getInventory().add(returnedScythe);
+            }
         }
         entity.hurt(this.damageSources().thrown(this, this.getOwner()), 4); //dmg amount
     }

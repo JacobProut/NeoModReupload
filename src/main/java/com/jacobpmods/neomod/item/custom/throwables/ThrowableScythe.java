@@ -32,7 +32,8 @@ public class ThrowableScythe extends SwordItem {
                 SoundEvents.SNOWBALL_THROW, SoundSource.NEUTRAL, 0.5F, 0.4F / (pLevel.getRandom().nextFloat() * 0.4F + 0.8F));
 
         if (!pLevel.isClientSide) {
-            ScytheProjectileEntity scytheProjectile = new ScytheProjectileEntity(pPlayer, pLevel);
+            // Pass the item stack to the projectile to preserve enchantments
+            ScytheProjectileEntity scytheProjectile = new ScytheProjectileEntity(pPlayer, pLevel, itemstack);
             scytheProjectile.shootFromRotation(pPlayer, pPlayer.getXRot(), pPlayer.getYRot(), 0.0F, 1.5F, 0F);
             pLevel.addFreshEntity(scytheProjectile);
         }
