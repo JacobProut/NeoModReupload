@@ -16,4 +16,7 @@ public class ModModelLayers {
 
     public static final ModelLayerLocation SKELETAL_COW = new ModelLayerLocation(
             ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID, "skeletal_cow"), "main");
+
+    public static final ModelLayerLocation SKELETAL_WOLF = new ModelLayerLocation(
+            ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID, "skeletal_wolf"), "main");
 }

@@ -1,10 +1,7 @@
 package com.jacobpmods.neomod.entity;
 
 import com.jacobpmods.neomod.FirstNeoMod;
-import com.jacobpmods.neomod.entity.custom.SkeletalCowEntity;
-import com.jacobpmods.neomod.entity.custom.SkeletalEndermanEntity;
-import com.jacobpmods.neomod.entity.custom.SkeletalGuardianEntity;
-import com.jacobpmods.neomod.entity.custom.SkeletalZombieEntity;
+import com.jacobpmods.neomod.entity.custom.*;
 import com.jacobpmods.neomod.entity.custom.throwables.ScytheProjectileEntity;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.entity.EntityType;
@@ -35,6 +32,10 @@ public class ModEntities {
     public static final Supplier<EntityType<SkeletalCowEntity>> SKELETAL_COW =
             ENTITY_TYPES.register("skeletal_cow", () -> EntityType.Builder.of(SkeletalCowEntity::new, MobCategory.MONSTER)
                     .sized(2f, 1f).build("skeletal_cow"));
+
+    public static final Supplier<EntityType<SkeletalWolfEntity>> SKELETAL_WOLF =
+            ENTITY_TYPES.register("skeletal_wolf", () -> EntityType.Builder.of(SkeletalWolfEntity::new, MobCategory.MONSTER)
+                    .sized(1.5f, 1f).build("skeletal_wolf"));
 
 
 

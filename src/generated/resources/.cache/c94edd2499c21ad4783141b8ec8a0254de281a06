@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-07T02:15:35.2146764	Item Models: neomod
+// 1.21.1	2025-01-13T17:17:04.3599314	Item Models: neomod
 fbf874db12b15ebd1b3414fff8d220b14c6beb9a assets/neomod/models/item/afterlife_torch.json
 44e12cf0726120f26700d8926b65be0432928d13 assets/neomod/models/item/bloody_door.json
 8fcc148714388bf2313f4f088807ff0e3830d26e assets/neomod/models/item/bloody_plank_button.json
@@ -94,6 +94,7 @@ c98877ce81d73c8aad6a75fe4ba8a6e293e16bf0 assets/neomod/models/item/shredded_leat
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/neomod/models/item/skeletal_cow_egg.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/neomod/models/item/skeletal_enderman_egg.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/neomod/models/item/skeletal_guardian_egg.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/neomod/models/item/skeletal_wolf_egg.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/neomod/models/item/skeletal_zombie_egg.json
 f8171fe4b496de7f2610cbee61e76b679a285234 assets/neomod/models/item/soul_split_necklace.json
 66b7a359dbf78b96087c99c975d23fe33fe89f32 assets/neomod/models/item/speedapple.json

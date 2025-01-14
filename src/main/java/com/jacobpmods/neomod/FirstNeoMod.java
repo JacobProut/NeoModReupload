@@ -8,6 +8,7 @@ import com.jacobpmods.neomod.entity.ModEntities;
 import com.jacobpmods.neomod.entity.client.skeletal.cow.SkeletalCowRender;
 import com.jacobpmods.neomod.entity.client.skeletal.enderman.SkeletalEndermanRender;
 import com.jacobpmods.neomod.entity.client.skeletal.guardian.SkeletalGuardianRender;
+import com.jacobpmods.neomod.entity.client.skeletal.wolf.SkeletalWolfRender;
 import com.jacobpmods.neomod.entity.client.skeletal.zombie.SkeletalZombieRender;
 import com.jacobpmods.neomod.entity.client.throwables.ScytheProjectileRenderer;
 import com.jacobpmods.neomod.fluid.BaseFluidType;
@@ -139,6 +140,7 @@ public class FirstNeoMod {
             EntityRenderers.register(ModEntities.SKELETAL_ENDERMAN.get(), SkeletalEndermanRender::new);
             EntityRenderers.register(ModEntities.SKELETAL_GUARDIAN.get(), SkeletalGuardianRender::new);
             EntityRenderers.register(ModEntities.SKELETAL_COW.get(), SkeletalCowRender::new);
+            EntityRenderers.register(ModEntities.SKELETAL_WOLF.get(), SkeletalWolfRender::new);
             //Throwables
             EntityRenderers.register(ModEntities.THROWABLE_SCYTHE.get(), ScytheProjectileRenderer::new);
 
