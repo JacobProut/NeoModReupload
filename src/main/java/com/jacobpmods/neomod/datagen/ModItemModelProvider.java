@@ -52,6 +52,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.COIN.get());
         basicItem(ModItems.SHREDDED_LEATHER.get());
 
+        itemFromBlock(ModBlocks.MIXER);
 
         //Fluids
         basicItem(ModFluids.POISONED_WATER_BUCKET.get());
@@ -193,6 +194,11 @@ public class ModItemModelProvider extends ItemModelProvider {
                         .texture("layer0", ResourceLocation.fromNamespaceAndPath(MOD_ID, "item/" + itemDeferredItem.getId().getPath()));
             });
         }
+    }
+    private ItemModelBuilder itemFromBlock(DeferredBlock<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                ResourceLocation.parse("item/generated")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID,"block/" + item.getId().getPath()));
     }
 
     public void buttonItem(DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {

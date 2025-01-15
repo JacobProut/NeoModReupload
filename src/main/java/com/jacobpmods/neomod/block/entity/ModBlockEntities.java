@@ -3,6 +3,7 @@ package com.jacobpmods.neomod.block.entity;
 import com.jacobpmods.neomod.FirstNeoMod;
 import com.jacobpmods.neomod.block.ModBlocks;
 import com.jacobpmods.neomod.block.entity.custom.EnhancerBlockEntity;
+import com.jacobpmods.neomod.block.entity.custom.MixerBlockEntity;
 import com.jacobpmods.neomod.block.entity.custom.PedestalBlockEntity;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -22,6 +23,10 @@ public class ModBlockEntities {
     public static final Supplier<BlockEntityType<EnhancerBlockEntity>> ENHANCER_BE =
             BLOCK_ENTITIES.register("enhancer_be", () -> BlockEntityType.Builder.of(
                     EnhancerBlockEntity::new, ModBlocks.ENHANCER.get()).build(null));
+
+    public static final Supplier<BlockEntityType<MixerBlockEntity>> MIXER_BE =
+            BLOCK_ENTITIES.register("mixer_be", () -> BlockEntityType.Builder.of(
+                    MixerBlockEntity::new, ModBlocks.MIXER.get()).build(null));
 
 
 

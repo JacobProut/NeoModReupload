@@ -171,6 +171,7 @@ public class ModCreativeModeTabs {
                         //Custom Block Models
                         output.accept(ModBlocks.PEDESTAL);
                         output.accept(ModBlocks.ENHANCER);
+                        output.accept(ModBlocks.MIXER);
 
                         //Fluids
                         output.accept(ModFluids.POISONED_WATER_BUCKET);

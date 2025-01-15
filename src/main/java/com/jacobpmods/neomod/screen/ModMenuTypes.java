@@ -2,6 +2,7 @@ package com.jacobpmods.neomod.screen;
 
 import com.jacobpmods.neomod.FirstNeoMod;
 import com.jacobpmods.neomod.screen.custom.EnhancerMenu;
+import com.jacobpmods.neomod.screen.custom.MixerMenu;
 import com.jacobpmods.neomod.screen.custom.PedestalMenu;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -21,6 +22,8 @@ public class ModMenuTypes {
 
     public static final DeferredHolder<MenuType<?>, MenuType<EnhancerMenu>> ENHANCER_MENU =
             registerMenuType("enhancer_menu", EnhancerMenu::new);
+    public static final DeferredHolder<MenuType<?>, MenuType<MixerMenu>> MIXER_MENU =
+            registerMenuType("mixer_menu", MixerMenu::new);
 
 
     private static <T extends AbstractContainerMenu>DeferredHolder<MenuType<?>, MenuType<T>> registerMenuType(String name,

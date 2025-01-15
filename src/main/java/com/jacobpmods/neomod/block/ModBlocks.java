@@ -6,6 +6,7 @@ import com.jacobpmods.neomod.block.custom.ModFlowerBlock;
 import com.jacobpmods.neomod.block.custom.ModSaplingBlock;
 import com.jacobpmods.neomod.block.custom.blocks.villagerJobBlocks.BankChestBlock;
 import com.jacobpmods.neomod.block.entity.blockentities.EnhancerBlock;
+import com.jacobpmods.neomod.block.entity.blockentities.MixerBlock;
 import com.jacobpmods.neomod.block.entity.blockentities.PedestalBlock;
 import com.jacobpmods.neomod.block.custom.blocks.*;
 import com.jacobpmods.neomod.block.custom.portal.GhostlyPortalBlock;
@@ -611,6 +612,9 @@ public class ModBlocks {
             .strength(-1.0F, Float.MAX_VALUE).destroyTime(100000).noOcclusion().sound(SoundType.ANVIL)));
     public static final DeferredBlock<Block> ENHANCER = registerBlock("enhancer",
             () -> new EnhancerBlock(BlockBehaviour.Properties.of().strength(-1.0f, Float.MAX_VALUE).destroyTime(100000).sound(SoundType.AMETHYST).noOcclusion()));
+
+    public static final DeferredBlock<Block> MIXER = registerBlock("mixer",
+            () -> new MixerBlock(BlockBehaviour.Properties.of().strength(1.0f).destroyTime(10).sound(SoundType.AMETHYST).noOcclusion()));
 
 
     //Portal Blocks

@@ -24,6 +24,7 @@ import com.jacobpmods.neomod.potion.ModPotions;
 import com.jacobpmods.neomod.recipe.ModRecipes;
 import com.jacobpmods.neomod.screen.ModMenuTypes;
 import com.jacobpmods.neomod.screen.custom.EnhancerScreen;
+import com.jacobpmods.neomod.screen.custom.MixerScreen;
 import com.jacobpmods.neomod.screen.custom.PedestalScreen;
 import com.jacobpmods.neomod.villager.ModVillagers;
 import com.jacobpmods.neomod.worldgen.dimension.ModPoiTypes;
@@ -167,6 +168,7 @@ public class FirstNeoMod {
         public static void registerScreens(RegisterMenuScreensEvent event) {
             event.register(ModMenuTypes.PEDESTAL_MENU.get(), PedestalScreen::new);
             event.register(ModMenuTypes.ENHANCER_MENU.get(), EnhancerScreen::new);
+            event.register(ModMenuTypes.MIXER_MENU.get(), MixerScreen::new);
 
         }
 

@@ -194,6 +194,7 @@ public class ModBlockLootTableProvider  extends BlockLootSubProvider {
         //Block Entities
         dropSelf(ModBlocks.PEDESTAL.get());
         dropSelf(ModBlocks.ENHANCER.get());
+        dropSelf(ModBlocks.MIXER.get());
 
         dropSelf(ModBlocks.GHOSTLY_WEB.get());
 

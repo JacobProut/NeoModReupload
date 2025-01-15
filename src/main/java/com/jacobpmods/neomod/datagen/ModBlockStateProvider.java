@@ -59,6 +59,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 modLoc("block/enhancer_top")));*/
         blockItem(ModBlocks.ENHANCER);
         blockItem(ModBlocks.BANK_CHEST);
+        saplingBlock(ModBlocks.MIXER); //May need to change later
 
         blockWithItem(ModBlocks.GHOSTLY_STONE);
         stairsBlock(((StairBlock) ModBlocks.GHOSTLY_STONE_STAIRS.get()), blockTexture(ModBlocks.GHOSTLY_STONE.get()));

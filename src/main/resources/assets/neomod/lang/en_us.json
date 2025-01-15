@@ -6,6 +6,8 @@
 
   "blockentity.neomod.pedestal": "Pedestal",
   "blockentity.neomod.enhancer": "Enhancer",
+  "blockentity.neomod.mixer": "Mixer",
+
 
   "entity.minecraft.villager.neomod.taxidermist" : "Taxidermist",
   "entity.minecraft.villager.neomod.banker" : "Banker",
@@ -75,8 +77,6 @@
   "item.neomod.undead_key": "Undead Key",
 
   "item.neomod.throwable_scythe": "Throwable Scythe",
-
-
 
 
 
@@ -193,7 +193,6 @@
   "block.neomod.ghostly_web": "Ghostly Web",
 
 
-
   "block.neomod.ghostly_portal_block": "Ghostly Portal Block",
 
   "block.neomod.oozing_flower": "Oozing Flower",
@@ -205,7 +204,7 @@
 
   "block.neomod.pedestal": "Pedestal",
   "block.neomod.enhancer": "Enhancer",
-
+  "block.neomod.mixer": "Mixer",
 
 
   "enchantment.neomod.magma_mine": "Magma Mine",
