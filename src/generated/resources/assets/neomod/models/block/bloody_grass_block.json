@@ -6,7 +6,8 @@
     "north": "neomod:block/bloody_grass_block",
     "south": "neomod:block/bloody_grass_block",
     "west": "neomod:block/bloody_grass_block",
-    "east": "neomod:block/bloody_grass_block"
+    "east": "neomod:block/bloody_grass_block",
+    "particle": "neomod:block/bloody_grass_block"
   }
 }
 

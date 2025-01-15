@@ -6,6 +6,7 @@
     "north": "neomod:block/afterlife_grass_block",
     "south": "neomod:block/afterlife_grass_block",
     "west": "neomod:block/afterlife_grass_block",
-    "east": "neomod:block/afterlife_grass_block"
+    "east": "neomod:block/afterlife_grass_block",
+    "particle": "neomod:block/afterlife_grass_block"
   }
 }

@@ -6,6 +6,7 @@
     "north": "neomod:block/ghostly_grass_block",
     "south": "neomod:block/ghostly_grass_block",
     "west": "neomod:block/ghostly_grass_block",
-    "east": "neomod:block/ghostly_grass_block"
+    "east": "neomod:block/ghostly_grass_block",
+    "particle": "neomod:block/ghostly_grass_block"
   }
 }
