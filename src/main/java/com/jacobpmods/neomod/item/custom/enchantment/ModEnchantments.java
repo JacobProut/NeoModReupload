@@ -42,6 +42,7 @@ public class ModEnchantments {
         register(context, ICE_BARRAGE_MELEE, Enchantment.enchantment(Enchantment.definition(items.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
                         items.getOrThrow(ItemTags.SWORDS), 5, 3,
                         Enchantment.dynamicCost(2, 4), Enchantment.dynamicCost(2, 8), 3, EquipmentSlotGroup.MAINHAND))
+                .exclusiveWith(HolderSet.direct(enchantment.getOrThrow(Enchantments.FIRE_ASPECT)))
                         .withEffect(EnchantmentEffectComponents.POST_ATTACK, EnchantmentTarget.ATTACKER,
                                 EnchantmentTarget.VICTIM, new IceBarrageMeleeEnchantmentEffect())
         );
