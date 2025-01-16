@@ -56,6 +56,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         basicItem(ModItems.SPEEDY_STRENGTH_POTION_I.get());
         basicItem(ModItems.SPEEDY_STRENGTH_POTION_II.get());
+        basicItem(ModItems.AGILITY_POTION_I.get());
+        basicItem(ModItems.AGILITY_POTION_II.get());
 
         basicItem(ModItems.GHOSTLY_DUST.get());
         basicItem(ModItems.ENHANCED_GHOSTLY_DUST.get());

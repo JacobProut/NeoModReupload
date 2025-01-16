@@ -10,6 +10,7 @@ import com.jacobpmods.neomod.item.custom.curiosItems.RingOfUndeadStrength;
 import com.jacobpmods.neomod.item.custom.curiosItems.SoulSplitNecklace;
 import com.jacobpmods.neomod.item.custom.food.speedapple;
 import com.jacobpmods.neomod.item.custom.igniter.PortalIgniter;
+import com.jacobpmods.neomod.item.custom.potions.AgilityPotion;
 import com.jacobpmods.neomod.item.custom.potions.SpeedyStrengthPotion;
 import com.jacobpmods.neomod.item.custom.throwables.ThrowableScythe;
 import com.jacobpmods.neomod.item.custom.tools.NexonAxe;
@@ -126,6 +127,9 @@ public class ModItems {
     //Custom Combined Potions
     public static final DeferredItem<Item> SPEEDY_STRENGTH_POTION_I = ITEMS.register("speedy_strength_potion_i", () -> new SpeedyStrengthPotion(new Item.Properties()));
     public static final DeferredItem<Item> SPEEDY_STRENGTH_POTION_II = ITEMS.register("speedy_strength_potion_ii", () -> new SpeedyStrengthPotion(new Item.Properties(), true));
+
+    public static final DeferredItem<Item> AGILITY_POTION_I = ITEMS.register("agility_potion_i", () -> new AgilityPotion(new Item.Properties()));
+    public static final DeferredItem<Item> AGILITY_POTION_II = ITEMS.register("agility_potion_ii", () -> new AgilityPotion(new Item.Properties(), true));
 
 
 

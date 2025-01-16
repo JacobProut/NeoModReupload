@@ -176,6 +176,8 @@ public class ModCreativeModeTabs {
                         //Custom Combined Potions
                         output.accept(ModItems.SPEEDY_STRENGTH_POTION_I);
                         output.accept(ModItems.SPEEDY_STRENGTH_POTION_II);
+                        output.accept(ModItems.AGILITY_POTION_I);
+                        output.accept(ModItems.AGILITY_POTION_II);
 
                         output.accept(ModItems.GHOSTLY_DUST);
                         output.accept(ModItems.ENHANCED_GHOSTLY_DUST);
