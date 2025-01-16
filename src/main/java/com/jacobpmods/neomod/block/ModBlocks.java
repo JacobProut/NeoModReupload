@@ -534,22 +534,7 @@ public class ModBlocks {
         }
     });
     public static final DeferredBlock<Block> BLOODY_LEAVES = registerBlock("bloody_leaves", () ->new BloodyLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)
-            .strength(0.2f).sound(SoundType.CHERRY_LEAVES)) {
-        @Override
-        public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-            return true;
-        }
-
-        @Override
-        public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-            return 60;
-        }
-
-        @Override
-        public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-            return 30;
-        }
-    });
+            .strength(0.2f).sound(SoundType.CHERRY_LEAVES)));
     public static final DeferredBlock<Block> BLOODY_SAPLING = registerBlock("bloody_sapling",
             () -> new ModSaplingBlock(ModTreeGrowers.BLOODY, BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_SAPLING)
                     .strength(0.2f).sound(SoundType.CHERRY_SAPLING), ModBlocks.BLOODY_GRASS_BLOCK.get(), ModBlocks.GHOSTLY_GRASS_BLOCK.get(), ModBlocks.GHOSTLY_DIRT.get(), Blocks.GRASS_BLOCK, Blocks.DIRT, ModBlocks.GILDED_GRASS_BLOCK.get(), ModBlocks.GILDED_DIRT.get()));
@@ -564,22 +549,7 @@ public class ModBlocks {
 
                                                                                                             //CHANGE LEAVESBLOCK TO CUSTOM BLOCK WITH PARTICLES
     public static final DeferredBlock<Block> GILDED_LEAVES = registerBlock("gilded_leaves", () ->new GildedLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)
-            .strength(0.2f).sound(SoundType.CHERRY_LEAVES)) {
-        @Override
-        public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-            return true;
-        }
-
-        @Override
-        public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-            return 60;
-        }
-
-        @Override
-        public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-            return 30;
-        }
-    });
+            .strength(0.2f).sound(SoundType.CHERRY_LEAVES)));
     public static final DeferredBlock<Block> GILDED_SAPLING = registerBlock("gilded_sapling",
             () -> new ModSaplingBlock(ModTreeGrowers.GILDED, BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_SAPLING)
                     .strength(0.2f).sound(SoundType.CHERRY_SAPLING), ModBlocks.BLOODY_GRASS_BLOCK.get(), ModBlocks.GHOSTLY_GRASS_BLOCK.get(), ModBlocks.GHOSTLY_DIRT.get(), Blocks.GRASS_BLOCK, Blocks.DIRT, ModBlocks.GILDED_GRASS_BLOCK.get(), ModBlocks.GILDED_DIRT.get()));
