@@ -117,6 +117,18 @@ public class ModItems {
             () -> new BloodBoneBerry(ModBlocks.BLOOD_BONE_FRUIT_BUSH.get(), new Item.Properties().food(ModFoodProperties.BLOOD_BONE_FRUIT_BERRY)));
 
 
+    public static final DeferredItem<Item> GHOSTLY_DUST = ITEMS.register("ghostly_dust",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> ENHANCED_GHOSTLY_DUST = ITEMS.register("enhanced_ghostly_dust",
+            () -> new Item(new Item.Properties()));
+
+    //Custom Combined Potions
+    public static final DeferredItem<Item> SPEEDY_STRENGTH_POTION_I = ITEMS.register("speedy_strength_potion_i",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> SPEEDY_STRENGTH_POTION_II = ITEMS.register("speedy_strength_potion_ii",
+            () -> new Item(new Item.Properties()));
+
+
 
     public static final DeferredItem<Item> SHATTERED_FRAGMENT = ITEMS.register("shattered_fragment", () -> new Item(new Item.Properties()));
 

@@ -137,9 +137,10 @@ public class MixerBlockEntity extends BlockEntity implements MenuProvider {
         Optional<RecipeHolder<MixerRecipe>> recipe = getCurrentRecipe();
         ItemStack output = recipe.get().value().output();
 
+
+        itemStackHandler.extractItem(MIXER_CHARGE_ITEM_SLOT, 1, false);
         itemStackHandler.extractItem(INPUT_SLOT, 1, false);
         itemStackHandler.extractItem(INPUT_SLOT_2, 1, false);
-        itemStackHandler.extractItem(MIXER_CHARGE_ITEM_SLOT, 1, false);
         itemStackHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(output.getItem(),
                 itemStackHandler.getStackInSlot(OUTPUT_SLOT).getCount() + output.getCount()));
 
@@ -165,12 +166,20 @@ public class MixerBlockEntity extends BlockEntity implements MenuProvider {
         }
 
         ItemStack output = recipe.get().value().getResultItem(null);
+
         return canInsertAmountIntoOutputSlot(output.getCount()) && canInsertItemIntoOutputSlot(output);
     }
 
     private Optional<RecipeHolder<MixerRecipe>> getCurrentRecipe() {
-        return this.level.getRecipeManager().getRecipeFor(ModRecipes.MIXER_TYPE.get(), new MixerRecipeInput(itemStackHandler.getStackInSlot(MIXER_CHARGE_ITEM_SLOT), itemStackHandler.getStackInSlot(INPUT_SLOT), itemStackHandler.getStackInSlot(INPUT_SLOT_2)), level);
+        ItemStack input1 = itemStackHandler.getStackInSlot(MIXER_CHARGE_ITEM_SLOT);
+        ItemStack input2 = itemStackHandler.getStackInSlot(INPUT_SLOT);
+        ItemStack input3 = itemStackHandler.getStackInSlot(INPUT_SLOT_2);
+
+
+        assert this.level != null;
+        return this.level.getRecipeManager().getRecipeFor(ModRecipes.MIXER_TYPE.get(), new MixerRecipeInput(input1, input2, input3), level);
     }
+
 
     private boolean canInsertItemIntoOutputSlot(ItemStack output) {
         return itemStackHandler.getStackInSlot(OUTPUT_SLOT).isEmpty() ||

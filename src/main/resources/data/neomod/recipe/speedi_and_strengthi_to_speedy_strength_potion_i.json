@@ -1,0 +1,25 @@
+{
+  "type": "neomod:mixing",
+  "ingredient1": {
+    "item": "neomod:ghostly_dust"
+  },
+  "ingredient2": {
+    "type": "neoforge:components",
+    "items": ["minecraft:potion"],
+    "components": {
+      "potion_contents": "minecraft:swiftness"
+    },
+    "count": 1
+  },
+  "ingredient3": {
+    "type": "neoforge:components",
+    "items": ["minecraft:potion"],
+    "components": {
+      "potion_contents": "minecraft:strength"
+    },
+    "count": 1
+  },
+  "result": {
+    "id": "neomod:speedy_strength_potion_i"
+  }
+}

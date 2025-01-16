@@ -2,8 +2,10 @@ package com.jacobpmods.neomod.block.entity.compat;
 
 import com.jacobpmods.neomod.FirstNeoMod;
 import com.jacobpmods.neomod.recipe.EnhancerRecipe;
+import com.jacobpmods.neomod.recipe.MixerRecipe;
 import com.jacobpmods.neomod.recipe.ModRecipes;
 import com.jacobpmods.neomod.screen.custom.EnhancerScreen;
+import com.jacobpmods.neomod.screen.custom.MixerScreen;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.registration.IGuiHandlerRegistration;
@@ -29,6 +31,9 @@ public class JEIMCCoursePlugin implements IModPlugin {
         registration.addRecipeCategories(new EnhancerRecipeCategory(
                 registration.getJeiHelpers().getGuiHelper()
         ));
+        registration.addRecipeCategories(new MixerRecipeCategory(
+                registration.getJeiHelpers().getGuiHelper()
+        ));
     }
 
     @Override
@@ -38,11 +43,18 @@ public class JEIMCCoursePlugin implements IModPlugin {
         List<EnhancerRecipe> enhancerRecipes = recipeManager
                 .getAllRecipesFor(ModRecipes.ENHANCER_TYPE.get()).stream().map(RecipeHolder::value).toList();
         registration.addRecipes(EnhancerRecipeCategory.ENHANCER_RECIPE_RECIPE_TYPE, enhancerRecipes);
+
+        List<MixerRecipe> mixerRecipes = recipeManager
+                .getAllRecipesFor(ModRecipes.MIXER_TYPE.get()).stream().map(RecipeHolder::value).toList();
+        registration.addRecipes(MixerRecipeCategory.MIXER_RECIPE_RECIPE_TYPE, mixerRecipes);
     }
 
     @Override
     public void registerGuiHandlers(IGuiHandlerRegistration registration) {
         registration.addRecipeClickArea(EnhancerScreen.class, 70, 30, 25, 20,
                 EnhancerRecipeCategory.ENHANCER_RECIPE_RECIPE_TYPE);
+
+        registration.addRecipeClickArea(MixerScreen.class, 70, 30, 25, 20,
+                MixerRecipeCategory.MIXER_RECIPE_RECIPE_TYPE);
     }
 }

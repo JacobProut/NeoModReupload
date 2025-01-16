@@ -23,6 +23,12 @@
   "item.minecraft.splash_potion.effect.extended_poison_resistance_potion": "Poison Resistance Splash Potion",
   "item.minecraft.lingering_potion.effect.extended_poison_resistance_potion": "Poison Resistance Lingering Potion",
 
+  "item.neomod.speedy_strength_potion_i": "Speedy Strength Potion I",
+  "item.neomod.speedy_strength_potion_ii": "Speedy Strength Potion II",
+
+  "item.neomod.ghostly_dust": "Ghostly Dust",
+  "item.neomod.enhanced_ghostly_dust": "Enhanced Ghostly Dust",
+
 
   "item.neomod.undead_beef": "Undead Beef",
   "item.neomod.speedapple": "Speed Apple",

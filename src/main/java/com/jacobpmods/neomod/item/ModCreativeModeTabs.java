@@ -173,6 +173,13 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.ENHANCER);
                         output.accept(ModBlocks.MIXER);
 
+                        //Custom Combined Potions
+                        output.accept(ModItems.SPEEDY_STRENGTH_POTION_I);
+                        output.accept(ModItems.SPEEDY_STRENGTH_POTION_II);
+
+                        output.accept(ModItems.GHOSTLY_DUST);
+                        output.accept(ModItems.ENHANCED_GHOSTLY_DUST);
+
                         //Fluids
                         output.accept(ModFluids.POISONED_WATER_BUCKET);
 
