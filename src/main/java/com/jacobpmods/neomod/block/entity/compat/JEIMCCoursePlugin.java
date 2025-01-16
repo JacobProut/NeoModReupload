@@ -51,10 +51,10 @@ public class JEIMCCoursePlugin implements IModPlugin {
 
     @Override
     public void registerGuiHandlers(IGuiHandlerRegistration registration) {
-        registration.addRecipeClickArea(EnhancerScreen.class, 70, 30, 25, 20,
+        registration.addRecipeClickArea(EnhancerScreen.class, 1, 30, 25, 20,
                 EnhancerRecipeCategory.ENHANCER_RECIPE_RECIPE_TYPE);
 
-        registration.addRecipeClickArea(MixerScreen.class, 70, 30, 25, 20,
+        registration.addRecipeClickArea(MixerScreen.class, 1, 30, 25, 20,
                 MixerRecipeCategory.MIXER_RECIPE_RECIPE_TYPE);
     }
 }

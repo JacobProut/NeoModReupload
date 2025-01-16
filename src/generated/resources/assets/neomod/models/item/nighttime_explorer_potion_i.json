@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "neomod:item/nighttime_explorer_potion_i"
+  }
+}

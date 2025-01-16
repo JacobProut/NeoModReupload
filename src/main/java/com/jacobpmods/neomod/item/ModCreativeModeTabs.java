@@ -178,6 +178,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.SPEEDY_STRENGTH_POTION_II);
                         output.accept(ModItems.AGILITY_POTION_I);
                         output.accept(ModItems.AGILITY_POTION_II);
+                        output.accept(ModItems.NIGHTTIME_EXPLORER_POTION_I);
+                        output.accept(ModItems.NIGHTTIME_EXPLORER_POTION_II);
 
                         output.accept(ModItems.GHOSTLY_DUST);
                         output.accept(ModItems.ENHANCED_GHOSTLY_DUST);

@@ -1,0 +1,25 @@
+{
+  "type": "neomod:mixing",
+  "ingredient1": {
+    "item": "neomod:ghostly_dust"
+  },
+  "ingredient3": {
+    "type": "neoforge:components",
+    "items": ["minecraft:potion"],
+    "components": {
+      "potion_contents": "minecraft:night_vision"
+    },
+    "count": 1
+  },
+  "ingredient2": {
+    "type": "neoforge:components",
+    "items": ["minecraft:potion"],
+    "components": {
+      "potion_contents": "minecraft:swiftness"
+    },
+    "count": 1
+  },
+  "result": {
+    "id": "neomod:nighttime_explorer_potion_i"
+  }
+}
