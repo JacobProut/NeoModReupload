@@ -1,7 +1,7 @@
-// 1.21.1	2025-01-11T00:39:10.9468731	Registries
+// 1.21.1	2025-01-14T19:07:27.1747696	Registries
 38ec268e3f49a851de8633d8ecbfdb0abdbb2518 data/neomod/dimension/afterlife.json
-30915c8766cc98f3239655449a757d0ce65a0d60 data/neomod/dimension_type/afterlife_type.json
-45cc21a0401cabe558b485aa212b0d94b39aaabb data/neomod/enchantment/ice_barrage_melee.json
+0aa4a325564d445797f7c4f4535769cd908be786 data/neomod/dimension_type/afterlife_type.json
+4dbd53ed86c8782b1053f351e692c2dcc6fe3815 data/neomod/enchantment/ice_barrage_melee.json
 5dac96e94bb5bafa709ac0d83698dbf496e5cba4 data/neomod/enchantment/magma_mine.json
 dafc7659e372a0835ef1a452e27a95616a23ec33 data/neomod/enchantment/timber_feller.json
 4c07a3d70c1851d190bb78a51c5e1b309246ff33 data/neomod/neoforge/biome_modifier/add_afterlife_dimension_diamond_ore.json
@@ -25,9 +25,9 @@ ee93cddba873e1d55737a7afee963516337f93a4 data/neomod/neoforge/biome_modifier/add
 264ce6f6340e68b7102b6acae3d883caf3f16150 data/neomod/neoforge/biome_modifier/spawn_skeletal_cow.json
 fd4f47e84710e586f3bab4a2f683ee345fca772e data/neomod/neoforge/biome_modifier/spawn_skeletal_enderman.json
 491ee8b2a42bfd9096bbccc925250a8d6289b342 data/neomod/neoforge/biome_modifier/spawn_skeletal_zombie.json
-fec6d80784a58c157986cc31798a114cfb55760b data/neomod/worldgen/biome/blood_garden_biome.json
+d0b916bebc27fc0955af255df1c58327626b7af9 data/neomod/worldgen/biome/blood_garden_biome.json
 e62dfe5915dd782b314721c75911cf800de55c6b data/neomod/worldgen/biome/ghostly_biome.json
-72df6450046fdf00e84d5cc06757ba3189121bdd data/neomod/worldgen/biome/gilded_forest_biome.json
+44b154c37ac657be80ab0dc925d13ac021ad725e data/neomod/worldgen/biome/gilded_forest_biome.json
 df3456f3e1dd9ba885d4bc380f12f3224817a817 data/neomod/worldgen/biome/heavenly_plains_biome.json
 a3ad0e3f5011e14a8d38a990ab68ede7777f8175 data/neomod/worldgen/configured_feature/afterlife_diamond_ore.json
 4cc4fdd8d9c4e2b01f5edf9c137628b38d9033d3 data/neomod/worldgen/configured_feature/afterlife_gold_ore.json
