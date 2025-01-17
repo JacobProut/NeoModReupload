@@ -117,8 +117,8 @@ public class ModEvents {
         builder.addMix(Potions.AWKWARD, ModItems.SPEED_APPLE.get(), ModPotions.POISON_RESISTANCE_POTION);
         builder.addMix(ModPotions.POISON_RESISTANCE_POTION, Items.REDSTONE, ModPotions.EXTENDED_POISON_RESISTANCE_POTION);
         //                              CHANGE THIS INGREDIENT
-        builder.addMix(Potions.AWKWARD, ModItems.COIN.get(), ModPotions.WATER_VELOCITY_POTION);
-        builder.addMix(ModPotions.WATER_VELOCITY_POTION, Items.REDSTONE, ModPotions.EXTENDED_WATER_VELOCITY_POTION);
+        builder.addMix(Potions.AWKWARD, ModItems.COIN.get(), ModPotions.SWIMMERS_VELOCITY_POTION);
+        builder.addMix(ModPotions.SWIMMERS_VELOCITY_POTION, Items.REDSTONE, ModPotions.EXTENDED_SWIMMERS_VELOCITY_POTION);
     }
 
 }

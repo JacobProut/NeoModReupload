@@ -3,10 +3,17 @@ package com.jacobpmods.neomod.item;
 import com.jacobpmods.neomod.FirstNeoMod;
 import com.jacobpmods.neomod.block.ModBlocks;
 import com.jacobpmods.neomod.fluid.ModFluids;
+import com.jacobpmods.neomod.potion.ModPotions;
+import net.minecraft.core.Holder;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.Potion;
+import net.minecraft.world.item.alchemy.PotionContents;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -180,6 +187,11 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.AGILITY_POTION_II);
                         output.accept(ModItems.NIGHTTIME_EXPLORER_POTION_I);
                         output.accept(ModItems.NIGHTTIME_EXPLORER_POTION_II);
+                        output.accept(createItemStack(Items.POTION, ModPotions.POISON_RESISTANCE_POTION));
+                        output.accept(createItemStack(Items.POTION, ModPotions.EXTENDED_POISON_RESISTANCE_POTION));
+                        output.accept(createItemStack(Items.POTION, ModPotions.SWIMMERS_VELOCITY_POTION));
+                        output.accept(createItemStack(Items.POTION, ModPotions.EXTENDED_SWIMMERS_VELOCITY_POTION));
+
 
                         output.accept(ModItems.GHOSTLY_DUST);
                         output.accept(ModItems.ENHANCED_GHOSTLY_DUST);
@@ -334,6 +346,12 @@ public class ModCreativeModeTabs {
 
                     }).build());
 
+
+    public static ItemStack createItemStack(Item item, Holder<Potion> holder) {
+        ItemStack itemstack = new ItemStack(item);
+        itemstack.set(DataComponents.POTION_CONTENTS, new PotionContents(holder));
+        return itemstack;
+    }
 
 
     public static void register(IEventBus eventBus) {
