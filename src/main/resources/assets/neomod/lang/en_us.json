@@ -12,6 +12,8 @@
   "entity.minecraft.villager.neomod.taxidermist" : "Taxidermist",
   "entity.minecraft.villager.neomod.banker" : "Banker",
 
+  "entity.neomod.skeletal_guardian": "Skeletal Guardian",
+
   "entity.neomod.throwable_scythe_entity": "Throwable Scythe",
 
   "effect.neomod.poison_resistance": "Poison Resistance",
