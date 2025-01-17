@@ -15,6 +15,10 @@ public class ModMobEffects {
     public static final Holder<MobEffect> POISON_RESISTANCE = MOB_EFFECTS.register("poison_resistance",
             () -> new PoisonResistanceEffect(MobEffectCategory.BENEFICIAL, 0x80B080));
 
+    public static final Holder<MobEffect> WATER_VELOCITY = MOB_EFFECTS.register("water_velocity",
+            () -> new SwimmersVelocityEffect(MobEffectCategory.BENEFICIAL, 0x6D7F8B));
+
+
 
     public static void register(IEventBus bus) {
         MOB_EFFECTS.register(bus);
