@@ -23,14 +23,20 @@ public class SkeletalGuardianModel extends HierarchicalModel<SkeletalGuardianEnt
     private final ModelPart shoulders;
     private final ModelPart Legs;
     private final ModelPart rightleg;
+    private final ModelPart rshin;
+    private final ModelPart rknee;
+    private final ModelPart rthigh;
     private final ModelPart leftleg;
+    private final ModelPart lshin;
+    private final ModelPart lthigh;
+    private final ModelPart lknee;
     private final ModelPart feet;
     private final ModelPart left;
     private final ModelPart right;
     private final ModelPart Scythe;
 
     public SkeletalGuardianModel(ModelPart root) {
-        this.skeletalGuardian = root.getChild("SkeletalGuardian");
+        this.skeletalGuardian = root.getChild("skeletalGuardian");
         this.head = this.skeletalGuardian.getChild("head");
         this.torso = this.skeletalGuardian.getChild("torso");
         this.arms = this.torso.getChild("arms");
@@ -43,7 +49,13 @@ public class SkeletalGuardianModel extends HierarchicalModel<SkeletalGuardianEnt
         this.shoulders = this.torso.getChild("shoulders");
         this.Legs = this.skeletalGuardian.getChild("Legs");
         this.rightleg = this.Legs.getChild("rightleg");
+        this.rshin = this.rightleg.getChild("rshin");
+        this.rknee = this.rightleg.getChild("rknee");
+        this.rthigh = this.rightleg.getChild("rthigh");
         this.leftleg = this.Legs.getChild("leftleg");
+        this.lshin = this.leftleg.getChild("lshin");
+        this.lthigh = this.leftleg.getChild("lthigh");
+        this.lknee = this.leftleg.getChild("lknee");
         this.feet = this.skeletalGuardian.getChild("feet");
         this.left = this.feet.getChild("left");
         this.right = this.feet.getChild("right");
@@ -54,9 +66,9 @@ public class SkeletalGuardianModel extends HierarchicalModel<SkeletalGuardianEnt
         MeshDefinition meshdefinition = new MeshDefinition();
         PartDefinition partdefinition = meshdefinition.getRoot();
 
-        PartDefinition SkeletalGuardian = partdefinition.addOrReplaceChild("SkeletalGuardian", CubeListBuilder.create(), PartPose.offset(0.0F, 24.0F, 0.0F));
+        PartDefinition skeletalGuardian = partdefinition.addOrReplaceChild("skeletalGuardian", CubeListBuilder.create(), PartPose.offset(0.0F, 24.0F, 0.0F));
 
-        PartDefinition head = SkeletalGuardian.addOrReplaceChild("head", CubeListBuilder.create().texOffs(94, 114).addBox(-5.0F, -14.0F, -13.0F, 10.0F, 4.0F, 2.0F, new CubeDeformation(0.0F))
+        PartDefinition head = skeletalGuardian.addOrReplaceChild("head", CubeListBuilder.create().texOffs(94, 114).addBox(-5.0F, -14.0F, -13.0F, 10.0F, 4.0F, 2.0F, new CubeDeformation(0.0F))
                 .texOffs(0, 29).addBox(5.0F, -12.0F, -13.0F, 3.0F, 10.0F, 19.0F, new CubeDeformation(0.0F))
                 .texOffs(0, 0).addBox(-8.0F, -12.0F, -13.0F, 3.0F, 10.0F, 19.0F, new CubeDeformation(0.0F))
                 .texOffs(106, 33).addBox(-5.0F, -5.0F, -13.0F, 10.0F, 9.0F, 2.0F, new CubeDeformation(0.0F))
@@ -71,7 +83,7 @@ public class SkeletalGuardianModel extends HierarchicalModel<SkeletalGuardianEnt
                 .texOffs(0, 75).addBox(5.0F, -15.0F, -11.0F, 1.0F, 3.0F, 16.0F, new CubeDeformation(0.0F))
                 .texOffs(44, 17).addBox(-5.0F, 0.0F, -11.0F, 10.0F, 1.0F, 16.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -56.0F, 6.0F));
 
-        PartDefinition torso = SkeletalGuardian.addOrReplaceChild("torso", CubeListBuilder.create(), PartPose.offset(0.0F, -46.0F, 8.0F));
+        PartDefinition torso = skeletalGuardian.addOrReplaceChild("torso", CubeListBuilder.create(), PartPose.offset(0.0F, -46.0F, 8.0F));
 
         PartDefinition arms = torso.addOrReplaceChild("arms", CubeListBuilder.create(), PartPose.offset(0.0F, -6.0F, -2.0F));
 
@@ -170,25 +182,37 @@ public class SkeletalGuardianModel extends HierarchicalModel<SkeletalGuardianEnt
         PartDefinition shoulders = torso.addOrReplaceChild("shoulders", CubeListBuilder.create().texOffs(94, 107).addBox(-1.0F, -2.0F, -1.0F, 8.0F, 2.0F, 5.0F, new CubeDeformation(0.0F))
                 .texOffs(0, 110).addBox(-29.0F, -2.0F, -1.0F, 8.0F, 2.0F, 5.0F, new CubeDeformation(0.0F)), PartPose.offset(11.0F, -7.0F, -6.0F));
 
-        PartDefinition Legs = SkeletalGuardian.addOrReplaceChild("Legs", CubeListBuilder.create(), PartPose.offset(0.0F, -24.2505F, 3.3809F));
+        PartDefinition Legs = skeletalGuardian.addOrReplaceChild("Legs", CubeListBuilder.create(), PartPose.offset(0.0F, -24.2505F, 3.3809F));
 
         PartDefinition rightleg = Legs.addOrReplaceChild("rightleg", CubeListBuilder.create(), PartPose.offset(-7.0F, 0.0F, 0.0F));
 
-        PartDefinition cube_r3 = rightleg.addOrReplaceChild("cube_r3", CubeListBuilder.create().texOffs(12, 139).addBox(-0.5F, -3.7495F, -1.0F, 2.0F, 4.0F, 3.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 11.0F, 0.0F, 1.5708F, 0.0F, 0.0F));
+        PartDefinition rshin = rightleg.addOrReplaceChild("rshin", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
 
-        PartDefinition cube_r4 = rightleg.addOrReplaceChild("cube_r4", CubeListBuilder.create().texOffs(90, 80).addBox(-1.0F, -4.7495F, -1.0F, 5.0F, 5.0F, 11.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-1.0F, 8.0F, 2.0F, 1.5708F, 0.0F, 0.0F));
+        PartDefinition cube_r3 = rshin.addOrReplaceChild("cube_r3", CubeListBuilder.create().texOffs(96, 18).addBox(-1.0F, -4.7495F, -1.0F, 5.0F, 5.0F, 10.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-1.0F, 21.0F, 2.0F, 1.5708F, 0.0F, 0.0F));
 
-        PartDefinition cube_r5 = rightleg.addOrReplaceChild("cube_r5", CubeListBuilder.create().texOffs(96, 18).addBox(-1.0F, -4.7495F, -1.0F, 5.0F, 5.0F, 10.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-1.0F, 21.0F, 2.0F, 1.5708F, 0.0F, 0.0F));
+        PartDefinition rknee = rightleg.addOrReplaceChild("rknee", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
+
+        PartDefinition cube_r4 = rknee.addOrReplaceChild("cube_r4", CubeListBuilder.create().texOffs(12, 139).addBox(-0.5F, -3.7495F, -1.0F, 2.0F, 4.0F, 3.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 11.0F, 0.0F, 1.5708F, 0.0F, 0.0F));
+
+        PartDefinition rthigh = rightleg.addOrReplaceChild("rthigh", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
+
+        PartDefinition cube_r5 = rthigh.addOrReplaceChild("cube_r5", CubeListBuilder.create().texOffs(90, 80).addBox(-1.0F, -4.7495F, -1.0F, 5.0F, 5.0F, 11.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-1.0F, 8.0F, 2.0F, 1.5708F, 0.0F, 0.0F));
 
         PartDefinition leftleg = Legs.addOrReplaceChild("leftleg", CubeListBuilder.create(), PartPose.offset(6.0F, 0.0F, 0.0F));
 
-        PartDefinition cube_r6 = leftleg.addOrReplaceChild("cube_r6", CubeListBuilder.create().texOffs(0, 94).addBox(-4.0F, -4.7495F, -1.0F, 5.0F, 5.0F, 11.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(2.0F, 8.0F, 2.0F, 1.5708F, 0.0F, 0.0F));
+        PartDefinition lshin = leftleg.addOrReplaceChild("lshin", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
 
-        PartDefinition cube_r7 = leftleg.addOrReplaceChild("cube_r7", CubeListBuilder.create().texOffs(94, 44).addBox(-4.0F, -4.7495F, -1.0F, 5.0F, 5.0F, 10.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(2.0F, 21.0F, 2.0F, 1.5708F, 0.0F, 0.0F));
+        PartDefinition cube_r6 = lshin.addOrReplaceChild("cube_r6", CubeListBuilder.create().texOffs(94, 44).addBox(-4.0F, -4.7495F, -1.0F, 5.0F, 5.0F, 10.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(2.0F, 21.0F, 2.0F, 1.5708F, 0.0F, 0.0F));
 
-        PartDefinition cube_r8 = leftleg.addOrReplaceChild("cube_r8", CubeListBuilder.create().texOffs(22, 139).addBox(-1.5F, -3.7495F, -1.0F, 2.0F, 4.0F, 3.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(1.0F, 11.0F, 0.0F, 1.5708F, 0.0F, 0.0F));
+        PartDefinition lthigh = leftleg.addOrReplaceChild("lthigh", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
 
-        PartDefinition feet = SkeletalGuardian.addOrReplaceChild("feet", CubeListBuilder.create(), PartPose.offset(0.0F, -2.0F, 4.0F));
+        PartDefinition cube_r7 = lthigh.addOrReplaceChild("cube_r7", CubeListBuilder.create().texOffs(0, 94).addBox(-4.0F, -4.7495F, -1.0F, 5.0F, 5.0F, 11.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(2.0F, 8.0F, 2.0F, 1.5708F, 0.0F, 0.0F));
+
+        PartDefinition lknee = leftleg.addOrReplaceChild("lknee", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
+
+        PartDefinition cube_r8 = lknee.addOrReplaceChild("cube_r8", CubeListBuilder.create().texOffs(22, 139).addBox(-1.5F, -3.7495F, -1.0F, 2.0F, 4.0F, 3.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(1.0F, 11.0F, 0.0F, 1.5708F, 0.0F, 0.0F));
+
+        PartDefinition feet = skeletalGuardian.addOrReplaceChild("feet", CubeListBuilder.create(), PartPose.offset(0.0F, -2.0F, 4.0F));
 
         PartDefinition left = feet.addOrReplaceChild("left", CubeListBuilder.create().texOffs(86, 128).addBox(-1.1F, -4.0F, 0.625F, 3.0F, 2.0F, 1.0F, new CubeDeformation(0.0F))
                 .texOffs(90, 96).addBox(-3.0F, -2.0F, -7.6191F, 6.0F, 2.0F, 9.0F, new CubeDeformation(0.0F))
@@ -204,7 +228,7 @@ public class SkeletalGuardianModel extends HierarchicalModel<SkeletalGuardianEnt
                 .texOffs(38, 70).addBox(-1.7F, -2.0F, -9.6191F, 1.0F, 2.0F, 2.0F, new CubeDeformation(0.0F))
                 .texOffs(20, 117).addBox(-2.9F, -2.0F, -9.6191F, 1.0F, 2.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offset(-6.0F, 2.0F, 1.0F));
 
-        PartDefinition Scythe = SkeletalGuardian.addOrReplaceChild("Scythe", CubeListBuilder.create().texOffs(72, 99).addBox(-2.0F, -8.0F, -8.0F, 3.0F, 2.0F, 6.0F, new CubeDeformation(0.0F))
+        PartDefinition Scythe = skeletalGuardian.addOrReplaceChild("Scythe", CubeListBuilder.create().texOffs(72, 99).addBox(-2.0F, -8.0F, -8.0F, 3.0F, 2.0F, 6.0F, new CubeDeformation(0.0F))
                 .texOffs(96, 0).addBox(-2.0F, -25.0F, -14.0F, 3.0F, 6.0F, 12.0F, new CubeDeformation(0.0F))
                 .texOffs(62, 129).addBox(-2.0F, -25.0F, 1.0F, 3.0F, 6.0F, 2.0F, new CubeDeformation(0.0F))
                 .texOffs(44, 34).addBox(-2.0F, -26.0F, -2.0F, 3.0F, 47.0F, 3.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-16.0F, -26.0F, 3.0F, 1.5708F, 0.0F, 0.0F));
@@ -229,7 +253,7 @@ public class SkeletalGuardianModel extends HierarchicalModel<SkeletalGuardianEnt
         this.root().getAllParts().forEach(ModelPart::resetPose);
         this.applyHeadRotation(netHeadYaw, headPitch);
 
-        //this.animateWalk(SkeletalZombieAnimations.SKELETAL_ZOMBIE_WALK, limbSwing, limbSwingAmount, 1f, 1f); //changes animation speed
+        this.animateWalk(SkeletalGuardianAnimations.SKELETAL_GUARDIAN_WALK, limbSwing, limbSwingAmount, 2f, 2f); //changes animation speed
 
        //this.animate(entity.idleAnimationState, SkeletalGuardianEntity.SKELETAL_ZOMBIE_IDLE, ageInTicks, 1f);
         //this.animate(entity.attackAnimationState, SkeletalZombieAnimations.SKELETAL_ZOMBIE_ATTACK, ageInTicks, 1f);
