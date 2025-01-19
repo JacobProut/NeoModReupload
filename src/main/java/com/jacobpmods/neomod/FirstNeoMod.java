@@ -11,6 +11,7 @@ import com.jacobpmods.neomod.entity.client.skeletal.guardian.SkeletalGuardianRen
 import com.jacobpmods.neomod.entity.client.skeletal.wolf.SkeletalWolfRender;
 import com.jacobpmods.neomod.entity.client.skeletal.zombie.SkeletalZombieRender;
 import com.jacobpmods.neomod.entity.client.throwables.ScytheProjectileRenderer;
+import com.jacobpmods.neomod.event.FogEventHandler;
 import com.jacobpmods.neomod.fluid.BaseFluidType;
 import com.jacobpmods.neomod.fluid.ModFluidTypes;
 import com.jacobpmods.neomod.fluid.ModFluids;
@@ -77,11 +78,13 @@ public class FirstNeoMod {
         ModPotions.register(modEventBus);
         ModMobEffects.register(modEventBus);
 
+
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
+        new FogEventHandler();
         //CuriosRendererRegistry.register(SOUL_SPLIT_NECKLACE.get().asItem(), () -> new CuriosRenderer());
     }
 

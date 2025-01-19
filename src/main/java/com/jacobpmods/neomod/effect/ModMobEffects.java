@@ -21,6 +21,9 @@ public class ModMobEffects {
     public static final Holder<MobEffect> LAVA_SPEED = MOB_EFFECTS.register("lava_speed",
             () -> new LavaSpeedEffect(MobEffectCategory.BENEFICIAL, 0x625355));
 
+    public static final Holder<MobEffect> NO_LAVA_FOG = MOB_EFFECTS.register("no_lava_fog",
+            () -> new NoLavaFogEffect(MobEffectCategory.BENEFICIAL, 0x625355));
+
 
 
     public static void register(IEventBus bus) {
