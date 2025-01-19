@@ -20,7 +20,7 @@ public class LavaSpeedEffect extends MobEffect {
         if (entity.isInLava()) { // Checks for lava
             assert player != null; //Ensures player is not null (Prevents NullExeceptionPointer)
             if (!player.isCreative()) { // Make sure player is not in creative (If player was in creative, it would give them extremely fast speed)
-                if (entity.isSprinting()) { // Checks for if the player is sprinting
+                if (entity.isSprinting()) { // Checks for if the player is sprinting first before apply walk speed.
                     double multiplier = 1.0 + (0.75 * (amplifier + 1)); // If sprinting apply 1.75% speed
                     entity.setDeltaMovement(entity.getDeltaMovement().multiply(multiplier, 1.0, multiplier));
                 } else if (entity.walkDistO > 0) { //Checks if player is walking
