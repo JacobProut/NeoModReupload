@@ -19,10 +19,15 @@ public class ModPotions {
             () -> new Potion(new MobEffectInstance(ModMobEffects.POISON_RESISTANCE, 9600, 0))); //Duration, Amplifier
 
     public static final Holder<Potion> SWIMMERS_VELOCITY_POTION = POTIONS.register("swimmers_velocity_potion",
-            () -> new Potion(new MobEffectInstance(ModMobEffects.WATER_VELOCITY, 3600, 1))); //Duration, Amplifier
+            () -> new Potion(new MobEffectInstance(ModMobEffects.SWIMMERS_VELOCITY, 3600, 1))); //Duration, Amplifier
     public static final Holder<Potion> EXTENDED_SWIMMERS_VELOCITY_POTION = POTIONS.register("extended_swimmers_velocity_potion",
-            () -> new Potion(new MobEffectInstance(ModMobEffects.WATER_VELOCITY, 9600, 1))); //Duration, Amplifier
+            () -> new Potion(new MobEffectInstance(ModMobEffects.SWIMMERS_VELOCITY, 9600, 1))); //Duration, Amplifier
 
+    public static final Holder<Potion> LAVA_SPEED_POTION = POTIONS.register("lava_speed_potion",
+            () -> new Potion(new MobEffectInstance(ModMobEffects.LAVA_SPEED, 3600, 0)));
+
+    public static final Holder<Potion> EXTENDED_LAVA_SPEED_POTION = POTIONS.register("extended_lava_speed_potion",
+            () -> new Potion(new MobEffectInstance(ModMobEffects.LAVA_SPEED, 9600, 0)));
 
     public static void register(IEventBus bus) {
         POTIONS.register(bus);

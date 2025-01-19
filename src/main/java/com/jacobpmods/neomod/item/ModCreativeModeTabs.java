@@ -191,7 +191,8 @@ public class ModCreativeModeTabs {
                         output.accept(createItemStack(Items.POTION, ModPotions.EXTENDED_POISON_RESISTANCE_POTION));
                         output.accept(createItemStack(Items.POTION, ModPotions.SWIMMERS_VELOCITY_POTION));
                         output.accept(createItemStack(Items.POTION, ModPotions.EXTENDED_SWIMMERS_VELOCITY_POTION));
-
+                        output.accept(createItemStack(Items.POTION, ModPotions.LAVA_SPEED_POTION));
+                        output.accept(createItemStack(Items.POTION, ModPotions.EXTENDED_LAVA_SPEED_POTION));
 
                         output.accept(ModItems.GHOSTLY_DUST);
                         output.accept(ModItems.ENHANCED_GHOSTLY_DUST);
