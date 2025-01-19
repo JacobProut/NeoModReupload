@@ -16,9 +16,11 @@ public class LavaSpeedEffect extends MobEffect {
 
         Minecraft minecraft = Minecraft.getInstance(); //Gets instance of level
         Player player = minecraft.player; //Gets instance of Player
+        if (player == null) {
+            return false; // No Player instance = abort execution
+        }
 
         if (entity.isInLava()) { // Checks for lava
-            assert player != null; //Ensures player is not null (Prevents NullExeceptionPointer)
             if (!player.isCreative()) { // Make sure player is not in creative (If player was in creative, it would give them extremely fast speed)
                 if (entity.isSprinting()) { // Checks for if the player is sprinting first before apply walk speed.
                     double multiplier = 1.0 + (0.75 * (amplifier + 1)); // If sprinting apply 1.75% speed
