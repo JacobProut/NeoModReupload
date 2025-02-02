@@ -17,6 +17,9 @@
   "entity.neomod.throwable_scythe_entity": "Throwable Scythe",
 
   "effect.neomod.poison_resistance": "Poison Resistance",
+  "effect.neomod.no_lava_fog": "Lava Fog Removal",
+  "effect.neomod.lava_speed": "Lava Swiftness",
+
 
   "item.minecraft.potion.effect.poison_resistance_potion": "Poison Resistance Potion",
   "item.minecraft.splash_potion.effect.poison_resistance_potion": "Poison Resistance Splash Potion",
@@ -44,6 +47,8 @@
   "item.neomod.agility_potion_ii": "Agility Potion II",
   "item.neomod.nighttime_explorer_potion_i": "Night-Time Explorer Potion I",
   "item.neomod.nighttime_explorer_potion_ii": "Night-Time Explorer Potion II",
+  "item.neomod.magma_miner_potion": "Magma Miner Potion",
+
 
 
   "item.neomod.ghostly_dust": "Ghostly Dust",

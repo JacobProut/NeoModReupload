@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-16T02:14:59.0703933	Item Models: neomod
+// 1.21.1	2025-01-19T18:18:05.5656478	Item Models: neomod
 fbf874db12b15ebd1b3414fff8d220b14c6beb9a assets/neomod/models/item/afterlife_torch.json
 cf006cf909687f587686d0b96c5c8e6fc332f7c6 assets/neomod/models/item/agility_potion_i.json
 ba0efaa0e5624cdb7ded4117f1e25d26ef71d8d8 assets/neomod/models/item/agility_potion_ii.json
@@ -36,6 +36,7 @@ f75ec004b4aaabbe87c713d25f9d4d30c869054e assets/neomod/models/item/ghostly_stone
 81ea002e4f685a70a9f74b4343866c376d0b8861 assets/neomod/models/item/ghostly_stone_wall.json
 09273cb119acd7a557493c1666bbc45aeecf29c4 assets/neomod/models/item/gilded_sapling.json
 8791d98c5c980172743a47ecc5962e71fe6bdb3a assets/neomod/models/item/god_sword.json
+e1ef5a538dc4a2490d591a95a63d7b1dc1e14b24 assets/neomod/models/item/magma_miner_potion.json
 65925b70e8d41c783ff3879893a0649634b22635 assets/neomod/models/item/mixer.json
 bb1db9b27e848db13a425e9df60ae7e1765aabe7 assets/neomod/models/item/nexon.json
 706cabc0cb7a7ce7084070578ecf92ebdc0313f9 assets/neomod/models/item/nexonaxe.json
