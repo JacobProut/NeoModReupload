@@ -547,7 +547,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> LOG_GILDED = registerBlock("log_gilded", () ->new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.of()
             .strength(2f).sound(SoundType.WOOD)));
 
-                                                                                                            //CHANGE LEAVESBLOCK TO CUSTOM BLOCK WITH PARTICLES
+                //Add Gilded Planks and other items
     public static final DeferredBlock<Block> GILDED_LEAVES = registerBlock("gilded_leaves", () ->new GildedLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)
             .strength(0.2f).sound(SoundType.CHERRY_LEAVES)));
     public static final DeferredBlock<Block> GILDED_SAPLING = registerBlock("gilded_sapling",
@@ -573,10 +573,6 @@ public class ModBlocks {
 
 
 
-
-
-
-
     //Block Entities
     public static final DeferredBlock<Block> PEDESTAL = registerBlock("pedestal", () ->new PedestalBlock(BlockBehaviour.Properties.of()
             .strength(-1.0F, Float.MAX_VALUE).destroyTime(100000).noOcclusion().sound(SoundType.ANVIL)));
@@ -597,11 +593,9 @@ public class ModBlocks {
         registerBlockItem(name, toReturn);
         return toReturn;
     }
-
     public static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
         ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
-
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
     }
