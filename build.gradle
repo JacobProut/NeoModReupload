@@ -43,10 +43,6 @@ repositories {
     maven { //Terrablender
         url = 'https://repo.spongepowered.org/repository/maven-public/'
     }
-   /* maven { //Biolith
-        name = 'TerraformersMC'
-        url = 'https://maven.terraformersmc.com/'
-    }*/
 }
 
 base {
@@ -136,7 +132,6 @@ dependencies {
     implementation "software.bernie.geckolib:geckolib-neoforge-${minecraft_version}:${geckolib_version}"
 
     implementation "com.github.glitchfiend:TerraBlender-neoforge:${minecraft_version}-${terrablender_version}"
-    //implementation "com.terraformersmc:biolith-neoforge:${project.biolith_version}"
 
 
 
@@ -180,8 +175,8 @@ tasks.withType(ProcessResources).configureEach {
             mod_version            : mod_version,
             mod_authors            : mod_authors,
             mod_description        : mod_description,
-            terrablender_version_range : terrablender_version
-           // biolith : biolith_version
+            terrablender_version : terrablender_version,
+            terrablender_version_range : terrablender_version_range
     ]
     inputs.properties replaceProperties
 
