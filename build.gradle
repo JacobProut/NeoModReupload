@@ -40,6 +40,9 @@ repositories {
             includeGroup("software.bernie.geckolib")
         }
     }
+    maven { // Terrablender?
+        url "https://maven.neoforged.net/releases"
+    }
     maven { //Terrablender
         url = 'https://repo.spongepowered.org/repository/maven-public/'
     }
@@ -131,7 +134,7 @@ dependencies {
 
     implementation "software.bernie.geckolib:geckolib-neoforge-${minecraft_version}:${geckolib_version}"
 
-    implementation "com.github.glitchfiend:TerraBlender-neoforge:${minecraft_version}-${terrablender_version}"
+    //implementation "com.github.glitchfiend:TerraBlender-neoforge:${minecraft_version}-${terrablender_version}"
 
 
 
@@ -175,7 +178,7 @@ tasks.withType(ProcessResources).configureEach {
             mod_version            : mod_version,
             mod_authors            : mod_authors,
             mod_description        : mod_description,
-            terrablender_version_range : terrablender_version
+            terrablender_version : terrablender_version
     ]
     inputs.properties replaceProperties
 
