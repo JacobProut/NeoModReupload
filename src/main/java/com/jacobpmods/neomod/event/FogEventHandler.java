@@ -1,9 +1,13 @@
 package com.jacobpmods.neomod.event;
 
 import com.jacobpmods.neomod.effect.ModMobEffects;
+import com.jacobpmods.neomod.worldgen.biome.ModBiomes;
+import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.Minecraft;
+import net.minecraft.core.Holder;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.biome.Biome;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.client.event.RenderBlockScreenEffectEvent;
 import net.neoforged.neoforge.client.event.ViewportEvent;
@@ -23,10 +27,17 @@ public class FogEventHandler {
             return; // Prevents null pointer if player is not available
         }
 
+        Holder<Biome> biome = player.level().getBiome(player.blockPosition());
+        if (biome.is(ModBiomes.GILDED_FOREST_BIOME)) {
+            // Apply custom fog settings for the biome
+            event.setNearPlaneDistance(1.0F);  // Adjust near fog distance
+            event.setFarPlaneDistance(25.0F);   // Adjust far fog distance
+            event.setCanceled(true); // Cancel the default fog rendering
+        }
+
         // Check if the player has the NoLavaFog effect
         MobEffectInstance effectInstance = player.getEffect(ModMobEffects.NO_LAVA_FOG);
         if (effectInstance != null) {
-
             // Cancel the fog rendering (adjusting fog properties)
             event.setNearPlaneDistance(0.0F);  // Disable near fog
             event.setFarPlaneDistance(1000.0F);  // Extend far fog distance
