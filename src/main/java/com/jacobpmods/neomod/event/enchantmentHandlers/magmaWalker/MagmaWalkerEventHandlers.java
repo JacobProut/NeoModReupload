@@ -31,13 +31,7 @@ public class MagmaWalkerEventHandlers {
         if (event.getEntity() instanceof Player player) {
             // Check if the damage source is from magma blocks
             if (event.getSource().is(DamageTypes.HOT_FLOOR)) {
-                // Get the block position below the player
-                BlockPos posBelowPlayer = player.blockPosition().below();
-
-                // Check if the block below the player is a temporary magma block
-                if (MagmaWalkerEnchantmentEffect.isTemporaryMagmaBlock(player.level(), posBelowPlayer)) {
-                    event.setCanceled(true); // Cancel the damage
-                }
+                event.setCanceled(true); // Cancel the damage from ALL magma blocks
             }
         }
     }
@@ -56,4 +50,25 @@ public class MagmaWalkerEventHandlers {
             MagmaWalkerEnchantmentEffect.removeAllTemporaryBlocks(serverLevel);
         }
     }
+
+
+
+    //This is so ONLY temporary Magma blocks don't cause damage. | This is for reference
+   /* @SubscribeEvent
+    public static void onLivingHurt(LivingIncomingDamageEvent event) {
+        // Check if the entity is a player
+        if (event.getEntity() instanceof Player player) {
+            // Check if the damage source is from magma blocks
+            if (event.getSource().is(DamageTypes.HOT_FLOOR)) {
+                // Get the block position below the player
+                BlockPos posBelowPlayer = player.blockPosition().below();
+
+                // Check if the block below the player is a temporary magma block
+                if (MagmaWalkerEnchantmentEffect.isTemporaryMagmaBlock(player.level(), posBelowPlayer)) {
+                    event.setCanceled(true); // Cancel the damage
+                }
+            }
+        }
+    }*/
+
 }
