@@ -1,10 +1,7 @@
 package com.jacobpmods.neomod.item.custom.enchantment;
 
 import com.jacobpmods.neomod.FirstNeoMod;
-import com.jacobpmods.neomod.item.custom.enchantment.effects.IceBarrageMeleeEnchantmentEffect;
-import com.jacobpmods.neomod.item.custom.enchantment.effects.MagmaMineEnchantmentEffect;
-import com.jacobpmods.neomod.item.custom.enchantment.effects.TimberFellerEnchantmentEffect;
-import com.jacobpmods.neomod.item.custom.enchantment.effects.VeinMinerEnchantmentEffect;
+import com.jacobpmods.neomod.item.custom.enchantment.effects.*;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -31,6 +28,9 @@ public class ModEnchantments {
     public static final ResourceKey<Enchantment> VEIN_MINER = ResourceKey.create(Registries.ENCHANTMENT,
             ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID, "vein_miner"));
 
+    public static final ResourceKey<Enchantment> MAGMA_WALKER = ResourceKey.create(Registries.ENCHANTMENT,
+            ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID, "magma_walker"));
+
     public static void bootstrap(BootstrapContext<Enchantment> context) {
         var enchantment = context.lookup(Registries.ENCHANTMENT);
         var items = context.lookup(Registries.ITEM);
@@ -43,7 +43,7 @@ public class ModEnchantments {
         );
 
         register(context, VEIN_MINER, Enchantment.enchantment(Enchantment.definition(items.getOrThrow(ItemTags.PICKAXES),
-                        items.getOrThrow(ItemTags.PICKAXES), 5, 1,
+                        items.getOrThrow(ItemTags.PICKAXES), 1, 1,
                         Enchantment.dynamicCost(2, 4), Enchantment.dynamicCost(2, 8), 3, EquipmentSlotGroup.MAINHAND))
                 .withEffect(EnchantmentEffectComponents.HIT_BLOCK, new VeinMinerEnchantmentEffect())
         );
@@ -62,6 +62,12 @@ public class ModEnchantments {
                         Enchantment.dynamicCost(2, 4), Enchantment.dynamicCost(2, 8), 3, EquipmentSlotGroup.MAINHAND))
                         .exclusiveWith(enchantment.getOrThrow(EnchantmentTags.MINING_EXCLUSIVE))
                         .withEffect(EnchantmentEffectComponents.HIT_BLOCK, new TimberFellerEnchantmentEffect())
+        );
+
+        register(context, MAGMA_WALKER, Enchantment.enchantment(Enchantment.definition(
+                items.getOrThrow(ItemTags.FOOT_ARMOR_ENCHANTABLE), 1, 1,
+                Enchantment.dynamicCost(10, 10), Enchantment.dynamicCost(25, 10), 4, EquipmentSlotGroup.FEET))
+                .withEffect(EnchantmentEffectComponents.TICK, new MagmaWalkerEnchantmentEffect())
         );
 
 

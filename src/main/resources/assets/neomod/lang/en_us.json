@@ -241,5 +241,6 @@
   "enchantment.neomod.magma_mine": "Magma Mine",
   "enchantment.neomod.ice_barrage_melee": "Ice Barrage",
   "enchantment.neomod.timber_feller" : "Timber Feller",
-  "enchantment.neomod.vein_miner" : "Vein Miner"
+  "enchantment.neomod.vein_miner" : "Vein Miner",
+  "enchantment.neomod.magma_walker" : "Magma Walker"
 }
