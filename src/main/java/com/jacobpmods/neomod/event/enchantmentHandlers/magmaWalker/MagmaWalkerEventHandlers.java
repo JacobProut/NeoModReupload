@@ -4,13 +4,16 @@ package com.jacobpmods.neomod.event.enchantmentHandlers.magmaWalker;
 import com.jacobpmods.neomod.FirstNeoMod;
 import com.jacobpmods.neomod.item.custom.enchantment.effects.MagmaWalkerEnchantmentEffect;
 import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.event.level.BlockEvent;
+import net.neoforged.neoforge.event.level.LevelEvent;
 
 @EventBusSubscriber(modid = FirstNeoMod.MOD_ID, bus = EventBusSubscriber.Bus.GAME)
 public class MagmaWalkerEventHandlers {
@@ -36,6 +39,21 @@ public class MagmaWalkerEventHandlers {
                     event.setCanceled(true); // Cancel the damage
                 }
             }
+        }
+    }
+
+    @SubscribeEvent
+    public static void onPlayerLogout(PlayerEvent.PlayerLoggedOutEvent event) {
+        Player player = event.getEntity();
+        if (player.level() instanceof ServerLevel serverLevel) {
+            MagmaWalkerEnchantmentEffect.removeAllTemporaryBlocks(serverLevel);
+        }
+    }
+
+    @SubscribeEvent
+    public static void onWorldUnload(LevelEvent.Unload event) {
+        if (event.getLevel() instanceof ServerLevel serverLevel) {
+            MagmaWalkerEnchantmentEffect.removeAllTemporaryBlocks(serverLevel);
         }
     }
 }

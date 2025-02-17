@@ -119,13 +119,26 @@ public class MagmaWalkerEnchantmentEffect implements EnchantmentEntityEffect {
         }
     }
 
-
+    //Used for onBlockBreak and LivingHurt Events
     public static boolean isTemporaryMagmaBlock(Level level, BlockPos pos) {
         if (level instanceof ServerLevel serverLevel) {
             Map<BlockPos, Long> levelBlocks = trackedBlocks.getOrDefault(serverLevel, new HashMap<>());
             return levelBlocks.containsKey(pos.immutable());
         }
         return false;
+    }
+
+    //Used for Removing blocks when leaving world or client closing events
+    public static void removeAllTemporaryBlocks(ServerLevel level) {
+        if (!trackedBlocks.containsKey(level)) return;
+
+        Map<BlockPos, Long> levelBlocks = trackedBlocks.get(level);
+        for (BlockPos pos : levelBlocks.keySet()) {
+            if (level.getBlockState(pos).is(Blocks.MAGMA_BLOCK)) {
+                level.setBlockAndUpdate(pos, Blocks.LAVA.defaultBlockState()); // Restore lava
+            }
+        }
+        trackedBlocks.remove(level);
     }
 
     @Override
