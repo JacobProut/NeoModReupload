@@ -26,39 +26,38 @@ public class MagmaWalkerEnchantmentEffect implements EnchantmentEntityEffect {
     public void apply(ServerLevel level, int enchantmentLevel, EnchantedItemInUse item, Entity entity, Vec3 origin) {
         if (!(entity instanceof Player player)) return;
 
-        // Get player position and calculate lava position
+        // Get player position and movement direction
         Vec3 playerPosition = player.position();
+        Vec3 movementVector = player.getDeltaMovement(); // Player's movement direction
+
+        // Calculate the block position in front of the player
         BlockPos lavaPos = new BlockPos(
-                (int) Math.floor(playerPosition.x),
+                (int) Math.floor(playerPosition.x + movementVector.x), // Add movement direction to X
                 (int) Math.floor(playerPosition.y - LAVA_DEPTH), // Lava is 0.5 blocks below
-                (int) Math.floor(playerPosition.z)
+                (int) Math.floor(playerPosition.z + movementVector.z) // Add movement direction to Z
         );
 
-        // Check if player is currently on lava
+        // Check if the block in front of the player is lava
         boolean isOnLava = level.getBlockState(lavaPos).is(Blocks.LAVA);
 
         // Get previous state
         boolean wasOnLava = playerOnLavaMap.getOrDefault(player, false);
 
-        // If player just stepped onto lava, play effects
+        // If the block in front of the player is lava, replace it with obsidian
         if (isOnLava && !wasOnLava) {
             playMagmaEffects(level, lavaPos);
+            replaceLavaWithObsidian(level, lavaPos, DURATION_TICKS);
         }
 
         // Update player state
         playerOnLavaMap.put(player, isOnLava);
-
-        // Replace lava with temporary obsidian
-        if (isOnLava) {
-            replaceLavaWithObsidian(level, lavaPos, DURATION_TICKS);
-        }
 
         // Revert expired blocks
         revertExpiredBlocks(level);
     }
 
     private void replaceLavaWithObsidian(ServerLevel level, BlockPos center, int durationTicks) {
-        int radius = 3; // Fixed radius for single level
+        int radius = 3; // Fixed radius for single level block spawning
         long expirationTime = level.getGameTime() + durationTicks;
 
         for (int x = -radius; x <= radius; x++) {
