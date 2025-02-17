@@ -12,6 +12,7 @@ import net.minecraft.world.item.enchantment.EnchantedItemInUse;
 import net.minecraft.world.item.enchantment.effects.EnchantmentEntityEffect;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.Vec3;
 import java.util.*;
 
@@ -31,20 +32,43 @@ public class MagmaWalkerEnchantmentEffect implements EnchantmentEntityEffect {
         Vec3 playerPosition = player.position();
         Vec3 movementVector = player.getDeltaMovement().scale(2); // Player's movement direction
 
-        // Calculate the block position in front of the player
+        // Calculate the block position in front of the player (at the same Y level)
         BlockPos lavaPos = new BlockPos(
                 (int) Math.floor(playerPosition.x + movementVector.x), // Add movement direction to X
                 (int) Math.floor(playerPosition.y - LAVA_DEPTH), // Lava is 0.5 blocks below
                 (int) Math.floor(playerPosition.z + movementVector.z) // Add movement direction to Z
         );
 
+        // Get player's forward direction
+        Vec3 lookDirection = player.getLookAngle().normalize();
+
+        // Scan for lava in a larger area, including in front and one block higher
+        for (int xOffset = -2; xOffset <= 2; xOffset++) {
+            for (int zOffset = -2; zOffset <= 2; zOffset++) {
+                for (int yOffset = 0; yOffset <= 1; yOffset++) { // Ground level and one block up
+                    BlockPos checkPos = player.blockPosition().offset(xOffset, yOffset, zOffset);
+
+                    // Check if the block is in front of the player based on their direction
+                    Vec3 blockVec = new Vec3(checkPos.getX() - player.getX(), 0, checkPos.getZ() - player.getZ());
+                    double dotProduct = blockVec.normalize().dot(lookDirection);
+
+                    if (dotProduct > 0.5 && level.getFluidState(checkPos).is(Fluids.LAVA)) {
+                        playMagmaEffects(level, checkPos);
+                        replaceLavaWithMagmaBlock(level, checkPos, DURATION_TICKS);
+                    }
+                }
+            }
+        }
+
         // Check if the block in front of the player is lava
-        boolean isOnLava = level.getBlockState(lavaPos).is(Blocks.LAVA);
+        boolean isOnLava = level.getFluidState(lavaPos).is(Fluids.LAVA) // Check for any type of lava
+                && level.getBlockState(lavaPos).getFluidState().isSource() // Includes source blocks
+                || level.getBlockState(lavaPos).is(Blocks.LAVA);
 
         // Get previous state
         boolean wasOnLava = playerOnLavaMap.getOrDefault(player, false);
 
-        // If the block in front of the player is lava, replace it with Magma Blokc
+        // If the block in front of the player is lava, replace it with Magma Block
         if (isOnLava && !wasOnLava) {
             playMagmaEffects(level, lavaPos);
             replaceLavaWithMagmaBlock(level, lavaPos, DURATION_TICKS);
@@ -58,7 +82,7 @@ public class MagmaWalkerEnchantmentEffect implements EnchantmentEntityEffect {
     }
 
     private void replaceLavaWithMagmaBlock(ServerLevel level, BlockPos center, int durationTicks) {
-        int radius = 3; // Fixed radius for single level block spawning
+        int radius = 3; // Radius for transformation
         long expirationTime = level.getGameTime() + durationTicks;
 
         for (int x = -radius; x <= radius; x++) {
@@ -66,13 +90,16 @@ public class MagmaWalkerEnchantmentEffect implements EnchantmentEntityEffect {
                 if (x * x + z * z > radius * radius) continue;
 
                 BlockPos pos = center.offset(x, 0, z);
-                if (level.getBlockState(pos).is(Blocks.LAVA) && level.getBlockState(pos.above()).isAir()) {
+                if (level.getFluidState(pos).is(Fluids.LAVA) // Check for any type of lava
+                        && level.getBlockState(pos).getFluidState().isSource() // Includes source blocks
+                        || level.getBlockState(pos).is(Blocks.LAVA)) { // Includes flowing lava
                     level.setBlock(pos, Blocks.MAGMA_BLOCK.defaultBlockState(), 3);
                     trackBlock(level, pos, expirationTime);
                 }
             }
         }
     }
+
 
     private void trackBlock(ServerLevel level, BlockPos pos, long expirationTime) {
         trackedBlocks.computeIfAbsent(level, k -> new HashMap<>())
