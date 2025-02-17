@@ -4,6 +4,7 @@ import com.jacobpmods.neomod.FirstNeoMod;
 import com.jacobpmods.neomod.item.custom.enchantment.effects.IceBarrageMeleeEnchantmentEffect;
 import com.jacobpmods.neomod.item.custom.enchantment.effects.MagmaMineEnchantmentEffect;
 import com.jacobpmods.neomod.item.custom.enchantment.effects.TimberFellerEnchantmentEffect;
+import com.jacobpmods.neomod.item.custom.enchantment.effects.VeinMinerEnchantmentEffect;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -27,6 +28,8 @@ public class ModEnchantments {
     public static final ResourceKey<Enchantment> TIMBER_FELLER = ResourceKey.create(Registries.ENCHANTMENT,
             ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID, "timber_feller"));
 
+    public static final ResourceKey<Enchantment> VEIN_MINER = ResourceKey.create(Registries.ENCHANTMENT,
+            ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID, "vein_miner"));
 
     public static void bootstrap(BootstrapContext<Enchantment> context) {
         var enchantment = context.lookup(Registries.ENCHANTMENT);
@@ -37,6 +40,12 @@ public class ModEnchantments {
                 Enchantment.dynamicCost(2, 4), Enchantment.dynamicCost(2, 8), 3, EquipmentSlotGroup.MAINHAND))
                 .exclusiveWith(HolderSet.direct(enchantment.getOrThrow(Enchantments.SILK_TOUCH)))
                 .withEffect(EnchantmentEffectComponents.HIT_BLOCK, new MagmaMineEnchantmentEffect())
+        );
+
+        register(context, VEIN_MINER, Enchantment.enchantment(Enchantment.definition(items.getOrThrow(ItemTags.PICKAXES),
+                        items.getOrThrow(ItemTags.PICKAXES), 5, 1,
+                        Enchantment.dynamicCost(2, 4), Enchantment.dynamicCost(2, 8), 3, EquipmentSlotGroup.MAINHAND))
+                .withEffect(EnchantmentEffectComponents.HIT_BLOCK, new VeinMinerEnchantmentEffect())
         );
 
         register(context, ICE_BARRAGE_MELEE, Enchantment.enchantment(Enchantment.definition(items.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),

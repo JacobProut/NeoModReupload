@@ -4,6 +4,7 @@ import com.jacobpmods.neomod.FirstNeoMod;
 import com.jacobpmods.neomod.item.custom.enchantment.effects.IceBarrageMeleeEnchantmentEffect;
 import com.jacobpmods.neomod.item.custom.enchantment.effects.MagmaMineEnchantmentEffect;
 import com.jacobpmods.neomod.item.custom.enchantment.effects.TimberFellerEnchantmentEffect;
+import com.jacobpmods.neomod.item.custom.enchantment.effects.VeinMinerEnchantmentEffect;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.enchantment.effects.EnchantmentEntityEffect;
@@ -25,6 +26,8 @@ public class ModEnchantmentEffects {
     public static final Supplier<MapCodec<? extends EnchantmentEntityEffect>> TIMBER_FELLER =
             registerEnchantmentEffect("timber_feller", TimberFellerEnchantmentEffect.CODEC);
 
+    public static final Supplier<MapCodec<? extends EnchantmentEntityEffect>> VEIN_MINER =
+            registerEnchantmentEffect("vein_miner", VeinMinerEnchantmentEffect.CODEC);
 
     private static Supplier<MapCodec<? extends EnchantmentEntityEffect>> registerEnchantmentEffect(String name, MapCodec<? extends EnchantmentEntityEffect> codec) {
         return ENTITY_ENCHANTMENT_EFFECTS.register(name, () -> codec);
