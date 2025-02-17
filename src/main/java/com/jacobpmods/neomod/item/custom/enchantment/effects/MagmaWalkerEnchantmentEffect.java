@@ -10,6 +10,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.enchantment.EnchantedItemInUse;
 import net.minecraft.world.item.enchantment.effects.EnchantmentEntityEffect;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.phys.Vec3;
 import java.util.*;
@@ -28,7 +29,7 @@ public class MagmaWalkerEnchantmentEffect implements EnchantmentEntityEffect {
 
         // Get player position and movement direction
         Vec3 playerPosition = player.position();
-        Vec3 movementVector = player.getDeltaMovement(); // Player's movement direction
+        Vec3 movementVector = player.getDeltaMovement().scale(2); // Player's movement direction
 
         // Calculate the block position in front of the player
         BlockPos lavaPos = new BlockPos(
@@ -43,10 +44,10 @@ public class MagmaWalkerEnchantmentEffect implements EnchantmentEntityEffect {
         // Get previous state
         boolean wasOnLava = playerOnLavaMap.getOrDefault(player, false);
 
-        // If the block in front of the player is lava, replace it with obsidian
+        // If the block in front of the player is lava, replace it with Magma Blokc
         if (isOnLava && !wasOnLava) {
             playMagmaEffects(level, lavaPos);
-            replaceLavaWithObsidian(level, lavaPos, DURATION_TICKS);
+            replaceLavaWithMagmaBlock(level, lavaPos, DURATION_TICKS);
         }
 
         // Update player state
@@ -56,7 +57,7 @@ public class MagmaWalkerEnchantmentEffect implements EnchantmentEntityEffect {
         revertExpiredBlocks(level);
     }
 
-    private void replaceLavaWithObsidian(ServerLevel level, BlockPos center, int durationTicks) {
+    private void replaceLavaWithMagmaBlock(ServerLevel level, BlockPos center, int durationTicks) {
         int radius = 3; // Fixed radius for single level block spawning
         long expirationTime = level.getGameTime() + durationTicks;
 
@@ -66,7 +67,7 @@ public class MagmaWalkerEnchantmentEffect implements EnchantmentEntityEffect {
 
                 BlockPos pos = center.offset(x, 0, z);
                 if (level.getBlockState(pos).is(Blocks.LAVA) && level.getBlockState(pos.above()).isAir()) {
-                    level.setBlock(pos, Blocks.OBSIDIAN.defaultBlockState(), 3);
+                    level.setBlock(pos, Blocks.MAGMA_BLOCK.defaultBlockState(), 3);
                     trackBlock(level, pos, expirationTime);
                 }
             }
@@ -85,7 +86,7 @@ public class MagmaWalkerEnchantmentEffect implements EnchantmentEntityEffect {
         levelBlocks.entrySet().removeIf(entry -> {
             if (currentTime >= entry.getValue()) {
                 BlockPos pos = entry.getKey();
-                if (level.getBlockState(pos).is(Blocks.OBSIDIAN)) {
+                if (level.getBlockState(pos).is(Blocks.MAGMA_BLOCK)) {
                     level.setBlock(pos, Blocks.LAVA.defaultBlockState(), 3);
                     playRevertEffects(level, pos);
                 }
@@ -109,13 +110,22 @@ public class MagmaWalkerEnchantmentEffect implements EnchantmentEntityEffect {
     }
 
     private void playRevertEffects(ServerLevel level, BlockPos pos) {
-        // Only play revert effects if the block is obsidian (about to revert)
-        if (level.getBlockState(pos).is(Blocks.OBSIDIAN)) {
+        // Only play revert effects if the block is Magma Block (about to revert)
+        if (level.getBlockState(pos).is(Blocks.MAGMA_BLOCK)) {
             level.playSound(null, pos, SoundEvents.LAVA_POP, SoundSource.BLOCKS, 0.5f, 0.9f);
             level.sendParticles(ParticleTypes.SMOKE,
                     pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5,
                     5, 0.2, 0.2, 0.2, 0.01);
         }
+    }
+
+
+    public static boolean isTemporaryMagmaBlock(Level level, BlockPos pos) {
+        if (level instanceof ServerLevel serverLevel) {
+            Map<BlockPos, Long> levelBlocks = trackedBlocks.getOrDefault(serverLevel, new HashMap<>());
+            return levelBlocks.containsKey(pos.immutable());
+        }
+        return false;
     }
 
     @Override
