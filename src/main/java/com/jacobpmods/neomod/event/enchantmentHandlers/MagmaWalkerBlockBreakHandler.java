@@ -1,4 +1,4 @@
-package com.jacobpmods.neomod.event;
+package com.jacobpmods.neomod.event.enchantmentHandlers;
 
 
 import com.jacobpmods.neomod.FirstNeoMod;
