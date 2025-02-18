@@ -1,4 +1,4 @@
-package com.jacobpmods.neomod.item.custom.enchantment.effects;
+package com.jacobpmods.neomod.item.custom.enchantment.effects.boots;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;

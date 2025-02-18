@@ -2,8 +2,7 @@ package com.jacobpmods.neomod.event.enchantmentHandlers.magmaWalker;
 
 
 import com.jacobpmods.neomod.FirstNeoMod;
-import com.jacobpmods.neomod.item.custom.enchantment.effects.MagmaWalkerEnchantmentEffect;
-import net.minecraft.core.BlockPos;
+import com.jacobpmods.neomod.item.custom.enchantment.effects.boots.MagmaWalkerEnchantmentEffect;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.player.Player;

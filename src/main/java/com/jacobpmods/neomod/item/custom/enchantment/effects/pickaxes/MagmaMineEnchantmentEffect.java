@@ -1,10 +1,8 @@
-package com.jacobpmods.neomod.item.custom.enchantment.effects;
+package com.jacobpmods.neomod.item.custom.enchantment.effects.pickaxes;
 
 import com.jacobpmods.neomod.block.ModBlocks;
 import com.jacobpmods.neomod.item.ModItems;
-import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;

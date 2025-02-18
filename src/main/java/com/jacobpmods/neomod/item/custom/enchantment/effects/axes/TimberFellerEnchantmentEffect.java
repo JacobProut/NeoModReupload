@@ -1,9 +1,7 @@
-package com.jacobpmods.neomod.item.custom.enchantment.effects;
+package com.jacobpmods.neomod.item.custom.enchantment.effects.axes;
 
 import com.jacobpmods.neomod.block.ModBlocks;
-import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;

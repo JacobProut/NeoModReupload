@@ -1,7 +1,11 @@
 package com.jacobpmods.neomod.item.custom.enchantment;
 
 import com.jacobpmods.neomod.FirstNeoMod;
-import com.jacobpmods.neomod.item.custom.enchantment.effects.*;
+import com.jacobpmods.neomod.item.custom.enchantment.effects.axes.TimberFellerEnchantmentEffect;
+import com.jacobpmods.neomod.item.custom.enchantment.effects.boots.MagmaWalkerEnchantmentEffect;
+import com.jacobpmods.neomod.item.custom.enchantment.effects.pickaxes.MagmaMineEnchantmentEffect;
+import com.jacobpmods.neomod.item.custom.enchantment.effects.pickaxes.VeinMinerEnchantmentEffect;
+import com.jacobpmods.neomod.item.custom.enchantment.effects.swords.IceBarrageMeleeEnchantmentEffect;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.enchantment.effects.EnchantmentEntityEffect;
