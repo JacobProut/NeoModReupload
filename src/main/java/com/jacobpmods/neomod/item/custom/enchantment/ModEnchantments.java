@@ -3,6 +3,8 @@ package com.jacobpmods.neomod.item.custom.enchantment;
 import com.jacobpmods.neomod.FirstNeoMod;
 import com.jacobpmods.neomod.item.custom.enchantment.effects.axes.TimberFellerEnchantmentEffect;
 import com.jacobpmods.neomod.item.custom.enchantment.effects.boots.MagmaWalkerEnchantmentEffect;
+import com.jacobpmods.neomod.item.custom.enchantment.effects.bows.DoubleShotEnchantmentEffect;
+import com.jacobpmods.neomod.item.custom.enchantment.effects.hoe.FastHarvestEnchantmentEffect;
 import com.jacobpmods.neomod.item.custom.enchantment.effects.pickaxes.MagmaMineEnchantmentEffect;
 import com.jacobpmods.neomod.item.custom.enchantment.effects.pickaxes.VeinMinerEnchantmentEffect;
 import com.jacobpmods.neomod.item.custom.enchantment.effects.swords.IceBarrageMeleeEnchantmentEffect;
@@ -34,6 +36,12 @@ public class ModEnchantments {
 
     public static final ResourceKey<Enchantment> MAGMA_WALKER = ResourceKey.create(Registries.ENCHANTMENT,
             ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID, "magma_walker"));
+
+    public static final ResourceKey<Enchantment> DOUBLE_SHOT = ResourceKey.create(Registries.ENCHANTMENT,
+            ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID, "double_shot"));
+
+    public static final ResourceKey<Enchantment> FAST_HARVEST = ResourceKey.create(Registries.ENCHANTMENT,
+            ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID, "fast_harvest"));
 
     public static void bootstrap(BootstrapContext<Enchantment> context) {
         var enchantment = context.lookup(Registries.ENCHANTMENT);
@@ -74,7 +82,19 @@ public class ModEnchantments {
                 .withEffect(EnchantmentEffectComponents.TICK, new MagmaWalkerEnchantmentEffect())
         );
 
+        register(context, FAST_HARVEST, Enchantment.enchantment(Enchantment.definition(items.getOrThrow(ItemTags.HOES),
+                        items.getOrThrow(ItemTags.HOES), 1, 1,
+                        Enchantment.dynamicCost(2, 4), Enchantment.dynamicCost(2, 8), 3, EquipmentSlotGroup.MAINHAND))
+                .withEffect(EnchantmentEffectComponents.HIT_BLOCK, new FastHarvestEnchantmentEffect())
+        );
 
+       /* register(context, DOUBLE_SHOT, Enchantment.enchantment(Enchantment.definition(
+                        items.getOrThrow(ItemTags.BOW_ENCHANTABLE), // Ensure this targets bows
+                        items.getOrThrow(ItemTags.BOW_ENCHANTABLE), 5, 1,
+                        Enchantment.dynamicCost(2, 4), Enchantment.dynamicCost(2, 8), 3, EquipmentSlotGroup.MAINHAND))
+                .withEffect(EnchantmentEffectComponents.PROJECTILE_SPAWNED, new DoubleShotEnchantmentEffect()) // Apply effect when a projectile is fired
+        );
+        */
     }
 
     private static void register(BootstrapContext<Enchantment> context, ResourceKey<Enchantment> key, Enchantment.Builder builder) {

@@ -1,0 +1,30 @@
+{
+  "anvil_cost": 3,
+  "description": {
+    "translate": "enchantment.neomod.fast_harvest"
+  },
+  "effects": {
+    "minecraft:hit_block": [
+      {
+        "effect": {
+          "type": "neomod:fast_harvest"
+        }
+      }
+    ]
+  },
+  "max_cost": {
+    "base": 2,
+    "per_level_above_first": 8
+  },
+  "max_level": 1,
+  "min_cost": {
+    "base": 2,
+    "per_level_above_first": 4
+  },
+  "primary_items": "#minecraft:hoes",
+  "slots": [
+    "mainhand"
+  ],
+  "supported_items": "#minecraft:hoes",
+  "weight": 1
+}

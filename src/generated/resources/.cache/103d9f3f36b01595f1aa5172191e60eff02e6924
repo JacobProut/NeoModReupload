@@ -1,6 +1,7 @@
-// 1.21.1	2025-02-16T18:37:03.6238941	Registries
+// 1.21.1	2025-03-07T02:38:50.7523359	Registries
 38ec268e3f49a851de8633d8ecbfdb0abdbb2518 data/neomod/dimension/afterlife.json
 0aa4a325564d445797f7c4f4535769cd908be786 data/neomod/dimension_type/afterlife_type.json
+faa62aa6a6b369f0ea24088b711a0f5b3ca46386 data/neomod/enchantment/fast_harvest.json
 4dbd53ed86c8782b1053f351e692c2dcc6fe3815 data/neomod/enchantment/ice_barrage_melee.json
 5dac96e94bb5bafa709ac0d83698dbf496e5cba4 data/neomod/enchantment/magma_mine.json
 8b2816cbf734921fb93da23b364a50faf0bd9540 data/neomod/enchantment/magma_walker.json

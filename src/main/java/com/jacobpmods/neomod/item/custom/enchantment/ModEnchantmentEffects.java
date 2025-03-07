@@ -3,6 +3,8 @@ package com.jacobpmods.neomod.item.custom.enchantment;
 import com.jacobpmods.neomod.FirstNeoMod;
 import com.jacobpmods.neomod.item.custom.enchantment.effects.axes.TimberFellerEnchantmentEffect;
 import com.jacobpmods.neomod.item.custom.enchantment.effects.boots.MagmaWalkerEnchantmentEffect;
+import com.jacobpmods.neomod.item.custom.enchantment.effects.bows.DoubleShotEnchantmentEffect;
+import com.jacobpmods.neomod.item.custom.enchantment.effects.hoe.FastHarvestEnchantmentEffect;
 import com.jacobpmods.neomod.item.custom.enchantment.effects.pickaxes.MagmaMineEnchantmentEffect;
 import com.jacobpmods.neomod.item.custom.enchantment.effects.pickaxes.VeinMinerEnchantmentEffect;
 import com.jacobpmods.neomod.item.custom.enchantment.effects.swords.IceBarrageMeleeEnchantmentEffect;
@@ -32,6 +34,12 @@ public class ModEnchantmentEffects {
 
     public static final Supplier<MapCodec<? extends EnchantmentEntityEffect>> MAGMA_WALKER =
             registerEnchantmentEffect("magma_walker", MagmaWalkerEnchantmentEffect.CODEC);
+
+    public static final Supplier<MapCodec<? extends EnchantmentEntityEffect>> FAST_HARVEST =
+            registerEnchantmentEffect("fast_harvest", FastHarvestEnchantmentEffect.CODEC);
+
+   /* public static final Supplier<MapCodec<? extends EnchantmentEntityEffect>> DOUBLE_SHOT =
+            registerEnchantmentEffect("double_shot", DoubleShotEnchantmentEffect.CODEC);*/
 
 
     private static Supplier<MapCodec<? extends EnchantmentEntityEffect>> registerEnchantmentEffect(String name, MapCodec<? extends EnchantmentEntityEffect> codec) {
