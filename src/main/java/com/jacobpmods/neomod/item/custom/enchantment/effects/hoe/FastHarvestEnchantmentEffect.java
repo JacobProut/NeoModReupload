@@ -8,7 +8,6 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.EnchantedItemInUse;
@@ -21,7 +20,7 @@ import net.minecraft.world.phys.Vec3;
 
 import java.util.*;
 
-public class FastHarvestEnchantmentEffect implements EnchantmentEntityEffect {
+public record FastHarvestEnchantmentEffect() implements EnchantmentEntityEffect {
     public static final MapCodec<FastHarvestEnchantmentEffect> CODEC = MapCodec.unit(FastHarvestEnchantmentEffect::new);
 
     public static final Set<Block> crop_list = Set.of(
@@ -38,25 +37,39 @@ public class FastHarvestEnchantmentEffect implements EnchantmentEntityEffect {
         if (!(crop_list.contains(blockstate.getBlock()))) return;
 
         ItemStack tool = itemInUse.itemStack();
-        damageTool(player, tool);
+
 
         boolean hasFastHarvest = tool.getEnchantmentLevel(level.registryAccess()
                 .registryOrThrow(Registries.ENCHANTMENT)
                 .getHolderOrThrow(ModEnchantments.FAST_HARVEST)) > 0;
 
-        mineConnectedCrops(level, blockPos, blockstate.getBlock(), hasFastHarvest);
-    }
-
-    private void damageTool(Player player, ItemStack tool) {
-        if (!tool.isEmpty() && tool.isDamageableItem()) {
-            tool.hurtAndBreak(1, player, null);
+        if (enchantmentLevel == 1) {
+            damageTool(player, tool, 1);
+            mineConnectedCrops(level, blockPos, blockstate.getBlock(), hasFastHarvest, 1);
+        }
+        if (enchantmentLevel == 2) {
+            damageTool(player, tool, 2);
+            mineConnectedCrops(level, blockPos, blockstate.getBlock(), hasFastHarvest, 2);
         }
     }
 
-    public static void mineConnectedCrops(ServerLevel level, BlockPos startPos, Block blockType, boolean hasFastHarvest) {
+    private void damageTool(Player player, ItemStack tool, int damageAmount) {
+        if (!tool.isEmpty() && tool.isDamageableItem()) {
+            if (damageAmount == 1) {
+                tool.hurtAndBreak(1, player, null);
+            }
+            if (damageAmount == 2) {
+                tool.hurtAndBreak(2, player, null);
+            }
+
+        }
+    }
+
+    public static void mineConnectedCrops(ServerLevel level, BlockPos startPos, Block blockType, boolean hasFastHarvest, int enchantmentLevel) {
         Set<BlockPos> visited = new HashSet<>();
         Queue<BlockPos> queue = new LinkedList<>();
 
+        // Store positions with their distance from the starting point
         queue.add(startPos);
         visited.add(startPos);
 
@@ -74,11 +87,31 @@ public class FastHarvestEnchantmentEffect implements EnchantmentEntityEffect {
                     Block.popResource(level, current, drop);
                 }
 
-                for (Direction direction : Direction.values()) {
+
+                // Explore only horizontal neighbors (ignore up and down)
+                for (Direction direction : Arrays.asList(Direction.NORTH, Direction.EAST, Direction.SOUTH, Direction.WEST)) {
                     BlockPos neighbor = current.relative(direction);
-                    if (!visited.contains(neighbor) && level.getBlockState(neighbor).is(blockType)) {
-                        queue.add(neighbor);
-                        visited.add(neighbor);
+
+                    // Ensure the Y-Level is the same
+                    if(neighbor.getY() != startPos.getY()) continue;
+
+                    // Calculate the Manhatten Distance (Horizontal only)
+                    int distance = Math.abs(neighbor.getX() - startPos.getX())
+                            + Math.abs(neighbor.getZ() - startPos.getZ());
+
+                    if (enchantmentLevel == 1) {
+                        // Check if within distance and unvisited
+                        if (distance <= 5 && !visited.contains(neighbor) && level.getBlockState(neighbor).is(blockType)) {
+                            queue.add(neighbor);
+                            visited.add(neighbor);
+                        }
+                    }
+                    if (enchantmentLevel == 2) {
+                        // Check if within distance and unvisited
+                        if (distance <= 10 && !visited.contains(neighbor) && level.getBlockState(neighbor).is(blockType)) {
+                            queue.add(neighbor);
+                            visited.add(neighbor);
+                        }
                     }
                 }
             }

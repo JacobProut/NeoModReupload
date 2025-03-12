@@ -61,7 +61,7 @@ public class ModEnchantments {
         );
 
         register(context, ICE_BARRAGE_MELEE, Enchantment.enchantment(Enchantment.definition(items.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
-                        items.getOrThrow(ItemTags.SWORDS), 5, 3,
+                        items.getOrThrow(ItemTags.SWORDS), 5, 3, // the 3 is the amount of enchantment levels
                         Enchantment.dynamicCost(2, 4), Enchantment.dynamicCost(2, 8), 3, EquipmentSlotGroup.MAINHAND))
                 .exclusiveWith(HolderSet.direct(enchantment.getOrThrow(Enchantments.FIRE_ASPECT)))
                         .withEffect(EnchantmentEffectComponents.POST_ATTACK, EnchantmentTarget.ATTACKER,
@@ -83,7 +83,7 @@ public class ModEnchantments {
         );
 
         register(context, FAST_HARVEST, Enchantment.enchantment(Enchantment.definition(items.getOrThrow(ItemTags.HOES),
-                        items.getOrThrow(ItemTags.HOES), 1, 1,
+                        items.getOrThrow(ItemTags.HOES), 1,2, // the 2 is the amount of enchantment levels
                         Enchantment.dynamicCost(2, 4), Enchantment.dynamicCost(2, 8), 3, EquipmentSlotGroup.MAINHAND))
                 .withEffect(EnchantmentEffectComponents.HIT_BLOCK, new FastHarvestEnchantmentEffect())
         );
