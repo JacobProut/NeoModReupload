@@ -1,4 +1,4 @@
-// 1.21.1	2025-03-12T12:32:10.1199	Registries
+// 1.21.1	2025-03-17T19:17:07.2230176	Registries
 38ec268e3f49a851de8633d8ecbfdb0abdbb2518 data/neomod/dimension/afterlife.json
 0aa4a325564d445797f7c4f4535769cd908be786 data/neomod/dimension_type/afterlife_type.json
 2e0351b3555ce2dab25fc54472cf1a3b2a6adbe5 data/neomod/enchantment/fast_harvest.json
@@ -7,6 +7,7 @@
 8b2816cbf734921fb93da23b364a50faf0bd9540 data/neomod/enchantment/magma_walker.json
 dafc7659e372a0835ef1a452e27a95616a23ec33 data/neomod/enchantment/timber_feller.json
 56449a5bd9a7f34e1e89b6164158f7dcc14bc728 data/neomod/enchantment/vein_miner.json
+26125ddfc5c08b5fd3de888ae0597221f85061b0 data/neomod/enchantment/venom_slice.json
 4c07a3d70c1851d190bb78a51c5e1b309246ff33 data/neomod/neoforge/biome_modifier/add_afterlife_dimension_diamond_ore.json
 4b0a6b02ea161f8f68af0a9ef0c7383d10270dca data/neomod/neoforge/biome_modifier/add_afterlife_dimension_gold_ore.json
 ab925b2d3b198edf5a2d0b8d0914d8f5f7012f8c data/neomod/neoforge/biome_modifier/add_afterlife_dimension_iron_ore.json

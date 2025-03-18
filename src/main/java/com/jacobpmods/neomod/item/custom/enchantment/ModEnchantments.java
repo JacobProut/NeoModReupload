@@ -8,6 +8,7 @@ import com.jacobpmods.neomod.item.custom.enchantment.effects.hoe.FastHarvestEnch
 import com.jacobpmods.neomod.item.custom.enchantment.effects.pickaxes.MagmaMineEnchantmentEffect;
 import com.jacobpmods.neomod.item.custom.enchantment.effects.pickaxes.VeinMinerEnchantmentEffect;
 import com.jacobpmods.neomod.item.custom.enchantment.effects.swords.IceBarrageMeleeEnchantmentEffect;
+import com.jacobpmods.neomod.item.custom.enchantment.effects.swords.VenomSliceEnchantmentEffect;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -42,6 +43,9 @@ public class ModEnchantments {
 
     public static final ResourceKey<Enchantment> FAST_HARVEST = ResourceKey.create(Registries.ENCHANTMENT,
             ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID, "fast_harvest"));
+
+    public static final ResourceKey<Enchantment> VENOM_SLICE = ResourceKey.create(Registries.ENCHANTMENT,
+            ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID, "venom_slice"));
 
     public static void bootstrap(BootstrapContext<Enchantment> context) {
         var enchantment = context.lookup(Registries.ENCHANTMENT);
@@ -86,6 +90,13 @@ public class ModEnchantments {
                         items.getOrThrow(ItemTags.HOES), 1,2, // the 2 is the amount of enchantment levels
                         Enchantment.dynamicCost(2, 4), Enchantment.dynamicCost(2, 8), 3, EquipmentSlotGroup.MAINHAND))
                 .withEffect(EnchantmentEffectComponents.HIT_BLOCK, new FastHarvestEnchantmentEffect())
+        );
+
+        register(context, VENOM_SLICE, Enchantment.enchantment(Enchantment.definition(items.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
+                        items.getOrThrow(ItemTags.SWORDS), 5, 2, // the 2 is the amount of enchantment levels
+                        Enchantment.dynamicCost(2, 4), Enchantment.dynamicCost(2, 8), 3, EquipmentSlotGroup.MAINHAND))
+                .withEffect(EnchantmentEffectComponents.POST_ATTACK, EnchantmentTarget.ATTACKER,
+                        EnchantmentTarget.VICTIM, new VenomSliceEnchantmentEffect())
         );
 
        /* register(context, DOUBLE_SHOT, Enchantment.enchantment(Enchantment.definition(

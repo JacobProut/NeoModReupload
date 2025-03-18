@@ -8,6 +8,7 @@ import com.jacobpmods.neomod.item.custom.enchantment.effects.hoe.FastHarvestEnch
 import com.jacobpmods.neomod.item.custom.enchantment.effects.pickaxes.MagmaMineEnchantmentEffect;
 import com.jacobpmods.neomod.item.custom.enchantment.effects.pickaxes.VeinMinerEnchantmentEffect;
 import com.jacobpmods.neomod.item.custom.enchantment.effects.swords.IceBarrageMeleeEnchantmentEffect;
+import com.jacobpmods.neomod.item.custom.enchantment.effects.swords.VenomSliceEnchantmentEffect;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.enchantment.effects.EnchantmentEntityEffect;
@@ -37,6 +38,9 @@ public class ModEnchantmentEffects {
 
     public static final Supplier<MapCodec<? extends EnchantmentEntityEffect>> FAST_HARVEST =
             registerEnchantmentEffect("fast_harvest", FastHarvestEnchantmentEffect.CODEC);
+
+    public static final Supplier<MapCodec<? extends EnchantmentEntityEffect>> VENOM_SLICE =
+            registerEnchantmentEffect("venom_slice", VenomSliceEnchantmentEffect.CODEC);
 
    /* public static final Supplier<MapCodec<? extends EnchantmentEntityEffect>> DOUBLE_SHOT =
             registerEnchantmentEffect("double_shot", DoubleShotEnchantmentEffect.CODEC);*/
