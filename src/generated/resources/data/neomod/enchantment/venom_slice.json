@@ -8,7 +8,7 @@
       {
         "affected": "victim",
         "effect": {
-          "type": "neomod:venom_slice"
+          "type": "neomod:night_glow"
         },
         "enchanted": "attacker"
       }

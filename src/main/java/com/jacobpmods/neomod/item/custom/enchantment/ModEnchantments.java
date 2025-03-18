@@ -3,7 +3,7 @@ package com.jacobpmods.neomod.item.custom.enchantment;
 import com.jacobpmods.neomod.FirstNeoMod;
 import com.jacobpmods.neomod.item.custom.enchantment.effects.axes.TimberFellerEnchantmentEffect;
 import com.jacobpmods.neomod.item.custom.enchantment.effects.boots.MagmaWalkerEnchantmentEffect;
-import com.jacobpmods.neomod.item.custom.enchantment.effects.bows.DoubleShotEnchantmentEffect;
+import com.jacobpmods.neomod.item.custom.enchantment.effects.helmet.NightGlowEnchantmentEffect;
 import com.jacobpmods.neomod.item.custom.enchantment.effects.hoe.FastHarvestEnchantmentEffect;
 import com.jacobpmods.neomod.item.custom.enchantment.effects.pickaxes.MagmaMineEnchantmentEffect;
 import com.jacobpmods.neomod.item.custom.enchantment.effects.pickaxes.VeinMinerEnchantmentEffect;
@@ -46,6 +46,9 @@ public class ModEnchantments {
 
     public static final ResourceKey<Enchantment> VENOM_SLICE = ResourceKey.create(Registries.ENCHANTMENT,
             ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID, "venom_slice"));
+
+    public static final ResourceKey<Enchantment> NIGHT_GLOW = ResourceKey.create(Registries.ENCHANTMENT,
+            ResourceLocation.fromNamespaceAndPath(FirstNeoMod.MOD_ID, "night_glow"));
 
     public static void bootstrap(BootstrapContext<Enchantment> context) {
         var enchantment = context.lookup(Registries.ENCHANTMENT);
@@ -97,6 +100,12 @@ public class ModEnchantments {
                         Enchantment.dynamicCost(2, 4), Enchantment.dynamicCost(2, 8), 3, EquipmentSlotGroup.MAINHAND))
                 .withEffect(EnchantmentEffectComponents.POST_ATTACK, EnchantmentTarget.ATTACKER,
                         EnchantmentTarget.VICTIM, new VenomSliceEnchantmentEffect())
+        );
+
+        register(context, NIGHT_GLOW, Enchantment.enchantment(Enchantment.definition(
+                        items.getOrThrow(ItemTags.HEAD_ARMOR_ENCHANTABLE), 1, 1,
+                        Enchantment.dynamicCost(10, 10), Enchantment.dynamicCost(25, 10), 4, EquipmentSlotGroup.HEAD))
+                .withEffect(EnchantmentEffectComponents.TICK, new NightGlowEnchantmentEffect())
         );
 
        /* register(context, DOUBLE_SHOT, Enchantment.enchantment(Enchantment.definition(

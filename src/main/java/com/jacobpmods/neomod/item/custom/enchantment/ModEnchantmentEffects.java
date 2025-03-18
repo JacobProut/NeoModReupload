@@ -4,6 +4,7 @@ import com.jacobpmods.neomod.FirstNeoMod;
 import com.jacobpmods.neomod.item.custom.enchantment.effects.axes.TimberFellerEnchantmentEffect;
 import com.jacobpmods.neomod.item.custom.enchantment.effects.boots.MagmaWalkerEnchantmentEffect;
 import com.jacobpmods.neomod.item.custom.enchantment.effects.bows.DoubleShotEnchantmentEffect;
+import com.jacobpmods.neomod.item.custom.enchantment.effects.helmet.NightGlowEnchantmentEffect;
 import com.jacobpmods.neomod.item.custom.enchantment.effects.hoe.FastHarvestEnchantmentEffect;
 import com.jacobpmods.neomod.item.custom.enchantment.effects.pickaxes.MagmaMineEnchantmentEffect;
 import com.jacobpmods.neomod.item.custom.enchantment.effects.pickaxes.VeinMinerEnchantmentEffect;
@@ -41,6 +42,9 @@ public class ModEnchantmentEffects {
 
     public static final Supplier<MapCodec<? extends EnchantmentEntityEffect>> VENOM_SLICE =
             registerEnchantmentEffect("venom_slice", VenomSliceEnchantmentEffect.CODEC);
+
+    public static final Supplier<MapCodec<? extends EnchantmentEntityEffect>> NIGHT_GLOW =
+            registerEnchantmentEffect("night_glow", NightGlowEnchantmentEffect.CODEC);
 
    /* public static final Supplier<MapCodec<? extends EnchantmentEntityEffect>> DOUBLE_SHOT =
             registerEnchantmentEffect("double_shot", DoubleShotEnchantmentEffect.CODEC);*/

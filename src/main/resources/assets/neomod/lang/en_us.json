@@ -244,7 +244,6 @@
   "enchantment.neomod.vein_miner" : "Vein Miner",
   "enchantment.neomod.magma_walker" : "Magma Walker",
   "enchantment.neomod.fast_harvest" : "Fast Harvest",
-  "enchantment.neomod.venom_slice" : "Venom Slicer"
-
-
+  "enchantment.neomod.venom_slice" : "Venom Slicer",
+  "enchantment.neomod.night_glow" : "Night Glow"
 }
